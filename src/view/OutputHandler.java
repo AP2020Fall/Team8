@@ -6,8 +6,8 @@ public class OutputHandler {
     public void showAdminOutput(int outputNo){}
     public void showGamesMenuOutput(int outputNo){}
     public void showReversiOutput(int outputNo){}
-    public void showFriendsMenuOutput(int outputNo){}
-    public String showRegisterMenuOutput(int outputNo){
+    public static void showFriendsMenuOutput(int outputNo){}
+    public static String showRegisterMenuOutput(int outputNo){
         //getinfo output
         if(outputNo==1)
             return "in order enter your name,lastName,email and phone number";
@@ -26,6 +26,6 @@ public class OutputHandler {
 
 
     }
-    public void showGameMenuOutput(int outputNo){}
+    public static void showGameMenuOutput(int outputNo){}
 
 }
