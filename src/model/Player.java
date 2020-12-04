@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Player extends  Account {
+    private int point;
+    private  ArrayList<String> platoMessages;
     private ArrayList<String> suggestions;
     private  ArrayList<Player> friends;
     private  ArrayList<Request> friendRequest;
@@ -23,9 +25,18 @@ public class Player extends  Account {
         return friends;
     }
 
-    public Player(String name, String lastName, String accountID, String passWord, ArrayList<String> suggestions) {
-        super(name, lastName, accountID, passWord);
-        this.suggestions = suggestions;
+    public Player(String username, String password) {
+        super(username,password);
+        suggestions=new ArrayList<>();
+        favoriteGames=new ArrayList<>();
+        friendRequest=new ArrayList<>();
+        friends=new ArrayList<>();
+        reversiAndWinsCounts=new ArrayList<>();
+        reversiPlayedCounts=new ArrayList<>();
+        dotsAndBoxesAndWinsCount=new ArrayList<>();
+        dotsAndBoxesPlayedCounts=new ArrayList<>();
+        allPlayers.add(this);
+
     }
 
 
