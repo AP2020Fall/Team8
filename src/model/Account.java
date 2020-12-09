@@ -73,6 +73,7 @@ public class Account {
             if (account.getAccountID()==id)
                 return account;
         }
+        return null;
     }
 
     public void setPlatoAge() {

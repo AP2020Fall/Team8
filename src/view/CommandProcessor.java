@@ -18,6 +18,9 @@ public class CommandProcessor {
     //todolist: error ha,regex megexa, age admin e ashghal accountesho pak kone chi?!,new kardan login account ro ye check bokon,
     // jahayi ke lazeme subcom haro null karde bash!;
     //plato bot message ro az kojam biaram?!
+    //age yaru login kard bege gamereq dari
+    //login o logout kamel
+    //allplayer o inaro bayad new konam ya na?
 
     public static void setOutput(int output) {
         CommandProcessor.output = output;
@@ -32,17 +35,17 @@ public class CommandProcessor {
     }*/
     public static void setMainCommandStatus(String command){
         // register menu commands
-          if (command==("Register .+,.+"))
+          if (command.matches("Register .+,.+"))
             mainCommandStatus=MainCommandStatus.REGISTER_USERNAME;
           //login menu
-        else if(command==("Delete .+"))
+        else if(command.matches("Delete .+"))
             mainCommandStatus=MainCommandStatus.DELETE_USERNAME;
-        else if (command==("Login .+"))
+        else if (command.matches("Login .+"))
             mainCommandStatus=MainCommandStatus.LOGIN_USERNAME;
         //player menu
-          else if(command==("Show Points"))
+          else if(command.matches("Show Points"))
               mainCommandStatus=MainCommandStatus.SHOW_POINTS;
-          else if (command==("View favorite games"))
+          else if (command.matches("View favorite games"))
               mainCommandStatus=MainCommandStatus.VIEW_FAVORITE_GAMES;
           else if(command==("View platobot's message"))
               mainCommandStatus=MainCommandStatus.VIEW_PLATOBOTS_MESSAGE;
@@ -131,24 +134,49 @@ public class CommandProcessor {
             String[] splitCommand =command.split(" ");
             setMainCommandStatus(command);
             if (mainMenuStatus==MainMenuStatus.RegisterMenu){
+                System.out.println("ma tu registerim gusale");
                 if(mainCommandStatus==MainCommandStatus.REGISTER_USERNAME){
                     String user=splitCommand[1].split(",")[0],password=splitCommand[1].split(",")[1];
+                    System.out.println("input gereftm");
                     if (RegisterMenu.userPassValidation(user,password)==1){
                         System.out.println(OutputHandler.showRegisterMenuOutput(1));
                         subCommandStatus=SubCommandStatus.GET_REGISTER_INFO;
                     }
                     else{
-                        System.out.println(RegisterMenu.userPassValidation(user,password));
+                        System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.userPassValidation(user,password)));
                         subCommandStatus=null;
                     }
-                    if (subCommandStatus==SubCommandStatus.GET_REGISTER_INFO){
-                        if(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2],splitCommand[3])==9)
-                            RegisterMenu.registerAccount(user,password,splitCommand[0],splitCommand[1],splitCommand[2],splitCommand[3]);
-                    }
-                    else
-                        System.out.println(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2],splitCommand[3]));
+                        if (subCommandStatus==SubCommandStatus.GET_REGISTER_INFO) {
+                            splitCommand = scanner.nextLine().split(" ");
+                            boolean isCompletedl
+                          //  while (RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3]) != 9)
 
-                }
+                                if (RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3]) == 9) {
+                                RegisterMenu.registerAccount(user, password, splitCommand[0], splitCommand[1], splitCommand[2], splitCommand[3]);
+                                System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
+                            }   else {
+                                System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
+
+                            }}
+                           /* getRegsterinfo:{
+                            if (scanner.hasNextLine()) {
+                                splitCommand = scanner.nextLine().split(" ");
+                                int r = splitCommand.length;
+                                for (int i = 0; i < r; ++i) {
+                                    System.out.println(splitCommand[i]);
+                                }
+                                if (RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3]) == 9) {
+                                    RegisterMenu.registerAccount(user, password, splitCommand[0], splitCommand[1], splitCommand[2], splitCommand[3]);
+                                    System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
+                                } else {
+                                    System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
+                                    continue getRegsterinfo;
+                                }}
+                            }
+                       */ }
+
+
+
 
             }
             else if (mainMenuStatus==MainMenuStatus.AccountMenu){
@@ -167,9 +195,9 @@ public class CommandProcessor {
                     }
                     else
                         System.out.println(LoginMenu.userIDValidation(user));
-                    if(subCommandStatus==SubCommandStatus.GET_PASSWORD){
-                        if ()
-                    }
+                   // if(subCommandStatus==SubCommandStatus.GET_PASSWORD){
+                     //   if ()
+                  //  }
 
                 }
                 else if (mainCommandStatus==MainCommandStatus.LOGIN_USERNAME){}

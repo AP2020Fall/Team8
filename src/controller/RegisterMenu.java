@@ -5,6 +5,9 @@ import model.Admin;
 import model.Player;
 import view.CommandProcessor;
 
+import java.util.Random;
+import java.util.UUID;
+
 public class RegisterMenu {
    // private Account toRegisterAccount;
     //public void register(){}
@@ -24,20 +27,21 @@ public class RegisterMenu {
     }
     //account id ro random bezar
     public static int emailAndPhoneNumberValidation(String phone,String email){
-        if(!email.matches(""))
+        if(!email.matches("\"^(.+)@(.+)$"))
             return 7;
-        else if (!phone.matches(""))
+        else if (!phone.matches("\\d{11}"))
             return 8;
         else
             return 9;
     }
     public static void registerAccount(String username,String password,String name,String lastname,String email,String phone){
+        String uniqueID = UUID.randomUUID().toString();
         if (Admin.getAdmin().isEmpty()){
-            addAdminDetails(registerAdmin(username,password),name,lastname,randomid,email,phone);
+            addAdminDetails(registerAdmin(username,password),name,lastname,uniqueID,email,phone);
         }
         else {
             Player player=registerPlayer(username,password);
-            addPlayerDetails(player,name,lastname,randomid,email,phone);
+            addPlayerDetails(player,name,lastname,uniqueID,email,phone);
             player.setPlatoAge();
         }
     }

@@ -1,7 +1,11 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Game {
+    private String name;
     private String gameId;
+    private ArrayList<Player> allOfThisGamesPlayers;
     private GamePlayer playerOne;
     private GamePlayer playerTwo;
     private GameResult playerOneResult;
@@ -9,11 +13,16 @@ public class Game {
     private boolean isFinished;
     private boolean isFavorite;
 
+    public String getName() {
+        return name;
+    }
+
     public Game(String gameId, GamePlayer playerOne, GamePlayer playerTwo) {
         this.gameId = gameId;
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
         isFinished=false;
+        //if (!allOfThisGamesPlayers.contains(pla))
     }
 
     public void setPlayerOneResult(GameResult playerOneResult) {

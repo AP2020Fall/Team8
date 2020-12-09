@@ -14,8 +14,49 @@ public class Player extends  Account {
     private ArrayList<Integer> dotsAndBoxesAndWinsCount;
     private ArrayList<Integer> reversiPlayedCounts;
     private ArrayList<Integer> dotsAndBoxesPlayedCounts;
-    private static ArrayList<Player> allPlayers;
+    private static ArrayList<Player> allPlayers=new ArrayList<>();
+    private   ArrayList<GameReq> gameReqs;
     public void addFriend(){}
+
+    public  ArrayList<GameReq> getGameReqs() {
+        return gameReqs;
+    }
+
+    public int getPoint() {
+        return point;
+    }
+
+    public ArrayList<String> getPlatoMessages() {
+        return platoMessages;
+    }
+
+    public ArrayList<String> getSuggestions() {
+        return suggestions;
+    }
+
+    public ArrayList<Request> getFriendRequest() {
+        return friendRequest;
+    }
+
+    public ArrayList<Game> getFavoriteGames() {
+        return favoriteGames;
+    }
+
+    public ArrayList<Integer> getReversiAndWinsCounts() {
+        return reversiAndWinsCounts;
+    }
+
+    public ArrayList<Integer> getDotsAndBoxesAndWinsCount() {
+        return dotsAndBoxesAndWinsCount;
+    }
+
+    public ArrayList<Integer> getReversiPlayedCounts() {
+        return reversiPlayedCounts;
+    }
+
+    public ArrayList<Integer> getDotsAndBoxesPlayedCounts() {
+        return dotsAndBoxesPlayedCounts;
+    }
 
     public static ArrayList<Player> getAllPlayers() {
         return allPlayers;

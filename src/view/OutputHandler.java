@@ -2,7 +2,14 @@ package view;
 
 public class OutputHandler {
     public void showAccountOutput(int outputNo){}
-    public void showMainMenuOutput(int outputNo){}
+    //naghes
+    public static String showPlayerMenuOutput(int outputNo){
+        if(outputNo==1)
+            return "This user does not exist";
+        else if (outputNo==2)
+            return "request is sent";
+        return null;
+    }
     public void showAdminOutput(int outputNo){}
     public void showGamesMenuOutput(int outputNo){}
     public void showReversiOutput(int outputNo){}
@@ -44,6 +51,11 @@ public class OutputHandler {
         return null;
 
     }
-    public static void showGameMenuOutput(int outputNo){}
+    //naghes
+    public static String showGameMenuOutput(int outputNo){
+        if(outputNo==1)
+            return "game request is sent";
+        return null;
+    }
 
 }
