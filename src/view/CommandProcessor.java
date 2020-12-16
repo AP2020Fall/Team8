@@ -41,24 +41,29 @@ public class CommandProcessor {
 
     }*/
     public static void setMainCommandStatus(String command) {
+         if(command.equalsIgnoreCase("View account menu")){
+            mainMenuStatus=MainMenuStatus.AccountMenu;
+        }
+
         // register menu commands
+         if(mainMenuStatus.equals(MainMenuStatus.RegisterMenu)){
           if (command.matches("Register .+,.+")){
             mainCommandStatus=MainCommandStatus.REGISTER_USERNAME;
             mainMenuStatus=MainMenuStatus.RegisterMenu;
-          }
+          }}
           //login menu
-          else if(command.equalsIgnoreCase("View account menu")){
-              mainMenuStatus=MainMenuStatus.AccountMenu;
-          }
-        else if(command.matches("Delete .+")){
+         else if(mainMenuStatus.equals(MainMenuStatus.LoginMenu)){
+
+         if(command.matches("Delete .+")){
             mainCommandStatus=MainCommandStatus.DELETE_USERNAME;
             mainMenuStatus=MainMenuStatus.LoginMenu;
         }
         else if (command.matches("Login .+")){
             mainMenuStatus=MainMenuStatus.LoginMenu;
-            mainCommandStatus=MainCommandStatus.LOGIN_USERNAME;}
+            mainCommandStatus=MainCommandStatus.LOGIN_USERNAME;}}
         //player menu
-          else if(command.matches("Show Points"))
+         else if (mainMenuStatus.equals(MainMenuStatus.PlayerMenu)){
+           if(command.matches("Show Points"))
               mainCommandStatus=MainCommandStatus.SHOW_POINTS;
           else if (command.matches("View favorite games"))
               mainCommandStatus=MainCommandStatus.VIEW_FAVORITE_GAMES;
@@ -69,10 +74,11 @@ public class CommandProcessor {
           else if (command.equals("View admin's suggestions"))
               mainCommandStatus=MainCommandStatus.VIEW_ADMINS_SUGGESTION;
           else if (command.equals("Choose suggested game"))
-              mainCommandStatus=MainCommandStatus.CHOOSE_SUGGESTED_GAME;
+              mainCommandStatus=MainCommandStatus.CHOOSE_SUGGESTED_GAME;}
           //admin
           //regex event o check bokn
-          else if (command.matches("Add event .+,.+,.+,\\d+"))
+         else if (mainMenuStatus.equals(MainMenuStatus.AdminMenu)){
+           if (command.matches("Add event .+,.+,.+,\\d+"))
               mainCommandStatus=MainCommandStatus.ADD_EVENT;
           else if (command.equals("View events"))
               mainCommandStatus=MainCommandStatus.VIEW_EVENTS;
@@ -81,12 +87,14 @@ public class CommandProcessor {
           else if (command.equals("View suggestions"))
               mainCommandStatus=MainCommandStatus.VIEW_SUGGESTIONS;
           else if (command.equals("View users"))
-              mainCommandStatus=MainCommandStatus.VIEW_USERS;
+              mainCommandStatus=MainCommandStatus.VIEW_USERS;}
           //gamesss
-          else if (command.matches("Open .+"))
-              mainCommandStatus=MainCommandStatus.OPEN_GAME;
+         else if (mainMenuStatus.equals(MainMenuStatus.GamesMenu)){
+           if (command.matches("Open .+"))
+              mainCommandStatus=MainCommandStatus.OPEN_GAME;}
           //gamee menu
-          else if (command.equals("Show scoreboard"))
+         else if (mainMenuStatus.equals(MainMenuStatus.GameMenu)){
+           if (command.equals("Show scoreboard"))
               mainCommandStatus=MainCommandStatus.SHOW_SCOREBOARD;
           else if (command.equals("Details"))
               mainCommandStatus=MainCommandStatus.DETAILS;
@@ -101,9 +109,10 @@ public class CommandProcessor {
           else if (command.equals("Run game"))
               mainCommandStatus=MainCommandStatus.RUN_GAME;
           else if (command.equals("Show points"))
-              mainCommandStatus=MainCommandStatus.SHOW_POINTS_GAME;
+              mainCommandStatus=MainCommandStatus.SHOW_POINTS_GAME;}
           //account menu
-          else if (command.equals("View account menu"))
+         else if (mainMenuStatus.equals(MainMenuStatus.AccountMenu)){
+           if (command.equals("View account menu"))
               mainCommandStatus=MainCommandStatus.ADD_FRIEND;
           else if (command.equals("View personal info"))
               mainCommandStatus=MainCommandStatus.ADD_FRIEND;
@@ -120,21 +129,87 @@ public class CommandProcessor {
           else if (command.matches("Game statistics .+"))
               mainCommandStatus=MainCommandStatus.ADD_FRIEND;
           else if (command.equals("Logout"))
-              mainCommandStatus=MainCommandStatus.ADD_FRIEND;
+              mainCommandStatus=MainCommandStatus.ADD_FRIEND;}
 
         //friends menu commands
-        else  if(command.equals("Show friends"))
+         else if (mainMenuStatus.equals(MainMenuStatus.FriendsMenu)){
+          if(command.equals("Show friends"))
             mainCommandStatus=MainCommandStatus.SHOW_FRIENDS;
         else if (command.equals("Show friend requests"))
             mainCommandStatus=MainCommandStatus.SHOW_FRIEND_REQUESTS;
         else if(command.matches("Add .+"))
-            mainCommandStatus=MainCommandStatus.ADD_FRIEND;
+            mainCommandStatus=MainCommandStatus.ADD_FRIEND;}
         //
         else if (command.equalsIgnoreCase("exit"))
             System.exit(0);
 
 
     }
+    public static void setSubCommandStatus(String command){
+        //account menu
+        if (mainCommandStatus.equals(MainCommandStatus.VIEW_PERSONAL_INFO)){
+            if (command.matches("change password .+,.+")){
+                subCommandStatus=SubCommandStatus.CHANGE_PASSWORD;
+            }
+            else if (command.matches("edit .+,.+")){
+                subCommandStatus=SubCommandStatus.EDIT_FIELD;
+            }
+            else subCommandStatus=SubCommandStatus.NO_SUB;
+        }
+        //player
+        else if (mainCommandStatus.equals(MainCommandStatus.VIEW_ADMINS_SUGGESTION)){
+            if (command.matches("Choose suggested game .+")){
+                subCommandStatus=SubCommandStatus.CHOOSE_SUGGESTED_GAME;
+            }
+            else subCommandStatus=SubCommandStatus.NO_SUB;
+        }
+
+        //admin
+        else if (mainCommandStatus.equals(MainCommandStatus.VIEW_EVENTS)) {
+            if (command.matches("Edit event .+,.+,.+")){
+                subCommandStatus=SubCommandStatus.EDIT_EVENT;
+            }
+            else if (command.matches("Remove event .+")){
+                subCommandStatus=SubCommandStatus.REMOVE_EVENT;
+            }
+            else subCommandStatus=SubCommandStatus.NO_SUB;
+        }
+        else if (mainCommandStatus.equals(MainCommandStatus.VIEW_SUGGESTIONS)){
+            if (command.matches("Remove suggestion .+")){
+                subCommandStatus=SubCommandStatus.REMOVE_SUGGESTION;
+            }
+            else subCommandStatus=SubCommandStatus.NO_SUB;
+        }
+        else if (mainCommandStatus.equals(MainCommandStatus.VIEW_USERS)){
+            if (command.matches("View user profile .+")){
+                subCommandStatus=SubCommandStatus.VIEW_USER_PROFILE;
+            }
+            else subCommandStatus=SubCommandStatus.NO_SUB;
+        }
+        //friendsMenu
+        else if (mainCommandStatus.equals(MainCommandStatus.SHOW_FRIENDS)){
+            if (command.matches("Remove .+")){
+                subCommandStatus=SubCommandStatus.REMOVE_USERNAME;
+            }
+            else if (command.matches("View user profile .+")){
+                subCommandStatus=SubCommandStatus.VIEW_USER_PROFILE;
+            }
+            else subCommandStatus=SubCommandStatus.NO_SUB;
+        }
+        else if (mainCommandStatus.equals(MainCommandStatus.SHOW_FRIEND_REQUESTS)){
+            if (command.matches("Add .+")){
+                subCommandStatus=SubCommandStatus.ADD_USERNAME;
+            }
+            else if (command.matches("Accept .+")){
+                subCommandStatus=SubCommandStatus.ACCEPT_USERNAME;
+            }
+            else if (command.matches("Decline .+")){
+                subCommandStatus=SubCommandStatus.DECLINE_USERNAME;
+            }
+            else subCommandStatus=SubCommandStatus.NO_SUB;
+        }
+    }
+
     public static void setShowReqSub(String command){
         if(command.matches("Add .+ "))
             subCommandStatus = SubCommandStatus.ADD_USERNAME;
@@ -179,28 +254,9 @@ public class CommandProcessor {
                             }   else {
                                 System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
 
-                            }}}
-                           /* getRegsterinfo:{
-                            if (scanner.hasNextLine()) {
-                                splitCommand = scanner.nextLine().split(" ");
-                                int r = splitCommand.length;
-                                for (int i = 0; i < r; ++i) {
-                                    System.out.println(splitCommand[i]);
-                                }
-                                if (RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3]) == 9) {
-                                    RegisterMenu.registerAccount(user, password, splitCommand[0], splitCommand[1], splitCommand[2], splitCommand[3]);
-                                    System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
-                                } else {
-                                    System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
-                                    continue getRegsterinfo;
-                                }}
-                            }
-                       */ }
+                            }}}}}
 
 
-
-
-            }
             else if (mainMenuStatus==MainMenuStatus.AccountMenu){
                  if(mainCommandStatus==MainCommandStatus.VIEW_PERSONAL_INFO){
                      System.out.println(AccountsMenu.viewAccountInfo());
