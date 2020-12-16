@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Admin extends Account {
-    private static ArrayList<Admin> Admin;
+    private static ArrayList<Admin> Admin=new ArrayList<>();
 
     public static ArrayList<model.Admin> getAdmin() {
         return Admin;

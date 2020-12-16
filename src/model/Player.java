@@ -1,5 +1,7 @@
 package model;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,6 +20,14 @@ public class Player extends  Account {
     private   ArrayList<GameReq> gameReqs;
     public void addFriend(){}
 
+
+    public Player getPlayerWithId(String Id){
+        for (Player player : allPlayers) {
+            if (player.getAccountID().equals(Id))
+                return player;
+        }
+        return null;
+    }
     public  ArrayList<GameReq> getGameReqs() {
         return gameReqs;
     }
@@ -79,11 +89,18 @@ public class Player extends  Account {
         allPlayers.add(this);
 
     }
+    public String statistic(){
+        int winsTotal=reversiAndWinsCounts.size()+dotsAndBoxesAndWinsCount.size();
+        long noOfDaysBetween = ChronoUnit.DAYS.between(getPlatoAge(), LocalDateTime.now());
+        return "numbers of friends:"+friends.size()+" wins count:"+winsTotal+" plato age: "+noOfDaysBetween;
+
+            }
+
 
 
     public static Player getPlayerWithUser(String username){
         for (Player player : allPlayers) {
-            if (player.getUserName()==username)
+            if (player.getUserName().equals(username))
                 return player;
         }
         return null;

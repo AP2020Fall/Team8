@@ -1,7 +1,22 @@
 package view;
 
 public class OutputHandler {
-    public void showAccountOutput(int outputNo){}
+    public String showAccountOutput(int outputNo){
+        if (outputNo==1)
+            return "your current password is wrong!";
+        else if(outputNo==2)
+            return "invalid field entered!";
+        else if(outputNo==3)
+            return"logout successfully";
+        else if (outputNo==4)
+            return "field edit successfully";
+        else if (outputNo==5)
+            return "invalid email format";
+        else  if (outputNo==6)
+            return "invalid phone number format";
+        else
+            return null;
+    }
     //naghes
     public static String showPlayerMenuOutput(int outputNo){
         if(outputNo==1)
@@ -13,7 +28,12 @@ public class OutputHandler {
     public void showAdminOutput(int outputNo){}
     public void showGamesMenuOutput(int outputNo){}
     public void showReversiOutput(int outputNo){}
-    public static void showFriendsMenuOutput(int outputNo){}
+    public static String showFriendsMenuOutput(int outputNo){
+        if (outputNo==1)
+            return "invalid user entered";
+
+
+    }
     public static String showRegisterMenuOutput(int outputNo){
         //getinfo output
         if(outputNo==1)

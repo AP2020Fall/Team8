@@ -4,6 +4,7 @@ import model.Account;
 import model.Admin;
 import model.Player;
 import view.CommandProcessor;
+import view.MainMenuStatus;
 
 import java.util.Random;
 import java.util.UUID;
@@ -26,23 +27,25 @@ public class RegisterMenu {
         return 1;
     }
     //account id ro random bezar
-    public static int emailAndPhoneNumberValidation(String phone,String email){
-        if(!email.matches("\"^(.+)@(.+)$"))
+    public static int emailAndPhoneNumberValidation(String email,String phone){
+        if(!email.matches("^.+@.+$"))
             return 7;
         else if (!phone.matches("\\d{11}"))
             return 8;
         else
             return 9;
     }
-    public static void registerAccount(String username,String password,String name,String lastname,String email,String phone){
+    public static void registerAccount(String username,String password,String name,String lastname,String email,String phone)throws NullPointerException{
         String uniqueID = UUID.randomUUID().toString();
         if (Admin.getAdmin().isEmpty()){
             addAdminDetails(registerAdmin(username,password),name,lastname,uniqueID,email,phone);
+            CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
         }
         else {
             Player player=registerPlayer(username,password);
             addPlayerDetails(player,name,lastname,uniqueID,email,phone);
             player.setPlatoAge();
+            CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
         }
     }
     public static Player registerPlayer(String username,String password){

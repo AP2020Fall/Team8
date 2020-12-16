@@ -13,7 +13,7 @@ public class Account {
     private String passWord;
     private String email;
     private String phone;
-    private static ArrayList<Account> allAccounts;
+    private static ArrayList<Account> allAccounts=new ArrayList<>();
     private LocalDateTime platoAge;
 
     public Account(String userName, String passWord) {
@@ -23,6 +23,14 @@ public class Account {
 
     public static ArrayList<Account> getAllAccounts() {
         return allAccounts;
+    }
+
+    public static Account getAccountWithId(String user) {
+        for (Account account : allAccounts) {
+            if (account.getAccountID().equalsIgnoreCase(user))
+                return account;
+        }
+        return null;
     }
 
     public void setName(String name) {
@@ -68,13 +76,6 @@ public class Account {
         return platoAge;
     }
 
-    public static Account  getAccountWithId(String id){
-        for (Account account : allAccounts) {
-            if (account.getAccountID()==id)
-                return account;
-        }
-        return null;
-    }
 
     public void setPlatoAge() {
         this.platoAge =LocalDateTime.now();
@@ -98,5 +99,17 @@ public class Account {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
+                ", accountID='" + accountID + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 }

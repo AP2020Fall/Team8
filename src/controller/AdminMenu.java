@@ -1,14 +1,19 @@
 package controller;
 
 import model.Admin;
+import model.Player;
 
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class AdminMenu {
-    private Admin admin;
+    private static Admin admin;
     public void validDate(LocalDateTime start,LocalDateTime end){
 
+    }
+
+    public static void setAdmin(Admin admin) {
+        AdminMenu.admin = admin;
     }
 
     public void processAddEvent(LocalDateTime start, LocalDateTime end, int score){}
@@ -22,6 +27,8 @@ public class AdminMenu {
     }
     public void idSugValidation(String suggestionId){}
     public void  removeSuggestion(){}
-    public void  viewUser(){}
+    public String  viewUser(){
+       return Player.getAllPlayers().toString();
+    }
 
 }
