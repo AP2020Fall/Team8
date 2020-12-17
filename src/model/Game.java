@@ -1,17 +1,19 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Game {
     private String name;
     private String gameId;
-    private ArrayList<Player> allOfThisGamesPlayers;
+    private HashMap<Player,Integer> allOfThisGamesPlayers=new HashMap<>();
     private GamePlayer playerOne;
     private GamePlayer playerTwo;
     private GameResult playerOneResult;
     private GameResult playerTwoResult;
     private boolean isFinished;
     private boolean isFavorite;
+    private String gameDetail;
 
     public String getName() {
         return name;
@@ -25,6 +27,9 @@ public class Game {
         //if (!allOfThisGamesPlayers.contains(pla))
     }
 
+    public void updateScoreboard(){
+        allOfThisGamesPlayers
+    }
     public void setPlayerOneResult(GameResult playerOneResult) {
         this.playerOneResult = playerOneResult;
     }

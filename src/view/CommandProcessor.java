@@ -2,6 +2,7 @@ package view;
 
 import controller.AccountsMenu;
 import controller.LoginMenu;
+import controller.PlayerMenu;
 import controller.RegisterMenu;
 import model.Account;
 
@@ -230,6 +231,7 @@ public class CommandProcessor {
             String command=scanner.nextLine();
             String[] splitCommand =command.split(" ");
             setMainCommandStatus(command);
+            setSubCommandStatus(command);
             if (mainMenuStatus==MainMenuStatus.RegisterMenu){
                // System.out.println("ma tu registerim gusale");
                 if(mainCommandStatus.equals(MainCommandStatus.REGISTER_USERNAME)){
@@ -260,21 +262,21 @@ public class CommandProcessor {
             else if (mainMenuStatus==MainMenuStatus.AccountMenu){
                  if(mainCommandStatus==MainCommandStatus.VIEW_PERSONAL_INFO){
                      System.out.println(AccountsMenu.viewAccountInfo());
-                     if (subCommandStatus==SubCommandStatus.CHANGE_PASSWORD){
-                         boolean isCompleted=false;
-                         while (!isCompleted){
-                             splitCommand = scanner.nextLine().split(" ");
-                             if (AccountsMenu.editField()== 9) {
-                                 RegisterMenu.registerAccount(user, password, splitCommand[0], splitCommand[1], splitCommand[2], splitCommand[3]);
-                                 System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
-                                 isCompleted=true;
-                             }   else {
-                                 System.out.println(OutputHandler.showRegisterMenuOutput(RegisterMenu.emailAndPhoneNumberValidation(splitCommand[2], splitCommand[3])));
+                     if (subCommandStatus==SubCommandStatus.EDIT_FIELD){
+                             if (AccountsMenu.editField(splitCommand[1],splitCommand[2])==2) {
+                                 AccountsMenu.editField(splitCommand[1],splitCommand[2]);
+                                 System.out.println(OutputHandler.showAccountOutput(2));
 
-                             }}
+                             }   else
+                                 System.out.println(OutputHandler.showAccountOutput(AccountsMenu.editField(splitCommand[1],splitCommand[2])));
+
                      }
-                     else if (subCommandStatus==SubCommandStatus.EDIT_FIELD){
-
+                     else if (subCommandStatus==SubCommandStatus.CHANGE_PASSWORD){
+                         if (AccountsMenu.passwordValidation(splitCommand[1],splitCommand[2])==8) {
+                             AccountsMenu.passwordValidation(splitCommand[1],splitCommand[2]);
+                             System.out.println(OutputHandler.showAccountOutput(8));
+                         }   else
+                             System.out.println(OutputHandler.showAccountOutput(AccountsMenu.editField(splitCommand[1],splitCommand[2])));
                      }
                  }
                 else if(mainCommandStatus==MainCommandStatus.VIEW_PLATO_STATISTICS){
@@ -336,12 +338,43 @@ public class CommandProcessor {
                 }
             }
             else if (mainMenuStatus==MainMenuStatus.PlayerMenu){
-                if (mainCommandStatus==MainCommandStatus.SHOW_POINTS){}
+                if (mainCommandStatus==MainCommandStatus.SHOW_POINTS){
+                    System.out.println(PlayerMenu.showPoints());
+                }
                 else if (mainCommandStatus==MainCommandStatus.VIEW_FAVORITE_GAMES){}
                 else if (mainCommandStatus==MainCommandStatus.VIEW_PLATOBOTS_MESSAGE){}
                 else if (mainCommandStatus==MainCommandStatus.VIEW_LAST_PLAYED){}
-                else if (mainCommandStatus==MainCommandStatus.VIEW_ADMINS_SUGGESTION){}
-                else if (mainCommandStatus==MainCommandStatus.ADD_FRIEND){}
+                else if (mainCommandStatus==MainCommandStatus.VIEW_ADMINS_SUGGESTION){
+                    System.out.println(PlayerMenu.viewAdminsSuggestion());
+                    if(subCommandStatus.equals(SubCommandStatus.CHOOSE_SUGGESTED_GAME)){
+                        System.out.println("enter the game name");
+                        String gameName=scanner.nextLine();
+                        if (gameName.equalsIgnoreCase("reversi"))
+                        {mainMenuStatus=MainMenuStatus.ReversiMenu;
+                        mainCommandStatus=MainCommandStatus.NO_MAIN_COM;
+                        subCommandStatus=SubCommandStatus.NO_SUB;
+                        }
+                        else if(gameName.equalsIgnoreCase("dots and boxes")){
+                            mainMenuStatus=MainMenuStatus.DBMENU;
+                            mainCommandStatus=MainCommandStatus.NO_MAIN_COM;
+                            subCommandStatus=SubCommandStatus.NO_SUB;
+                        }
+                    }
+                }
+                else if (mainCommandStatus==MainCommandStatus.ADD_FRIEND){
+                    System.out.println("enter ID");
+                    boolean isCompleted=false;
+                    while (!isCompleted){
+                        splitCommand = scanner.nextLine().split(" ");
+                        if (PlayerMenu.friendUserValidation(splitCommand[0]) == 2) {
+                            PlayerMenu.friendUserValidation(splitCommand[0]);
+                            System.out.println(OutputHandler.showPlayerMenuOutput(2));
+                            isCompleted=true;
+                        }   else {
+                            System.out.println(OutputHandler.showPlayerMenuOutput(PlayerMenu.friendUserValidation(splitCommand[0])));
+
+                        }}
+                }
             }
             else if (mainMenuStatus==MainMenuStatus.AdminMenu){
                 if (mainCommandStatus==MainCommandStatus.ADD_EVENT){}

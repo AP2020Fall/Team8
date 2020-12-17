@@ -30,7 +30,7 @@ public class LoginMenu {
         }
         else{
             CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
-            PlayerMenu.setPlayer
+            PlayerMenu.setPlayer(Player.getPlayerWithUser(id));
         }
     }
 }

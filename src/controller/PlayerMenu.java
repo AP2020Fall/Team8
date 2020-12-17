@@ -12,10 +12,10 @@ public class PlayerMenu {
         PlayerMenu.player = player;
     }
 
-    public String showPoints(){
+    public static String showPoints(){
         return String.valueOf(player.getPoint()) ;
     }
-    public StringBuilder viewFavoriteGames(){
+    public static StringBuilder viewFavoriteGames(){
         StringBuilder favGames=new StringBuilder();
         for (Game game : player.getFavoriteGames()) {
             favGames.append(game.getName()+"  ");
@@ -24,31 +24,28 @@ public class PlayerMenu {
 
     }
     //hame view ha miran tu khode view fuck u
-    public String  viewPlatobotsMessage(){
+    public static String  viewPlatobotsMessage(){
         return player.getPlatoMessages().toString();
     }
-    public String viewLastPlayed(){
+    public static String viewLastPlayed(){
         return
     }
-    public String  viewAdminsSuggestion(){
+    public static String  viewAdminsSuggestion(){
         return player.getSuggestions().toString();
     }
-    public void chooseSuggestedGame(){}
-    public int usernameValidation(String user){
-        if (Player.getAllPlayers().contains(Player.getPlayerWithUser(user)))
-            return 8976;
-        else
-            return 1;
-    }
-    public void addFriend(String username){
+    public static void chooseSuggestedGame(){}
+    public static void addFriend(String username){
         Request request=new Request(player,Player.getPlayerWithUser(username));
         request.setPending(true);
     }
-    public int friendUserValidation(String ID){
+    public static int friendUserValidation(String ID){
         if (!Player.getAllAccounts().contains(Player.getPlayerWithUser(ID))){
             return 1;
         }
-        return 98767;
+        else {
+            addFriend(ID);
+            return 2;
+        }
     }
 
 }

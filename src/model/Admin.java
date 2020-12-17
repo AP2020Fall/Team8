@@ -23,7 +23,9 @@ public class Admin extends Account {
     public void setPhone(String phone) {
         super.setPhone(phone);
     }
-    public void addEvent(){}
+    public void addEvent(){
+        Event event=new Event()
+    }
     public void addSuggestions(){}
     public void removeSuggestion(){}
 

@@ -1,6 +1,7 @@
 package view;
 
 public enum  MainCommandStatus {
+    NO_MAIN_COM,
     //account menu
     VIEW_ACCOUNT_MENU,VIEW_PERSONAL_INFO,VIEW_PLATO_STATISTICS,GAMES_HISTORY,GAMES_STATISTICS,LOGOUT,
     // main menu

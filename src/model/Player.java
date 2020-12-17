@@ -12,10 +12,10 @@ public class Player extends  Account {
     private  ArrayList<Player> friends;
     private  ArrayList<Request> friendRequest;
     private ArrayList<Game> favoriteGames;
-    private ArrayList<Integer> reversiAndWinsCounts;
-    private ArrayList<Integer> dotsAndBoxesAndWinsCount;
-    private ArrayList<Integer> reversiPlayedCounts;
-    private ArrayList<Integer> dotsAndBoxesPlayedCounts;
+    private int reversiAndWinsCounts;
+    private int dotsAndBoxesAndWinsCount;
+    private int reversiPlayedCounts;
+    private int dotsAndBoxesPlayedCounts;
     private static ArrayList<Player> allPlayers=new ArrayList<>();
     private   ArrayList<GameReq> gameReqs;
     public void addFriend(){}

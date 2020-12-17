@@ -1,5 +1,5 @@
 package view;
 
 public enum MainMenuStatus {
-    AccountMenu,AdminMenu,PlayerMenu,GamesMenu,FriendsMenu,RegisterMenu,LoginMenu,GameMenu
+    AccountMenu,AdminMenu,PlayerMenu,GamesMenu,FriendsMenu,RegisterMenu,LoginMenu,GameMenu,ReversiMenu,DBMENU
 }

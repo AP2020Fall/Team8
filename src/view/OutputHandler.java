@@ -1,7 +1,7 @@
 package view;
 
 public class OutputHandler {
-    public String showAccountOutput(int outputNo){
+    public static String showAccountOutput(int outputNo){
         if (outputNo==1)
             return "your current password is wrong!";
         else if(outputNo==2)
@@ -14,8 +14,12 @@ public class OutputHandler {
             return "invalid email format";
         else  if (outputNo==6)
             return "invalid phone number format";
+        else if(outputNo==7)
+            return "password length must be between 8-26";
+        else if (outputNo==8)
+            return "password changed successfully";
         else
-            return null;
+            return "piouiupouiu";
     }
     //naghes
     public static String showPlayerMenuOutput(int outputNo){

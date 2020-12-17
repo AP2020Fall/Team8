@@ -14,14 +14,20 @@ public class AccountsMenu {
     public static void changePassWord(String password){
         account.setPassWord(password);
     }
-    public static int passwordValidation(String password){
-
-
+    public static int passwordValidation(String oldPassword,String newPass){
+        if (!account.getPassWord().equals(oldPassword))   {
+            return 1;
+        }
+        else if (newPass.length()<8||newPass.length()>26)
+            return 7;
+        else{
+            changePassWord(newPass);
+            return 8;
+        }
     }
 
 
     public static int editField(String field,String value){
-        if ()
         if (field.equalsIgnoreCase("name")){
             account.setName(value);
             return 4;
