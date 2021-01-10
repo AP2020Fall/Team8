@@ -1,15 +1,23 @@
 package model;
 
+//import java.awt.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class ReversiPlayer extends GamePlayer {
-    private Color color ;
-    private ArrayList<Player> allplayers ;
-    private int wins , draws , looses ;
-    private ArrayList<Reversi> Gamesplayed;
-    private int username ;
-    private int turnParity ;
+public class ReversiPlayer {
+    private Color color;
+    private static ArrayList<ReversiPlayer> allplayers = new ArrayList<>();
+    private int username;
+    private int playerNum;
+    private boolean hasMadeMove ;
+
+    public ReversiPlayer(int username){
+        this.username = username;
+        allplayers.add(this);
+    }
+    public boolean hasmadeMove(){
+        return hasMadeMove;
+    }
 
     public Color getColor() {
         return color;
@@ -19,51 +27,27 @@ public class ReversiPlayer extends GamePlayer {
         this.color = color;
     }
 
-    public int getWins() {
-        return wins;
+    public static ReversiPlayer getPlayerByUsername(int pUsername) {
+        for (ReversiPlayer allplayer : allplayers) {
+            if (allplayer.getUsername() == pUsername)
+                return allplayer;
+        }
+        return null;
     }
 
-    public int getDraws() {
-        return draws;
+    public void setHasMadeMove(boolean hasMadeMove) {
+        this.hasMadeMove = hasMadeMove;
     }
 
-    public int getLooses() {
-        return looses;
+    public int getPlayerNum() {
+        return playerNum;
     }
 
-    public ArrayList<Reversi> getGamesPlayed() {
-        return Gamesplayed;
-    }
-
-    public ArrayList<Player> getAllPlayers() {
-        return allplayers;
+    public void setPlayerNum(int playerNum) {
+        this.playerNum = playerNum;
     }
 
     public int getUsername() {
         return username;
     }
-
-    public void setUsername(int username) {
-        this.username = username;
-    }
-  //  public static Player getPlayerByUsername(int username){    }
-    public int getTurnParity() {
-        return turnParity;
-    }
-
-    @Override
-    public void increaseScore() {
-
-    }
-
-    @Override
-    public void endTurn() {
-
-    }
-
-    public ReversiPlayer(Player player) {
-        super(player);
-    }
-
 }
-

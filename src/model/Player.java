@@ -4,20 +4,22 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Player extends  Account {
     private int point;
     private  ArrayList<String> platoMessages;
-    private ArrayList<String> suggestions;
+    private Set<Suggestion> suggestions;
     private  ArrayList<Player> friends;
-    private  ArrayList<Request> friendRequest;
-    private ArrayList<Game> favoriteGames;
-    private int reversiAndWinsCounts;
-    private int dotsAndBoxesAndWinsCount;
-    private int reversiPlayedCounts;
-    private int dotsAndBoxesPlayedCounts;
+    private  ArrayList<Player> friendRequest;
+    private Set<String> favoriteGames;
+    private int reversiAndWinsCounts=0;
+    private int dotsAndBoxesAndWinsCount=0;
+    private int reversiPlayedCounts=0;
+    private int dotsAndBoxesPlayedCounts=0;
     private static ArrayList<Player> allPlayers=new ArrayList<>();
-    private   ArrayList<GameReq> gameReqs;
+    private  ArrayList<GameReq> gameReqs;
     public void addFriend(){}
 
 
@@ -40,31 +42,32 @@ public class Player extends  Account {
         return platoMessages;
     }
 
-    public ArrayList<String> getSuggestions() {
-        return suggestions;
-    }
 
-    public ArrayList<Request> getFriendRequest() {
+    public ArrayList<Player> getFriendRequest() {
         return friendRequest;
     }
 
-    public ArrayList<Game> getFavoriteGames() {
+    public Set<Suggestion> getSuggestions() {
+        return suggestions;
+    }
+
+    public Set<String> getFavoriteGames() {
         return favoriteGames;
     }
 
-    public ArrayList<Integer> getReversiAndWinsCounts() {
+    public int getReversiAndWinsCounts() {
         return reversiAndWinsCounts;
     }
 
-    public ArrayList<Integer> getDotsAndBoxesAndWinsCount() {
+    public int getDotsAndBoxesAndWinsCount() {
         return dotsAndBoxesAndWinsCount;
     }
 
-    public ArrayList<Integer> getReversiPlayedCounts() {
+    public int getReversiPlayedCounts() {
         return reversiPlayedCounts;
     }
 
-    public ArrayList<Integer> getDotsAndBoxesPlayedCounts() {
+    public int getDotsAndBoxesPlayedCounts() {
         return dotsAndBoxesPlayedCounts;
     }
 
@@ -78,19 +81,15 @@ public class Player extends  Account {
 
     public Player(String username, String password) {
         super(username,password);
-        suggestions=new ArrayList<>();
-        favoriteGames=new ArrayList<>();
+        suggestions=new LinkedHashSet<>();
+        favoriteGames=new LinkedHashSet<String>();
         friendRequest=new ArrayList<>();
         friends=new ArrayList<>();
-        reversiAndWinsCounts=new ArrayList<>();
-        reversiPlayedCounts=new ArrayList<>();
-        dotsAndBoxesAndWinsCount=new ArrayList<>();
-        dotsAndBoxesPlayedCounts=new ArrayList<>();
         allPlayers.add(this);
 
     }
     public String statistic(){
-        int winsTotal=reversiAndWinsCounts.size()+dotsAndBoxesAndWinsCount.size();
+        int winsTotal=reversiAndWinsCounts+dotsAndBoxesAndWinsCount;
         long noOfDaysBetween = ChronoUnit.DAYS.between(getPlatoAge(), LocalDateTime.now());
         return "numbers of friends:"+friends.size()+" wins count:"+winsTotal+" plato age: "+noOfDaysBetween;
 

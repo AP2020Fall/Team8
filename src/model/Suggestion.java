@@ -5,19 +5,38 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Suggestion {
-    private  Game suggestedGame;
+    private  String suggestedGame;
     private LocalDateTime dateOfSuggestion;
     private String suggestionId;
-    private ArrayList<Suggestion> allSugs;
+    private static ArrayList<Suggestion> allSugs;
 
-    public Suggestion(Game suggestedGame, LocalDateTime dateOfSuggestion, String suggestionId) {
+    public Suggestion(String suggestedGame, LocalDateTime dateOfSuggestion, String suggestionId) {
         this.suggestedGame = suggestedGame;
         this.dateOfSuggestion = dateOfSuggestion;
         this.suggestionId = suggestionId;
         allSugs.add(this);
     }
 
-    public void setSuggestedGame(Game suggestedGame) {
+    public String getSuggestionId() {
+        return suggestionId;
+    }
+
+    public String getSuggestedGame() {
+        return suggestedGame;
+    }
+
+    public static ArrayList<Suggestion> getAllSugs() {
+        return allSugs;
+    }
+
+    public static Suggestion getSugwithId(String idSug){
+        for (Suggestion sug : allSugs) {
+            if (sug.getSuggestionId().equals(idSug))
+                return sug;
+        }
+        return null;
+    }
+    public void setSuggestedGame(String suggestedGame) {
         this.suggestedGame = suggestedGame;
     }
 

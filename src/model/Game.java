@@ -2,10 +2,13 @@ package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Game {
     private String name;
     private String gameId;
+    private static Set<Game> allGames=new LinkedHashSet<>();
     private HashMap<Player,Integer> allOfThisGamesPlayers=new HashMap<>();
     private GamePlayer playerOne;
     private GamePlayer playerTwo;
@@ -15,8 +18,76 @@ public class Game {
     private boolean isFavorite;
     private String gameDetail;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGameId(String gameId) {
+        this.gameId = gameId;
+    }
+
+    public void setPlayerOne(GamePlayer playerOne) {
+        this.playerOne = playerOne;
+    }
+
+    public void setPlayerTwo(GamePlayer playerTwo) {
+        this.playerTwo = playerTwo;
+    }
+
+    public void setFinished(boolean finished) {
+        isFinished = finished;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public void setGameDetail(String gameDetail) {
+        this.gameDetail = gameDetail;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public String getGameId() {
+        return gameId;
+    }
+
+    public Set<Game> getAllGames() {
+        return allGames;
+    }
+
+    public HashMap<Player, Integer> getAllOfThisGamesPlayers() {
+        return allOfThisGamesPlayers;
+    }
+
+    public GamePlayer getPlayerOne() {
+        return playerOne;
+    }
+
+    public GamePlayer getPlayerTwo() {
+        return playerTwo;
+    }
+
+    public GameResult getPlayerOneResult() {
+        return playerOneResult;
+    }
+
+    public GameResult getPlayerTwoResult() {
+        return playerTwoResult;
+    }
+
+    public boolean isFinished() {
+        return isFinished;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public String getGameDetail() {
+        return gameDetail;
     }
 
     public Game(String gameId, GamePlayer playerOne, GamePlayer playerTwo) {
@@ -26,9 +97,17 @@ public class Game {
         isFinished=false;
         //if (!allOfThisGamesPlayers.contains(pla))
     }
+    public static Game getGameWithName(String gameName){
+        for (Game game : allGames) {
+            if (game.getName().equalsIgnoreCase(gameName))
+                return game;
+        }
+        return null;
+    }
 
-    public void updateScoreboard(){
-        allOfThisGamesPlayers
+    public void updateScoreboard(Player player,int score){
+        int preScore=allOfThisGamesPlayers.get(player);
+        allOfThisGamesPlayers.replace(player,preScore+score);
     }
     public void setPlayerOneResult(GameResult playerOneResult) {
         this.playerOneResult = playerOneResult;

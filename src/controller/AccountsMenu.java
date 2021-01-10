@@ -60,10 +60,12 @@ public class AccountsMenu {
     }
     public static String viewPlatoStatistics(){
         if (account instanceof Player){
-            account.ge
+
         }
         else
-            return "your not a player";
+        return "your not a player";
+
+        return null;
     }
 
     public static void setAccount(Account account) {

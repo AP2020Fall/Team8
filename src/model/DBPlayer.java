@@ -8,8 +8,15 @@ public class DBPlayer extends GamePlayer {
     }
 
     private ArrayList<Player> players = new ArrayList<Player>();
-
+    private int currentScore;
     public boolean isMyTurn;
+
+    public void setMyTurn(boolean myTurn) {
+        isMyTurn = myTurn;
+    }
+    public void move(){
+
+    }
 
     public void getPlayer(){}
 

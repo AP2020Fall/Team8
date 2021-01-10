@@ -35,6 +35,8 @@ public class OutputHandler {
     public static String showFriendsMenuOutput(int outputNo){
         if (outputNo==1)
             return "invalid user entered";
+        else
+            return "lalalalala";
 
 
     }

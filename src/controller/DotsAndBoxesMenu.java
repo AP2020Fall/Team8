@@ -18,4 +18,9 @@ public class DotsAndBoxesMenu extends GameMenu {
     public   void processShowResult(){}
 
     public void processShowScore(){}
+
+    @Override
+    public void runGame() {
+
+    }
 }

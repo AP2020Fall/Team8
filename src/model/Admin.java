@@ -1,6 +1,8 @@
 package model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Admin extends Account {
     private static ArrayList<Admin> Admin=new ArrayList<>();
@@ -23,8 +25,8 @@ public class Admin extends Account {
     public void setPhone(String phone) {
         super.setPhone(phone);
     }
-    public void addEvent(){
-        Event event=new Event()
+    public void addEvent(LocalDateTime start,LocalDateTime end,String gameName,int score){
+        Event event=new Event( UUID.randomUUID().toString(),gameName,start,end,score);
     }
     public void addSuggestions(){}
     public void removeSuggestion(){}
