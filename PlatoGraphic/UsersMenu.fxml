@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="515.0" fitWidth="622.0" layoutX="-8.0" layoutY="-7.0">
+            <image>
+                <Image url="@background/paszamine_com_1687_Full_HD.jpg" />
+            </image>
+        </ImageView>
+        <ListView fx:id="UsersMenuList" layoutX="173.0" layoutY="125.0" prefHeight="251.0" prefWidth="261.0" />
+        <Label layoutX="221.0" layoutY="54.0" text="User's Menu">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>
