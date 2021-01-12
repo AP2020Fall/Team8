@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.Games">
     <children>
         <ImageView fitHeight="515.0" fitWidth="624.0" layoutX="-8.0" layoutY="-9.0">
             <image>
                 <Image url="@background/paszamine_com_1617_1280×1024.jpg" />
             </image>
         </ImageView>
-        <Label layoutX="259.0" layoutY="46.0" text="Games" textFill="WHITE">
+        <Label layoutX="259.0" layoutY="46.0" text="controller.GraphicController.Games" textFill="WHITE">
             <font>
                 <Font size="30.0" />
             </font>

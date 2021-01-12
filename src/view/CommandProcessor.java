@@ -125,7 +125,7 @@ public class CommandProcessor {
           }
           else if (command.equals("View plato statistics"))
               mainCommandStatus=MainCommandStatus.ADD_FRIEND;
-          else if (command.equals("Games history"))
+          else if (command.equals("controller.GraphicController.Games history"))
               mainCommandStatus=MainCommandStatus.ADD_FRIEND;
           else if (command.matches("Game statistics .+"))
               mainCommandStatus=MainCommandStatus.ADD_FRIEND;
