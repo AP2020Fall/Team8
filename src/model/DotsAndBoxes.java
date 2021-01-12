@@ -21,6 +21,9 @@ import java.security.PublicKey;
 import java.util.ArrayList;
 
 public class DbGameMenu {
+    private  ArrayList<Line> ra11=new ArrayList<>();
+    ...
+    private ArrayList<Line> ra77=new ArrayList<>();
     public Line vl77;
     public Line vl72;
     public Line vl82;
@@ -327,11 +330,15 @@ public class DbGameMenu {
                         hl11.setVisible(true);
                         //baraye rang
                         hl11;
+                        //in mishe voice jadide ke ezafe kardam
+                        ra11.add(hl11);
 
                     }
                     else if (firstCircle.getCenterX()==29&&firstCircle.getCenterY()==73){
                         sc21.setVisible(true);
                         vl21.setVisible(true);
+                        //in mishe voice jadide ke ezafe kardam
+                        ra11.add(vl21);
                     }
                     else{
                         alertMessage.setText("invalid move");
