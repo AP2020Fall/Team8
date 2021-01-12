@@ -39,13 +39,13 @@ public class RegisterMenu {
         String uniqueID = UUID.randomUUID().toString();
         if (Admin.getAdmin().isEmpty()){
             addAdminDetails(registerAdmin(username,password),name,lastname,uniqueID,email,phone);
-            CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
+          //  CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
         }
         else {
             Player player=registerPlayer(username,password);
             addPlayerDetails(player,name,lastname,uniqueID,email,phone);
             player.setPlatoAge();
-            CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
+            //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
         }
     }
     public static Player registerPlayer(String username,String password){

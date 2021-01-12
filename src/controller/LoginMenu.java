@@ -22,15 +22,16 @@ public class LoginMenu {
 
 
     }
-    public void setLoginAccount(String id){
+    public void login(String id){
         if (Admin.getAdmin().contains(Admin.getAccountWithId(id))){
-            CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
+       //     CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
             AdminMenu.setAdmin(Admin.getAdmin().get(0));
             AccountsMenu.setAccount(Admin.getAdmin().get(0));
         }
         else{
-            CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
+            //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
             PlayerMenu.setPlayer(Player.getPlayerWithUser(id));
+            AccountsMenu.setAccount(Player.getPlayerWithUser(id));
         }
     }
 }
