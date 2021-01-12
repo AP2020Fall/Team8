@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.RegisterMenuFx">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="485.0" layoutX="-1.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#ff1f7b" />
+                        <Stop color="#1030de" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <Text layoutX="263.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RegisterMenu" wrappingWidth="73.6640625">
+            <font>
+                <Font name="Arial terminal one" size="20.0" />
+            </font>
+        </Text>
+        <Label layoutX="143.0" layoutY="115.0" text="UserName:" />
+        <Label layoutX="143.0" layoutY="155.0" text="Password:" />
+        <Label layoutX="152.0" layoutY="199.0" text="Name:" />
+        <Label layoutX="144.0" layoutY="238.0" text="LastName:" />
+        <Label layoutX="156.0" layoutY="286.0" text="Email:" />
+        <Label layoutX="114.0" layoutY="339.0" text="Phon Number:" />
+        <TextField fx:id="userTFReg" layoutX="211.0" layoutY="111.0" />
+        <PasswordField fx:id="passPFReg" layoutX="211.0" layoutY="151.0" />
+        <TextField fx:id="nameTFReg" layoutX="211.0" layoutY="195.0" />
+        <TextField fx:id="lastnameTFReg" layoutX="211.0" layoutY="234.0" />
+        <TextField fx:id="emailTFReg" layoutX="211.0" layoutY="282.0" />
+        <TextField fx:id="phoneTFReg" layoutX="211.0" layoutY="335.0" />
+        <Button fx:id="registerB" layoutX="435.0" layoutY="386.0" mnemonicParsing="false" onAction="#register" text="Register " />
+        <Label fx:id="alertReg" layoutX="205.0" layoutY="399.0" prefHeight="25.0" prefWidth="161.0" textFill="#f30b0b" />
+        <ImageView fx:id="exitReg" fitHeight="81.0" fitWidth="85.0" layoutX="501.0" layoutY="97.0" onContextMenuRequested="#processExit" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="backReg" fitHeight="81.0" fitWidth="77.0" layoutX="512.0" layoutY="200.0" onContextMenuRequested="#processBack" pickOnBounds="true" preserveRatio="true" />
+    </children>
+
+</Pane>

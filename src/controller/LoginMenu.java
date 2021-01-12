@@ -3,8 +3,6 @@ package controller;
 import model.Account;
 import model.Admin;
 import model.Player;
-import view.CommandProcessor;
-import view.MainMenuStatus;
 
 public class LoginMenu {
     public static void deleteUserName(String user){

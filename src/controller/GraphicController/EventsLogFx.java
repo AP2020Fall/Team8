@@ -2,6 +2,6 @@ package controller.GraphicController;
 
 import javafx.scene.control.ListView;
 
-public class ShowFavoriteGames {
-    public ListView ShowFavoriteGamesList;
+public class EventsLogFx {
+    public ListView EventsLogList;
 }

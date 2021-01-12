@@ -12,28 +12,35 @@ import java.util.UUID;
 public class RegisterMenu {
    // private Account toRegisterAccount;
     //public void register(){}
-    public static int userPassValidation(String username,String password) {
+    private static int num;
+
+    public static int getNum() {
+        return num;
+    }
+
+    public static void userPassValidation(String username, String password) {
         if (Player.getAllPlayers().contains(Player.getPlayerWithUser(username))){
-            CommandProcessor.setOutput(2);
-            return 2;
+           // CommandProcessor.setOutput(2);
+            num= 2;
         }
         else if (password.length() < 9) {
-            CommandProcessor.setOutput(3);
-            return 3;
+            //CommandProcessor.setOutput(3);
+            num= 3;
         } else if (password.length() > 26){
-            CommandProcessor.setOutput(4);
-            return 4;
+          //  CommandProcessor.setOutput(4);
+            num= 4;
     }
-        return 1;
+        //user and password are right
+        num= 1;
     }
     //account id ro random bezar
-    public static int emailAndPhoneNumberValidation(String email,String phone){
+    public static void emailAndPhoneNumberValidation(String email,String phone){
         if(!email.matches("^.+@.+$"))
-            return 7;
+            num= 7;
         else if (!phone.matches("\\d{11}"))
-            return 8;
-        else
-            return 9;
+            num= 8;
+        else if(num==1)
+            num= 9;
     }
     public static void registerAccount(String username,String password,String name,String lastname,String email,String phone)throws NullPointerException{
         String uniqueID = UUID.randomUUID().toString();
