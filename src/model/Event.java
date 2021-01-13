@@ -12,6 +12,22 @@ public class Event {
     private  LocalDateTime endOfGame;
     private int eventScore;
 
+    public String getGameName() {
+        return gameName;
+    }
+
+    public LocalDateTime getStartOfGame() {
+        return startOfGame;
+    }
+
+    public LocalDateTime getEndOfGame() {
+        return endOfGame;
+    }
+
+    public int getEventScore() {
+        return eventScore;
+    }
+
     public Event(String eventId, String gameName, LocalDateTime startOfGame, LocalDateTime endOfGame, int eventScore) {
         this.eventId = eventId;
         this.gameName = gameName;

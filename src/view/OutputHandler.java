@@ -42,10 +42,8 @@ public class OutputHandler {
     }
     public static String showRegisterMenuOutput(int outputNo){
         //getinfo output
-        if(outputNo==1)
-            return "in order enter your name,lastName,email and phone number with space";
         //error output
-        else if (outputNo==2)
+         if (outputNo==2)
             return "this username  has already exist";
         else if (outputNo==3)
             return "password length must be more than 8!";
@@ -72,8 +70,7 @@ public class OutputHandler {
             return "There is no account with this username";
         else if (outputNo==3)
             return "Wrong password";
-        else if (outputNo==4)
-            return "enter password";
+
         return null;
 
     }

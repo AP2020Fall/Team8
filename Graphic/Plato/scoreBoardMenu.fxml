@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.ScoreBoardMenuFx">
     <children>
         <ImageView fitHeight="515.0" fitWidth="622.0" layoutX="-8.0" layoutY="-7.0">
             <image>
                 <Image url="@background/paszamine_com_1687_Full_HD.jpg" />
             </image>
         </ImageView>
-        <ListView fx:id="SuggestionsMenuList" layoutX="173.0" layoutY="125.0" prefHeight="251.0" prefWidth="261.0" />
-        <Label layoutX="181.0" layoutY="56.0" text="Suggestions Menu">
+        <ListView fx:id="ScoreBoardMenuList" layoutX="173.0" layoutY="118.0" prefHeight="251.0" prefWidth="261.0" />
+        <Label layoutX="181.0" layoutY="56.0" text="ScoreBoard Menu">
             <font>
                 <Font size="30.0" />
             </font>

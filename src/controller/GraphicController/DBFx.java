@@ -1,4 +1,5 @@
-package model;
+package controller.GraphicController;
+
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import jdk.jfr.Event;
+import model.DBPlayer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -260,7 +262,7 @@ public class DbGameMenu {
     private ArrayList<Circle> selectedC=new ArrayList<>();
     private boolean isSecondCircle=false;
     private DBPlayer firstPlayer;
-    private DbGameMenu secondPlayer;
+    private model.DbGameMenu secondPlayer;
     private int firstPlayerScore;
     private int secondPlayerScore;
     private boolean isFirstPlayerTurn;

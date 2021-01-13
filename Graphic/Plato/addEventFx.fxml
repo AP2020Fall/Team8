@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="482.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.AddEventFx">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="499.0" layoutX="-2.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="391.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.11999999731779099" blue="0.11999999731779099" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.06943091005086899" green="0.9780701994895935" blue="0.6751904487609863" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text layoutX="120.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create event">
+         <font>
+            <Font name="Arial terminal one" size="26.0" />
+         </font>
+      </Text>
+      <Label layoutX="67.0" layoutY="121.0" text="Game:">
+         <font>
+            <Font name="Arial terminal one" size="15.0" />
+         </font></Label>
+      <Label layoutX="46.0" layoutY="176.0" text="Date of Start:">
+         <font>
+            <Font name="Arial terminal one" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="234.0" text="Date of End:">
+         <font>
+            <Font name="Arial terminal one" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="300.0" text="Event Score:">
+         <font>
+            <Font name="Arial terminal one" size="16.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="gameMenuB" layoutX="147.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Game">
+        <items>
+          <MenuItem fx:id="reversiItem" mnemonicParsing="false" text="Reversi" />
+          <MenuItem fx:id="DBItems" mnemonicParsing="false" text="DotsAndBoxes" />
+        </items>
+         <font>
+            <Font name="Arial terminal one" size="12.0" />
+         </font>
+      </MenuButton>
+      <TextField fx:id="startDateAddEventTF" layoutX="147.0" layoutY="174.0" />
+      <TextField fx:id="endDateAddEventTF" layoutX="147.0" layoutY="232.0" />
+      <TextField fx:id="eventScoreTF" layoutX="147.0" layoutY="298.0" />
+      <Button fx:id="createEventB" layoutX="296.0" layoutY="411.0" mnemonicParsing="false" onAction="#addEvent" text="Create" />
+      <Label fx:id="alertCreateEvent" layoutX="179.0" layoutY="350.0" prefHeight="44.0" prefWidth="75.0" textFill="#d81111" />
+   </children>
+</AnchorPane>

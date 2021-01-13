@@ -1,9 +1,6 @@
 package controller;
 
-import model.Account;
-import model.Game;
 import model.Player;
-import model.Request;
 
 public class PlayerMenu {
     private static Player player;

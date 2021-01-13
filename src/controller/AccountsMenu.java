@@ -3,7 +3,6 @@ package controller;
 import model.Account;
 import model.Player;
 import view.CommandProcessor;
-import view.MainMenuStatus;
 
 public class AccountsMenu {
     private static Account account;

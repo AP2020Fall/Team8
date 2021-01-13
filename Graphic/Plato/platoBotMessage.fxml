@@ -7,19 +7,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EventsLog">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.PlatoBotMessageFx">
     <children>
         <ImageView fitHeight="514.0" fitWidth="625.0" layoutX="-7.0" layoutY="-8.0">
             <image>
                 <Image url="@background/paszamine_com_1677_Full_HD.png" />
             </image>
         </ImageView>
-        <Label layoutX="251.0" layoutY="59.0" text="Events Log" textFill="WHITE">
+        <Label layoutX="207.0" layoutY="63.0" text="PlatoBot Message" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="30.0" />
             </font>
         </Label>
-        <ListView fx:id="EventsLogList" layoutX="184.0" layoutY="155.0" prefHeight="231.0" prefWidth="265.0" />
+        <ListView fx:id="PlatoBotMessageList" layoutX="184.0" layoutY="155.0" prefHeight="231.0" prefWidth="265.0" />
     </children>
 </Pane>
