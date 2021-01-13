@@ -7,15 +7,23 @@ import java.util.UUID;
 
 public class AdminMenu {
     private static Admin admin;
-    public void validDate(LocalDateTime start,LocalDateTime end){
-
+    public static String validation(LocalDateTime start,LocalDateTime end,String score){
+        if (!start.isBefore(end))
+            return "start of the date must be before end";
+        else if(start.isBefore(LocalDateTime.now()))
+            return "start of the date must be after now";
+        else if(end.isBefore(LocalDateTime.now()))
+            return "end of the date must be after now";
+        else if (!score.matches("\\d+"))
+            return "you must enter a number!!";
+return null;
     }
 
     public static void setAdmin(Admin admin) {
         AdminMenu.admin = admin;
     }
 
-    public void processAddEvent(LocalDateTime start, LocalDateTime end, int score,String gameName){
+    public static void processAddEvent(LocalDateTime start, LocalDateTime end, int score,String gameName){
         Event event=new Event(UUID.randomUUID().toString(),gameName,start,end,score);
 
     }
