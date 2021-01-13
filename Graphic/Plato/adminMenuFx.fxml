@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.GraphicController.AdminMenuFx"
-            prefHeight="400.0" prefWidth="600.0">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.AdminMenuFx">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="518.0" layoutX="-3.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="559.0">
+            <fill>
+                <RadialGradient centerX="0.5" centerY="0.5" radius="0.4612403248631677">
+                    <stops>
+                        <Stop color="#0e1ae8a3" />
+                        <Stop color="#09e082" offset="1.0" />
+                    </stops>
+                </RadialGradient>
+            </fill>
+        </Rectangle>
+        <Text layoutX="218.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AdminMenu" textAlignment="CENTER">
+            <font>
+                <Font name="Arial terminal one" size="25.0" />
+            </font>
+        </Text>
+        <Button fx:id="addEventB" layoutX="66.0" layoutY="338.0" mnemonicParsing="false" onAction="#loadAddEvent" prefHeight="62.0" prefWidth="152.0" text="Add Event" />
+        <Button fx:id="viewEventB" layoutX="372.0" layoutY="338.0" mnemonicParsing="false" onAction="#loadViewEvent" prefHeight="62.0" prefWidth="152.0" text="View Events" />
+        <Button fx:id="addSugB" layoutX="56.0" layoutY="152.0" mnemonicParsing="false" onAction="#loadAddSug" prefHeight="62.0" prefWidth="152.0" text="Suggestions" />
+        <Button fx:id="viewUserAdminB" layoutX="362.0" layoutY="152.0" mnemonicParsing="false" onAction="#loadUsers" prefHeight="62.0" prefWidth="162.0" text="View Users" />
+    </children>
 
-</AnchorPane>
+</Pane>
