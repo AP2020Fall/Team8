@@ -5,12 +5,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import model.Account;
 import view.Main;
 
+import java.io.IOException;
 import java.util.Objects;
 
-public class firstMenuFx {
-    public void loadMain(ActionEvent actionEvent) {
+public class FirstMenuFx {
+    public static Account getLoginAccount() {
+        return loginAccount;
+    }
+
+    public static Account loginAccount;
+    public void loadMain(ActionEvent actionEvent) throws IOException {
          Parent root = FXMLLoader.load(Objects.requireNonNull(RegisterMenu.class.getClassLoader().getResource("register.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);

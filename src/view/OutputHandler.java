@@ -70,8 +70,7 @@ public class OutputHandler {
             return "There is no account with this username";
         else if (outputNo==3)
             return "Wrong password";
-        else if (outputNo==4)
-            return "enter password";
+
         return null;
 
     }
