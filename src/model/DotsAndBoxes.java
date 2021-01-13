@@ -21,7 +21,7 @@ import java.security.PublicKey;
 import java.util.ArrayList;
 
 public class DbGameMenu {
-    private  ArrayList<Line> ra11=new ArrayList<>();
+  /*  private  ArrayList<Line> ra11=new ArrayList<>();
     ...
     private ArrayList<Line> ra77=new ArrayList<>();
     public Line vl77;
@@ -295,7 +295,7 @@ public class DbGameMenu {
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
-    }*/
+    }
     public void setTimer(){
         // Timer timer=new Timer(120000,this);
     }
@@ -383,5 +383,6 @@ public class DbGameMenu {
 
         }
     }*/
+
 
 }

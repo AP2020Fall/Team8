@@ -25,7 +25,7 @@ public class AddEventFx {
         LocalDateTime start = LocalDateTime.parse(startDateAddEventTF.getText());
         LocalDateTime end = LocalDateTime.parse(endDateAddEventTF.getText());
         alertCreateEvent.setText(AdminMenu.validation(start,end,eventScoreTF.getText()));
-        AdminMenu.processAddEvent(start,end,Integer.parseInt(eventScoreTF.getText());
+        AdminMenu.processAddEvent(start,end,Integer.parseInt(eventScoreTF.getText()),gameMenuB.getI);
 
     }
 }

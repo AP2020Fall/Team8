@@ -22,9 +22,9 @@ import java.awt.*;
 import java.security.PublicKey;
 import java.util.ArrayList;
 
-public class DbGameMenu {
+public class DBFx {
     private  ArrayList<Line> ra11=new ArrayList<>();
-    ...
+
     private ArrayList<Line> ra77=new ArrayList<>();
     public Line vl77;
     public Line vl72;
@@ -274,7 +274,6 @@ public class DbGameMenu {
     public void setHasCountDown(boolean hasCountDown) {
         this.hasCountDown = hasCountDown;
     }
-    @FXML
    /* public void initialize(){
         dbBackground.setOnMouseClicked(e->{
             double x=e.getX();
@@ -309,7 +308,7 @@ public class DbGameMenu {
         circle.setVisible(true);
     }
 
-    public void showC(MouseEvent mouseEvent) {
+   /* public void showC(MouseEvent mouseEvent) {
         double x= MouseInfo.getPointerInfo().getLocation().getX();
         double y=MouseInfo.getPointerInfo().getLocation().getY();
         //command for first player
@@ -331,10 +330,17 @@ public class DbGameMenu {
                         sc11.setVisible(true);
                         hl11.setVisible(true);
                         //baraye rang
-                        hl11;
+                     //   hl11;
                         //in mishe voice jadide ke ezafe kardam
                         ra11.add(hl11);
 
+                        if (isSecondCircle) {
+                            if (x <) {
+                                sc11.setVisible(true);
+                                isSecondCircle = true;
+                                hl11.setVisible(true);
+                            } else if () {
+                            }
                     }
                     else if (firstCircle.getCenterX()==29&&firstCircle.getCenterY()==73){
                         sc21.setVisible(true);

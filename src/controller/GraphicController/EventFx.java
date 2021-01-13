@@ -10,6 +10,6 @@ public class EventFx {
     public Text evEndT;
     Event event;
     public void setEventScene(){
-        evGameT.setText(event.getStartOfGame.format(formatter););
+        //evGameT.setText(event.getStartOfGame.format(formatter););
     }
 }

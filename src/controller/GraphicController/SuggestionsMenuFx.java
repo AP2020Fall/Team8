@@ -15,6 +15,6 @@ public class SuggestionsMenuFx {
     public TextField gamesSugTf;
 
     public void addSuggestion(ActionEvent actionEvent) {
-        AdminMenu.addSuggestion()
+        //AdminMenu.addSuggestion();
     }
 }
