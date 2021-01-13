@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.SuggestionsMenuFx">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.SuggestionsMenuFx">
     <children>
         <ImageView fitHeight="515.0" fitWidth="622.0" layoutX="-8.0" layoutY="-7.0">
             <image>
                 <Image url="@background/paszamine_com_1687_Full_HD.jpg" />
             </image>
         </ImageView>
-        <ListView fx:id="SuggestionsMenuList" layoutX="173.0" layoutY="125.0" prefHeight="251.0" prefWidth="261.0" />
-        <Label layoutX="181.0" layoutY="56.0" text="Suggestions Menu">
+        <ListView fx:id="SuggestionsMenuList" layoutX="163.0" layoutY="59.0" prefHeight="251.0" prefWidth="261.0" />
+        <Label layoutX="163.0" layoutY="14.0" text="Suggestions Menu">
             <font>
                 <Font size="30.0" />
             </font>
         </Label>
+      <Text layoutX="349.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game name:">
+         <font>
+            <Font name="Arial terminal one" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="80.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="usersugTf" layoutX="163.0" layoutY="374.0" />
+      <TextField fx:id="gamesSugTf" layoutX="434.0" layoutY="374.0" />
+      <Button fx:id="addsugB" layoutX="474.0" layoutY="428.0" mnemonicParsing="false" onAction="#addSuggestion" text="Add Suggestion" />
+      <Label fx:id="alertSug" layoutX="258.0" layoutY="444.0" textFill="#ee0c0c" />
     </children>
 </Pane>

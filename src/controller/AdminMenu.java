@@ -51,7 +51,7 @@ return null;
 
     }
     public boolean userNameValidationForSug(){return true;}
-    public String addSuggestion(String userName,String gameName){
+    public static String addSuggestion(String userName,String gameName){
         if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(userName))){
             return "invalid userName";
         }
