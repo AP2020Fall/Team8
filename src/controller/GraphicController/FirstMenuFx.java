@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import model.Account;
+import model.Admin;
+import model.Player;
 import view.Main;
 
 import java.io.IOException;
@@ -19,6 +21,25 @@ public class FirstMenuFx {
     public Button firstGamesB;
     public Button firstLoginB;
     public Button firstFriendB;
+    private static Player loggedInPlayer;
+
+    public static Player getLoggedInPlayer() {
+        return loggedInPlayer;
+    }
+
+    public static Admin getLoggedInAdmin() {
+        return loggedInAdmin;
+    }
+
+    public static void setLoggedInPlayer(Player loggedInPlayer) {
+        FirstMenuFx.loggedInPlayer = loggedInPlayer;
+    }
+
+    public static void setLoggedInAdmin(Admin loggedInAdmin) {
+        FirstMenuFx.loggedInAdmin = loggedInAdmin;
+    }
+
+    private static Admin loggedInAdmin;
 
     public static Account getLoginAccount() {
         return loginAccount;
@@ -60,7 +81,7 @@ public class FirstMenuFx {
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
     }
-
+//helia akhtarkavian pare shod.
     public void loadFriends(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(FriendsMenuFx.class.getClassLoader().getResource("friendsMenu.fxml")));
         Scene pageTwoScene = new Scene(root);
