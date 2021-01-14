@@ -3,7 +3,6 @@ package controller.GraphicController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +11,7 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import model.Event;
 import model.Player;
 import model.UserShow;
 import view.Main;
@@ -23,16 +23,18 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class EventsLogFx {
-    public TableColumn<Event, String> idColumn;
-    public TableColumn<Event, LocalDateTime> gameColumn;
-    public TableColumn<Event, LocalDateTime> startColumn;
-    public TableColumn<Event, Integer> endColumn;
-    public TableColumn<Event, String> scoreColumn;
-    public TableView<UserShow> EventsTable;
-    ObservableList<UserShow> names = FXCollections.observableArrayList();
-    public static ArrayList<UserShow> users =new ArrayList<>();
+    public TableColumn<model.Event, String> idColumn;
+    public TableColumn<model.Event, LocalDateTime> gameColumn;
+    public TableColumn<model.Event, LocalDateTime> startColumn;
+    public TableColumn<model.Event, Integer> endColumn;
+    public TableColumn<model.Event, String> scoreColumn;
+    public TableView<model.Event> EventsTable;
+    ObservableList<model.Event> eventsObserve = FXCollections.observableArrayList();
+    public static ArrayList<model.Event> eventsShow =new ArrayList<>();
     public void loadEvent(ActionEvent actionEvent) throws IOException {
-         Parent root = FXMLLoader.load(Objects.requireNonNull(EventFx.class.getClassLoader().getResource("eventFx.fxml")));
+        model.Event event=EventsTable.getSelectionModel().getSelectedItem();
+        EventFx.setEvent(event);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(EventFx.class.getClassLoader().getResource("eventFx.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
@@ -42,26 +44,24 @@ public class EventsLogFx {
         makeTree();
     }
     public void makeTree() {
-        idColumn.setCellValueFactory(new PropertyValueFactory<Event, String>("eventId"));
-        scoreColumn.setCellValueFactory(new PropertyValueFactory<Event,String>("gameName"));
-        gameColumn.setCellValueFactory(new PropertyValueFactory<Event,LocalDateTime>("startOfGame"));
-        startColumn.setCellValueFactory(new PropertyValueFactory<Event,LocalDateTime>("endOfGame"));
-        endColumn.setCellValueFactory(new PropertyValueFactory<Event,Integer>("eventScore"));
-        names.clear();
-        users.clear();
+        idColumn.setCellValueFactory(new PropertyValueFactory<model.Event, String>("eventId"));
+        scoreColumn.setCellValueFactory(new PropertyValueFactory<model.Event,String>("gameName"));
+        gameColumn.setCellValueFactory(new PropertyValueFactory<model.Event,LocalDateTime>("startOfGame"));
+        startColumn.setCellValueFactory(new PropertyValueFactory<model.Event,LocalDateTime>("endOfGame"));
+        endColumn.setCellValueFactory(new PropertyValueFactory<model.Event,Integer>("eventScore"));
+        eventsObserve.clear();
+        eventsShow.clear();
         list();
-        names.addAll(users);
+        eventsObserve.addAll(eventsShow);
         EventsTable.setEditable(true);
         EventsTable.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         EventsTable.getSelectionModel().setCellSelectionEnabled(true);
-        EventsTable.setItems(names);
+        EventsTable.setItems(eventsObserve);
+
     }
 
-    private  static void list(){
-        for (Player player : Player.getAllPlayers()) {
-            UserShow userShow=new UserShow(player.getUserName(),player.getDBScore()+player.getReversiScore(), (int) Duration.between(LocalDateTime.now(),player.getPlatoAge()).toDays(),player.getReversiAndWinsCounts()+player.getDotsAndBoxesAndWinsCount());
-            userShow.setPlayer(player);
-            users.add(userShow);
-        }
+    public   static void list(){
+        eventsShow.addAll(Event.getAllEvents());
+
     }
 }

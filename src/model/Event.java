@@ -12,6 +12,11 @@ public class Event {
     private  LocalDateTime endOfGame;
     private int eventScore;
 
+    public static void setAllEvents(ArrayList<Event> allEvents) {
+        Event.allEvents = allEvents;
+    }
+
+
     public String getGameName() {
         return gameName;
     }
