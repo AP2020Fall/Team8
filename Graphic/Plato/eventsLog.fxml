@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.EventsLogFx">
@@ -12,10 +13,32 @@
                 <Image url="@background/paszamine_com_1677_Full_HD.png" />
             </image>
         </ImageView>
-        <Label layoutX="251.0" layoutY="59.0" text="Events Log" textFill="WHITE">
+        <Label layoutX="225.0" layoutY="25.0" text="Events Log" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="30.0" />
             </font>
         </Label>
+      <Button fx:id="showB" layoutX="474.0" layoutY="431.0" mnemonicParsing="false" onAction="#loadEvent" prefHeight="46.0" prefWidth="110.0" text="Show Event">
+         <font>
+            <Font name="Arial terminal one" size="12.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ed2a07" />
+                  <Stop color="#e517ec" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <TableView fx:id="EventsTable" layoutX="62.0" layoutY="78.0" prefHeight="342.0" prefWidth="456.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="84.66668319702148" text="EventID" />
+          <TableColumn fx:id="gameColumn" prefWidth="79.33331298828125" text="Game" />
+            <TableColumn fx:id="startColumn" prefWidth="90.66664123535156" text="Start Date" />
+            <TableColumn fx:id="endColumn" prefWidth="98.0" text="End Date" />
+            <TableColumn fx:id="scoreColumn" prefWidth="103.99996948242188" text="Score" />
+        </columns>
+      </TableView>
     </children>
 </Pane>

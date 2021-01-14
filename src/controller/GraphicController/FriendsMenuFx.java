@@ -35,6 +35,7 @@ public class FriendsMenuFx {
     }
 
     public void viewUser(ActionEvent actionEvent) throws IOException {
+        UserProfile.setPlayer(Player.getPlayerWithUser(FriendsMenuList.getSelectionModel().getSelectedItem().toString()));
         Parent root = FXMLLoader.load(Objects.requireNonNull(UserProfile.class.getClassLoader().getResource("userProfile.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);

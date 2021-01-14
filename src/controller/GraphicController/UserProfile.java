@@ -10,14 +10,14 @@ import java.time.LocalDateTime;
 
 public class UserProfile {
 
-    private Player player;
+    private static Player player;
     public Text usernameT;
     public Text winsCountT;
     public Text datePassedT;
     public Text scoreT;
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public static void setPlayer(Player player) {
+        UserProfile.player = player;
     }
     @FXML
     public void initialize(){

@@ -308,12 +308,14 @@ public class DBFx {
         circle.setVisible(true);
     }
 
-   /* public void showC(MouseEvent mouseEvent) {
+    public void showC(MouseEvent mouseEvent) {
         double x= MouseInfo.getPointerInfo().getLocation().getX();
         double y=MouseInfo.getPointerInfo().getLocation().getY();
         //command for first player
         if (isFirstPlayerTurn) {
+
             if (!isSecondCircle) {
+                //dayere avali
                 if (x >11 || x<47 && y>4 ||y<40) {
                     sc11.setVisible(true);
                     selectedC.add(sc11);
@@ -321,9 +323,10 @@ public class DBFx {
                 }
 
 
-                isSecondCircle = false;
+                isSecondCircle = true;
 
             } else {
+                //dayere dovomi va badesh khat keshidan
                 if (x >11 || x<47 && y>4 ||y<40) {
                     Circle firstCircle =selectedC.get(0);
                     if (firstCircle.getCenterX()==80 && firstCircle.getCenterY()==22){
@@ -333,7 +336,6 @@ public class DBFx {
                      //   hl11;
                         //in mishe voice jadide ke ezafe kardam
                         ra11.add(hl11);
-
                         if (isSecondCircle) {
                             if (x <) {
                                 sc11.setVisible(true);
@@ -341,7 +343,7 @@ public class DBFx {
                                 hl11.setVisible(true);
                             } else if () {
                             }
-                    }
+
                     else if (firstCircle.getCenterX()==29&&firstCircle.getCenterY()==73){
                         sc21.setVisible(true);
                         vl21.setVisible(true);
@@ -366,7 +368,7 @@ public class DBFx {
 
 
             isFirstPlayerTurn=true;
-        }
+        }}
     }
 
 
