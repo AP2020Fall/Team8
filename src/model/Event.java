@@ -39,6 +39,7 @@ public class Event {
         this.startOfGame = startOfGame;
         this.endOfGame = endOfGame;
         this.eventScore = eventScore;
+        allEvents.add(this);
     }
 
     public String getEventId() {

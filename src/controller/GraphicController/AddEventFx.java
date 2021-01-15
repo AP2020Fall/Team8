@@ -19,13 +19,27 @@ public class AddEventFx {
     public TextField eventScoreTF;
     public Button createEventB;
     public Label alertCreateEvent;
+    private String gameName;
 
     public void addEvent(ActionEvent actionEvent) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH.mm.ss.nnn");
         LocalDateTime start = LocalDateTime.parse(startDateAddEventTF.getText());
         LocalDateTime end = LocalDateTime.parse(endDateAddEventTF.getText());
-        alertCreateEvent.setText(AdminMenu.validation(start,end,eventScoreTF.getText()));
-        AdminMenu.processAddEvent(start,end,Integer.parseInt(eventScoreTF.getText()),gameMenuB.getI);
+        if (gameName == null){
+            alertCreateEvent.setText("you must choose your game first!");
+        }
+        else {
+        alertCreateEvent.setText(AdminMenu.validation(start,end,eventScoreTF.getText(),gameName));}
+      //  AdminMenu.processAddEvent(start,end,Integer.parseInt(eventScoreTF.getText()),gameMenuB.getI);
 
+    }
+
+
+    public void addReversi(ActionEvent actionEvent) {
+        gameName="reversi";
+    }
+
+    public void addDB(ActionEvent actionEvent) {
+        gameName="Dots and Boxes";
     }
 }

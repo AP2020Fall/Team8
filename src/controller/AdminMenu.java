@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public class AdminMenu {
     private static Admin admin;
-    public static String validation(LocalDateTime start,LocalDateTime end,String score){
+    public static String validation(LocalDateTime start,LocalDateTime end,String score,String gameName){
         if (!start.isBefore(end))
             return "start of the date must be before end";
         else if(start.isBefore(LocalDateTime.now()))
@@ -16,7 +16,9 @@ public class AdminMenu {
             return "end of the date must be after now";
         else if (!score.matches("\\d+"))
             return "you must enter a number!!";
-return null;
+        else{
+            processAddEvent(start,end,Integer.parseInt(score),gameName);
+            return "event added successfully!";}
     }
 
     public static void setAdmin(Admin admin) {
@@ -76,7 +78,7 @@ return null;
         if (Suggestion.getAllSugs().contains(Suggestion.getSugwithId(suggestionId)))
             return "suggestion removed";
         else
-            return "invalid suggestino id";
+            return "invalid suggestion id";
     }
     public String viewUserProfile(String userName){
         if (Player.getAllPlayers().contains(Player.getPlayerWithUser(userName)))
