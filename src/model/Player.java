@@ -16,6 +16,8 @@ public class Player extends  Account {
     private Set<String> favoriteGames;
     private int reversiAndWinsCounts=0;
     private int reversiScore;
+    private boolean isReversiFav;
+    private boolean isDBFav;
     private int DBScore;
     private int dotsAndBoxesAndWinsCount=0;
     private int reversiPlayedCounts=0;
@@ -23,6 +25,22 @@ public class Player extends  Account {
     private static ArrayList<Player> allPlayers=new ArrayList<>();
     private  ArrayList<GameReq> gameReqs;
     public void addFriend(){}
+
+    public void setReversiFav(boolean reversiFav) {
+        isReversiFav = reversiFav;
+    }
+
+    public boolean isReversiFav() {
+        return isReversiFav;
+    }
+
+    public boolean isDBFav() {
+        return isDBFav;
+    }
+
+    public void setDBFav(boolean DBFav) {
+        isDBFav = DBFav;
+    }
 
     //for scoreboards
     public void setReversiScore(int reversiScore) {
