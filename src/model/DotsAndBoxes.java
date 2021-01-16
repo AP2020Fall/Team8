@@ -304,7 +304,7 @@ public class DotsAndBoxes extends Game {
             circle.setVisible(true);
         }
 
-       /* public void showC(MouseEvent mouseEvent) {
+        public void showC(MouseEvent mouseEvent) {
             double x= MouseInfo.getPointerInfo().getLocation().getX();
             double y=MouseInfo.getPointerInfo().getLocation().getY();
             //command for first player
@@ -3045,7 +3045,6 @@ public class DotsAndBoxes extends Game {
         }
     }
 
-*/
     /*public void showL(MouseEvent mouseEvent) {
         double x= MouseInfo.getPointerInfo().getLocation().getX();
         double y=MouseInfo.getPointerInfo().getLocation().getY();
