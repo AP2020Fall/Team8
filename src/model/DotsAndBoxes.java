@@ -2179,8 +2179,36 @@ import java.util.ArrayList;
                     }
 
                     else if (x > 11 && x < 47 && y > 255 && y < 291) {
-                        sc61.setVisible(true);
-                        sc61.setFill(Color.web("#bac267"));
+                        if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()) {
+                            if (vl51.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc51.setVisible(true);
+                                vl51.setVisible(true);
+                                sc51.setFill(Color.web("#bac267"));
+                                vl51.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
+                            if (hl61.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc62.setVisible(true);
+                                hl61.setVisible(true);
+                                sc62.setFill(Color.web("#bac267"));
+                                hl61.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc71.getCenterX() && y1 == sc71.getCenterY()) {
+                            if (vl61.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc71.setVisible(true);
+                                vl61.setVisible(true);
+                                sc71.setFill(Color.web("#bac267"));
+                                vl61.setFill(Color.web("98c4c0"));
+                            }
+                        }
                     }
                     else if (x > 62 && x < 98 && y > 255 && y < 291) {
                         sc62.setVisible(true);
