@@ -73,4 +73,23 @@ public class GameMenuFx {
             Main.allStage.show();
         }
     }
+
+    public void loadScoreBoard(ActionEvent actionEvent) throws IOException {
+        if (gameName.equals("Reversi")){
+            ScoreBoardMenuFx.setGameName("Reversi");
+        }
+        else
+            ScoreBoardMenuFx.setGameName("Dots and Boxes");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(ScoreBoardMenuFx.class.getClassLoader().getResource("scoreBoardMenu.fxml")));
+        Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
+
+    public void loadGameLog(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(GameHistoryFx.class.getClassLoader().getResource("gameHistory.fxml")));
+        Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
 }
