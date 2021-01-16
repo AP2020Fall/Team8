@@ -53,13 +53,13 @@ public class Game {
         return gameDetail;
     }
 
-    public Game(String gameId, GamePlayer playerOne, GamePlayer playerTwo) {
-        this.gameId = gameId;
-        this.playerOne = playerOne;
-        this.playerTwo = playerTwo;
-        isFinished=false;
-        //if (!allOfThisGamesPlayers.contains(pla))
+    public Game(String name, Player player, boolean isFavorite, String gameDetail) {
+        this.name = name;
+        this.player = player;
+        this.isFavorite = isFavorite;
+        this.gameDetail = gameDetail;
     }
+
     public static Game getGameWithName(String gameName){
         for (Game game : allGames) {
             if (game.getName().equalsIgnoreCase(gameName))

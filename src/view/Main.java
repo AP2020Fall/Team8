@@ -11,6 +11,6 @@ public class Main {
 
         CommandProcessor commandProcessor=new CommandProcessor();
         Scanner scanner=new Scanner(System.in);
-        CommandProcessor.runPlato(scanner);
+        //CommandProcessor.runPlato(scanner);
     }
 }

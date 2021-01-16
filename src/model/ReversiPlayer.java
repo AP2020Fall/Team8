@@ -8,7 +8,7 @@ public class ReversiPlayer {
     private Player player;
     private Color color;
     private static ArrayList<ReversiPlayer> allplayers = new ArrayList<>();
-    private int username;
+    private String username;
     private int playerNum;
     private boolean hasMadeMove ;
     //taze ezafe kardam
@@ -32,7 +32,7 @@ public class ReversiPlayer {
         this.color = color;
     }
 
-    public static ReversiPlayer getPlayerByUsername(int pUsername) {
+    public static ReversiPlayer getPlayerByUsername(String pUsername) {
         for (ReversiPlayer allplayer : allplayers) {
             if (allplayer.getUsername() == pUsername)
                 return allplayer;
@@ -52,7 +52,7 @@ public class ReversiPlayer {
         this.playerNum = playerNum;
     }
 
-    public int getUsername() {
+    public String getUsername() {
         return username;
     }
 }

@@ -16,31 +16,9 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class DotsAndBoxes extends Game {
-    public DotsAndBoxes(String gameId, GamePlayer playerOne, GamePlayer playerTwo) {
-        super(gameId, playerOne, playerTwo);
+    public DotsAndBoxes(String name, Player player, boolean isFavorite, String gameDetail) {
+        super(name, player, isFavorite, gameDetail);
     }
-
-    package sample;
-
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.shape.*;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import jdk.jfr.Event;
-
-import javax.swing.*;
-import java.awt.*;
-import java.security.PublicKey;
-import java.util.ArrayList;
 
     public class DbGameMenu {
         public Line vl77;
@@ -291,7 +269,7 @@ import java.util.ArrayList;
         public void setHasCountDown(boolean hasCountDown) {
             this.hasCountDown = hasCountDown;
         }
-        @FXML
+      //  @FXML
    /* public void initialize(){
         dbBackground.setOnMouseClicked(e->{
             double x=e.getX();
@@ -326,7 +304,7 @@ import java.util.ArrayList;
             circle.setVisible(true);
         }
 
-        public void showC(MouseEvent mouseEvent) {
+       /* public void showC(MouseEvent mouseEvent) {
             double x= MouseInfo.getPointerInfo().getLocation().getX();
             double y=MouseInfo.getPointerInfo().getLocation().getY();
             //command for first player
@@ -1005,14 +983,11 @@ import java.util.ArrayList;
                 }
 
             //commands for second player
-            else {
-
-            }
 
         }
     }
 
-
+*/
     /*public void showL(MouseEvent mouseEvent) {
         double x= MouseInfo.getPointerInfo().getLocation().getX();
         double y=MouseInfo.getPointerInfo().getLocation().getY();
