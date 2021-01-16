@@ -320,8 +320,8 @@ import java.util.ArrayList;
         }
 
         public void drawCircle(MouseEvent mouseEvent) {
-            double x=  mouseEvent.getX();
-            double y=mouseEvent.getY();
+            double x = mouseEvent.getX();
+            double y = mouseEvent.getY();
             Circle circle=new Circle(x,y,10);
             circle.setVisible(true);
         }
@@ -668,33 +668,82 @@ import java.util.ArrayList;
                 }
                 //else dovmi commands for second circles and lines
                 else {
+                    double x1 = selectedC.get(0).getCenterX();
+                    double y1 = selectedC.get(0).getCenterY();
+
                     if (x > 11 && x < 47 && y > 4 && y < 40) {
-                        sc11.setVisible(true);
-                        sc11.setFill(Color.web("#bac267"));
-                        if (x > 62 && x < 98 && y > 4 && y < 40){
+                        if (x1 == sc12.getCenterX() && y1 == sc12.getCenterY()) {
                             sc12.setVisible(true);
                             hl11.setVisible(true);
                             sc12.setFill(Color.web("#bac267"));
                             hl11.setFill(Color.web("98c4c0"));
-                        }
-                        else if (x > 11 && x < 47 && y > 55 && y < 91){
+                        } else if (x1 == sc21.getCenterX() && y1 == sc21.getCenterY()) {
                             sc21.setVisible(true);
                             vl11.setVisible(true);
                             sc21.setFill(Color.web("#bac267"));
                             vl11.setFill(Color.web("98c4c0"));
                         }
+                    }
                         else if (x > 62 && x < 98 && y > 4 && y < 40) {
-                        sc12.setVisible(true);
-                        sc12.setFill(Color.web("#bac267"));
+                        if (x1 == sc11.getCenterX() && y1 == sc11.getCenterY()){
+                            sc11.setVisible(true);
+                            hl11.setVisible(true);
+                            sc11.setFill(Color.web("#bac267"));
+                            hl11.setFill(Color.web("98c4c0"));
+                        }
+                        else if (x1 == sc13.getCenterX() && y1 == sc13.getCenterY()){
+                            sc13.setVisible(true);
+                            hl12.setVisible(true);
+                            sc13.setFill(Color.web("#bac267"));
+                            hl12.setFill(Color.web("98c4c0"));
+                        }
+                        else if (x1 == sc22.getCenterX() && y1 == sc22.getCenterY()){
+                            sc22.setVisible(true);
+                            vl12.setVisible(true);
+                            sc22.setFill(Color.web("#bac267"));
+                            vl12.setFill(Color.web("98c4c0"));
+                        }
                     }
 
                     else if (x > 112 && x < 148 && y > 5 && y < 41) {
-                        sc13.setVisible(true);
-                        sc13.setFill(Color.web("#bac267"));
+                        if (x1 == sc12.getCenterX() && y1 == sc12.getCenterY()){
+                            sc12.setVisible(true);
+                            hl12.setVisible(true);
+                            sc12.setFill(Color.web("#bac267"));
+                            hl12.setFill(Color.web("98c4c0"));
+                        }
+                        else if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()){
+                            sc14.setVisible(true);
+                            hl13.setVisible(true);
+                            sc14.setFill(Color.web("#bac267"));
+                            hl13.setFill(Color.web("98c4c0"));
+                        }
+                        else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()){
+                            sc23.setVisible(true);
+                            vl13.setVisible(true);
+                            sc23.setFill(Color.web("#bac267"));
+                            vl13.setFill(Color.web("98c4c0"));
+                        }
                     }
                     else if (x > 161 && x < 197 && y > 5 && y < 41) {
-                        sc14.setVisible(true);
-                        sc14.setFill(Color.web("#bac267"));
+                        if (x1 == sc13.getCenterX() && y1 == sc13.getCenterY()){
+                            sc13.setVisible(true);
+                            hl13.setVisible(true);
+                            sc13.setFill(Color.web("#bac267"));
+                            hl13.setFill(Color.web("98c4c0"));
+                        }
+                        else if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()){
+                            sc15.setVisible(true);
+                            hl14.setVisible(true);
+                            sc15.setFill(Color.web("#bac267"));
+                            hl14.setFill(Color.web("98c4c0"));
+                        }
+                        else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()){
+                            sc24.setVisible(true);
+                            vl14.setVisible(true);
+                            sc24.setFill(Color.web("#bac267"));
+                            vl14.setFill(Color.web("98c4c0"));
+                        }
                     }
 
                     else if (x > 212 && x < 248 && y > 5 && y < 41) {
@@ -955,7 +1004,6 @@ import java.util.ArrayList;
                     isSecondCircle = false;
                 }
 
-            }
             //commands for second player
             else {
 
