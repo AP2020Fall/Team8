@@ -1,5 +1,6 @@
 package controller.GraphicController;
 
+import controller.GameMenu;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,14 +16,16 @@ public class GamesFx {
     public Button DBB;
 
     public void loadReversi(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GamesFx.class.getClassLoader().getResource("games.fxml")));
+        GameMenuFx.setGameName("Reversi");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(GameMenuFx.class.getClassLoader().getResource("gameMenu.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
     }
 
     public void loadDB(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GamesFx.class.getClassLoader().getResource("games.fxml")));
+        GameMenuFx.setGameName("Dots and Boxes");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(GameMenuFx.class.getClassLoader().getResource("gameMenu.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();

@@ -395,3 +395,585 @@ public class DBFx {
     }*/
 
 }
+    public void showC(MouseEvent mouseEvent) {
+        double x= MouseInfo.getPointerInfo().getLocation().getX();
+        double y=MouseInfo.getPointerInfo().getLocation().getY();
+        //command for first player
+        //player1 color: #bac267 and player2 color: #c17f68
+        if (isFirstPlayerTurn) {
+            if (!isSecondCircle) {
+                if (x > 11 && x < 47 && y > 4 && y < 40) {
+                    sc11.setVisible(true);
+                    sc11.setFill(Color.web("#bac267"));
+                    //jadid
+                    selectedC.add(sc11);
+                } else if (x > 62 && x < 98 && y > 4 && y < 40) {
+                    sc12.setVisible(true);
+                    sc12.setFill(Color.web("#bac267"));
+                    //jadid
+                    selectedC.add(sc12);
+                }
+                //ela akhar...
+                else if (x > 112 && x < 148 && y > 5 && y < 41) {
+                    sc13.setVisible(true);
+                    sc13.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 5 && y < 41) {
+                    sc14.setVisible(true);
+                    sc14.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 212 && x < 248 && y > 5 && y < 41) {
+                    sc15.setVisible(true);
+                    sc15.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 262 && x < 298 && y > 5 && y < 41) {
+                    sc16.setVisible(true);
+                    sc16.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 5 && y < 41) {
+                    sc17.setVisible(true);
+                    sc17.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 5 && y < 41) {
+                    sc18.setVisible(true);
+                    sc18.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 55 && y < 91) {
+                    sc21.setVisible(true);
+                    sc21.setFill(Color.web("#bac267"));
+                }
+                else if (x > 98 && x < 62 && y > 55 && y < 91) {
+                    sc22.setVisible(true);
+                    sc22.setFill(Color.web("#bac267"));
+                }
+                else if (x > 148 && x < 112 && y > 55 && y < 91) {
+                    sc23.setVisible(true);
+                    sc23.setFill(Color.web("#bac267"));
+                }
+                else if (x > 197 && x < 161 && y > 55 && y < 91) {
+                    sc24.setVisible(true);
+                    sc24.setFill(Color.web("#bac267"));
+                }
+                else if (x > 248 && x < 212 && y > 55 && y < 91) {
+                    sc25.setVisible(true);
+                    sc25.setFill(Color.web("#bac267"));
+                }
+                else if (x > 298 && x < 262 && y > 55 && y < 91) {
+                    sc26.setVisible(true);
+                    sc26.setFill(Color.web("#bac267"));
+                }
+                else if (x > 348 && x < 312 && y > 55 && y < 91) {
+                    sc27.setVisible(true);
+                    sc27.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 55 && y < 91) {
+                    sc28.setVisible(true);
+                    sc28.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 105 && y < 141) {
+                    sc31.setVisible(true);
+                    sc31.setFill(Color.web("#bac267"));
+                }
+                else if (x > 98 && x < 62 && y > 105 && y < 141) {
+                    sc32.setVisible(true);
+                    sc32.setFill(Color.web("#bac267"));
+                }
+                else if (x > 112 && x < 148 && y > 106 && y < 142) {
+                    sc33.setVisible(true);
+                    sc33.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 106 && y < 142) {
+                    sc34.setVisible(true);
+                    sc34.setFill(Color.web("#bac267"));
+
+                }
+                else if (x > 212 && x < 248 && y > 106 && y < 142) {
+                    sc35.setVisible(true);
+                    sc35.setFill(Color.web("#bac267"));
+
+                }
+                else if (x > 262 && x < 298 && y > 106 && y < 142) {
+                    sc36.setVisible(true);
+                    sc36.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 106 && y < 142) {
+                    sc37.setVisible(true);
+                    sc37.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 106 && y < 142) {
+                    sc38.setVisible(true);
+                    sc38.setFill(Color.web("#bac267"));
+
+                }
+
+                else if (x > 11 && x < 47 && y > 155 && y < 191) {
+                    sc41.setVisible(true);
+                    sc41.setFill(Color.web("#bac267"));
+                }
+                else if (x > 62 && x < 98 && y > 155 && y < 191) {
+                    sc42.setVisible(true);
+                    sc42.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 112 && x < 148 && y > 156 && y < 192) {
+                    sc43.setVisible(true);
+                    sc43.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 156 && y < 192) {
+                    sc44.setVisible(true);
+                    sc44.setFill(Color.web("#bac267"));
+                }
+                else if (x > 212 && x < 248 && y > 156 && y < 192) {
+                    sc45.setVisible(true);
+                    sc45.setFill(Color.web("#bac267"));
+                }
+                else if (x > 262 && x < 298 && y > 156 && y < 192) {
+                    sc46.setVisible(true);
+                    sc46.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 156 && y < 192) {
+                    sc47.setVisible(true);
+                    sc47.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 156 && y < 192) {
+                    sc48.setVisible(true);
+                    sc48.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 206 && y < 242) {
+                    sc51.setVisible(true);
+                    sc51.setFill(Color.web("#bac267"));
+                }
+                else if (x > 62 && x < 98 && y > 205 && y < 241) {
+                    sc52.setVisible(true);
+                    sc52.setFill(Color.web("#bac267"));
+                }
+                else if (x > 112 && x < 148 && y > 206 && y < 242) {
+                    sc53.setVisible(true);
+                    sc53.setFill(Color.web("#bac267"));
+
+                }
+
+                else if (x > 161 && x < 197 && y > 205 && y < 241) {
+                    sc54.setVisible(true);
+                    sc54.setFill(Color.web("#bac267"));
+                }
+                else if (x > 212 && x < 248 && y > 205 && y < 241) {
+                    sc55.setVisible(true);
+                    sc55.setFill(Color.web("#bac267"));
+                }
+                else if (x > 262 && x < 298 && y > 205 && y < 241) {
+                    sc56.setVisible(true);
+                    sc56.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 205 && y < 241) {
+                    sc57.setVisible(true);
+                    sc57.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 205 && y < 241) {
+                    sc58.setVisible(true);
+                    sc58.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 11 && x < 47 && y > 255 && y < 291) {
+                    sc61.setVisible(true);
+                    sc61.setFill(Color.web("#bac267"));
+                }
+                else if (x > 62 && x < 98 && y > 255 && y < 291) {
+                    sc62.setVisible(true);
+                    sc62.setFill(Color.web("#bac267"));
+                }
+                else if (x > 112 && x < 148 && y > 256 && y < 292) {
+                    sc63.setVisible(true);
+                    sc63.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 256 && y < 292) {
+                    sc64.setVisible(true);
+                    sc64.setFill(Color.web("#bac267"));
+                }
+                else if (x > 212 && x < 248 && y > 256 && y < 292) {
+                    sc65.setVisible(true);
+                    sc65.setFill(Color.web("#bac267"));
+                }
+                else if (x > 262 && x < 298 && y > 256 && y < 292) {
+                    sc66.setVisible(true);
+                    sc66.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 256 && y < 292) {
+                    sc67.setVisible(true);
+                    sc67.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 256 && y < 292) {
+                    sc68.setVisible(true);
+                    sc68.setFill(Color.web("#bac267"));
+                }
+                else if (x > 10 && x < 46 && y > 306 && y < 342) {
+                    sc71.setVisible(true);
+                    sc71.setFill(Color.web("#bac267"));
+                }
+                else if (x > 61 && x < 97 && y > 305 && y < 341) {
+                    sc72.setVisible(true);
+                    sc72.setFill(Color.web("#bac267"));
+                }
+                else if (x > 111 && x < 147 && y > 306 && y < 342) {
+                    sc73.setVisible(true);
+                    sc73.setFill(Color.web("#bac267"));
+                }
+                else if (x > 160 && x < 196 && y > 306 && y < 342) {
+                    sc74.setVisible(true);
+                    sc74.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 211 && x < 247 && y > 306 && y < 342) {
+                    sc75.setVisible(true);
+                    sc75.setFill(Color.web("#bac267"));
+                }
+                else if (x > 261 && x < 297 && y > 306 && y < 342) {
+                    sc76.setVisible(true);
+                    sc76.setFill(Color.web("#bac267"));
+                }
+                else if (x > 311 && x < 347 && y > 306 && y < 342) {
+                    sc77.setVisible(true);
+                    sc77.setFill(Color.web("#bac267"));
+                }
+                else if (x > 359 && x < 395 && y > 306 && y < 342) {
+                    sc78.setVisible(true);
+                    sc78.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 355 && y < 391) {
+                    sc81.setVisible(true);
+                    sc81.setFill(Color.web("#bac267"));
+
+                }
+
+                else if (x > 61 && x < 97 && y > 356 && y < 392) {
+                    sc82.setVisible(true);
+                    sc82.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 111 && x < 147 && y > 356 && y < 392) {
+                    sc83.setVisible(true);
+                    sc83.setFill(Color.web("#bac267"));
+                }
+                else if (x > 159 && x < 195 && y > 356 && y < 392) {
+                    sc84.setVisible(true);
+                    sc84.setFill(Color.web("#bac267"));
+                }
+                else if (x > 211 && x < 247 && y > 356 && y < 392) {
+                    sc85.setVisible(true);
+                    sc85.setFill(Color.web("#bac267"));
+                }
+                else if (x > 261 && x < 297 && y > 356 && y < 392) {
+                    sc86.setVisible(true);
+                    sc86.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 356 && y < 392) {
+                    sc87.setVisible(true);
+                    sc87.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 356 && y < 392) {
+                    sc88.setVisible(true);
+                    sc88.setFill(Color.web("#bac267"));
+                }
+                isSecondCircle = true;
+            }
+            //else dovmi commands for second circles and lines
+            else {
+                double x1=selectedC.get(0).getCenterX();
+                double y1=selectedC.get(0).getCenterY();
+                if (x > 11 && x < 47 && y > 4 && y < 40) {
+                    sc11.setVisible(true);
+                    sc11.setFill(Color.web("#bac267"));
+                            if (x1 ==اixe markaze y1==y e makraze){
+                                sc12.setVisible(true);
+                                hl11.setVisible(true);
+                                sc12.setFill(Color.web("#bac267"));
+                                hl11.setFill(Color.web("98c4c0"));
+                            }
+                            else if (x > 11 && x < 47 && y > 55 && y < 91){
+                                sc21.setVisible(true);
+                                vl11.setVisible(true);
+                                sc21.setFill(Color.web("#bac267"));
+                                vl11.setFill(Color.web("98c4c0"));
+                            }
+
+                } else if (x > 62 && x < 98 && y > 4 && y < 40) {
+                    sc12.setVisible(true);
+                    sc12.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 112 && x < 148 && y > 5 && y < 41) {
+                    sc13.setVisible(true);
+                    sc13.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 5 && y < 41) {
+                    sc14.setVisible(true);
+                    sc14.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 212 && x < 248 && y > 5 && y < 41) {
+                    sc15.setVisible(true);
+                    sc15.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 262 && x < 298 && y > 5 && y < 41) {
+                    sc16.setVisible(true);
+                    sc16.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 5 && y < 41) {
+                    sc17.setVisible(true);
+                    sc17.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 5 && y < 41) {
+                    sc18.setVisible(true);
+                    sc18.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 55 && y < 91) {
+                    sc21.setVisible(true);
+                    sc21.setFill(Color.web("#bac267"));
+                }
+                else if (x > 98 && x < 62 && y > 55 && y < 91) {
+                    sc22.setVisible(true);
+                    sc22.setFill(Color.web("#bac267"));
+                }
+                else if (x > 148 && x < 112 && y > 55 && y < 91) {
+                    sc23.setVisible(true);
+                    sc23.setFill(Color.web("#bac267"));
+                }
+                else if (x > 197 && x < 161 && y > 55 && y < 91) {
+                    sc24.setVisible(true);
+                    sc24.setFill(Color.web("#bac267"));
+                }
+                else if (x > 248 && x < 212 && y > 55 && y < 91) {
+                    sc25.setVisible(true);
+                    sc25.setFill(Color.web("#bac267"));
+                }
+                else if (x > 298 && x < 262 && y > 55 && y < 91) {
+                    sc26.setVisible(true);
+                    sc26.setFill(Color.web("#bac267"));
+                }
+                else if (x > 348 && x < 312 && y > 55 && y < 91) {
+                    sc27.setVisible(true);
+                    sc27.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 55 && y < 91) {
+                    sc28.setVisible(true);
+                    sc28.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 105 && y < 141) {
+                    sc31.setVisible(true);
+                    sc31.setFill(Color.web("#bac267"));
+                }
+                else if (x > 98 && x < 62 && y > 105 && y < 141) {
+                    sc32.setVisible(true);
+                    sc32.setFill(Color.web("#bac267"));
+                }
+                else if (x > 112 && x < 148 && y > 106 && y < 142) {
+                    sc33.setVisible(true);
+                    sc33.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 106 && y < 142) {
+                    sc34.setVisible(true);
+                    sc34.setFill(Color.web("#bac267"));
+
+                }
+                else if (x > 212 && x < 248 && y > 106 && y < 142) {
+                    sc35.setVisible(true);
+                    sc35.setFill(Color.web("#bac267"));
+
+                }
+                else if (x > 262 && x < 298 && y > 106 && y < 142) {
+                    sc36.setVisible(true);
+                    sc36.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 106 && y < 142) {
+                    sc37.setVisible(true);
+                    sc37.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 106 && y < 142) {
+                    sc38.setVisible(true);
+                    sc38.setFill(Color.web("#bac267"));
+
+                }
+
+                else if (x > 11 && x < 47 && y > 155 && y < 191) {
+                    sc41.setVisible(true);
+                    sc41.setFill(Color.web("#bac267"));
+                }
+                else if (x > 62 && x < 98 && y > 155 && y < 191) {
+                    sc42.setVisible(true);
+                    sc42.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 112 && x < 148 && y > 156 && y < 192) {
+                    sc43.setVisible(true);
+                    sc43.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 156 && y < 192) {
+                    sc44.setVisible(true);
+                    sc44.setFill(Color.web("#bac267"));
+                }
+                else if (x > 212 && x < 248 && y > 156 && y < 192) {
+                    sc45.setVisible(true);
+                    sc45.setFill(Color.web("#bac267"));
+                }
+                else if (x > 262 && x < 298 && y > 156 && y < 192) {
+                    sc46.setVisible(true);
+                    sc46.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 156 && y < 192) {
+                    sc47.setVisible(true);
+                    sc47.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 156 && y < 192) {
+                    sc48.setVisible(true);
+                    sc48.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 206 && y < 242) {
+                    sc51.setVisible(true);
+                    sc51.setFill(Color.web("#bac267"));
+                }
+                else if (x > 62 && x < 98 && y > 205 && y < 241) {
+                    sc52.setVisible(true);
+                    sc52.setFill(Color.web("#bac267"));
+                }
+                else if (x > 112 && x < 148 && y > 206 && y < 242) {
+                    sc53.setVisible(true);
+                    sc53.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 161 && x < 197 && y > 205 && y < 241) {
+                    sc54.setVisible(true);
+                    sc54.setFill(Color.web("#bac267"));
+                }
+                else if (x > 212 && x < 248 && y > 205 && y < 241) {
+                    sc55.setVisible(true);
+                    sc55.setFill(Color.web("#bac267"));
+                }
+                else if (x > 262 && x < 298 && y > 205 && y < 241) {
+                    sc56.setVisible(true);
+                    sc56.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 205 && y < 241) {
+                    sc57.setVisible(true);
+                    sc57.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 205 && y < 241) {
+                    sc58.setVisible(true);
+                    sc58.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 11 && x < 47 && y > 255 && y < 291) {
+                    sc61.setVisible(true);
+                    sc61.setFill(Color.web("#bac267"));
+                }
+                else if (x > 62 && x < 98 && y > 255 && y < 291) {
+                    sc62.setVisible(true);
+                    sc62.setFill(Color.web("#bac267"));
+                }
+                else if (x > 112 && x < 148 && y > 256 && y < 292) {
+                    sc63.setVisible(true);
+                    sc63.setFill(Color.web("#bac267"));
+                }
+                else if (x > 161 && x < 197 && y > 256 && y < 292) {
+                    sc64.setVisible(true);
+                    sc64.setFill(Color.web("#bac267"));
+                }
+                else if (x > 212 && x < 248 && y > 256 && y < 292) {
+                    sc65.setVisible(true);
+                    sc65.setFill(Color.web("#bac267"));
+                }
+                else if (x > 262 && x < 298 && y > 256 && y < 292) {
+                    sc66.setVisible(true);
+                    sc66.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 256 && y < 292) {
+                    sc67.setVisible(true);
+                    sc67.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 256 && y < 292) {
+                    sc68.setVisible(true);
+                    sc68.setFill(Color.web("#bac267"));
+                }
+                else if (x > 10 && x < 46 && y > 306 && y < 342) {
+                    sc71.setVisible(true);
+                    sc71.setFill(Color.web("#bac267"));
+                }
+                else if (x > 61 && x < 97 && y > 305 && y < 341) {
+                    sc72.setVisible(true);
+                    sc72.setFill(Color.web("#bac267"));
+                }
+                else if (x > 111 && x < 147 && y > 306 && y < 342) {
+                    sc73.setVisible(true);
+                    sc73.setFill(Color.web("#bac267"));
+                }
+                else if (x > 160 && x < 196 && y > 306 && y < 342) {
+                    sc74.setVisible(true);
+                    sc74.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 211 && x < 247 && y > 306 && y < 342) {
+                    sc75.setVisible(true);
+                    sc75.setFill(Color.web("#bac267"));
+                }
+                else if (x > 261 && x < 297 && y > 306 && y < 342) {
+                    sc76.setVisible(true);
+                    sc76.setFill(Color.web("#bac267"));
+                }
+                else if (x > 311 && x < 347 && y > 306 && y < 342) {
+                    sc77.setVisible(true);
+                    sc77.setFill(Color.web("#bac267"));
+                }
+                else if (x > 359 && x < 395 && y > 306 && y < 342) {
+                    sc78.setVisible(true);
+                    sc78.setFill(Color.web("#bac267"));
+                }
+                else if (x > 11 && x < 47 && y > 355 && y < 391) {
+                    sc81.setVisible(true);
+                    sc81.setFill(Color.web("#bac267"));
+                    isSecondCircle = true;
+                }
+
+                else if (x > 61 && x < 97 && y > 356 && y < 392) {
+                    sc82.setVisible(true);
+                    sc82.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 111 && x < 147 && y > 356 && y < 392) {
+                    sc83.setVisible(true);
+                    sc83.setFill(Color.web("#bac267"));
+                }
+
+                else if (x > 159 && x < 195 && y > 356 && y < 392) {
+                    sc84.setVisible(true);
+                    sc84.setFill(Color.web("#bac267"));
+                }
+
+
+                else if (x > 211 && x < 247 && y > 356 && y < 392) {
+                    sc85.setVisible(true);
+                    sc85.setFill(Color.web("#bac267"));
+                }
+                else if (x > 261 && x < 297 && y > 356 && y < 392) {
+                    sc86.setVisible(true);
+                    sc86.setFill(Color.web("#bac267"));
+                }
+                else if (x > 312 && x < 348 && y > 356 && y < 392) {
+                    sc87.setVisible(true);
+                    sc87.setFill(Color.web("#bac267"));
+                }
+                else if (x > 360 && x < 396 && y > 356 && y < 392) {
+                    sc88.setVisible(true);
+                    sc88.setFill(Color.web("#bac267"));
+                }
+                isSecondCircle = false;
+            }
+
+        }
+        //commands for second player
+        else {
+
+        }
+
+    }}

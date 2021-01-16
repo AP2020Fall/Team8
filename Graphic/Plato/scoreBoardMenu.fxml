@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -14,11 +15,22 @@
                 <Image url="@background/paszamine_com_1687_Full_HD.jpg" />
             </image>
         </ImageView>
-        <ListView fx:id="ScoreBoardMenuList" layoutX="173.0" layoutY="118.0" prefHeight="251.0" prefWidth="261.0" />
-        <Label layoutX="181.0" layoutY="56.0" text="ScoreBoard Menu">
+        <Label fx:id="gameSBName" layoutX="181.0" layoutY="56.0" prefHeight="45.0" prefWidth="81.0">
             <font>
                 <Font size="30.0" />
             </font>
         </Label>
+      <TreeTableView fx:id="SBTableView1" layoutX="163.0" layoutY="78.0" prefHeight="376.0" prefWidth="307.0" visible="false">
+        <columns>
+          <TreeTableColumn fx:id="playerSBColumn1" prefWidth="140.66664123535156" text="Player"/>
+          <TreeTableColumn fx:id="scoreSBColumn1" prefWidth="161.3333740234375" text="Score" />
+        </columns>
+      </TreeTableView>
+        <TreeTableView fx:id="SBTableView2" layoutX="163.0" layoutY="78.0" prefHeight="376.0" prefWidth="307.0" visible="false">
+            <columns>
+                <TreeTableColumn fx:id="playerSBColumn2" prefWidth="140.66664123535156" text="Player" />
+                <TreeTableColumn fx:id="scoreSBColumn2" prefWidth="161.3333740234375" text="Score" />
+            </columns>
+        </TreeTableView>
     </children>
 </Pane>

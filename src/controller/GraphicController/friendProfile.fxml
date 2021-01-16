@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.FriendProfile">
+<children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="557.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="610.0">
+        <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+                <stops>
+                    <Stop>
+                     <color>
+                        <Color red="1.0" green="0.6549019813537598" blue="0.12156862765550613" />
+                     </color></Stop>
+                    <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1080000028014183" green="0.5300780534744263" blue="0.8999999761581421" />
+                     </color></Stop>
+                </stops>
+            </LinearGradient>
+        </fill>
+    </Rectangle>
+    <Text layoutX="203.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends User Profile">
+        <font>
+            <Font name="Arial terminal one" size="24.0" />
+        </font>
+    </Text>
+    <Label layoutX="132.0" layoutY="163.0" text="Username:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="127.0" layoutY="235.0" text="Wins Count:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="56.0" layoutY="308.0" text="Passed Days Since Register:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="147.0" layoutY="377.0" text="Score:">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Text fx:id="frUsernameT" layoutX="306.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text fx:id="frWinsCountT" layoutX="306.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text fx:id="frDatePassedT" layoutX="289.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="50.07745361328125">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text fx:id="frScoreT" layoutX="289.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="39.99999999999994">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+</children>
+</AnchorPane>
