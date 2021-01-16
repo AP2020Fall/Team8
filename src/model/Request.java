@@ -9,7 +9,7 @@ public class Request {
     public Request(Player sender, Player receiver) {
         this.sender = sender;
         this.receiver = receiver;
-        receiver.getFriendRequest().add(this);
+       // receiver.getFriendRequest().add(this);
     }
 
     public void setPending(boolean pending) {

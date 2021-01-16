@@ -16,6 +16,6 @@ public class CreateEventFx {
     public TextField endCreateTF;
 
     public void createEvent(ActionEvent actionEvent) {
-        AdminMenu.validation(LocalDateTime.parse(startCreateEvTF.getText()),LocalDateTime.parse());
+        AdminMenu.validation(LocalDateTime.parse(startCreateEvTF.getText()),LocalDateTime.parse(endCreateTF.getText()),scoreTF.getText(),gameCreateEvTF.getText());
     }
 }

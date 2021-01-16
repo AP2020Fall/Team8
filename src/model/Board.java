@@ -1,14 +1,9 @@
 package model;
 
-import View.BoardVisual;
-import org.jetbrains.annotations.NotNull;
-import org.junit.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 
 public class Board {
-    public int[][] Boards = new int[9][9];
+  /*  public int[][] Boards = new int[9][9];
     // 0 is for free spot , 1 for player 1 , 2 for player 2
     private int lastX , lastY;
     public Board(){
@@ -488,6 +483,6 @@ public class Board {
 
     public int getLastY() {
         return lastY;
-    }
+    }*/
 }
 

@@ -14,13 +14,13 @@ public class CommandProcessor {
     private Account loginAccount;
     private boolean isFirstRun=true;
     private static int output;
-    private static MainCommandStatus mainCommandStatus=null;
-    private static SubCommandStatus subCommandStatus =null;
-    private static MainMenuStatus mainMenuStatus=MainMenuStatus.RegisterMenu;
+    //private static MainCommandStatus mainCommandStatus=null;
+    //private static SubCommandStatus subCommandStatus =null;
+   // private static MainMenuStatus mainMenuStatus=MainMenuStatus.RegisterMenu;
 
-    public static void setMainMenuStatus(MainMenuStatus mainMenuStatus) {
-        CommandProcessor.mainMenuStatus = mainMenuStatus;
-    }
+    //public static void setMainMenuStatus(MainMenuStatus mainMenuStatus) {
+      //  CommandProcessor.mainMenuStatus = mainMenuStatus;
+    //}
 
     // VIEW LASTPLAYED az player KAR DARE!!
     //todolist: error ha,regex megexa, age admin e ashghal accountesho pak kone chi?!,new kardan login account ro ye check bokon,
@@ -41,7 +41,7 @@ public class CommandProcessor {
             mainCommandStatus=MainCommandStatus.SHOW_FRIEND_REQUESTS;
 
     }*/
-    public static void setMainCommandStatus(String command) {
+    /*public static void setMainCommandStatus(String command) {
          if(command.equalsIgnoreCase("View account menu")){
             mainMenuStatus=MainMenuStatus.AccountMenu;
         }
@@ -225,7 +225,8 @@ public class CommandProcessor {
         else if (command.equals("Show friend requests"))
             mainCommandStatus=MainCommandStatus.SHOW_FRIEND_REQUESTS;
 
-    }
+    }*/
+    /*
     public static void runPlato(Scanner scanner){
         while (true){
             String command=scanner.nextLine();
@@ -408,7 +409,7 @@ public class CommandProcessor {
         }
 
 
-    }
+    }*/
     public static boolean matchRegex(String command,String regex){
         Pattern pattern=Pattern.compile(regex);
         Matcher matcher=pattern.matcher(command);

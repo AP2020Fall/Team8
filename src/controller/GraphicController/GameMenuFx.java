@@ -67,7 +67,7 @@ public class GameMenuFx {
             Main.allStage.show();
         }
         else{
-            Parent root = FXMLLoader.load(Objects.requireNonNull(DbFirstMenu.class.getClassLoader().getResource("DbFirstMenu.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(DBFirstMenu.class.getClassLoader().getResource("DBFirstMenu.fxml")));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
             Main.allStage.show();
