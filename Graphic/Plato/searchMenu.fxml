@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.GraphicController.SearchMenu"
-            prefHeight="400.0" prefWidth="600.0">
-
-
+<AnchorPane prefHeight="484.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.SearchMenu">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="514.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="531.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#871fff" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TextField fx:id="searchTF" layoutX="129.0" layoutY="37.0" onInputMethodTextChanged="#searchProcess" prefHeight="25.0" prefWidth="269.0" />
+      <ListView fx:id="searchList" layoutX="126.0" layoutY="78.0" prefHeight="434.0" prefWidth="276.0" />
+      <Label layoutX="68.0" layoutY="78.0" text="Results:">
+         <font>
+            <Font name="Arial Terminal" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="40.0" layoutX="97.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/serachIcon.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="442.0" layoutY="295.0" mnemonicParsing="false" onAction="#openUser" text="View User" />
+   </children>
 </AnchorPane>

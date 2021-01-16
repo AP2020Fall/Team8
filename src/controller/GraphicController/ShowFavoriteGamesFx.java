@@ -9,7 +9,7 @@ import javafx.scene.control.SelectionMode;
 import java.util.ArrayList;
 
 public class ShowFavoriteGamesFx {
-    public ListView<String> ShowFavoriteGamesList;
+    public ListView<String> ShowFavoriteGamesList=new ListView<>();
     ObservableList<String> gameNames = FXCollections.observableArrayList();
   //  ListView<String> ShowF = new ListView<String>();
     @FXML
