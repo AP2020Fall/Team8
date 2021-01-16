@@ -1,0 +1,641 @@
+Index: src/model/DotsAndBoxes.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package model;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.ColorPicker;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.input.MouseEvent;\r\nimport javafx.scene.shape.Circle;\r\nimport javafx.scene.shape.Line;\r\nimport javafx.scene.shape.Rectangle;\r\nimport javafx.scene.text.Text;\r\nimport javafx.stage.Stage;\r\nimport javafx.scene.paint.Color;\r\n\r\nimport java.awt.*;\r\nimport java.util.ArrayList;\r\n\r\npublic class DotsAndBoxes extends Game {\r\n    public DotsAndBoxes(String gameId, GamePlayer playerOne, GamePlayer playerTwo) {\r\n        super(gameId, playerOne, playerTwo);\r\n    }\r\n\r\n    package sample;\r\n\r\nimport javafx.event.EventHandler;\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Group;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.input.MouseEvent;\r\nimport javafx.scene.shape.*;\r\nimport javafx.scene.shape.Rectangle;\r\nimport javafx.scene.text.Text;\r\nimport javafx.stage.Stage;\r\nimport jdk.jfr.Event;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.security.PublicKey;\r\nimport java.util.ArrayList;\r\n\r\n    public class DbGameMenu {\r\n        public Line vl77;\r\n        public Line vl72;\r\n        public Line vl82;\r\n        public Line vl83;\r\n        public Line vl81;\r\n        public Line vl71;\r\n        public Line vl73;\r\n        public Line hl81;\r\n        public Line hl82;\r\n        public Line hl83;\r\n        public Line hl84;\r\n        public Line hl85;\r\n        public Line hl86;\r\n        public Line hl87;\r\n        public Line vl84;\r\n        public Line vl74;\r\n        public Line vl75;\r\n        public Line vl85;\r\n        public Line vl87;\r\n        public Line vl18;\r\n        public Line vl76;\r\n        public Line vl86;\r\n        public Line vl28;\r\n        public Line vl38;\r\n        public Line vl48;\r\n        public Line vl58;\r\n        public Line vl78;\r\n        public Line vl88;\r\n        public Rectangle r21;\r\n        public Rectangle r22;\r\n        public Rectangle r23;\r\n        public Rectangle r24;\r\n        public Rectangle r25;\r\n        public Rectangle r26;\r\n        public Rectangle r27;\r\n        public Rectangle r12;\r\n        public Rectangle r13;\r\n        public Rectangle r14;\r\n        public Rectangle r15;\r\n        public Rectangle r16;\r\n        public Rectangle r17;\r\n        public Rectangle r31;\r\n        public Rectangle r32;\r\n        public Rectangle r33;\r\n        public Rectangle r34;\r\n        public Rectangle r35;\r\n        public Rectangle r36;\r\n        public Rectangle r37;\r\n        public Rectangle r41;\r\n        public Rectangle r42;\r\n        public Rectangle r43;\r\n        public Rectangle r44;\r\n        public Rectangle r45;\r\n        public Rectangle r46;\r\n        public Rectangle r47;\r\n        public Rectangle r51;\r\n        public Rectangle r52;\r\n        public Rectangle r53;\r\n        public Rectangle r54;\r\n        public Rectangle r55;\r\n        public Rectangle r56;\r\n        public Rectangle r57;\r\n        public Rectangle r61;\r\n        public Rectangle r62;\r\n        public Rectangle r63;\r\n        public Rectangle r64;\r\n        public Rectangle r65;\r\n        public Rectangle r66;\r\n        public Rectangle r67;\r\n        public Rectangle r71;\r\n        public Rectangle r72;\r\n        public Rectangle r73;\r\n        public Rectangle r74;\r\n        public Rectangle r75;\r\n        public Rectangle r76;\r\n        public Circle sc11;\r\n        public Circle sc12;\r\n        public Circle sc13;\r\n        public Circle sc14;\r\n        public Circle sc15;\r\n        public Circle sc16;\r\n        public Circle sc17;\r\n        public Circle sc18;\r\n        public Circle sc21;\r\n        public Circle sc22;\r\n        public Circle sc23;\r\n        public Circle sc24;\r\n        public Circle sc25;\r\n        public Circle sc26;\r\n        public Circle sc27;\r\n        public Circle sc28;\r\n        public Circle sc31;\r\n        public Circle sc32;\r\n        public Circle sc33;\r\n        public Circle sc34;\r\n        public Circle sc35;\r\n        public Circle sc36;\r\n        public Circle sc37;\r\n        public Circle sc38;\r\n        public Circle sc41;\r\n        public Circle sc42;\r\n        public Circle sc43;\r\n        public Circle sc44;\r\n        public Circle sc45;\r\n        public Circle sc46;\r\n        public Circle sc47;\r\n        public Circle sc48;\r\n        public Circle sc51;\r\n        public Circle sc52;\r\n        public Circle sc53;\r\n        public Circle sc54;\r\n        public Circle sc55;\r\n        public Circle sc56;\r\n        public Circle sc57;\r\n        public Circle sc58;\r\n        public Circle sc61;\r\n        public Circle sc62;\r\n        public Circle sc63;\r\n        public Circle sc64;\r\n        public Circle sc65;\r\n        public Circle sc66;\r\n        public Circle sc67;\r\n        public Circle sc68;\r\n        public Circle sc71;\r\n        public Circle sc72;\r\n        public Circle sc73;\r\n        public Circle sc74;\r\n        public Circle sc75;\r\n        public Circle sc76;\r\n        public Circle sc77;\r\n        public Circle sc78;\r\n        public Circle sc81;\r\n        public Circle sc82;\r\n        public Circle sc83;\r\n        public Circle sc84;\r\n        public Circle sc85;\r\n        public Circle sc86;\r\n        public Circle sc87;\r\n        public Circle sc88;\r\n        private boolean hasCountDown;\r\n        public ImageView dbBackground;\r\n        public ImageView p1Img;\r\n        public ImageView p2Img;\r\n        public Text p1Score;\r\n        public Text p2Score;\r\n        public Label alertMessage;\r\n        public Line hl11;\r\n        public Line hl12;\r\n        public Line hl13;\r\n        public Line hl14;\r\n        public Line hl15;\r\n        public Line hl16;\r\n        public Line hl17;\r\n        public Line hl21;\r\n        public Line hl22;\r\n        public Line hl23;\r\n        public Line hl24;\r\n        public Line hl25;\r\n        public Line hl26;\r\n        public Line hl27;\r\n        public Line hl31;\r\n        public Line hl32;\r\n        public Line hl33;\r\n        public Line hl34;\r\n        public Line hl35;\r\n        public Line hl36;\r\n        public Line hl37;\r\n        public Line hl41;\r\n        public Line hl42;\r\n        public Line hl43;\r\n        public Line hl44;\r\n        public Line hl45;\r\n        public Line hl46;\r\n        public Line hl47;\r\n        public Line hl51;\r\n        public Line hl52;\r\n        public Line hl53;\r\n        public Line hl54;\r\n        public Line hl55;\r\n        public Line hl56;\r\n        public Line hl57;\r\n        public Line hl61;\r\n        public Line hl62;\r\n        public Line hl63;\r\n        public Line hl64;\r\n        public Line hl65;\r\n        public Line hl66;\r\n        public Line hl67;\r\n        public Line hl71;\r\n        public Line hl72;\r\n        public Line hl73;\r\n        public Line hl74;\r\n        public Line hl75;\r\n        public Line hl76;\r\n        public Line hl77;\r\n        public Line vl11;\r\n        public Line vl12;\r\n        public Line vl13;\r\n        public Line vl14;\r\n        public Line vl15;\r\n        public Line vl16;\r\n        public Line vl17;\r\n        public Line vl21;\r\n        public Line vl22;\r\n        public Line vl23;\r\n        public Line vl24;\r\n        public Line vl25;\r\n        public Line vl26;\r\n        public Line vl27;\r\n        public Line vl31;\r\n        public Line vl32;\r\n        public Line vl33;\r\n        public Line vl34;\r\n        public Line vl35;\r\n        public Line vl36;\r\n        public Line vl37;\r\n        public Line vl41;\r\n        public Line vl42;\r\n        public Line vl43;\r\n        public Line vl44;\r\n        public Line vl45;\r\n        public Line vl46;\r\n        public Line vl47;\r\n        public Line vl51;\r\n        public Line vl52;\r\n        public Line vl53;\r\n        public Line vl54;\r\n        public Line vl55;\r\n        public Line vl56;\r\n        public Line vl57;\r\n        //moraba haye tamame khuneha\r\n        public Rectangle r11;\r\n        public Rectangle r77;\r\n        private ArrayList<Circle> selectedC=new ArrayList<>();\r\n        private boolean isSecondCircle=false;\r\n        private DBPlayer firstPlayer;\r\n        private DbGameMenu secondPlayer;\r\n        private int firstPlayerScore;\r\n        private int secondPlayerScore;\r\n        private boolean isFirstPlayerTurn;\r\n        private boolean isRectangleDone;\r\n        private ArrayList<Line> selectedL;\r\n        //   private boolean isFirst;\r\n        private Stage stage;\r\n\r\n        public void setHasCountDown(boolean hasCountDown) {\r\n            this.hasCountDown = hasCountDown;\r\n        }\r\n        @FXML\r\n   /* public void initialize(){\r\n        dbBackground.setOnMouseClicked(e->{\r\n            double x=e.getX();\r\n            double y=e.getY();\r\n            Circle circle=new Circle(x,y,10);\r\n            Group root = new Group(circle);\r\n         //   primaryStage.setTitle(\"Hello World\");\r\n            stage.setScene(new Scene(root, 300, 275));\r\n            stage.show();\r\n        });\r\n    }*/\r\n\r\n   /* public void drawCircle(int centerX,int centerY){\r\n//Drawing a Circle\r\n        Circle circle = new Circle(centerX, centerY, 10);\r\n\r\n        //Creating a Group object\r\n        Group root = new Group(circle);\r\n        Parent root = FXMLLoader.load(getClass().getResource(\"sample.fxml\"));\r\n        primaryStage.setTitle(\"Hello World\");\r\n        primaryStage.setScene(new Scene(root, 300, 275));\r\n        primaryStage.show();\r\n    }*/\r\n        public void setTimer(){\r\n            // Timer timer=new Timer(120000,this);\r\n        }\r\n\r\n        public void drawCircle(MouseEvent mouseEvent) {\r\n            double x=  mouseEvent.getX();\r\n            double y=mouseEvent.getY();\r\n            Circle circle=new Circle(x,y,10);\r\n            circle.setVisible(true);\r\n        }\r\n\r\n        public void showC(MouseEvent mouseEvent) {\r\n            double x= MouseInfo.getPointerInfo().getLocation().getX();\r\n            double y=MouseInfo.getPointerInfo().getLocation().getY();\r\n            //command for first player\r\n            //player1 color: #bac267 and player2 color: #c17f68\r\n            if (isFirstPlayerTurn) {\r\n                if (isSecondCircle) {\r\n                    if (x>11 && x<47 && y>4 && y<40) {\r\n                        sc11.setVisible(true);\r\n                        sc11.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                if (isSecondCircle) {\r\n                    if (x>62 && x<98 && y>4 && y<40) {\r\n                        sc12.setVisible(true);\r\n                        sc12.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                if (isSecondCircle) {\r\n                    if (x>112 && x<148 && y>5 && y<41) {\r\n                        sc13.setVisible(true);\r\n                        sc13.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                if (isSecondCircle) {\r\n                    if (x>161 && x<197 && y>5 && y<41) {\r\n                        sc14.setVisible(true);\r\n                        sc14.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                if (isSecondCircle) {\r\n                    if (x>212 && x<248 && y>5 && y<41) {\r\n                        sc15.setVisible(true);\r\n                        sc15.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                if (isSecondCircle) {\r\n                    if (x>262 && x<298 && y>5 && y<41) {\r\n                        sc16.setVisible(true);\r\n                        sc16.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                if (isSecondCircle) {\r\n                    if (x>312 && x<348 && y>5 && y<41) {\r\n                        sc17.setVisible(true);\r\n                        sc17.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                if (isSecondCircle) {\r\n                    if (x>360 && x<396 && y>5 && y<41) {\r\n                        sc18.setVisible(true);\r\n                        sc18.setFill(Color.web(\"#bac267\"));\r\n                        isSecondCircle = true;\r\n                    }\r\n                    isSecondCircle = false;\r\n                } else {\r\n                    isSecondCircle = true;\r\n                }\r\n                //end\r\n                isFirstPlayerTurn=false;\r\n            }\r\n            //commands for second player\r\n            else {\r\n\r\n            }\r\n        }\r\n\r\n\r\n    /*public void showL(MouseEvent mouseEvent) {\r\n        double x= MouseInfo.getPointerInfo().getLocation().getX();\r\n        double y=MouseInfo.getPointerInfo().getLocation().getY();\r\n        Circle circle1= selectedC.get(0);\r\n        Circle circle2=selectedC.get(1);\r\n        if (circle1.getCenterX()==29&& circle2.getCenterY()==22){\r\n\r\n        }\r\n\r\n\r\n    }*/\r\n\r\n  /*  public void drawLine(MouseEvent mouseEvent){\r\n        if (isFirstPoint){\r\n            drawCircle();\r\n        }\r\n        else{\r\n            drawCircle();\r\n\r\n        }\r\n    }*/\r\n\r\n    }\r\n\r\n    public   boolean isValid(int x1,int x2,int y1,int y2){return true;}\r\n\r\n      public   void showValidPosition(){}\r\n\r\n       public void showGrid(){}\r\n\r\n     public    void drawLine(){}\r\n\r\n       public void setLineColor(){}\r\n\r\n      public   void showLines(){}\r\n\r\n       public void showPossibleDots(){}\r\n\r\n      public   void showResult(){}\r\n\r\n       public void showScore(){}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\npublic class Board{\r\n    private int[][] Board = new int[8][8];\r\n    private int lastX , lastY;\r\n    public int[][] getBoard() {\r\n        return Board;\r\n    }\r\n\r\n    public void setLastX(int lastX) {\r\n        this.lastX = lastX;\r\n    }\r\n\r\n    public void setLastY(int lastY) {\r\n        this.lastY = lastY;\r\n    }\r\n\r\n    public int getLastX() {\r\n        return lastX;\r\n    }\r\n\r\n    public int getLastY() {\r\n        return lastY;\r\n    }\r\n}}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/model/DotsAndBoxes.java	(revision c0acb5cc17e2c7fac2453ed20ef63bba9eb3dba1)
++++ src/model/DotsAndBoxes.java	(date 1610782640910)
+@@ -332,94 +332,575 @@
+             //command for first player
+             //player1 color: #bac267 and player2 color: #c17f68
+             if (isFirstPlayerTurn) {
+-                if (isSecondCircle) {
+-                    if (x>11 && x<47 && y>4 && y<40) {
++                if (!isSecondCircle) {
++                    if (x > 11 && x < 47 && y > 4 && y < 40) {
+                         sc11.setVisible(true);
+                         sc11.setFill(Color.web("#bac267"));
+-                        isSecondCircle = true;
++                    } else if (x > 62 && x < 98 && y > 4 && y < 40) {
++                        sc12.setVisible(true);
++                        sc12.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 112 && x < 148 && y > 5 && y < 41) {
++                        sc13.setVisible(true);
++                        sc13.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 161 && x < 197 && y > 5 && y < 41) {
++                        sc14.setVisible(true);
++                        sc14.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 212 && x < 248 && y > 5 && y < 41) {
++                        sc15.setVisible(true);
++                        sc15.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 262 && x < 298 && y > 5 && y < 41) {
++                        sc16.setVisible(true);
++                        sc16.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 5 && y < 41) {
++                        sc17.setVisible(true);
++                        sc17.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 5 && y < 41) {
++                        sc18.setVisible(true);
++                        sc18.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 55 && y < 91) {
++                        sc21.setVisible(true);
++                        sc21.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 98 && x < 62 && y > 55 && y < 91) {
++                        sc22.setVisible(true);
++                        sc22.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 148 && x < 112 && y > 55 && y < 91) {
++                        sc23.setVisible(true);
++                        sc23.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 197 && x < 161 && y > 55 && y < 91) {
++                        sc24.setVisible(true);
++                        sc24.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 248 && x < 212 && y > 55 && y < 91) {
++                        sc25.setVisible(true);
++                        sc25.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 298 && x < 262 && y > 55 && y < 91) {
++                        sc26.setVisible(true);
++                        sc26.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 348 && x < 312 && y > 55 && y < 91) {
++                        sc27.setVisible(true);
++                        sc27.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 55 && y < 91) {
++                        sc28.setVisible(true);
++                        sc28.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 105 && y < 141) {
++                        sc31.setVisible(true);
++                        sc31.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 98 && x < 62 && y > 105 && y < 141) {
++                        sc32.setVisible(true);
++                        sc32.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 112 && x < 148 && y > 106 && y < 142) {
++                        sc33.setVisible(true);
++                        sc33.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 161 && x < 197 && y > 106 && y < 142) {
++                        sc34.setVisible(true);
++                        sc34.setFill(Color.web("#bac267"));
++
++                    }
++                    else if (x > 212 && x < 248 && y > 106 && y < 142) {
++                        sc35.setVisible(true);
++                        sc35.setFill(Color.web("#bac267"));
++
++                    }
++                    else if (x > 262 && x < 298 && y > 106 && y < 142) {
++                        sc36.setVisible(true);
++                        sc36.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 106 && y < 142) {
++                        sc37.setVisible(true);
++                        sc37.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 106 && y < 142) {
++                        sc38.setVisible(true);
++                        sc38.setFill(Color.web("#bac267"));
++
++                    }
++
++                    else if (x > 11 && x < 47 && y > 155 && y < 191) {
++                        sc41.setVisible(true);
++                        sc41.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 62 && x < 98 && y > 155 && y < 191) {
++                        sc42.setVisible(true);
++                        sc42.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 112 && x < 148 && y > 156 && y < 192) {
++                        sc43.setVisible(true);
++                        sc43.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 161 && x < 197 && y > 156 && y < 192) {
++                        sc44.setVisible(true);
++                        sc44.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 212 && x < 248 && y > 156 && y < 192) {
++                        sc45.setVisible(true);
++                        sc45.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 262 && x < 298 && y > 156 && y < 192) {
++                        sc46.setVisible(true);
++                        sc46.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 156 && y < 192) {
++                        sc47.setVisible(true);
++                        sc47.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 156 && y < 192) {
++                        sc48.setVisible(true);
++                        sc48.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 206 && y < 242) {
++                        sc51.setVisible(true);
++                        sc51.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 62 && x < 98 && y > 205 && y < 241) {
++                        sc52.setVisible(true);
++                        sc52.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 112 && x < 148 && y > 206 && y < 242) {
++                        sc53.setVisible(true);
++                        sc53.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 161 && x < 197 && y > 205 && y < 241) {
++                        sc54.setVisible(true);
++                        sc54.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 212 && x < 248 && y > 205 && y < 241) {
++                        sc55.setVisible(true);
++                        sc55.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 262 && x < 298 && y > 205 && y < 241) {
++                        sc56.setVisible(true);
++                        sc56.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 205 && y < 241) {
++                        sc57.setVisible(true);
++                        sc57.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 205 && y < 241) {
++                        sc58.setVisible(true);
++                        sc58.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 11 && x < 47 && y > 255 && y < 291) {
++                        sc61.setVisible(true);
++                        sc61.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 62 && x < 98 && y > 255 && y < 291) {
++                        sc62.setVisible(true);
++                        sc62.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 112 && x < 148 && y > 256 && y < 292) {
++                        sc63.setVisible(true);
++                        sc63.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 161 && x < 197 && y > 256 && y < 292) {
++                        sc64.setVisible(true);
++                        sc64.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 212 && x < 248 && y > 256 && y < 292) {
++                        sc65.setVisible(true);
++                        sc65.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 262 && x < 298 && y > 256 && y < 292) {
++                        sc66.setVisible(true);
++                        sc66.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 256 && y < 292) {
++                        sc67.setVisible(true);
++                        sc67.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 256 && y < 292) {
++                        sc68.setVisible(true);
++                        sc68.setFill(Color.web("#bac267"));
+                     }
+-                    isSecondCircle = false;
+-                } else {
++                    else if (x > 10 && x < 46 && y > 306 && y < 342) {
++                        sc71.setVisible(true);
++                        sc71.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 61 && x < 97 && y > 305 && y < 341) {
++                        sc72.setVisible(true);
++                        sc72.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 111 && x < 147 && y > 306 && y < 342) {
++                        sc73.setVisible(true);
++                        sc73.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 160 && x < 196 && y > 306 && y < 342) {
++                        sc74.setVisible(true);
++                        sc74.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 211 && x < 247 && y > 306 && y < 342) {
++                        sc75.setVisible(true);
++                        sc75.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 261 && x < 297 && y > 306 && y < 342) {
++                        sc76.setVisible(true);
++                        sc76.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 311 && x < 347 && y > 306 && y < 342) {
++                        sc77.setVisible(true);
++                        sc77.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 359 && x < 395 && y > 306 && y < 342) {
++                        sc78.setVisible(true);
++                        sc78.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 355 && y < 391) {
++                        sc81.setVisible(true);
++                        sc81.setFill(Color.web("#bac267"));
++
++                    }
++
++                    else if (x > 61 && x < 97 && y > 356 && y < 392) {
++                        sc82.setVisible(true);
++                        sc82.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 111 && x < 147 && y > 356 && y < 392) {
++                        sc83.setVisible(true);
++                        sc83.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 159 && x < 195 && y > 356 && y < 392) {
++                        sc84.setVisible(true);
++                        sc84.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 211 && x < 247 && y > 356 && y < 392) {
++                        sc85.setVisible(true);
++                        sc85.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 261 && x < 297 && y > 356 && y < 392) {
++                        sc86.setVisible(true);
++                        sc86.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 356 && y < 392) {
++                        sc87.setVisible(true);
++                        sc87.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 356 && y < 392) {
++                        sc88.setVisible(true);
++                        sc88.setFill(Color.web("#bac267"));
++                    }
+                     isSecondCircle = true;
+                 }
+-                if (isSecondCircle) {
+-                    if (x>62 && x<98 && y>4 && y<40) {
+-                        sc12.setVisible(true);
+-                        sc12.setFill(Color.web("#bac267"));
+-                        isSecondCircle = true;
+-                    }
+-                    isSecondCircle = false;
+-                } else {
+-                    isSecondCircle = true;
+-                }
+-                if (isSecondCircle) {
+-                    if (x>112 && x<148 && y>5 && y<41) {
++                //else dovmi commands for second circles and lines
++                else {
++                    if (x > 11 && x < 47 && y > 4 && y < 40) {
++                        sc11.setVisible(true);
++                        sc11.setFill(Color.web("#bac267"));
++                        if (x > 62 && x < 98 && y > 4 && y < 40){
++                            sc12.setVisible(true);
++                            hl11.setVisible(true);
++                            sc12.setFill(Color.web("#bac267"));
++                            hl11.setFill(Color.web("98c4c0"));
++                        }
++                        else if (x > 11 && x < 47 && y > 55 && y < 91){
++                            sc21.setVisible(true);
++                            vl11.setVisible(true);
++                            sc21.setFill(Color.web("#bac267"));
++                            vl11.setFill(Color.web("98c4c0"));
++                        }
++                    } else if (x > 62 && x < 98 && y > 4 && y < 40) {
++                        sc12.setVisible(true);
++                        sc12.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 112 && x < 148 && y > 5 && y < 41) {
+                         sc13.setVisible(true);
+                         sc13.setFill(Color.web("#bac267"));
+-                        isSecondCircle = true;
+                     }
+-                    isSecondCircle = false;
+-                } else {
+-                    isSecondCircle = true;
+-                }
+-                if (isSecondCircle) {
+-                    if (x>161 && x<197 && y>5 && y<41) {
++                    else if (x > 161 && x < 197 && y > 5 && y < 41) {
+                         sc14.setVisible(true);
+                         sc14.setFill(Color.web("#bac267"));
+-                        isSecondCircle = true;
+                     }
+-                    isSecondCircle = false;
+-                } else {
+-                    isSecondCircle = true;
+-                }
+-                if (isSecondCircle) {
+-                    if (x>212 && x<248 && y>5 && y<41) {
++
++                    else if (x > 212 && x < 248 && y > 5 && y < 41) {
+                         sc15.setVisible(true);
+                         sc15.setFill(Color.web("#bac267"));
+-                        isSecondCircle = true;
+                     }
+-                    isSecondCircle = false;
+-                } else {
+-                    isSecondCircle = true;
+-                }
+-                if (isSecondCircle) {
+-                    if (x>262 && x<298 && y>5 && y<41) {
++
++                    else if (x > 262 && x < 298 && y > 5 && y < 41) {
+                         sc16.setVisible(true);
+                         sc16.setFill(Color.web("#bac267"));
+-                        isSecondCircle = true;
+                     }
+-                    isSecondCircle = false;
+-                } else {
+-                    isSecondCircle = true;
+-                }
+-                if (isSecondCircle) {
+-                    if (x>312 && x<348 && y>5 && y<41) {
++                    else if (x > 312 && x < 348 && y > 5 && y < 41) {
+                         sc17.setVisible(true);
+                         sc17.setFill(Color.web("#bac267"));
+-                        isSecondCircle = true;
+                     }
+-                    isSecondCircle = false;
+-                } else {
+-                    isSecondCircle = true;
+-                }
+-                if (isSecondCircle) {
+-                    if (x>360 && x<396 && y>5 && y<41) {
++                    else if (x > 360 && x < 396 && y > 5 && y < 41) {
+                         sc18.setVisible(true);
+                         sc18.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 55 && y < 91) {
++                        sc21.setVisible(true);
++                        sc21.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 98 && x < 62 && y > 55 && y < 91) {
++                        sc22.setVisible(true);
++                        sc22.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 148 && x < 112 && y > 55 && y < 91) {
++                        sc23.setVisible(true);
++                        sc23.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 197 && x < 161 && y > 55 && y < 91) {
++                        sc24.setVisible(true);
++                        sc24.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 248 && x < 212 && y > 55 && y < 91) {
++                        sc25.setVisible(true);
++                        sc25.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 298 && x < 262 && y > 55 && y < 91) {
++                        sc26.setVisible(true);
++                        sc26.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 348 && x < 312 && y > 55 && y < 91) {
++                        sc27.setVisible(true);
++                        sc27.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 55 && y < 91) {
++                        sc28.setVisible(true);
++                        sc28.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 105 && y < 141) {
++                        sc31.setVisible(true);
++                        sc31.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 98 && x < 62 && y > 105 && y < 141) {
++                        sc32.setVisible(true);
++                        sc32.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 112 && x < 148 && y > 106 && y < 142) {
++                        sc33.setVisible(true);
++                        sc33.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 161 && x < 197 && y > 106 && y < 142) {
++                        sc34.setVisible(true);
++                        sc34.setFill(Color.web("#bac267"));
++
++                    }
++                    else if (x > 212 && x < 248 && y > 106 && y < 142) {
++                        sc35.setVisible(true);
++                        sc35.setFill(Color.web("#bac267"));
++
++                    }
++                    else if (x > 262 && x < 298 && y > 106 && y < 142) {
++                        sc36.setVisible(true);
++                        sc36.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 106 && y < 142) {
++                        sc37.setVisible(true);
++                        sc37.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 106 && y < 142) {
++                        sc38.setVisible(true);
++                        sc38.setFill(Color.web("#bac267"));
++
++                    }
++
++                    else if (x > 11 && x < 47 && y > 155 && y < 191) {
++                        sc41.setVisible(true);
++                        sc41.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 62 && x < 98 && y > 155 && y < 191) {
++                        sc42.setVisible(true);
++                        sc42.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 112 && x < 148 && y > 156 && y < 192) {
++                        sc43.setVisible(true);
++                        sc43.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 161 && x < 197 && y > 156 && y < 192) {
++                        sc44.setVisible(true);
++                        sc44.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 212 && x < 248 && y > 156 && y < 192) {
++                        sc45.setVisible(true);
++                        sc45.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 262 && x < 298 && y > 156 && y < 192) {
++                        sc46.setVisible(true);
++                        sc46.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 156 && y < 192) {
++                        sc47.setVisible(true);
++                        sc47.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 156 && y < 192) {
++                        sc48.setVisible(true);
++                        sc48.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 206 && y < 242) {
++                        sc51.setVisible(true);
++                        sc51.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 62 && x < 98 && y > 205 && y < 241) {
++                        sc52.setVisible(true);
++                        sc52.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 112 && x < 148 && y > 206 && y < 242) {
++                        sc53.setVisible(true);
++                        sc53.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 161 && x < 197 && y > 205 && y < 241) {
++                        sc54.setVisible(true);
++                        sc54.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 212 && x < 248 && y > 205 && y < 241) {
++                        sc55.setVisible(true);
++                        sc55.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 262 && x < 298 && y > 205 && y < 241) {
++                        sc56.setVisible(true);
++                        sc56.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 205 && y < 241) {
++                        sc57.setVisible(true);
++                        sc57.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 205 && y < 241) {
++                        sc58.setVisible(true);
++                        sc58.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 11 && x < 47 && y > 255 && y < 291) {
++                        sc61.setVisible(true);
++                        sc61.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 62 && x < 98 && y > 255 && y < 291) {
++                        sc62.setVisible(true);
++                        sc62.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 112 && x < 148 && y > 256 && y < 292) {
++                        sc63.setVisible(true);
++                        sc63.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 161 && x < 197 && y > 256 && y < 292) {
++                        sc64.setVisible(true);
++                        sc64.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 212 && x < 248 && y > 256 && y < 292) {
++                        sc65.setVisible(true);
++                        sc65.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 262 && x < 298 && y > 256 && y < 292) {
++                        sc66.setVisible(true);
++                        sc66.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 256 && y < 292) {
++                        sc67.setVisible(true);
++                        sc67.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 256 && y < 292) {
++                        sc68.setVisible(true);
++                        sc68.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 10 && x < 46 && y > 306 && y < 342) {
++                        sc71.setVisible(true);
++                        sc71.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 61 && x < 97 && y > 305 && y < 341) {
++                        sc72.setVisible(true);
++                        sc72.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 111 && x < 147 && y > 306 && y < 342) {
++                        sc73.setVisible(true);
++                        sc73.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 160 && x < 196 && y > 306 && y < 342) {
++                        sc74.setVisible(true);
++                        sc74.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 211 && x < 247 && y > 306 && y < 342) {
++                        sc75.setVisible(true);
++                        sc75.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 261 && x < 297 && y > 306 && y < 342) {
++                        sc76.setVisible(true);
++                        sc76.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 311 && x < 347 && y > 306 && y < 342) {
++                        sc77.setVisible(true);
++                        sc77.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 359 && x < 395 && y > 306 && y < 342) {
++                        sc78.setVisible(true);
++                        sc78.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 11 && x < 47 && y > 355 && y < 391) {
++                        sc81.setVisible(true);
++                        sc81.setFill(Color.web("#bac267"));
+                         isSecondCircle = true;
+                     }
++
++                    else if (x > 61 && x < 97 && y > 356 && y < 392) {
++                        sc82.setVisible(true);
++                        sc82.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 111 && x < 147 && y > 356 && y < 392) {
++                        sc83.setVisible(true);
++                        sc83.setFill(Color.web("#bac267"));
++                    }
++
++                    else if (x > 159 && x < 195 && y > 356 && y < 392) {
++                        sc84.setVisible(true);
++                        sc84.setFill(Color.web("#bac267"));
++                    }
++
++
++                    else if (x > 211 && x < 247 && y > 356 && y < 392) {
++                        sc85.setVisible(true);
++                        sc85.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 261 && x < 297 && y > 356 && y < 392) {
++                        sc86.setVisible(true);
++                        sc86.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 312 && x < 348 && y > 356 && y < 392) {
++                        sc87.setVisible(true);
++                        sc87.setFill(Color.web("#bac267"));
++                    }
++                    else if (x > 360 && x < 396 && y > 356 && y < 392) {
++                        sc88.setVisible(true);
++                        sc88.setFill(Color.web("#bac267"));
++                    }
+                     isSecondCircle = false;
+-                } else {
+-                    isSecondCircle = true;
+                 }
+-                //end
+-                isFirstPlayerTurn=false;
++
+             }
+             //commands for second player
+             else {
+ 
+             }
++
+         }
++    }
+ 
+ 
+     /*public void showL(MouseEvent mouseEvent) {
