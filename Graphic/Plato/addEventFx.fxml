@@ -52,8 +52,8 @@
       </Label>
       <MenuButton fx:id="gameMenuB" layoutX="147.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Game">
         <items>
-          <MenuItem fx:id="reversiItem" mnemonicParsing="false" text="Reversi" />
-          <MenuItem fx:id="DBItems" mnemonicParsing="false" text="DotsAndBoxes" />
+          <MenuItem fx:id="reversiItem" mnemonicParsing="false" onAction="#addReversi" text="Reversi" />
+          <MenuItem fx:id="DBItems" mnemonicParsing="false" onAction="#addDB" text="DotsAndBoxes" />
         </items>
          <font>
             <Font name="Arial terminal one" size="12.0" />

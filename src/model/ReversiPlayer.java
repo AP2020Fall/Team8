@@ -5,13 +5,18 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ReversiPlayer {
+    private Player player;
     private Color color;
     private static ArrayList<ReversiPlayer> allplayers = new ArrayList<>();
     private int username;
     private int playerNum;
     private boolean hasMadeMove ;
+    //taze ezafe kardam
+    private int currentScore;
+    private  int finalScore;
+    private boolean isWinner;
 
-    public ReversiPlayer(int username){
+    public ReversiPlayer(String username){
         this.username = username;
         allplayers.add(this);
     }

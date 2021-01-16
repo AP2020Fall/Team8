@@ -7,35 +7,20 @@ import java.util.Set;
 
 public class Game {
     private String name;
-    private String gameId;
+    private Player player;
+   // private String gameId;
     private static Set<Game> allGames=new LinkedHashSet<>();
     private HashMap<Player,Integer> allOfThisGamesPlayers=new HashMap<>();
-    private GamePlayer playerOne;
-    private GamePlayer playerTwo;
-    private GameResult playerOneResult;
-    private GameResult playerTwoResult;
-    private boolean isFinished;
+   // private GamePlayer playerOne;
+    //private GamePlayer playerTwo;
+  //  private GameResult playerOneResult;
+   // private GameResult playerTwoResult;
+    //private boolean isFinished;
     private boolean isFavorite;
     private String gameDetail;
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setGameId(String gameId) {
-        this.gameId = gameId;
-    }
-
-    public void setPlayerOne(GamePlayer playerOne) {
-        this.playerOne = playerOne;
-    }
-
-    public void setPlayerTwo(GamePlayer playerTwo) {
-        this.playerTwo = playerTwo;
-    }
-
-    public void setFinished(boolean finished) {
-        isFinished = finished;
     }
 
     public void setFavorite(boolean favorite) {
@@ -50,9 +35,6 @@ public class Game {
         return name;
     }
 
-    public String getGameId() {
-        return gameId;
-    }
 
     public Set<Game> getAllGames() {
         return allGames;
@@ -62,25 +44,6 @@ public class Game {
         return allOfThisGamesPlayers;
     }
 
-    public GamePlayer getPlayerOne() {
-        return playerOne;
-    }
-
-    public GamePlayer getPlayerTwo() {
-        return playerTwo;
-    }
-
-    public GameResult getPlayerOneResult() {
-        return playerOneResult;
-    }
-
-    public GameResult getPlayerTwoResult() {
-        return playerTwoResult;
-    }
-
-    public boolean isFinished() {
-        return isFinished;
-    }
 
     public boolean isFavorite() {
         return isFavorite;
@@ -107,16 +70,5 @@ public class Game {
 
     public void updateScoreboard(Player player,int score){
         int preScore=allOfThisGamesPlayers.get(player);
-        allOfThisGamesPlayers.replace(player,preScore+score);
-    }
-    public void setPlayerOneResult(GameResult playerOneResult) {
-        this.playerOneResult = playerOneResult;
-    }
-
-    public void setPlayerTwoResult(GameResult playerTwoResult) {
-        this.playerTwoResult = playerTwoResult;
-    }
-    public void endGame(){
-        isFinished=true;
-    }
+        allOfThisGamesPlayers.replace(player,preScore+score);}
 }

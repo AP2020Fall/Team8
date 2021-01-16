@@ -38,10 +38,10 @@ public class LoginMenu {
 
     public static void login(String id,String password){
         correctPassword(id,password);
-        if (Admin.getAdmin().contains(Admin.getAccountWithId(id))){
+        if (Admin.getAdmin().contains(Admin.getAdmin().get(0))){
             isAdmin=true;
        //     CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
-
+            FirstMenuFx.setLoggedInAdmin(Admin.getAdmin().get(0));
             FirstMenuFx.loginAccount=Admin.getAdmin().get(0);
             AdminMenu.setAdmin(Admin.getAdmin().get(0));
             AccountsMenu.setAccount(Admin.getAdmin().get(0));
@@ -49,8 +49,10 @@ public class LoginMenu {
         else{
             isAdmin=false;
             //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
+            FirstMenuFx.setLoggedInPlayer(Player.getPlayerWithUser(id));
             FirstMenuFx.loginAccount=Player.getPlayerWithUser(id);
             PlayerMenu.setPlayer(Player.getPlayerWithUser(id));
+            FriendsMenu.setPlayer(Player.getPlayerWithUser(id));
             AccountsMenu.setAccount(Player.getPlayerWithUser(id));
         }
     }

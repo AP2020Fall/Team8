@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -14,11 +15,18 @@
                 <Image url="@background/paszamine_com_1687_Full_HD.jpg" />
             </image>
         </ImageView>
-        <ListView fx:id="UsersMenuList" layoutX="173.0" layoutY="125.0" prefHeight="251.0" prefWidth="261.0" />
         <Label layoutX="221.0" layoutY="54.0" text="User's Menu">
             <font>
                 <Font size="30.0" />
             </font>
         </Label>
+      <TableView fx:id="userTable" layoutX="120.0" layoutY="133.0" prefHeight="330.0" prefWidth="365.0">
+        <columns>
+          <TableColumn fx:id="userColumn" prefWidth="86.66667938232422" text="UserName" />
+          <TableColumn fx:id="scoreColumn" prefWidth="79.33338928222656" text="Score" />
+            <TableColumn fx:id="daysPassedColumn" prefWidth="97.33331298828125" text="Days Passed" />
+            <TableColumn fx:id="winCountColumn" prefWidth="101.33331298828125" text="Wins Count" />
+        </columns>
+      </TableView>
     </children>
 </Pane>

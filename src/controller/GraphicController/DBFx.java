@@ -22,9 +22,9 @@ import java.awt.*;
 import java.security.PublicKey;
 import java.util.ArrayList;
 
-public class DbGameMenu {
+public class DBFx {
     private  ArrayList<Line> ra11=new ArrayList<>();
-    ...
+
     private ArrayList<Line> ra77=new ArrayList<>();
     public Line vl77;
     public Line vl72;
@@ -274,7 +274,6 @@ public class DbGameMenu {
     public void setHasCountDown(boolean hasCountDown) {
         this.hasCountDown = hasCountDown;
     }
-    @FXML
    /* public void initialize(){
         dbBackground.setOnMouseClicked(e->{
             double x=e.getX();
@@ -314,7 +313,9 @@ public class DbGameMenu {
         double y=MouseInfo.getPointerInfo().getLocation().getY();
         //command for first player
         if (isFirstPlayerTurn) {
+
             if (!isSecondCircle) {
+                //dayere avali
                 if (x >11 || x<47 && y>4 ||y<40) {
                     sc11.setVisible(true);
                     selectedC.add(sc11);
@@ -322,20 +323,27 @@ public class DbGameMenu {
                 }
 
 
-                isSecondCircle = false;
+                isSecondCircle = true;
 
             } else {
+                //dayere dovomi va badesh khat keshidan
                 if (x >11 || x<47 && y>4 ||y<40) {
                     Circle firstCircle =selectedC.get(0);
                     if (firstCircle.getCenterX()==80 && firstCircle.getCenterY()==22){
                         sc11.setVisible(true);
                         hl11.setVisible(true);
                         //baraye rang
-                        hl11;
+                     //   hl11;
                         //in mishe voice jadide ke ezafe kardam
                         ra11.add(hl11);
+                        if (isSecondCircle) {
+                            if (x <) {
+                                sc11.setVisible(true);
+                                isSecondCircle = true;
+                                hl11.setVisible(true);
+                            } else if () {
+                            }
 
-                    }
                     else if (firstCircle.getCenterX()==29&&firstCircle.getCenterY()==73){
                         sc21.setVisible(true);
                         vl21.setVisible(true);
@@ -360,7 +368,7 @@ public class DbGameMenu {
 
 
             isFirstPlayerTurn=true;
-        }
+        }}
     }
 
 

@@ -15,6 +15,8 @@ public class Player extends  Account {
     private  ArrayList<Player> friendRequest;
     private Set<String> favoriteGames;
     private int reversiAndWinsCounts=0;
+    private int reversiScore;
+    private int DBScore;
     private int dotsAndBoxesAndWinsCount=0;
     private int reversiPlayedCounts=0;
     private int dotsAndBoxesPlayedCounts=0;
@@ -22,6 +24,22 @@ public class Player extends  Account {
     private  ArrayList<GameReq> gameReqs;
     public void addFriend(){}
 
+    //for scoreboards
+    public void setReversiScore(int reversiScore) {
+        this.reversiScore = reversiScore;
+    }
+
+    public void setDBScore(int DBScore) {
+        this.DBScore = DBScore;
+    }
+
+    public int getReversiScore() {
+        return reversiScore;
+    }
+
+    public int getDBScore() {
+        return DBScore;
+    }
 
     public Player getPlayerWithId(String Id){
         for (Player player : allPlayers) {
