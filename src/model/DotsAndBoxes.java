@@ -2146,8 +2146,36 @@ import java.util.ArrayList;
                         }
                     }
                     else if (x > 360 && x < 396 && y > 205 && y < 241) {
-                        sc58.setVisible(true);
-                        sc58.setFill(Color.web("#bac267"));
+                        if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()) {
+                            if (vl48.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc48.setVisible(true);
+                                vl48.setVisible(true);
+                                sc48.setFill(Color.web("#bac267"));
+                                vl48.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
+                            if (hl57.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc57.setVisible(true);
+                                hl57.setVisible(true);
+                                sc57.setFill(Color.web("#bac267"));
+                                hl57.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
+                            if (vl58.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc67.setVisible(true);
+                                vl58.setVisible(true);
+                                sc67.setFill(Color.web("#bac267"));
+                                vl58.setFill(Color.web("98c4c0"));
+                            }
+                        }
                     }
 
                     else if (x > 11 && x < 47 && y > 255 && y < 291) {
