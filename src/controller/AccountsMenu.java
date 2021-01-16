@@ -75,8 +75,8 @@ public class AccountsMenu {
         setAccount(null);
         PlayerMenu.setPlayer(null);
         AdminMenu.setAdmin(null);
-        CommandProcessor.setMainCommandStatus(null);
-        CommandProcessor.setMainMenuStatus(null);
+      //  CommandProcessor.setMainCommandStatus(null);
+        //CommandProcessor.setMainMenuStatus(null);
     }
     public static void gameNameValidation(String name){}
     public static void showGameHistory(){}

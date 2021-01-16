@@ -251,6 +251,9 @@ public class DotsAndBoxes extends Game {
         public Line vl55;
         public Line vl56;
         public Line vl57;
+       private ArrayList<Line> ra11;
+       ...
+
         //moraba haye tamame khuneha
         public Rectangle r11;
         public Rectangle r77;
@@ -304,7 +307,7 @@ public class DotsAndBoxes extends Game {
             circle.setVisible(true);
         }
 
-       /* public void showC(MouseEvent mouseEvent) {
+        public void showC(MouseEvent mouseEvent) {
             double x= MouseInfo.getPointerInfo().getLocation().getX();
             double y=MouseInfo.getPointerInfo().getLocation().getY();
             //command for first player
@@ -658,6 +661,11 @@ public class DotsAndBoxes extends Game {
                                 hl11.setVisible(true);
                                 sc12.setFill(Color.web("#bac267"));
                                 hl11.setFill(Color.web("98c4c0"));
+                                ra11.add(hl11);
+                                if (ra11.size()==4){
+                                    r11.setVisible(true);
+                                    r11.setFill(Color.web("#bac267"));
+                                }
                             }
                         }
                         else if (x1 == sc21.getCenterX() && y1 == sc21.getCenterY()) {
@@ -668,6 +676,11 @@ public class DotsAndBoxes extends Game {
                                 vl11.setVisible(true);
                                 sc21.setFill(Color.web("#bac267"));
                                 vl11.setFill(Color.web("98c4c0"));
+                                ra11.add(vl11);
+                                if (ra11.size()==4){
+                                    r11.setVisible(true);
+                                    r11.setFill(Color.web("#bac267"));
+                                }
                             }
                         }
                     }
@@ -2841,7 +2854,7 @@ public class DotsAndBoxes extends Game {
         }
     }
 
-*/
+
     /*public void showL(MouseEvent mouseEvent) {
         double x= MouseInfo.getPointerInfo().getLocation().getX();
         double y=MouseInfo.getPointerInfo().getLocation().getY();
