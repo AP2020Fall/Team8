@@ -12,7 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 
-import java.awt.*;
+//import java.awt.*;
 import java.util.ArrayList;
 
 public class DotsAndBoxes extends Game {
@@ -252,7 +252,7 @@ public class DotsAndBoxes extends Game {
         public Line vl56;
         public Line vl57;
        private ArrayList<Line> ra11;
-       ...
+      // ...
 
         //moraba haye tamame khuneha
         public Rectangle r11;
@@ -307,7 +307,7 @@ public class DotsAndBoxes extends Game {
             circle.setVisible(true);
         }
 
-        public void showC(MouseEvent mouseEvent) {
+      /*  public void showC(MouseEvent mouseEvent) {
             double x= MouseInfo.getPointerInfo().getLocation().getX();
             double y=MouseInfo.getPointerInfo().getLocation().getY();
             //command for first player
