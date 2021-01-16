@@ -2469,12 +2469,68 @@ import java.util.ArrayList;
                         }
                     }
                     else if (x > 360 && x < 396 && y > 256 && y < 292) {
-                        sc68.setVisible(true);
-                        sc68.setFill(Color.web("#bac267"));
+                        if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
+                            if (vl58.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc58.setVisible(true);
+                                vl58.setVisible(true);
+                                sc58.setFill(Color.web("#bac267"));
+                                vl58.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
+                            if (hl67.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc67.setVisible(true);
+                                hl67.setVisible(true);
+                                sc67.setFill(Color.web("#bac267"));
+                                hl67.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc78.getCenterX() && y1 == sc78.getCenterY()) {
+                            if (vl78.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc78.setVisible(true);
+                                vl78.setVisible(true);
+                                sc78.setFill(Color.web("#bac267"));
+                                vl78.setFill(Color.web("98c4c0"));
+                            }
+                        }
                     }
                     else if (x > 10 && x < 46 && y > 306 && y < 342) {
-                        sc71.setVisible(true);
-                        sc71.setFill(Color.web("#bac267"));
+                        if (x1 == sc61.getCenterX() && y1 == sc61.getCenterY()) {
+                            if (vl71.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc61.setVisible(true);
+                                vl71.setVisible(true);
+                                sc61.setFill(Color.web("#bac267"));
+                                vl71.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc81.getCenterX() && y1 == sc81.getCenterY()) {
+                            if (vl81.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc81.setVisible(true);
+                                vl81.setVisible(true);
+                                sc81.setFill(Color.web("#bac267"));
+                                vl81.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
+                            if (vl71.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc72.setVisible(true);
+                                vl71.setVisible(true);
+                                sc72.setFill(Color.web("#bac267"));
+                                vl71.setFill(Color.web("98c4c0"));
+                            }
+                        }
                     }
                     else if (x > 61 && x < 97 && y > 305 && y < 341) {
                         sc72.setVisible(true);
