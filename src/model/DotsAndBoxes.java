@@ -779,26 +779,85 @@ import java.util.ArrayList;
                                 hl14.setFill(Color.web("98c4c0"));
                             }
                         }
-                        else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()){
-                            sc24.setVisible(true);
-                            vl14.setVisible(true);
-                            sc24.setFill(Color.web("#bac267"));
-                            vl14.setFill(Color.web("98c4c0"));
+                       else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
+                            if (vl14.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc24.setVisible(true);
+                                vl14.setVisible(true);
+                                sc24.setFill(Color.web("#bac267"));
+                                vl14.setFill(Color.web("98c4c0"));
+                            }
                         }
                     }
 
                     else if (x > 212 && x < 248 && y > 5 && y < 41) {
-                        sc15.setVisible(true);
-                        sc15.setFill(Color.web("#bac267"));
+                        if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()){
+                            if (hl14.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                                else {
+                                    sc14.setVisible(true);
+                                    hl14.setVisible(true);
+                                    sc14.setFill(Color.web("#bac267"));
+                                    hl14.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc16.getCenterX() && y1 == sc16.getCenterY()){
+                            if (hl15.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc16.setVisible(true);
+                                hl15.setVisible(true);
+                                sc16.setFill(Color.web("#bac267"));
+                                hl15.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
+                            if (vl15.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc25.setVisible(true);
+                                vl15.setVisible(true);
+                                sc25.setFill(Color.web("#bac267"));
+                                vl15.setFill(Color.web("98c4c0"));
+                            }
+                        }
                     }
 
                     else if (x > 262 && x < 298 && y > 5 && y < 41) {
-                        sc16.setVisible(true);
-                        sc16.setFill(Color.web("#bac267"));
+                        if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()){
+                            if (hl15.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc15.setVisible(true);
+                                hl15.setVisible(true);
+                                sc15.setFill(Color.web("#bac267"));
+                                hl15.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc17.getCenterX() && y1 == sc17.getCenterY()) {
+                            if (hl16.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc17.setVisible(true);
+                                hl16.setVisible(true);
+                                sc17.setFill(Color.web("#bac267"));
+                                hl16.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc26.getCenterX()  && y1 == sc26.getCenterY()) {
+                            if (vl16.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc26.setVisible(true);
+                                vl16.setVisible(true);
+                                sc26.setFill(Color.web("#bac267"));
+                                vl16.setFill(Color.web("98c4c0"));
+                            }
+                        }
                     }
                     else if (x > 312 && x < 348 && y > 5 && y < 41) {
-                        sc17.setVisible(true);
-                        sc17.setFill(Color.web("#bac267"));
+
                     }
                     else if (x > 360 && x < 396 && y > 5 && y < 41) {
                         sc18.setVisible(true);
