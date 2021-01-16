@@ -1830,7 +1830,30 @@ import java.util.ArrayList;
                             if (vl38.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
-
+                                sc38.setVisible(true);
+                                vl38.setVisible(true);
+                                sc38.setFill(Color.web("#bac267"));
+                                vl38.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
+                            if (hl47.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc47.setVisible(true);
+                                hl47.setVisible(true);
+                                sc47.setFill(Color.web("#bac267"));
+                                hl47.setFill(Color.web("98c4c0"));
+                            }
+                        }
+                        else if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
+                            if (vl48.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc58.setVisible(true);
+                                vl48.setVisible(true);
+                                sc58.setFill(Color.web("#bac267"));
+                                vl48.setFill(Color.web("98c4c0"));
                             }
                         }
                     }
