@@ -6,11 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import sample.Main;
 import sample.model.platoModel.Account;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
 
+import java.io.File;
 import java.io.IOException;
 
 //import model.Admin;
@@ -118,5 +121,12 @@ public class FirstMenuFx {
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
+
+    }
+    public void playMusic() {
+        File file = new File("src\\Sounds\\Click.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.play();
     }
 }
