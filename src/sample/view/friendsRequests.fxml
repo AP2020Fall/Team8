@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.FriendsRequestsFx">
+    <children>
+        <ImageView fitHeight="515.0" fitWidth="622.0" layoutX="-8.0" layoutY="-7.0">
+            <image>
+                <Image url="@background/paszamine_com_1687_Full_HD.jpg" />
+            </image>
+        </ImageView>
+        <ListView fx:id="FriendRequestsList" layoutX="173.0" layoutY="118.0" prefHeight="251.0" prefWidth="261.0" />
+        <Label layoutX="203.0" layoutY="58.0" text="FriendRequests">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+      <Button fx:id="declineB" layoutX="527.0" layoutY="118.0" mnemonicParsing="false" onAction="#declineReq" text="Decline">
+         <font>
+            <Font name="Arial terminal one" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="acceptB" layoutX="527.0" layoutY="344.0" mnemonicParsing="false" onAction="#acceptReq" text="Accept">
+         <font>
+            <Font name="Arial terminal one" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="addB" layoutX="434.0" layoutY="431.0" mnemonicParsing="false" onAction="#sendFreindReq" text="Add" />
+      <TextField fx:id="userTF" layoutX="203.0" layoutY="431.0" />
+      <Label layoutX="137.0" layoutY="435.0" text="Username:">
+         <font>
+            <Font name="Arial terminal one" size="12.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

@@ -23,14 +23,14 @@ public class LoginMenuFx {
       /*  alertLog.setText(String.valueOf(LoginMenu.getNum()));
         LoginMenu.login(userLoginTF.getText(),passwordLoginTF.getText());
         if (LoginMenu.isIsAdmin()){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(AdminMenuFx.class.getClassLoader().getResource("adminMenuFx.fxml")));
+            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
             Main.allStage.show();
 
         }
         else{
-            Parent root = FXMLLoader.load(Objects.requireNonNull(AdminMenuFx.class.getClassLoader().getResource("playerMenuFx.fxml")));
+          Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
             Main.allStage.show();

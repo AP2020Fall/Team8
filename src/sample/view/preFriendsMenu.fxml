@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="489.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.PreFriendsMenu">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="522.0" stroke="BLACK" strokeType="INSIDE" width="446.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop color="#ff1f1f"/>
+               <Stop color="#7a73b0" offset="1.0"/>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Rectangle>
+   <Button layoutX="43.0" layoutY="131.0" mnemonicParsing="false" onAction="#loadFriendLists" prefHeight="81.0"
+           prefWidth="179.0" text="FriendsList"/>
+   <Button layoutX="235.0" layoutY="314.0" mnemonicParsing="false" onAction="#loadFriendsReqa" prefHeight="81.0"
+           prefWidth="179.0" text="Friend Requests"/>
+   <Text layoutX="200.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends Menu"/>
+</AnchorPane>

@@ -10,7 +10,7 @@
 
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.StartMenuController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.reversi.StartMenuController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0">
          <fill>

@@ -55,7 +55,7 @@ public class FirstMenuFx {
         stage.setResizable(false);
         stage.show();*/
     }
-    public void loadMain() throws IOException {
+    public void loadMain() throws IOException {/*
         Parent root = FXMLLoader.load(getClass().getResource("../view/ScoreBoardMenu.fxml"));
         Main.allStage.setTitle("Score Board Menu");
         Main.allStage.setScene(new Scene(root));
@@ -79,11 +79,11 @@ public class FirstMenuFx {
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();}
 
-    public void loadGames() throws IOException {/*
-        Parent root = FXMLLoader.load(Objects.requireNonNull(GamesFx.class.getClassLoader().getResource("games.fxml")));
+    public void loadGames() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/games.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();*/
+        Main.allStage.show();
     }
 
     public void loadLogin() throws IOException {
@@ -93,10 +93,10 @@ public class FirstMenuFx {
             Main.allStage.show();
     }
 //helia akhtarkavian pare shod.
-    public void loadFriendMenu() throws IOException {/*
-        Parent root = FXMLLoader.load(Objects.requireNonNull(FriendsMenuFx.class.getClassLoader().getResource("friendsMenu.fxml")));
+    public void loadFriendMenu() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();*/
+        Main.allStage.show();
     }
 }

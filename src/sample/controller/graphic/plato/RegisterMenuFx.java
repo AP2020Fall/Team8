@@ -35,14 +35,14 @@ public class RegisterMenuFx {
         RegisterMenu.userPassValidation(userTFReg.getText(),passPFReg.getText());
         RegisterMenu.emailAndPhoneNumberValidation(emailTFReg.getText(),phoneTFReg.getText());
         alertReg.setText(OutputHandler.showRegisterMenuOutput(RegisterMenu.getNum()));
-        if (Admin.getAdmin().isEmpty()){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(AdminMenuFx.class.getClassLoader().getResource("adminMenuFx.fxml")));
+        if (Admin.getAdmin().size()==0){
+            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
             Main.allStage.show();
         }
         else {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(PlayerMenuFx.class.getClassLoader().getResource("playerMenuFx.fxml")));
+            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
             Main.allStage.show();

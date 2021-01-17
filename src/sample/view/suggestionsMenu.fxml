@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.SuggestionsMenuFx">
+    <children>
+        <ImageView fitHeight="596.0" fitWidth="590.0" layoutX="-8.0" layoutY="-4.0">
+            <image>
+                <Image url="@background/paszamine_com_1687_Full_HD.jpg" />
+            </image>
+        </ImageView>
+        <ListView fx:id="SuggestionsMenuList" layoutX="159.0" layoutY="59.0" prefHeight="251.0" prefWidth="261.0" />
+        <Label layoutX="163.0" layoutY="14.0" text="Suggestions Menu">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+      <Text layoutX="278.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game name:">
+         <font>
+            <Font name="Arial terminal one" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="32.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="usersugTf" layoutX="109.0" layoutY="328.0" />
+      <TextField fx:id="gamesSugTf" layoutX="371.0" layoutY="327.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="addsugB" layoutX="463.0" layoutY="360.0" mnemonicParsing="false" onAction="#addSuggestion" text="Add Suggestion">
+         <font>
+            <Font name="Arial terminal one" size="12.0" />
+         </font></Button>
+      <Label fx:id="alertSug" layoutX="258.0" layoutY="444.0" textFill="#ee0c0c" />
+      <Text layoutX="129.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="userPBMessage" layoutX="215.0" layoutY="382.0" />
+      <TextArea fx:id="PBTAMessage" layoutX="215.0" layoutY="427.0" prefHeight="140.0" prefWidth="149.0" />
+      <Text layoutX="136.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="446.0" layoutY="449.0" mnemonicParsing="false" onAction="#sendPlatoBotsMessage" text="Send ">
+         <font>
+            <Font name="Arial Terminal" size="12.0" />
+         </font></Button>
+    </children>
+</Pane>

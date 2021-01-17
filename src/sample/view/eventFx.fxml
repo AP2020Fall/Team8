@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="493.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.EventFx">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="504.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="477.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color blue="0.11999999731779099" green="1.0" red="0.23634615540504456" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color blue="0.9868420958518982" green="0.578399121761322" red="0.07919103652238846" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="98.0" layoutY="78.0" text="Start of Event:">
+         <font>
+            <Font name="Arial terminal one" size="14.0" />
+         </font></Label>
+      <Label layoutX="103.0" layoutY="343.0" text="Event Game:">
+         <font>
+            <Font name="Arial terminal one" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="252.0" text="Event Score:">
+         <font>
+            <Font name="Arial terminal one" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="170.0" text="End of Event:">
+         <font>
+            <Font name="Arial terminal one" size="14.0" />
+         </font>
+      </Label>
+      <Text fx:id="evGameT" layoutX="258.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="evStartT" layoutX="269.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Arial terminal one" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="evScoreT" layoutX="258.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="evEndT" layoutX="268.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

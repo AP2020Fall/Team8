@@ -32,12 +32,15 @@ public class RegisterMenu {
     }
     //account id ro random bezar
     public static void emailAndPhoneNumberValidation(String email, String phone){
-        if(!email.matches("^.+@.+$"))
+        if (num==1){
+            if(!email.matches("^.+@.+$"))
             num= 7;
         else if (!phone.matches("\\d{11}"))
             num= 8;
-        else if(num==1)
-            num= 9;
+        else
+            num=9;
+        }
+
     }
     public static void registerAccount(String username, String password, String name, String lastname, String email, String phone)throws NullPointerException {
         String uniqueID = UUID.randomUUID().toString();
