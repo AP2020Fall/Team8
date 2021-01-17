@@ -305,6 +305,7 @@ public class DotsAndBoxes extends Game {
         private ArrayList<Line> ra75;
         private ArrayList<Line> ra76;
         private ArrayList<Line> ra77;
+        private ArrayList<Rectangle> allRectangles;
 
         // ...
 
@@ -723,6 +724,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra11.size()==4){
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r11);
                                     firstPlayerScore++;
                                 }
                             }
@@ -739,6 +741,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra11.size()==4){
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r11);
                                     firstPlayerScore++;
                                 }
                             }
@@ -757,6 +760,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra11.size()==4){
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r11);
                                     firstPlayerScore++;
                                 }
                             }
@@ -773,6 +777,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra12.size()==4){
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r12);
                                     firstPlayerScore++;
                                 }
                             }
@@ -790,11 +795,13 @@ public class DotsAndBoxes extends Game {
                                 if (ra11.size()==4){
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r11);
                                     firstPlayerScore++;
                                 }
                                 if (ra12.size()==4){
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r12);
                                     firstPlayerScore++;
                                 }
                             }
@@ -813,6 +820,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra12.size()==4){
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r12);
                                     firstPlayerScore++;
                                 }
                             }
@@ -829,6 +837,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra13.size()==4){
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r13);
                                     firstPlayerScore++;
                                 }
                             }
@@ -846,11 +855,13 @@ public class DotsAndBoxes extends Game {
                                 if (ra12.size()==4){
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r12);
                                     firstPlayerScore++;
                                 }
                                 if (ra13.size()==4){
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r13);
                                     firstPlayerScore++;
                                 }
                             }
@@ -868,7 +879,8 @@ public class DotsAndBoxes extends Game {
                                 ra13.add(hl13);
                                 if (ra13.size()==4){
                                     r13.setVisible(true);
-                                    r12.setFill(Color.web("#dcff3e"));
+                                    r13.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r13);
                                     firstPlayerScore++;
                                 }
                             }
@@ -885,6 +897,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra14.size()==4){
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r14);
                                     firstPlayerScore++;
                                 }
                             }
@@ -902,11 +915,13 @@ public class DotsAndBoxes extends Game {
                                 if (ra13.size()==4){
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r13);
                                     firstPlayerScore++;
                                 }
                                 if (ra14.size()==4){
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r14);
                                     firstPlayerScore++;
                                 }
                             }
@@ -925,6 +940,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra14.size()==4){
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r14);
                                     firstPlayerScore++;
                                 }
                             }
@@ -941,6 +957,7 @@ public class DotsAndBoxes extends Game {
                                 if (ra15.size()==4){
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r15);
                                     firstPlayerScore++;
                                 }
                             }
@@ -958,17 +975,18 @@ public class DotsAndBoxes extends Game {
                                 if (ra14.size()==4){
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r14);
                                     firstPlayerScore++;
                                 }
                                 if (ra15.size()==4){
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r15);
                                     firstPlayerScore++;
                                 }
                             }
                         }
                     }
-
                     else if (x > 262 && x < 298 && y > 5 && y < 41) {
                         if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()){
                             if (hl15.isVisible())
@@ -978,6 +996,13 @@ public class DotsAndBoxes extends Game {
                                 hl15.setVisible(true);
                                 sc15.setFill(Color.web("#bac267"));
                                 hl15.setFill(Color.web("#98c4c0"));
+                                ra15.add(hl15);
+                                if (ra15.size()==4){
+                                    r15.setVisible(true);
+                                    r15.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r15);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc17.getCenterX() && y1 == sc17.getCenterY()) {
@@ -988,6 +1013,13 @@ public class DotsAndBoxes extends Game {
                                 hl16.setVisible(true);
                                 sc17.setFill(Color.web("#bac267"));
                                 hl16.setFill(Color.web("#98c4c0"));
+                                ra16.add(hl16);
+                                if (ra16.size()==4){
+                                    r16.setVisible(true);
+                                    r16.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r16);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc26.getCenterX()  && y1 == sc26.getCenterY()) {
@@ -998,6 +1030,20 @@ public class DotsAndBoxes extends Game {
                                 vl16.setVisible(true);
                                 sc26.setFill(Color.web("#bac267"));
                                 vl16.setFill(Color.web("#98c4c0"));
+                                ra15.add(vl16);
+                                if (ra15.size()==4){
+                                    r15.setVisible(true);
+                                    r15.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r15);
+                                    firstPlayerScore++;
+                                }
+                                ra16.add(vl16);
+                                if (ra16.size()==4){
+                                    r16.setVisible(true);
+                                    r16.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r16);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                     }
@@ -1010,6 +1056,13 @@ public class DotsAndBoxes extends Game {
                                 hl16.setVisible(true);
                                 sc16.setFill(Color.web("#bac267"));
                                 hl16.setFill(Color.web("#98c4c0"));
+                                ra16.add(hl16);
+                                if (ra16.size()==4){
+                                    r16.setVisible(true);
+                                    r16.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r16);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc18.getCenterX() && y1 == sc18.getCenterY()) {
@@ -1020,6 +1073,13 @@ public class DotsAndBoxes extends Game {
                                 hl17.setVisible(true);
                                 sc18.setFill(Color.web("#bac267"));
                                 hl17.setFill(Color.web("#98c4c0"));
+                                ra17.add(hl17);
+                                if (ra17.size()==4){
+                                    r17.setVisible(true);
+                                    r17.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r17);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
@@ -1030,6 +1090,20 @@ public class DotsAndBoxes extends Game {
                                 vl17.setVisible(true);
                                 sc27.setFill(Color.web("#bac267"));
                                 vl17.setFill(Color.web("#98c4c0"));
+                                ra16.add(vl17);
+                                if (ra16.size()==4){
+                                    r16.setVisible(true);
+                                    r16.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r16);
+                                    firstPlayerScore++;
+                                }
+                                ra17.add(vl17);
+                                if (ra17.size()==4){
+                                    r17.setVisible(true);
+                                    r17.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r17);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                     }
@@ -1042,6 +1116,13 @@ public class DotsAndBoxes extends Game {
                                 hl17.setVisible(true);
                                 sc17.setFill(Color.web("#bac267"));
                                 hl17.setFill(Color.web("#98c4c0"));
+                                ra17.add(hl17);
+                                if (ra17.size()==4){
+                                    r17.setVisible(true);
+                                    r17.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r17);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
@@ -1052,9 +1133,17 @@ public class DotsAndBoxes extends Game {
                                 vl18.setVisible(true);
                                 sc28.setFill(Color.web("#bac267"));
                                 vl18.setFill(Color.web("#98c4c0"));
+                                ra17.add(vl18);
+                                if (ra17.size()==4){
+                                    r17.setVisible(true);
+                                    r17.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r17);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                     }
+                    //here
                     else if (x > 11 && x < 47 && y > 55 && y < 91) {
                         if (x1 == sc22.getCenterX() && y1 == sc22.getCenterY()) {
                             if (hl21.isVisible())
