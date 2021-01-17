@@ -1725,30 +1725,44 @@ public class DotsAndBoxes extends Game {
                                 hl26.setVisible(true);
                                 sc26.setFill(Color.web("#bac267"));
                                 hl26.setFill(Color.web("#98c4c0"));
-                                ra15.add(vl15);
-                                if (ra15.size()==4){
-                                    r15.setVisible(true);
-                                    r15.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r15);
+                                ra16.add(hl26);
+                                if (ra16.size()==4){
+                                    r16.setVisible(true);
+                                    r16.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r16);
                                     firstPlayerScore++;
                                 }
-                                ra15.add(vl15);
-                                if (ra15.size()==4){
-                                    r15.setVisible(true);
-                                    r15.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r15);
+                                ra26.add(hl26);
+                                if (ra26.size()==4){
+                                    r26.setVisible(true);
+                                    r26.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r26);
                                     firstPlayerScore++;
                                 }
                             }
                         }
                         else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
-                            if (hl26.isVisible())
+                            if (hl27.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
                                 sc28.setVisible(true);
                                 hl27.setVisible(true);
                                 sc28.setFill(Color.web("#bac267"));
                                 hl27.setFill(Color.web("#98c4c0"));
+                                ra17.add(hl27);
+                                if (ra17.size()==4){
+                                    r17.setVisible(true);
+                                    r17.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r17);
+                                    firstPlayerScore++;
+                                }
+                                ra27.add(hl27);
+                                if (ra27.size()==4){
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
@@ -1759,6 +1773,20 @@ public class DotsAndBoxes extends Game {
                                 vl27.setVisible(true);
                                 sc37.setFill(Color.web("#bac267"));
                                 vl27.setFill(Color.web("#98c4c0"));
+                                ra26.add(vl27);
+                                if (ra26.size()==4){
+                                    r26.setVisible(true);
+                                    r26.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r26);
+                                    firstPlayerScore++;
+                                }
+                                ra27.add(vl27);
+                                if (ra27.size()==4){
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                     }
@@ -1771,6 +1799,13 @@ public class DotsAndBoxes extends Game {
                                vl18.setVisible(true);
                                sc38.setFill(Color.web("#bac267"));
                                vl18.setFill(Color.web("#98c4c0"));
+                               ra17.add(vl18);
+                               if (ra17.size()==4){
+                                   r17.setVisible(true);
+                                   r17.setFill(Color.web("#dcff3e"));
+                                   allRectangles.add(r17);
+                                   firstPlayerScore++;
+                               }
                            }
                        }
                        else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
@@ -1781,6 +1816,20 @@ public class DotsAndBoxes extends Game {
                                hl27.setVisible(true);
                                sc27.setFill(Color.web("#bac267"));
                                hl27.setFill(Color.web("#98c4c0"));
+                               ra17.add(hl27);
+                               if (ra17.size()==4){
+                                   r17.setVisible(true);
+                                   r17.setFill(Color.web("#dcff3e"));
+                                   allRectangles.add(r17);
+                                   firstPlayerScore++;
+                               }
+                               ra27.add(hl27);
+                               if (ra27.size()==4){
+                                   r27.setVisible(true);
+                                   r27.setFill(Color.web("#dcff3e"));
+                                   allRectangles.add(r27);
+                                   firstPlayerScore++;
+                               }
                            }
                        }
                        else if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
@@ -1791,6 +1840,13 @@ public class DotsAndBoxes extends Game {
                                vl27.setVisible(true);
                                sc38.setFill(Color.web("#bac267"));
                                vl27.setFill(Color.web("#98c4c0"));
+                               ra27.add(vl27);
+                               if (ra27.size()==4){
+                                   r27.setVisible(true);
+                                   r27.setFill(Color.web("#dcff3e"));
+                                   allRectangles.add(r27);
+                                   firstPlayerScore++;
+                               }
                            }
                        }
                     }
