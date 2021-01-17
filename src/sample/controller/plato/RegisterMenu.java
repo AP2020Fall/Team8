@@ -6,6 +6,7 @@ import sample.controller.graphic.plato.RegisterMenuFx;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
 
+import javax.swing.*;
 import java.util.UUID;
 
 public class RegisterMenu {
@@ -45,6 +46,7 @@ public class RegisterMenu {
         if (!Admin.isThereAdmin){
           registerAdmin(username,password,name,lastname,email,phone);
             FirstMenuFx.setLoggedInAdmin(Admin.getAdminWithUser(username));
+            System.out.println(Admin.getAdminWithUser(username));
             Admin.isThereAdmin=true;
             registered=true;
 
@@ -55,6 +57,7 @@ public class RegisterMenu {
            registerPlayer(username,password,name,lastname,email,phone);
             FirstMenuFx.setLoggedInPlayer(Player.getPlayerWithUser(username));
             registered=false;
+            System.out.println(Player.getPlayerWithUser(username));
             //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
         }}
         Admin.isThereAdmin=true;
