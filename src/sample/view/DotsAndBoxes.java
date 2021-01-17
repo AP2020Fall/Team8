@@ -305,8 +305,8 @@ public class DotsAndBoxes{
 
     private ArrayList<Circle> selectedC = new ArrayList<>();
     private boolean isSecondCircle = false;
-    private DBPlayer firstPlayer;
-    private DbGameMenu secondPlayer;
+  //  private DBPlayer firstPlayer;
+   // private DbGameMenu secondPlayer;
     private int firstPlayerScore = 0;
     private int secondPlayerScore = 0;
     private boolean isFirstPlayerTurn;

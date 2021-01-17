@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"fx:controller="sample.view.DotsAndBoxes">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.DotsAndBoxes">
     <children>
         <ImageView fitHeight="412.0" fitWidth="412.0" layoutY="-8.0">
             <image>
-                <Image url="@screen-0.png" />
+                <Image url="@/sample/images/screen-0.png" />
             </image>
         </ImageView>
         <Text layoutX="427.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player1 score:">
@@ -255,7 +255,7 @@
         </Text>
         <ImageView id="DBImage1" fitHeight="66.0" fitWidth="66.0" layoutX="422.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@blank-avatar.jpg" />
+                <Image url="@/sample/images/blank-avatar.jpg" />
             </image>
         </ImageView>
         <TextField layoutX="427.0" layoutY="235.0" prefHeight="25.0" prefWidth="86.0" />
@@ -264,7 +264,7 @@
         <Label layoutX="536.0" layoutY="89.0" text="Player2" />
         <ImageView id="DBImage1" fitHeight="66.0" fitWidth="66.0" layoutX="522.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@blank-avatar.jpg" />
+                <Image url="@/sample/images/blank-avatar.jpg" />
             </image>
         </ImageView>
     </children>
