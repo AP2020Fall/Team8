@@ -7,7 +7,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="489.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.PreFriendsMenu">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.PreFriendsMenu">
    <Rectangle arcHeight="5.0" arcWidth="5.0" height="522.0" stroke="BLACK" strokeType="INSIDE" width="446.0">
       <fill>
          <LinearGradient endX="1.0" endY="1.0">
