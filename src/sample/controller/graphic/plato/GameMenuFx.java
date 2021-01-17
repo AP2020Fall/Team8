@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class GameMenuFx {
+    @FXML
     private static String gameName;
     private static Player player;
     public Text showWinsText;
