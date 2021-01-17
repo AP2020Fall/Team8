@@ -256,56 +256,56 @@ public class DotsAndBoxes extends Game {
         public Line vl55;
         public Line vl56;
         public Line vl57;
-        private ArrayList<Line> ra11;
-        private ArrayList<Line> ra12;
-        private ArrayList<Line> ra13;
-        private ArrayList<Line> ra14;
-        private ArrayList<Line> ra15;
-        private ArrayList<Line> ra16;
-        private ArrayList<Line> ra17;
-        private ArrayList<Line> ra21;
-        private ArrayList<Line> ra22;
-        private ArrayList<Line> ra23;
-        private ArrayList<Line> ra24;
-        private ArrayList<Line> ra25;
-        private ArrayList<Line> ra26;
-        private ArrayList<Line> ra27;
-        private ArrayList<Line> ra31;
-        private ArrayList<Line> ra32;
-        private ArrayList<Line> ra33;
-        private ArrayList<Line> ra34;
-        private ArrayList<Line> ra35;
-        private ArrayList<Line> ra36;
-        private ArrayList<Line> ra37;
-        private ArrayList<Line> ra41;
-        private ArrayList<Line> ra42;
-        private ArrayList<Line> ra43;
-        private ArrayList<Line> ra44;
-        private ArrayList<Line> ra45;
-        private ArrayList<Line> ra46;
-        private ArrayList<Line> ra47;
-        private ArrayList<Line> ra51;
-        private ArrayList<Line> ra52;
-        private ArrayList<Line> ra53;
-        private ArrayList<Line> ra54;
-        private ArrayList<Line> ra55;
-        private ArrayList<Line> ra56;
-        private ArrayList<Line> ra57;
-        private ArrayList<Line> ra61;
-        private ArrayList<Line> ra62;
-        private ArrayList<Line> ra63;
-        private ArrayList<Line> ra64;
-        private ArrayList<Line> ra65;
-        private ArrayList<Line> ra66;
-        private ArrayList<Line> ra67;
-        private ArrayList<Line> ra71;
-        private ArrayList<Line> ra72;
-        private ArrayList<Line> ra73;
-        private ArrayList<Line> ra74;
-        private ArrayList<Line> ra75;
-        private ArrayList<Line> ra76;
-        private ArrayList<Line> ra77;
-        private ArrayList<Rectangle> allRectangles;
+        private ArrayList<Line> ra11 = new ArrayList<Line>();
+        private ArrayList<Line> ra12 = new ArrayList<Line>();
+        private ArrayList<Line> ra13 = new ArrayList<Line>();
+        private ArrayList<Line> ra14 = new ArrayList<Line>();
+        private ArrayList<Line> ra15 = new ArrayList<Line>();
+        private ArrayList<Line> ra16 = new ArrayList<Line>();
+        private ArrayList<Line> ra17 = new ArrayList<Line>();
+        private ArrayList<Line> ra21 = new ArrayList<Line>();
+        private ArrayList<Line> ra22 = new ArrayList<Line>();
+        private ArrayList<Line> ra23 = new ArrayList<Line>();
+        private ArrayList<Line> ra24 = new ArrayList<Line>();
+        private ArrayList<Line> ra25 = new ArrayList<Line>();
+        private ArrayList<Line> ra26 = new ArrayList<Line>();
+        private ArrayList<Line> ra27 = new ArrayList<Line>();
+        private ArrayList<Line> ra31 = new ArrayList<Line>();
+        private ArrayList<Line> ra32 = new ArrayList<Line>();
+        private ArrayList<Line> ra33 = new ArrayList<Line>();
+        private ArrayList<Line> ra34 = new ArrayList<Line>();
+        private ArrayList<Line> ra35 = new ArrayList<Line>();
+        private ArrayList<Line> ra36 = new ArrayList<Line>();
+        private ArrayList<Line> ra37 = new ArrayList<Line>();
+        private ArrayList<Line> ra41 = new ArrayList<Line>();
+        private ArrayList<Line> ra42 = new ArrayList<Line>();
+        private ArrayList<Line> ra43 = new ArrayList<Line>();
+        private ArrayList<Line> ra44 = new ArrayList<Line>();
+        private ArrayList<Line> ra45 = new ArrayList<Line>();
+        private ArrayList<Line> ra46 = new ArrayList<Line>();
+        private ArrayList<Line> ra47 = new ArrayList<Line>();
+        private ArrayList<Line> ra51 = new ArrayList<Line>();
+        private ArrayList<Line> ra52 = new ArrayList<Line>();
+        private ArrayList<Line> ra53 = new ArrayList<Line>();
+        private ArrayList<Line> ra54 = new ArrayList<Line>();
+        private ArrayList<Line> ra55 = new ArrayList<Line>();
+        private ArrayList<Line> ra56 = new ArrayList<Line>();
+        private ArrayList<Line> ra57 = new ArrayList<Line>();
+        private ArrayList<Line> ra61 = new ArrayList<Line>();
+        private ArrayList<Line> ra62 = new ArrayList<Line>();
+        private ArrayList<Line> ra63 = new ArrayList<Line>();
+        private ArrayList<Line> ra64 = new ArrayList<Line>();
+        private ArrayList<Line> ra65 = new ArrayList<Line>();
+        private ArrayList<Line> ra66 = new ArrayList<Line>();
+        private ArrayList<Line> ra67 = new ArrayList<Line>();
+        private ArrayList<Line> ra71 = new ArrayList<Line>();
+        private ArrayList<Line> ra72 = new ArrayList<Line>();
+        private ArrayList<Line> ra73 = new ArrayList<Line>();
+        private ArrayList<Line> ra74 = new ArrayList<Line>();
+        private ArrayList<Line> ra75 = new ArrayList<Line>();
+        private ArrayList<Line> ra76 = new ArrayList<Line>();
+        private ArrayList<Line> ra77 = new ArrayList<Line>();
+        private ArrayList<Rectangle> allRectangles = new ArrayList<Rectangle>();
 
         // ...
 
@@ -362,15 +362,14 @@ public class DotsAndBoxes extends Game {
         public void drawCircle(MouseEvent mouseEvent) {
             double x = mouseEvent.getX();
             double y = mouseEvent.getY();
-            Circle circle=new Circle(x,y,10);
+            Circle circle = new Circle(x,y,10);
             circle.setVisible(true);
         }
 
        public void showC(MouseEvent mouseEvent) {
-            double x= MouseInfo.getPointerInfo().getLocation().getX();
-            double y= MouseInfo.getPointerInfo().getLocation().getY();
+            double x = MouseInfo.getPointerInfo().getLocation().getX() - 340;
+            double y = MouseInfo.getPointerInfo().getLocation().getY() - 110;
             //command for first player
-            //player1 color: #bac267 and player2 color: #c17f68
             if (isFirstPlayerTurn) {
                 if (!isSecondCircle) {
                     if (x > 11 && x < 47 && y > 4 && y < 40) {
@@ -1859,6 +1858,13 @@ public class DotsAndBoxes extends Game {
                                 vl21.setVisible(true);
                                 sc21.setFill(Color.web("#bac267"));
                                 vl21.setFill(Color.web("#98c4c0"));
+                                ra21.add(vl21);
+                                if (ra21.size()==4){
+                                    r21.setVisible(true);
+                                    r21.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r21);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
@@ -1869,6 +1875,20 @@ public class DotsAndBoxes extends Game {
                                 hl31.setVisible(true);
                                 sc32.setFill(Color.web("#bac267"));
                                 hl31.setFill(Color.web("#98c4c0"));
+                                ra21.add(hl31);
+                                if (ra21.size()==4){
+                                    r21.setVisible(true);
+                                    r21.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r21);
+                                    firstPlayerScore++;
+                                }
+                                ra31.add(hl31);
+                                if (ra31.size()==4){
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
@@ -1879,6 +1899,13 @@ public class DotsAndBoxes extends Game {
                                 vl31.setVisible(true);
                                 sc41.setFill(Color.web("#bac267"));
                                 vl31.setFill(Color.web("#98c4c0"));
+                                ra31.add(vl31);
+                                if (ra31.size()==4){
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                     }
@@ -1891,6 +1918,20 @@ public class DotsAndBoxes extends Game {
                                 vl22.setVisible(true);
                                 sc22.setFill(Color.web("#bac267"));
                                 vl22.setFill(Color.web("#98c4c0"));
+                                ra21.add(vl22);
+                                if (ra21.size()==4){
+                                    r21.setVisible(true);
+                                    r21.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r21);
+                                    firstPlayerScore++;
+                                }
+                                ra22.add(vl22);
+                                if (ra22.size()==4){
+                                    r22.setVisible(true);
+                                    r22.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r22);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
@@ -1901,6 +1942,20 @@ public class DotsAndBoxes extends Game {
                                 hl31.setVisible(true);
                                 sc31.setFill(Color.web("#bac267"));
                                 hl31.setFill(Color.web("#98c4c0"));
+                                ra21.add(hl31);
+                                if (ra21.size()==4){
+                                    r21.setVisible(true);
+                                    r21.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r21);
+                                    firstPlayerScore++;
+                                }
+                                ra31.add(hl31);
+                                if (ra31.size()==4){
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
@@ -1911,6 +1966,20 @@ public class DotsAndBoxes extends Game {
                                 hl32.setVisible(true);
                                 sc33.setFill(Color.web("#bac267"));
                                 hl32.setFill(Color.web("#98c4c0"));
+                                ra22.add(hl32);
+                                if (ra22.size()==4){
+                                    r22.setVisible(true);
+                                    r22.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r22);
+                                    firstPlayerScore++;
+                                }
+                                ra32.add(hl32);
+                                if (ra32.size()==4){
+                                    r32.setVisible(true);
+                                    r32.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r32);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                         else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
@@ -1921,6 +1990,20 @@ public class DotsAndBoxes extends Game {
                                 vl32.setVisible(true);
                                 sc42.setFill(Color.web("#bac267"));
                                 vl32.setFill(Color.web("#98c4c0"));
+                                ra31.add(vl32);
+                                if (ra31.size()==4){
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                }
+                                ra32.add(vl32);
+                                if (ra32.size()==4){
+                                    r32.setVisible(true);
+                                    r32.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r32);
+                                    firstPlayerScore++;
+                                }
                             }
                         }
                     }
@@ -1934,7 +2017,7 @@ public class DotsAndBoxes extends Game {
                                 sc23.setFill(Color.web("#bac267"));
                                 vl23.setFill(Color.web("#98c4c0"));
                             }
-                        }
+                        }//-------------------------------------BIA INJAAA------------------------------------------------
                         else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
                             if (hl32.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
