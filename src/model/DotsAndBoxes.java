@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 
 //import java.awt.*;
+import java.awt.*;
 import java.util.ArrayList;
 
 public class DotsAndBoxes extends Game {
@@ -307,9 +308,9 @@ public class DotsAndBoxes extends Game {
             circle.setVisible(true);
         }
 
-      /*  public void showC(MouseEvent mouseEvent) {
+       public void showC(MouseEvent mouseEvent) {
             double x= MouseInfo.getPointerInfo().getLocation().getX();
-            double y=MouseInfo.getPointerInfo().getLocation().getY();
+            double y= MouseInfo.getPointerInfo().getLocation().getY();
             //command for first player
             //player1 color: #bac267 and player2 color: #c17f68
             if (isFirstPlayerTurn) {
@@ -660,7 +661,7 @@ public class DotsAndBoxes extends Game {
                                 sc12.setVisible(true);
                                 hl11.setVisible(true);
                                 sc12.setFill(Color.web("#bac267"));
-                                hl11.setFill(Color.web("98c4c0"));
+                                hl11.setFill(Color.web("#98c4c0"));
                                 ra11.add(hl11);
                                 if (ra11.size()==4){
                                     r11.setVisible(true);
@@ -675,7 +676,7 @@ public class DotsAndBoxes extends Game {
                                 sc21.setVisible(true);
                                 vl11.setVisible(true);
                                 sc21.setFill(Color.web("#bac267"));
-                                vl11.setFill(Color.web("98c4c0"));
+                                vl11.setFill(Color.web("#98c4c0"));
                                 ra11.add(vl11);
                                 if (ra11.size()==4){
                                     r11.setVisible(true);
@@ -692,7 +693,7 @@ public class DotsAndBoxes extends Game {
                                 sc11.setVisible(true);
                                 hl11.setVisible(true);
                                 sc11.setFill(Color.web("#bac267"));
-                                hl11.setFill(Color.web("98c4c0"));
+                                hl11.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc13.getCenterX() && y1 == sc13.getCenterY()) {
@@ -702,7 +703,7 @@ public class DotsAndBoxes extends Game {
                                 sc13.setVisible(true);
                                 hl12.setVisible(true);
                                 sc13.setFill(Color.web("#bac267"));
-                                hl12.setFill(Color.web("98c4c0"));
+                                hl12.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc22.getCenterX() && y1 == sc22.getCenterY()) {
@@ -712,7 +713,7 @@ public class DotsAndBoxes extends Game {
                                 sc22.setVisible(true);
                                 vl12.setVisible(true);
                                 sc22.setFill(Color.web("#bac267"));
-                                vl12.setFill(Color.web("98c4c0"));
+                                vl12.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -725,7 +726,7 @@ public class DotsAndBoxes extends Game {
                                 sc12.setVisible(true);
                                 hl12.setVisible(true);
                                 sc12.setFill(Color.web("#bac267"));
-                                hl12.setFill(Color.web("98c4c0"));
+                                hl12.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()) {
@@ -735,7 +736,7 @@ public class DotsAndBoxes extends Game {
                                 sc14.setVisible(true);
                                 hl13.setVisible(true);
                                 sc14.setFill(Color.web("#bac267"));
-                                hl13.setFill(Color.web("98c4c0"));
+                                hl13.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()){
@@ -745,7 +746,7 @@ public class DotsAndBoxes extends Game {
                                 sc23.setVisible(true);
                                 vl13.setVisible(true);
                                 sc23.setFill(Color.web("#bac267"));
-                                vl13.setFill(Color.web("98c4c0"));
+                                vl13.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -757,7 +758,7 @@ public class DotsAndBoxes extends Game {
                             sc13.setVisible(true);
                                 hl13.setVisible(true);
                                 sc13.setFill(Color.web("#bac267"));
-                                hl13.setFill(Color.web("98c4c0"));
+                                hl13.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()) {
@@ -767,7 +768,7 @@ public class DotsAndBoxes extends Game {
                                 sc15.setVisible(true);
                                 hl14.setVisible(true);
                                 sc15.setFill(Color.web("#bac267"));
-                                hl14.setFill(Color.web("98c4c0"));
+                                hl14.setFill(Color.web("#98c4c0"));
                             }
                         }
                        else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
@@ -777,7 +778,7 @@ public class DotsAndBoxes extends Game {
                                 sc24.setVisible(true);
                                 vl14.setVisible(true);
                                 sc24.setFill(Color.web("#bac267"));
-                                vl14.setFill(Color.web("98c4c0"));
+                                vl14.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -790,7 +791,7 @@ public class DotsAndBoxes extends Game {
                                     sc14.setVisible(true);
                                     hl14.setVisible(true);
                                     sc14.setFill(Color.web("#bac267"));
-                                    hl14.setFill(Color.web("98c4c0"));
+                                    hl14.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc16.getCenterX() && y1 == sc16.getCenterY()){
@@ -800,7 +801,7 @@ public class DotsAndBoxes extends Game {
                                 sc16.setVisible(true);
                                 hl15.setVisible(true);
                                 sc16.setFill(Color.web("#bac267"));
-                                hl15.setFill(Color.web("98c4c0"));
+                                hl15.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
@@ -810,7 +811,7 @@ public class DotsAndBoxes extends Game {
                                 sc25.setVisible(true);
                                 vl15.setVisible(true);
                                 sc25.setFill(Color.web("#bac267"));
-                                vl15.setFill(Color.web("98c4c0"));
+                                vl15.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -823,7 +824,7 @@ public class DotsAndBoxes extends Game {
                                 sc15.setVisible(true);
                                 hl15.setVisible(true);
                                 sc15.setFill(Color.web("#bac267"));
-                                hl15.setFill(Color.web("98c4c0"));
+                                hl15.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc17.getCenterX() && y1 == sc17.getCenterY()) {
@@ -833,7 +834,7 @@ public class DotsAndBoxes extends Game {
                                 sc17.setVisible(true);
                                 hl16.setVisible(true);
                                 sc17.setFill(Color.web("#bac267"));
-                                hl16.setFill(Color.web("98c4c0"));
+                                hl16.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc26.getCenterX()  && y1 == sc26.getCenterY()) {
@@ -843,7 +844,7 @@ public class DotsAndBoxes extends Game {
                                 sc26.setVisible(true);
                                 vl16.setVisible(true);
                                 sc26.setFill(Color.web("#bac267"));
-                                vl16.setFill(Color.web("98c4c0"));
+                                vl16.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -855,7 +856,7 @@ public class DotsAndBoxes extends Game {
                                 sc16.setVisible(true);
                                 hl16.setVisible(true);
                                 sc16.setFill(Color.web("#bac267"));
-                                hl16.setFill(Color.web("98c4c0"));
+                                hl16.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc18.getCenterX() && y1 == sc18.getCenterY()) {
@@ -865,7 +866,7 @@ public class DotsAndBoxes extends Game {
                                 sc18.setVisible(true);
                                 hl17.setVisible(true);
                                 sc18.setFill(Color.web("#bac267"));
-                                hl17.setFill(Color.web("98c4c0"));
+                                hl17.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
@@ -875,7 +876,7 @@ public class DotsAndBoxes extends Game {
                                 sc27.setVisible(true);
                                 vl17.setVisible(true);
                                 sc27.setFill(Color.web("#bac267"));
-                                vl17.setFill(Color.web("98c4c0"));
+                                vl17.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -887,7 +888,7 @@ public class DotsAndBoxes extends Game {
                                 sc17.setVisible(true);
                                 hl17.setVisible(true);
                                 sc17.setFill(Color.web("#bac267"));
-                                hl17.setFill(Color.web("98c4c0"));
+                                hl17.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
@@ -897,7 +898,7 @@ public class DotsAndBoxes extends Game {
                                 sc28.setVisible(true);
                                 vl18.setVisible(true);
                                 sc28.setFill(Color.web("#bac267"));
-                                vl18.setFill(Color.web("98c4c0"));
+                                vl18.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -909,7 +910,7 @@ public class DotsAndBoxes extends Game {
                                 sc22.setVisible(true);
                                 hl21.setVisible(true);
                                 sc22.setFill(Color.web("#bac267"));
-                                hl21.setFill(Color.web("98c4c0"));
+                                hl21.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc11.getCenterX() && y1 == sc11.getCenterY()) {
@@ -919,7 +920,7 @@ public class DotsAndBoxes extends Game {
                                 sc11.setVisible(true);
                                 vl11.setVisible(true);
                                 sc11.setFill(Color.web("#bac267"));
-                                vl11.setFill(Color.web("98c4c0"));
+                                vl11.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
@@ -929,7 +930,7 @@ public class DotsAndBoxes extends Game {
                                 sc31.setVisible(true);
                                 vl21.setVisible(true);
                                 sc31.setFill(Color.web("#bac267"));
-                                vl21.setFill(Color.web("98c4c0"));
+                                vl21.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -941,7 +942,7 @@ public class DotsAndBoxes extends Game {
                                 sc12.setVisible(true);
                                 vl12.setVisible(true);
                                 sc12.setFill(Color.web("#bac267"));
-                                vl12.setFill(Color.web("98c4c0"));
+                                vl12.setFill(Color.web("#98c4c0"));
                             }
                         } else if (x1 == sc21.getCenterX() && y1 == sc21.getCenterY()) {
                             if (hl21.isVisible())
@@ -950,7 +951,7 @@ public class DotsAndBoxes extends Game {
                                 sc21.setVisible(true);
                                 hl21.setVisible(true);
                                 sc21.setFill(Color.web("#bac267"));
-                                hl21.setFill(Color.web("98c4c0"));
+                                hl21.setFill(Color.web("#98c4c0"));
                             }
                         } else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()) {
                             if (hl22.isVisible())
@@ -959,7 +960,7 @@ public class DotsAndBoxes extends Game {
                                 sc23.setVisible(true);
                                 hl22.setVisible(true);
                                 sc23.setFill(Color.web("#bac267"));
-                                hl22.setFill(Color.web("98c4c0"));
+                                hl22.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
@@ -969,7 +970,7 @@ public class DotsAndBoxes extends Game {
                                 sc32.setVisible(true);
                                 vl22.setVisible(true);
                                 sc32.setFill(Color.web("#bac267"));
-                                vl22.setFill(Color.web("98c4c0"));
+                                vl22.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -982,7 +983,7 @@ public class DotsAndBoxes extends Game {
                                 sc13.setVisible(true);
                                 vl13.setVisible(true);
                                 sc13.setFill(Color.web("#bac267"));
-                                vl13.setFill(Color.web("98c4c0"));
+                                vl13.setFill(Color.web("#98c4c0"));
                             }
                         } else if (x1 == sc22.getCenterX() && y1 == sc22.getCenterY()) {
                             if (hl22.isVisible())
@@ -991,7 +992,7 @@ public class DotsAndBoxes extends Game {
                                 sc22.setVisible(true);
                                 hl22.setVisible(true);
                                 sc22.setFill(Color.web("#bac267"));
-                                hl22.setFill(Color.web("98c4c0"));
+                                hl22.setFill(Color.web("#98c4c0"));
                             }
                         } else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
                             if (hl23.isVisible())
@@ -1000,7 +1001,7 @@ public class DotsAndBoxes extends Game {
                                 sc24.setVisible(true);
                                 hl23.setVisible(true);
                                 sc24.setFill(Color.web("#bac267"));
-                                hl23.setFill(Color.web("98c4c0"));
+                                hl23.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
@@ -1010,7 +1011,7 @@ public class DotsAndBoxes extends Game {
                                 sc33.setVisible(true);
                                 vl23.setVisible(true);
                                 sc33.setFill(Color.web("#bac267"));
-                                vl23.setFill(Color.web("98c4c0"));
+                                vl23.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1022,7 +1023,7 @@ public class DotsAndBoxes extends Game {
                                 sc14.setVisible(true);
                                 vl14.setVisible(true);
                                 sc14.setFill(Color.web("#bac267"));
-                                vl14.setFill(Color.web("98c4c0"));
+                                vl14.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()) {
@@ -1032,7 +1033,7 @@ public class DotsAndBoxes extends Game {
                                 sc23.setVisible(true);
                                 hl23.setVisible(true);
                                 sc23.setFill(Color.web("#bac267"));
-                                hl23.setFill(Color.web("98c4c0"));
+                                hl23.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
@@ -1042,7 +1043,7 @@ public class DotsAndBoxes extends Game {
                                 sc25.setVisible(true);
                                 hl24.setVisible(true);
                                 sc25.setFill(Color.web("#bac267"));
-                                hl24.setFill(Color.web("98c4c0"));
+                                hl24.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
@@ -1052,7 +1053,7 @@ public class DotsAndBoxes extends Game {
                                 sc34.setVisible(true);
                                 vl24.setVisible(true);
                                 sc34.setFill(Color.web("#bac267"));
-                                vl24.setFill(Color.web("98c4c0"));
+                                vl24.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1064,7 +1065,7 @@ public class DotsAndBoxes extends Game {
                                 sc15.setVisible(true);
                                 vl15.setVisible(true);
                                 sc15.setFill(Color.web("#bac267"));
-                                vl15.setFill(Color.web("98c4c0"));
+                                vl15.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
@@ -1074,7 +1075,7 @@ public class DotsAndBoxes extends Game {
                                 sc24.setVisible(true);
                                 hl24.setVisible(true);
                                 sc24.setFill(Color.web("#bac267"));
-                                hl24.setFill(Color.web("98c4c0"));
+                                hl24.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
@@ -1084,7 +1085,7 @@ public class DotsAndBoxes extends Game {
                                 sc26.setVisible(true);
                                 hl25.setVisible(true);
                                 sc26.setFill(Color.web("#bac267"));
-                                hl25.setFill(Color.web("98c4c0"));
+                                hl25.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
@@ -1094,7 +1095,7 @@ public class DotsAndBoxes extends Game {
                                 sc35.setVisible(true);
                                 vl25.setVisible(true);
                                 sc35.setFill(Color.web("#bac267"));
-                                vl25.setFill(Color.web("98c4c0"));
+                                vl25.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1106,7 +1107,7 @@ public class DotsAndBoxes extends Game {
                                 sc16.setVisible(true);
                                 vl16.setVisible(true);
                                 sc16.setFill(Color.web("#bac267"));
-                                vl16.setFill(Color.web("98c4c0"));
+                                vl16.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
@@ -1116,7 +1117,7 @@ public class DotsAndBoxes extends Game {
                                 sc25.setVisible(true);
                                 hl25.setVisible(true);
                                 sc25.setFill(Color.web("#bac267"));
-                                hl25.setFill(Color.web("98c4c0"));
+                                hl25.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
@@ -1126,7 +1127,7 @@ public class DotsAndBoxes extends Game {
                                 sc27.setVisible(true);
                                 hl26.setVisible(true);
                                 sc27.setFill(Color.web("#bac267"));
-                                hl26.setFill(Color.web("98c4c0"));
+                                hl26.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
@@ -1136,7 +1137,7 @@ public class DotsAndBoxes extends Game {
                                 sc36.setVisible(true);
                                 vl26.setVisible(true);
                                 sc36.setFill(Color.web("#bac267"));
-                                vl26.setFill(Color.web("98c4c0"));
+                                vl26.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1148,7 +1149,7 @@ public class DotsAndBoxes extends Game {
                                 sc17.setVisible(true);
                                 vl17.setVisible(true);
                                 sc17.setFill(Color.web("#bac267"));
-                                vl17.setFill(Color.web("98c4c0"));
+                                vl17.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
@@ -1158,7 +1159,7 @@ public class DotsAndBoxes extends Game {
                                 sc26.setVisible(true);
                                 hl26.setVisible(true);
                                 sc26.setFill(Color.web("#bac267"));
-                                hl26.setFill(Color.web("98c4c0"));
+                                hl26.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
@@ -1168,7 +1169,7 @@ public class DotsAndBoxes extends Game {
                                 sc28.setVisible(true);
                                 hl27.setVisible(true);
                                 sc28.setFill(Color.web("#bac267"));
-                                hl27.setFill(Color.web("98c4c0"));
+                                hl27.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
@@ -1178,7 +1179,7 @@ public class DotsAndBoxes extends Game {
                                 sc37.setVisible(true);
                                 vl27.setVisible(true);
                                 sc37.setFill(Color.web("#bac267"));
-                                vl27.setFill(Color.web("98c4c0"));
+                                vl27.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1190,7 +1191,7 @@ public class DotsAndBoxes extends Game {
                                sc38.setVisible(true);
                                vl18.setVisible(true);
                                sc38.setFill(Color.web("#bac267"));
-                               vl18.setFill(Color.web("98c4c0"));
+                               vl18.setFill(Color.web("#98c4c0"));
                            }
                        }
                        else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
@@ -1200,7 +1201,7 @@ public class DotsAndBoxes extends Game {
                                sc27.setVisible(true);
                                hl27.setVisible(true);
                                sc27.setFill(Color.web("#bac267"));
-                               hl27.setFill(Color.web("98c4c0"));
+                               hl27.setFill(Color.web("#98c4c0"));
                            }
                        }
                        else if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
@@ -1210,7 +1211,7 @@ public class DotsAndBoxes extends Game {
                                sc38.setVisible(true);
                                vl27.setVisible(true);
                                sc38.setFill(Color.web("#bac267"));
-                               vl27.setFill(Color.web("98c4c0"));
+                               vl27.setFill(Color.web("#98c4c0"));
                            }
                        }
                     }
@@ -1222,7 +1223,7 @@ public class DotsAndBoxes extends Game {
                                 sc21.setVisible(true);
                                 vl21.setVisible(true);
                                 sc21.setFill(Color.web("#bac267"));
-                                vl21.setFill(Color.web("98c4c0"));
+                                vl21.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
@@ -1232,7 +1233,7 @@ public class DotsAndBoxes extends Game {
                                 sc32.setVisible(true);
                                 hl31.setVisible(true);
                                 sc32.setFill(Color.web("#bac267"));
-                                hl31.setFill(Color.web("98c4c0"));
+                                hl31.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
@@ -1242,7 +1243,7 @@ public class DotsAndBoxes extends Game {
                                 sc41.setVisible(true);
                                 vl31.setVisible(true);
                                 sc41.setFill(Color.web("#bac267"));
-                                vl31.setFill(Color.web("98c4c0"));
+                                vl31.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1254,7 +1255,7 @@ public class DotsAndBoxes extends Game {
                                 sc22.setVisible(true);
                                 vl22.setVisible(true);
                                 sc22.setFill(Color.web("#bac267"));
-                                vl22.setFill(Color.web("98c4c0"));
+                                vl22.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
@@ -1264,7 +1265,7 @@ public class DotsAndBoxes extends Game {
                                 sc31.setVisible(true);
                                 hl31.setVisible(true);
                                 sc31.setFill(Color.web("#bac267"));
-                                hl31.setFill(Color.web("98c4c0"));
+                                hl31.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
@@ -1274,7 +1275,7 @@ public class DotsAndBoxes extends Game {
                                 sc33.setVisible(true);
                                 hl32.setVisible(true);
                                 sc33.setFill(Color.web("#bac267"));
-                                hl32.setFill(Color.web("98c4c0"));
+                                hl32.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
@@ -1284,7 +1285,7 @@ public class DotsAndBoxes extends Game {
                                 sc42.setVisible(true);
                                 vl32.setVisible(true);
                                 sc42.setFill(Color.web("#bac267"));
-                                vl32.setFill(Color.web("98c4c0"));
+                                vl32.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1296,7 +1297,7 @@ public class DotsAndBoxes extends Game {
                                 sc23.setVisible(true);
                                 vl23.setVisible(true);
                                 sc23.setFill(Color.web("#bac267"));
-                                vl23.setFill(Color.web("98c4c0"));
+                                vl23.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
@@ -1306,7 +1307,7 @@ public class DotsAndBoxes extends Game {
                                 sc32.setVisible(true);
                                 hl32.setVisible(true);
                                 sc32.setFill(Color.web("#bac267"));
-                                hl32.setFill(Color.web("98c4c0"));
+                                hl32.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
@@ -1316,7 +1317,7 @@ public class DotsAndBoxes extends Game {
                                 sc34.setVisible(true);
                                 hl33.setVisible(true);
                                 sc34.setFill(Color.web("#bac267"));
-                                hl33.setFill(Color.web("98c4c0"));
+                                hl33.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
@@ -1326,7 +1327,7 @@ public class DotsAndBoxes extends Game {
                                 sc43.setVisible(true);
                                 vl33.setVisible(true);
                                 sc43.setFill(Color.web("#bac267"));
-                                vl33.setFill(Color.web("98c4c0"));
+                                vl33.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1338,7 +1339,7 @@ public class DotsAndBoxes extends Game {
                                 sc24.setVisible(true);
                                 vl24.setVisible(true);
                                 sc24.setFill(Color.web("#bac267"));
-                                vl24.setFill(Color.web("98c4c0"));
+                                vl24.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
@@ -1348,7 +1349,7 @@ public class DotsAndBoxes extends Game {
                                 sc33.setVisible(true);
                                 hl33.setVisible(true);
                                 sc33.setFill(Color.web("#bac267"));
-                                hl33.setFill(Color.web("98c4c0"));
+                                hl33.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
@@ -1358,7 +1359,7 @@ public class DotsAndBoxes extends Game {
                                 sc35.setVisible(true);
                                 hl34.setVisible(true);
                                 sc35.setFill(Color.web("#bac267"));
-                                hl34.setFill(Color.web("98c4c0"));
+                                hl34.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
@@ -1368,7 +1369,7 @@ public class DotsAndBoxes extends Game {
                                 sc44.setVisible(true);
                                 vl34.setVisible(true);
                                 sc44.setFill(Color.web("#bac267"));
-                                vl34.setFill(Color.web("98c4c0"));
+                                vl34.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1380,7 +1381,7 @@ public class DotsAndBoxes extends Game {
                                 sc25.setVisible(true);
                                 vl25.setVisible(true);
                                 sc25.setFill(Color.web("#bac267"));
-                                vl25.setFill(Color.web("98c4c0"));
+                                vl25.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
@@ -1390,7 +1391,7 @@ public class DotsAndBoxes extends Game {
                                 sc34.setVisible(true);
                                 hl34.setVisible(true);
                                 sc34.setFill(Color.web("#bac267"));
-                                hl34.setFill(Color.web("98c4c0"));
+                                hl34.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
@@ -1400,7 +1401,7 @@ public class DotsAndBoxes extends Game {
                                 sc36.setVisible(true);
                                 hl35.setVisible(true);
                                 sc36.setFill(Color.web("#bac267"));
-                                hl35.setFill(Color.web("98c4c0"));
+                                hl35.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
@@ -1410,7 +1411,7 @@ public class DotsAndBoxes extends Game {
                                 sc45.setVisible(true);
                                 vl35.setVisible(true);
                                 sc45.setFill(Color.web("#bac267"));
-                                vl35.setFill(Color.web("98c4c0"));
+                                vl35.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1422,7 +1423,7 @@ public class DotsAndBoxes extends Game {
                                 sc26.setVisible(true);
                                 vl26.setVisible(true);
                                 sc26.setFill(Color.web("#bac267"));
-                                vl26.setFill(Color.web("98c4c0"));
+                                vl26.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
@@ -1432,7 +1433,7 @@ public class DotsAndBoxes extends Game {
                                 sc35.setVisible(true);
                                 hl35.setVisible(true);
                                 sc35.setFill(Color.web("#bac267"));
-                                hl35.setFill(Color.web("98c4c0"));
+                                hl35.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
@@ -1442,7 +1443,7 @@ public class DotsAndBoxes extends Game {
                                 sc37.setVisible(true);
                                 hl36.setVisible(true);
                                 sc37.setFill(Color.web("#bac267"));
-                                hl36.setFill(Color.web("98c4c0"));
+                                hl36.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
@@ -1452,7 +1453,7 @@ public class DotsAndBoxes extends Game {
                                 sc46.setVisible(true);
                                 vl36.setVisible(true);
                                 sc46.setFill(Color.web("#bac267"));
-                                vl36.setFill(Color.web("98c4c0"));
+                                vl36.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1464,7 +1465,7 @@ public class DotsAndBoxes extends Game {
                                 sc27.setVisible(true);
                                 vl27.setVisible(true);
                                 sc27.setFill(Color.web("#bac267"));
-                                vl27.setFill(Color.web("98c4c0"));
+                                vl27.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
@@ -1474,7 +1475,7 @@ public class DotsAndBoxes extends Game {
                                 sc36.setVisible(true);
                                 hl36.setVisible(true);
                                 sc36.setFill(Color.web("#bac267"));
-                                hl36.setFill(Color.web("98c4c0"));
+                                hl36.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
@@ -1484,7 +1485,7 @@ public class DotsAndBoxes extends Game {
                                 sc38.setVisible(true);
                                 hl37.setVisible(true);
                                 sc38.setFill(Color.web("#bac267"));
-                                hl37.setFill(Color.web("98c4c0"));
+                                hl37.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
@@ -1494,7 +1495,7 @@ public class DotsAndBoxes extends Game {
                                 sc47.setVisible(true);
                                 vl37.setVisible(true);
                                 sc47.setFill(Color.web("#bac267"));
-                                vl37.setFill(Color.web("98c4c0"));
+                                vl37.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1506,7 +1507,7 @@ public class DotsAndBoxes extends Game {
                                 sc28.setVisible(true);
                                 vl28.setVisible(true);
                                 sc28.setFill(Color.web("#bac267"));
-                                vl28.setFill(Color.web("98c4c0"));
+                                vl28.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
@@ -1516,7 +1517,7 @@ public class DotsAndBoxes extends Game {
                                 sc37.setVisible(true);
                                 hl37.setVisible(true);
                                 sc37.setFill(Color.web("#bac267"));
-                                hl37.setFill(Color.web("98c4c0"));
+                                hl37.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()){
@@ -1526,7 +1527,7 @@ public class DotsAndBoxes extends Game {
                                 sc48.setVisible(true);
                                 vl38.setVisible(true);
                                 sc48.setFill(Color.web("#bac267"));
-                                vl38.setFill(Color.web("98c4c0"));
+                                vl38.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1539,7 +1540,7 @@ public class DotsAndBoxes extends Game {
                                 sc31.setVisible(true);
                                 vl31.setVisible(true);
                                 sc31.setFill(Color.web("#bac267"));
-                                vl31.setFill(Color.web("98c4c0"));
+                                vl31.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
@@ -1549,7 +1550,7 @@ public class DotsAndBoxes extends Game {
                                 sc42.setVisible(true);
                                 hl41.setVisible(true);
                                 sc42.setFill(Color.web("#bac267"));
-                                hl41.setFill(Color.web("98c4c0"));
+                                hl41.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()){
@@ -1559,7 +1560,7 @@ public class DotsAndBoxes extends Game {
                                 sc51.setVisible(true);
                                 vl41.setVisible(true);
                                 sc51.setFill(Color.web("#bac267"));
-                                vl41.setFill(Color.web("98c4c0"));
+                                vl41.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1571,7 +1572,7 @@ public class DotsAndBoxes extends Game {
                                 sc32.setVisible(true);
                                 vl32.setVisible(true);
                                 sc32.setFill(Color.web("#bac267"));
-                                vl32.setFill(Color.web("98c4c0"));
+                                vl32.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
@@ -1581,7 +1582,7 @@ public class DotsAndBoxes extends Game {
                                 sc41.setVisible(true);
                                 hl41.setVisible(true);
                                 sc41.setFill(Color.web("#bac267"));
-                                hl41.setFill(Color.web("98c4c0"));
+                                hl41.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
@@ -1591,7 +1592,7 @@ public class DotsAndBoxes extends Game {
                                 sc43.setVisible(true);
                                 hl42.setVisible(true);
                                 sc43.setFill(Color.web("#bac267"));
-                                hl42.setFill(Color.web("98c4c0"));
+                                hl42.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
@@ -1601,7 +1602,7 @@ public class DotsAndBoxes extends Game {
                                 sc52.setVisible(true);
                                 vl42.setVisible(true);
                                 sc52.setFill(Color.web("#bac267"));
-                                vl42.setFill(Color.web("98c4c0"));
+                                vl42.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1614,7 +1615,7 @@ public class DotsAndBoxes extends Game {
                                 sc33.setVisible(true);
                                 vl33.setVisible(true);
                                 sc33.setFill(Color.web("#bac267"));
-                                vl33.setFill(Color.web("98c4c0"));
+                                vl33.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
@@ -1624,7 +1625,7 @@ public class DotsAndBoxes extends Game {
                                 sc42.setVisible(true);
                                 hl42.setVisible(true);
                                 sc42.setFill(Color.web("#bac267"));
-                                hl42.setFill(Color.web("98c4c0"));
+                                hl42.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
@@ -1634,7 +1635,7 @@ public class DotsAndBoxes extends Game {
                                 sc44.setVisible(true);
                                 hl43.setVisible(true);
                                 sc44.setFill(Color.web("#bac267"));
-                                hl43.setFill(Color.web("98c4c0"));
+                                hl43.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
@@ -1644,7 +1645,7 @@ public class DotsAndBoxes extends Game {
                                 sc53.setVisible(true);
                                 vl43.setVisible(true);
                                 sc53.setFill(Color.web("#bac267"));
-                                vl43.setFill(Color.web("98c4c0"));
+                                vl43.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1656,7 +1657,7 @@ public class DotsAndBoxes extends Game {
                                 sc34.setVisible(true);
                                 vl34.setVisible(true);
                                 sc34.setFill(Color.web("#bac267"));
-                                vl34.setFill(Color.web("98c4c0"));
+                                vl34.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
@@ -1666,7 +1667,7 @@ public class DotsAndBoxes extends Game {
                                 sc43.setVisible(true);
                                 hl43.setVisible(true);
                                 sc43.setFill(Color.web("#bac267"));
-                                hl43.setFill(Color.web("98c4c0"));
+                                hl43.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
@@ -1676,7 +1677,7 @@ public class DotsAndBoxes extends Game {
                                 sc45.setVisible(true);
                                 hl44.setVisible(true);
                                 sc45.setFill(Color.web("#bac267"));
-                                hl44.setFill(Color.web("98c4c0"));
+                                hl44.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
@@ -1686,7 +1687,7 @@ public class DotsAndBoxes extends Game {
                                 sc54.setVisible(true);
                                 vl44.setVisible(true);
                                 sc54.setFill(Color.web("#bac267"));
-                                vl44.setFill(Color.web("98c4c0"));
+                                vl44.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1698,7 +1699,7 @@ public class DotsAndBoxes extends Game {
                                 sc35.setVisible(true);
                                 vl35.setVisible(true);
                                 sc35.setFill(Color.web("#bac267"));
-                                vl35.setFill(Color.web("98c4c0"));
+                                vl35.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
@@ -1708,7 +1709,7 @@ public class DotsAndBoxes extends Game {
                                 sc44.setVisible(true);
                                 hl44.setVisible(true);
                                 sc44.setFill(Color.web("#bac267"));
-                                hl44.setFill(Color.web("98c4c0"));
+                                hl44.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
@@ -1718,7 +1719,7 @@ public class DotsAndBoxes extends Game {
                                 sc46.setVisible(true);
                                 hl45.setVisible(true);
                                 sc46.setFill(Color.web("#bac267"));
-                                hl45.setFill(Color.web("98c4c0"));
+                                hl45.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
@@ -1728,7 +1729,7 @@ public class DotsAndBoxes extends Game {
                                 sc55.setVisible(true);
                                 vl45.setVisible(true);
                                 sc55.setFill(Color.web("#bac267"));
-                                vl45.setFill(Color.web("98c4c0"));
+                                vl45.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1740,7 +1741,7 @@ public class DotsAndBoxes extends Game {
                                 sc36.setVisible(true);
                                 vl36.setVisible(true);
                                 sc36.setFill(Color.web("#bac267"));
-                                vl36.setFill(Color.web("98c4c0"));
+                                vl36.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
@@ -1750,7 +1751,7 @@ public class DotsAndBoxes extends Game {
                                 sc45.setVisible(true);
                                 hl45.setVisible(true);
                                 sc45.setFill(Color.web("#bac267"));
-                                hl45.setFill(Color.web("98c4c0"));
+                                hl45.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
@@ -1760,7 +1761,7 @@ public class DotsAndBoxes extends Game {
                                 sc47.setVisible(true);
                                 hl46.setVisible(true);
                                 sc47.setFill(Color.web("#bac267"));
-                                hl46.setFill(Color.web("98c4c0"));
+                                hl46.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
@@ -1770,7 +1771,7 @@ public class DotsAndBoxes extends Game {
                                 sc56.setVisible(true);
                                 vl46.setVisible(true);
                                 sc56.setFill(Color.web("#bac267"));
-                                vl46.setFill(Color.web("98c4c0"));
+                                vl46.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1782,7 +1783,7 @@ public class DotsAndBoxes extends Game {
                                 sc37.setVisible(true);
                                 vl37.setVisible(true);
                                 sc37.setFill(Color.web("#bac267"));
-                                vl37.setFill(Color.web("98c4c0"));
+                                vl37.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
@@ -1792,7 +1793,7 @@ public class DotsAndBoxes extends Game {
                                 sc46.setVisible(true);
                                 hl46.setVisible(true);
                                 sc46.setFill(Color.web("#bac267"));
-                                hl46.setFill(Color.web("98c4c0"));
+                                hl46.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()) {
@@ -1802,7 +1803,7 @@ public class DotsAndBoxes extends Game {
                                 sc48.setVisible(true);
                                 hl47.setVisible(true);
                                 sc48.setFill(Color.web("#bac267"));
-                                hl47.setFill(Color.web("98c4c0"));
+                                hl47.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
@@ -1812,7 +1813,7 @@ public class DotsAndBoxes extends Game {
                                 sc57.setVisible(true);
                                 vl47.setVisible(true);
                                 sc57.setFill(Color.web("#bac267"));
-                                vl47.setFill(Color.web("98c4c0"));
+                                vl47.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1824,7 +1825,7 @@ public class DotsAndBoxes extends Game {
                                 sc38.setVisible(true);
                                 vl38.setVisible(true);
                                 sc38.setFill(Color.web("#bac267"));
-                                vl38.setFill(Color.web("98c4c0"));
+                                vl38.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
@@ -1834,7 +1835,7 @@ public class DotsAndBoxes extends Game {
                                 sc47.setVisible(true);
                                 hl47.setVisible(true);
                                 sc47.setFill(Color.web("#bac267"));
-                                hl47.setFill(Color.web("98c4c0"));
+                                hl47.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
@@ -1844,7 +1845,7 @@ public class DotsAndBoxes extends Game {
                                 sc58.setVisible(true);
                                 vl48.setVisible(true);
                                 sc58.setFill(Color.web("#bac267"));
-                                vl48.setFill(Color.web("98c4c0"));
+                                vl48.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1859,7 +1860,7 @@ public class DotsAndBoxes extends Game {
                                 sc41.setVisible(true);
                                 vl41.setVisible(true);
                                 sc41.setFill(Color.web("#bac267"));
-                                vl41.setFill(Color.web("98c4c0"));
+                                vl41.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc61.getCenterX() && y1 == sc61.getCenterY()) {
@@ -1869,7 +1870,7 @@ public class DotsAndBoxes extends Game {
                                 sc61.setVisible(true);
                                 vl51.setVisible(true);
                                 sc61.setFill(Color.web("#bac267"));
-                                vl51.setFill(Color.web("98c4c0"));
+                                vl51.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
@@ -1879,7 +1880,7 @@ public class DotsAndBoxes extends Game {
                                 sc52.setVisible(true);
                                 hl51.setVisible(true);
                                 sc52.setFill(Color.web("#bac267"));
-                                hl51.setFill(Color.web("98c4c0"));
+                                hl51.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1891,7 +1892,7 @@ public class DotsAndBoxes extends Game {
                                 sc42.setVisible(true);
                                 vl42.setVisible(true);
                                 sc42.setFill(Color.web("#bac267"));
-                                vl42.setFill(Color.web("98c4c0"));
+                                vl42.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()) {
@@ -1901,7 +1902,7 @@ public class DotsAndBoxes extends Game {
                                 sc51.setVisible(true);
                                 hl51.setVisible(true);
                                 sc51.setFill(Color.web("#bac267"));
-                                hl51.setFill(Color.web("98c4c0"));
+                                hl51.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
@@ -1911,7 +1912,7 @@ public class DotsAndBoxes extends Game {
                                 sc53.setVisible(true);
                                 hl52.setVisible(true);
                                 sc53.setFill(Color.web("#bac267"));
-                                hl52.setFill(Color.web("98c4c0"));
+                                hl52.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
@@ -1921,7 +1922,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setVisible(true);
                                 vl52.setVisible(true);
                                 sc62.setFill(Color.web("#bac267"));
-                                vl52.setFill(Color.web("98c4c0"));
+                                vl52.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1933,7 +1934,7 @@ public class DotsAndBoxes extends Game {
                                 sc43.setVisible(true);
                                 vl43.setVisible(true);
                                 sc43.setFill(Color.web("#bac267"));
-                                vl43.setFill(Color.web("98c4c0"));
+                                vl43.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
@@ -1943,7 +1944,7 @@ public class DotsAndBoxes extends Game {
                                 sc52.setVisible(true);
                                 hl52.setVisible(true);
                                 sc52.setFill(Color.web("#bac267"));
-                                hl52.setFill(Color.web("98c4c0"));
+                                hl52.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
@@ -1953,7 +1954,7 @@ public class DotsAndBoxes extends Game {
                                 sc54.setVisible(true);
                                 hl53.setVisible(true);
                                 sc54.setFill(Color.web("#bac267"));
-                                hl53.setFill(Color.web("98c4c0"));
+                                hl53.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
@@ -1963,7 +1964,7 @@ public class DotsAndBoxes extends Game {
                                 sc63.setVisible(true);
                                 vl53.setVisible(true);
                                 sc63.setFill(Color.web("#bac267"));
-                                vl53.setFill(Color.web("98c4c0"));
+                                vl53.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -1976,7 +1977,7 @@ public class DotsAndBoxes extends Game {
                                 sc44.setVisible(true);
                                 vl44.setVisible(true);
                                 sc44.setFill(Color.web("#bac267"));
-                                vl44.setFill(Color.web("98c4c0"));
+                                vl44.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
@@ -1986,7 +1987,7 @@ public class DotsAndBoxes extends Game {
                                 sc53.setVisible(true);
                                 hl53.setVisible(true);
                                 sc53.setFill(Color.web("#bac267"));
-                                hl53.setFill(Color.web("98c4c0"));
+                                hl53.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
@@ -1996,7 +1997,7 @@ public class DotsAndBoxes extends Game {
                                 sc55.setVisible(true);
                                 hl54.setVisible(true);
                                 sc55.setFill(Color.web("#bac267"));
-                                hl54.setFill(Color.web("98c4c0"));
+                                hl54.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
@@ -2006,7 +2007,7 @@ public class DotsAndBoxes extends Game {
                                 sc64.setVisible(true);
                                 vl54.setVisible(true);
                                 sc64.setFill(Color.web("#bac267"));
-                                vl54.setFill(Color.web("98c4c0"));
+                                vl54.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2018,7 +2019,7 @@ public class DotsAndBoxes extends Game {
                                 sc45.setVisible(true);
                                 vl45.setVisible(true);
                                 sc45.setFill(Color.web("#bac267"));
-                                vl45.setFill(Color.web("98c4c0"));
+                                vl45.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
@@ -2028,7 +2029,7 @@ public class DotsAndBoxes extends Game {
                                 sc54.setVisible(true);
                                 hl54.setVisible(true);
                                 sc54.setFill(Color.web("#bac267"));
-                                hl54.setFill(Color.web("98c4c0"));
+                                hl54.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
@@ -2038,7 +2039,7 @@ public class DotsAndBoxes extends Game {
                                 sc56.setVisible(true);
                                 hl55.setVisible(true);
                                 sc56.setFill(Color.web("#bac267"));
-                                hl55.setFill(Color.web("98c4c0"));
+                                hl55.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
@@ -2048,7 +2049,7 @@ public class DotsAndBoxes extends Game {
                                 sc65.setVisible(true);
                                 vl55.setVisible(true);
                                 sc65.setFill(Color.web("#bac267"));
-                                vl55.setFill(Color.web("98c4c0"));
+                                vl55.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2060,7 +2061,7 @@ public class DotsAndBoxes extends Game {
                                 sc46.setVisible(true);
                                 vl46.setVisible(true);
                                 sc46.setFill(Color.web("#bac267"));
-                                vl46.setFill(Color.web("98c4c0"));
+                                vl46.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
@@ -2070,7 +2071,7 @@ public class DotsAndBoxes extends Game {
                                 sc55.setVisible(true);
                                 hl55.setVisible(true);
                                 sc55.setFill(Color.web("#bac267"));
-                                hl55.setFill(Color.web("98c4c0"));
+                                hl55.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
@@ -2080,7 +2081,7 @@ public class DotsAndBoxes extends Game {
                                 sc57.setVisible(true);
                                 hl56.setVisible(true);
                                 sc57.setFill(Color.web("#bac267"));
-                                hl56.setFill(Color.web("98c4c0"));
+                                hl56.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
@@ -2090,7 +2091,7 @@ public class DotsAndBoxes extends Game {
                                 sc66.setVisible(true);
                                 vl56.setVisible(true);
                                 sc66.setFill(Color.web("#bac267"));
-                                vl56.setFill(Color.web("98c4c0"));
+                                vl56.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2102,7 +2103,7 @@ public class DotsAndBoxes extends Game {
                                 sc47.setVisible(true);
                                 vl47.setVisible(true);
                                 sc47.setFill(Color.web("#bac267"));
-                                vl47.setFill(Color.web("98c4c0"));
+                                vl47.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
@@ -2112,7 +2113,7 @@ public class DotsAndBoxes extends Game {
                                 sc56.setVisible(true);
                                 hl56.setVisible(true);
                                 sc56.setFill(Color.web("#bac267"));
-                                hl56.setFill(Color.web("98c4c0"));
+                                hl56.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
@@ -2122,7 +2123,7 @@ public class DotsAndBoxes extends Game {
                                 sc58.setVisible(true);
                                 hl57.setVisible(true);
                                 sc58.setFill(Color.web("#bac267"));
-                                hl57.setFill(Color.web("98c4c0"));
+                                hl57.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
@@ -2132,7 +2133,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setVisible(true);
                                 vl57.setVisible(true);
                                 sc67.setFill(Color.web("#bac267"));
-                                vl57.setFill(Color.web("98c4c0"));
+                                vl57.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2144,7 +2145,7 @@ public class DotsAndBoxes extends Game {
                                 sc48.setVisible(true);
                                 vl48.setVisible(true);
                                 sc48.setFill(Color.web("#bac267"));
-                                vl48.setFill(Color.web("98c4c0"));
+                                vl48.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
@@ -2154,7 +2155,7 @@ public class DotsAndBoxes extends Game {
                                 sc57.setVisible(true);
                                 hl57.setVisible(true);
                                 sc57.setFill(Color.web("#bac267"));
-                                hl57.setFill(Color.web("98c4c0"));
+                                hl57.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
@@ -2164,7 +2165,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setVisible(true);
                                 vl58.setVisible(true);
                                 sc67.setFill(Color.web("#bac267"));
-                                vl58.setFill(Color.web("98c4c0"));
+                                vl58.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2177,7 +2178,7 @@ public class DotsAndBoxes extends Game {
                                 sc51.setVisible(true);
                                 vl51.setVisible(true);
                                 sc51.setFill(Color.web("#bac267"));
-                                vl51.setFill(Color.web("98c4c0"));
+                                vl51.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
@@ -2187,7 +2188,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setVisible(true);
                                 hl61.setVisible(true);
                                 sc62.setFill(Color.web("#bac267"));
-                                hl61.setFill(Color.web("98c4c0"));
+                                hl61.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc71.getCenterX() && y1 == sc71.getCenterY()) {
@@ -2197,7 +2198,7 @@ public class DotsAndBoxes extends Game {
                                 sc71.setVisible(true);
                                 vl71.setVisible(true);
                                 sc71.setFill(Color.web("#bac267"));
-                                vl71.setFill(Color.web("98c4c0"));
+                                vl71.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2209,7 +2210,7 @@ public class DotsAndBoxes extends Game {
                             sc52.setVisible(true);
                             vl52.setVisible(true);
                             sc52.setFill(Color.web("#bac267"));
-                            vl52.setFill(Color.web("98c4c0"));
+                            vl52.setFill(Color.web("#98c4c0"));
                         }
                     }
 
@@ -2220,7 +2221,7 @@ public class DotsAndBoxes extends Game {
                             sc61.setVisible(true);
                             hl61.setVisible(true);
                             sc61.setFill(Color.web("#bac267"));
-                            hl61.setFill(Color.web("98c4c0"));
+                            hl61.setFill(Color.web("#98c4c0"));
                         }
                     }
                     else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
@@ -2230,7 +2231,7 @@ public class DotsAndBoxes extends Game {
                             sc63.setVisible(true);
                             hl62.setVisible(true);
                             sc63.setFill(Color.web("#bac267"));
-                            hl62.setFill(Color.web("98c4c0"));
+                            hl62.setFill(Color.web("#98c4c0"));
                         }
                     }
                         else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
@@ -2240,7 +2241,7 @@ public class DotsAndBoxes extends Game {
                                 sc72.setVisible(true);
                                 vl72.setVisible(true);
                                 sc72.setFill(Color.web("#bac267"));
-                                vl72.setFill(Color.web("98c4c0"));
+                                vl72.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2252,7 +2253,7 @@ public class DotsAndBoxes extends Game {
                                 sc53.setVisible(true);
                                 vl53.setVisible(true);
                                 sc53.setFill(Color.web("#bac267"));
-                                vl53.setFill(Color.web("98c4c0"));
+                                vl53.setFill(Color.web("#98c4c0"));
                             }
                         }
 
@@ -2263,7 +2264,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setVisible(true);
                                 hl62.setVisible(true);
                                 sc62.setFill(Color.web("#bac267"));
-                                hl62.setFill(Color.web("98c4c0"));
+                                hl62.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
@@ -2273,7 +2274,7 @@ public class DotsAndBoxes extends Game {
                                 sc64.setVisible(true);
                                 hl63.setVisible(true);
                                 sc64.setFill(Color.web("#bac267"));
-                                hl63.setFill(Color.web("98c4c0"));
+                                hl63.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
@@ -2283,7 +2284,7 @@ public class DotsAndBoxes extends Game {
                                 sc73.setVisible(true);
                                 vl73.setVisible(true);
                                 sc73.setFill(Color.web("#bac267"));
-                                vl73.setFill(Color.web("98c4c0"));
+                                vl73.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2295,7 +2296,7 @@ public class DotsAndBoxes extends Game {
                                 sc54.setVisible(true);
                                 vl54.setVisible(true);
                                 sc54.setFill(Color.web("#bac267"));
-                                vl54.setFill(Color.web("98c4c0"));
+                                vl54.setFill(Color.web("#98c4c0"));
                             }
                         }
 
@@ -2306,7 +2307,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setVisible(true);
                                 hl62.setVisible(true);
                                 sc62.setFill(Color.web("#bac267"));
-                                hl62.setFill(Color.web("98c4c0"));
+                                hl62.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
@@ -2316,7 +2317,7 @@ public class DotsAndBoxes extends Game {
                                 sc65.setVisible(true);
                                 hl64.setVisible(true);
                                 sc65.setFill(Color.web("#bac267"));
-                                hl64.setFill(Color.web("98c4c0"));
+                                hl64.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
@@ -2326,7 +2327,7 @@ public class DotsAndBoxes extends Game {
                                 sc74.setVisible(true);
                                 vl74.setVisible(true);
                                 sc74.setFill(Color.web("#bac267"));
-                                vl74.setFill(Color.web("98c4c0"));
+                                vl74.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2338,7 +2339,7 @@ public class DotsAndBoxes extends Game {
                                 sc55.setVisible(true);
                                 vl55.setVisible(true);
                                 sc55.setFill(Color.web("#bac267"));
-                                vl55.setFill(Color.web("98c4c0"));
+                                vl55.setFill(Color.web("#98c4c0"));
                             }
                         }
 
@@ -2349,7 +2350,7 @@ public class DotsAndBoxes extends Game {
                                 sc64.setVisible(true);
                                 hl63.setVisible(true);
                                 sc64.setFill(Color.web("#bac267"));
-                                hl63.setFill(Color.web("98c4c0"));
+                                hl63.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
@@ -2359,7 +2360,7 @@ public class DotsAndBoxes extends Game {
                                 sc66.setVisible(true);
                                 hl65.setVisible(true);
                                 sc66.setFill(Color.web("#bac267"));
-                                hl65.setFill(Color.web("98c4c0"));
+                                hl65.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
@@ -2369,7 +2370,7 @@ public class DotsAndBoxes extends Game {
                                 sc75.setVisible(true);
                                 vl75.setVisible(true);
                                 sc75.setFill(Color.web("#bac267"));
-                                vl75.setFill(Color.web("98c4c0"));
+                                vl75.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2381,7 +2382,7 @@ public class DotsAndBoxes extends Game {
                                 sc56.setVisible(true);
                                 vl56.setVisible(true);
                                 sc56.setFill(Color.web("#bac267"));
-                                vl56.setFill(Color.web("98c4c0"));
+                                vl56.setFill(Color.web("#98c4c0"));
                             }
                         }
 
@@ -2392,7 +2393,7 @@ public class DotsAndBoxes extends Game {
                                 sc65.setVisible(true);
                                 hl64.setVisible(true);
                                 sc65.setFill(Color.web("#bac267"));
-                                hl64.setFill(Color.web("98c4c0"));
+                                hl64.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
@@ -2402,7 +2403,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setVisible(true);
                                 hl66.setVisible(true);
                                 sc67.setFill(Color.web("#bac267"));
-                                hl66.setFill(Color.web("98c4c0"));
+                                hl66.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
@@ -2412,7 +2413,7 @@ public class DotsAndBoxes extends Game {
                                 sc76.setVisible(true);
                                 vl76.setVisible(true);
                                 sc76.setFill(Color.web("#bac267"));
-                                vl76.setFill(Color.web("98c4c0"));
+                                vl76.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2424,7 +2425,7 @@ public class DotsAndBoxes extends Game {
                                 sc57.setVisible(true);
                                 vl57.setVisible(true);
                                 sc57.setFill(Color.web("#bac267"));
-                                vl57.setFill(Color.web("98c4c0"));
+                                vl57.setFill(Color.web("#98c4c0"));
                             }
                         }
 
@@ -2435,7 +2436,7 @@ public class DotsAndBoxes extends Game {
                                 sc66.setVisible(true);
                                 hl65.setVisible(true);
                                 sc66.setFill(Color.web("#bac267"));
-                                hl65.setFill(Color.web("98c4c0"));
+                                hl65.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc68.getCenterX() && y1 == sc68.getCenterY()) {
@@ -2445,7 +2446,7 @@ public class DotsAndBoxes extends Game {
                                 sc68.setVisible(true);
                                 hl67.setVisible(true);
                                 sc68.setFill(Color.web("#bac267"));
-                                hl67.setFill(Color.web("98c4c0"));
+                                hl67.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
@@ -2455,7 +2456,7 @@ public class DotsAndBoxes extends Game {
                                 sc77.setVisible(true);
                                 vl77.setVisible(true);
                                 sc77.setFill(Color.web("#bac267"));
-                                vl77.setFill(Color.web("98c4c0"));
+                                vl77.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2467,7 +2468,7 @@ public class DotsAndBoxes extends Game {
                                 sc58.setVisible(true);
                                 vl58.setVisible(true);
                                 sc58.setFill(Color.web("#bac267"));
-                                vl58.setFill(Color.web("98c4c0"));
+                                vl58.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
@@ -2477,7 +2478,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setVisible(true);
                                 hl67.setVisible(true);
                                 sc67.setFill(Color.web("#bac267"));
-                                hl67.setFill(Color.web("98c4c0"));
+                                hl67.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc78.getCenterX() && y1 == sc78.getCenterY()) {
@@ -2487,7 +2488,7 @@ public class DotsAndBoxes extends Game {
                                 sc78.setVisible(true);
                                 vl78.setVisible(true);
                                 sc78.setFill(Color.web("#bac267"));
-                                vl78.setFill(Color.web("98c4c0"));
+                                vl78.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2499,7 +2500,7 @@ public class DotsAndBoxes extends Game {
                                 sc61.setVisible(true);
                                 vl71.setVisible(true);
                                 sc61.setFill(Color.web("#bac267"));
-                                vl71.setFill(Color.web("98c4c0"));
+                                vl71.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc81.getCenterX() && y1 == sc81.getCenterY()) {
@@ -2509,7 +2510,7 @@ public class DotsAndBoxes extends Game {
                                 sc81.setVisible(true);
                                 vl81.setVisible(true);
                                 sc81.setFill(Color.web("#bac267"));
-                                vl81.setFill(Color.web("98c4c0"));
+                                vl81.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
@@ -2519,7 +2520,7 @@ public class DotsAndBoxes extends Game {
                                 sc72.setVisible(true);
                                 vl71.setVisible(true);
                                 sc72.setFill(Color.web("#bac267"));
-                                vl71.setFill(Color.web("98c4c0"));
+                                vl71.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2531,7 +2532,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setVisible(true);
                                 vl72.setVisible(true);
                                 sc62.setFill(Color.web("#bac267"));
-                                vl72.setFill(Color.web("98c4c0"));
+                                vl72.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc71.getCenterX() && y1 == sc71.getCenterY()) {
@@ -2541,7 +2542,7 @@ public class DotsAndBoxes extends Game {
                                 sc71.setVisible(true);
                                 hl71.setVisible(true);
                                 sc71.setFill(Color.web("#bac267"));
-                                hl71.setFill(Color.web("98c4c0"));
+                                hl71.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
@@ -2551,7 +2552,7 @@ public class DotsAndBoxes extends Game {
                                 sc73.setVisible(true);
                                 hl72.setVisible(true);
                                 sc73.setFill(Color.web("#bac267"));
-                                hl72.setFill(Color.web("98c4c0"));
+                                hl72.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc82.getCenterX() && y1 == sc82.getCenterY()) {
@@ -2561,7 +2562,7 @@ public class DotsAndBoxes extends Game {
                                 sc82.setVisible(true);
                                 vl82.setVisible(true);
                                 sc82.setFill(Color.web("#bac267"));
-                                vl82.setFill(Color.web("98c4c0"));
+                                vl82.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2573,7 +2574,7 @@ public class DotsAndBoxes extends Game {
                                 sc63.setVisible(true);
                                 vl73.setVisible(true);
                                 sc63.setFill(Color.web("#bac267"));
-                                vl73.setFill(Color.web("98c4c0"));
+                                vl73.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
@@ -2583,7 +2584,7 @@ public class DotsAndBoxes extends Game {
                                 sc72.setVisible(true);
                                 hl72.setVisible(true);
                                 sc72.setFill(Color.web("#bac267"));
-                                hl72.setFill(Color.web("98c4c0"));
+                                hl72.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
@@ -2593,7 +2594,7 @@ public class DotsAndBoxes extends Game {
                                 sc74.setVisible(true);
                                 hl73.setVisible(true);
                                 sc74.setFill(Color.web("#bac267"));
-                                hl73.setFill(Color.web("98c4c0"));
+                                hl73.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc83.getCenterX() && y1 == sc83.getCenterY()) {
@@ -2603,7 +2604,7 @@ public class DotsAndBoxes extends Game {
                                 sc83.setVisible(true);
                                 vl83.setVisible(true);
                                 sc83.setFill(Color.web("#bac267"));
-                                vl83.setFill(Color.web("98c4c0"));
+                                vl83.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2615,7 +2616,7 @@ public class DotsAndBoxes extends Game {
                                 sc64.setVisible(true);
                                 vl74.setVisible(true);
                                 sc64.setFill(Color.web("#bac267"));
-                                vl74.setFill(Color.web("98c4c0"));
+                                vl74.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
@@ -2625,7 +2626,7 @@ public class DotsAndBoxes extends Game {
                                 sc73.setVisible(true);
                                 hl73.setVisible(true);
                                 sc73.setFill(Color.web("#bac267"));
-                                hl73.setFill(Color.web("98c4c0"));
+                                hl73.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
@@ -2635,7 +2636,7 @@ public class DotsAndBoxes extends Game {
                                 sc75.setVisible(true);
                                 hl74.setVisible(true);
                                 sc75.setFill(Color.web("#bac267"));
-                                hl74.setFill(Color.web("98c4c0"));
+                                hl74.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc84.getCenterX() && y1 == sc84.getCenterY()) {
@@ -2645,7 +2646,7 @@ public class DotsAndBoxes extends Game {
                                 sc84.setVisible(true);
                                 vl84.setVisible(true);
                                 sc84.setFill(Color.web("#bac267"));
-                                vl84.setFill(Color.web("98c4c0"));
+                                vl84.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2658,7 +2659,7 @@ public class DotsAndBoxes extends Game {
                                 sc65.setVisible(true);
                                 vl75.setVisible(true);
                                 sc65.setFill(Color.web("#bac267"));
-                                vl75.setFill(Color.web("98c4c0"));
+                                vl75.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
@@ -2668,7 +2669,7 @@ public class DotsAndBoxes extends Game {
                                 sc74.setVisible(true);
                                 hl74.setVisible(true);
                                 sc74.setFill(Color.web("#bac267"));
-                                hl74.setFill(Color.web("98c4c0"));
+                                hl74.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
@@ -2678,7 +2679,7 @@ public class DotsAndBoxes extends Game {
                                 sc76.setVisible(true);
                                 hl75.setVisible(true);
                                 sc76.setFill(Color.web("#bac267"));
-                                hl75.setFill(Color.web("98c4c0"));
+                                hl75.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc85.getCenterX() && y1 == sc85.getCenterY()) {
@@ -2688,7 +2689,7 @@ public class DotsAndBoxes extends Game {
                                 sc85.setVisible(true);
                                 vl85.setVisible(true);
                                 sc85.setFill(Color.web("#bac267"));
-                                vl85.setFill(Color.web("98c4c0"));
+                                vl85.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2700,7 +2701,7 @@ public class DotsAndBoxes extends Game {
                                 sc66.setVisible(true);
                                 vl76.setVisible(true);
                                 sc66.setFill(Color.web("#bac267"));
-                                vl76.setFill(Color.web("98c4c0"));
+                                vl76.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
@@ -2710,7 +2711,7 @@ public class DotsAndBoxes extends Game {
                                 sc75.setVisible(true);
                                 hl75.setVisible(true);
                                 sc75.setFill(Color.web("#bac267"));
-                                hl75.setFill(Color.web("98c4c0"));
+                                hl75.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
@@ -2720,7 +2721,7 @@ public class DotsAndBoxes extends Game {
                                 sc77.setVisible(true);
                                 hl76.setVisible(true);
                                 sc77.setFill(Color.web("#bac267"));
-                                hl76.setFill(Color.web("98c4c0"));
+                                hl76.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc86.getCenterX() && y1 == sc86.getCenterY()) {
@@ -2730,7 +2731,7 @@ public class DotsAndBoxes extends Game {
                                 sc86.setVisible(true);
                                 vl86.setVisible(true);
                                 sc86.setFill(Color.web("#bac267"));
-                                vl86.setFill(Color.web("98c4c0"));
+                                vl86.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2742,7 +2743,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setVisible(true);
                                 vl77.setVisible(true);
                                 sc67.setFill(Color.web("#bac267"));
-                                vl77.setFill(Color.web("98c4c0"));
+                                vl77.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
@@ -2752,7 +2753,7 @@ public class DotsAndBoxes extends Game {
                                 sc76.setVisible(true);
                                 hl76.setVisible(true);
                                 sc76.setFill(Color.web("#bac267"));
-                                hl76.setFill(Color.web("98c4c0"));
+                                hl76.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc78.getCenterX() && y1 == sc78.getCenterY()) {
@@ -2762,7 +2763,7 @@ public class DotsAndBoxes extends Game {
                                 sc78.setVisible(true);
                                 hl77.setVisible(true);
                                 sc78.setFill(Color.web("#bac267"));
-                                hl77.setFill(Color.web("98c4c0"));
+                                hl77.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc87.getCenterX() && y1 == sc87.getCenterY()) {
@@ -2772,7 +2773,7 @@ public class DotsAndBoxes extends Game {
                                 sc87.setVisible(true);
                                 vl87.setVisible(true);
                                 sc87.setFill(Color.web("#bac267"));
-                                vl87.setFill(Color.web("98c4c0"));
+                                vl87.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
@@ -2784,7 +2785,7 @@ public class DotsAndBoxes extends Game {
                                 sc68.setVisible(true);
                                 vl78.setVisible(true);
                                 sc68.setFill(Color.web("#bac267"));
-                                vl78.setFill(Color.web("98c4c0"));
+                                vl78.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
@@ -2794,7 +2795,7 @@ public class DotsAndBoxes extends Game {
                                 sc77.setVisible(true);
                                 hl77.setVisible(true);
                                 sc77.setFill(Color.web("#bac267"));
-                                hl77.setFill(Color.web("98c4c0"));
+                                hl77.setFill(Color.web("#98c4c0"));
                             }
                         }
                         else if (x1 == sc88.getCenterX() && y1 == sc88.getCenterY()) {
@@ -2804,54 +2805,15 @@ public class DotsAndBoxes extends Game {
                                 sc88.setVisible(true);
                                 vl88.setVisible(true);
                                 sc88.setFill(Color.web("#bac267"));
-                                vl88.setFill(Color.web("98c4c0"));
+                                vl88.setFill(Color.web("#98c4c0"));
                             }
                         }
                     }
-                    else if (x > 11 && x < 47 && y > 355 && y < 391) {
-                        sc81.setVisible(true);
-                        sc81.setFill(Color.web("#bac267"));
-                        isSecondCircle = true;
-                    }
-
-                    else if (x > 61 && x < 97 && y > 356 && y < 392) {
-                        sc82.setVisible(true);
-                        sc82.setFill(Color.web("#bac267"));
-                    }
-
-                    else if (x > 111 && x < 147 && y > 356 && y < 392) {
-                        sc83.setVisible(true);
-                        sc83.setFill(Color.web("#bac267"));
-                    }
-
-                    else if (x > 159 && x < 195 && y > 356 && y < 392) {
-                        sc84.setVisible(true);
-                        sc84.setFill(Color.web("#bac267"));
-                    }
-
-
-                    else if (x > 211 && x < 247 && y > 356 && y < 392) {
-                        sc85.setVisible(true);
-                        sc85.setFill(Color.web("#bac267"));
-                    }
-                    else if (x > 261 && x < 297 && y > 356 && y < 392) {
-                        sc86.setVisible(true);
-                        sc86.setFill(Color.web("#bac267"));
-                    }
-                    else if (x > 312 && x < 348 && y > 356 && y < 392) {
-                        sc87.setVisible(true);
-                        sc87.setFill(Color.web("#bac267"));
-                    }
-                    else if (x > 360 && x < 396 && y > 356 && y < 392) {
-                        sc88.setVisible(true);
-                        sc88.setFill(Color.web("#bac267"));
-                    }
                     isSecondCircle = false;
                 }
-
             //commands for second player
-
         }
+            else {}
     }
 
 
