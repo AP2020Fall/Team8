@@ -17,6 +17,13 @@ public class Admin extends Account {
     public static ArrayList<Admin> getAdmin() {
         return Admin;
     }
+    public static Admin getAdminWithUser(String user){
+        for (sample.model.platoModel.Admin admin : Admin) {
+            if (admin.getUserName().equalsIgnoreCase(user))
+                return admin;
+        }
+        return null;
+    }
 
     public Admin(String userName, String passWord) {
         super(userName, passWord);

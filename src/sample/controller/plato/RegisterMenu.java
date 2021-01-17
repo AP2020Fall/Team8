@@ -41,15 +41,16 @@ public class RegisterMenu {
         if (num==9){
         String uniqueID = UUID.randomUUID().toString();
         if (!Admin.isThereAdmin){
-            FirstMenuFx.setLoggedInAdmin(Admin.getAccountWithId(username));
             addAdminDetails(registerAdmin(username,password),name,lastname,uniqueID,email,phone);
             Admin.adminId=username;
+            FirstMenuFx.setLoggedInAdmin(Admin.getAdminWithUser(username));
           //  CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
         }
         else {
             Player player=registerPlayer(username,password);
             addPlayerDetails(player,name,lastname,uniqueID,email,phone);
             player.setPlatoAge();
+            FirstMenuFx.setLoggedInPlayer(Player.getPlayerWithUser(username));
             //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
         }}
         Admin.isThereAdmin=true;
