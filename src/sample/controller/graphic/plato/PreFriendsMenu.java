@@ -18,7 +18,7 @@ public class PreFriendsMenu {
     }
 
     public void loadFriendsReqa(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendRequests.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendsRequests.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();

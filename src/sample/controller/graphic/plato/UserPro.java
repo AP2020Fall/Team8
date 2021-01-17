@@ -18,6 +18,7 @@ public class UserPro {
     @FXML
     public void initialize(){
         if(player!=null){
+            System.out.println("playere?");
         userProfile.setText(player.getUserName());
         nameProfile.setText(player.getName());
         lastnameProfile.setText(player.getLastName());
@@ -25,6 +26,7 @@ public class UserPro {
         phoneProfile.setText(player.getPhone());
     }
         else if(admin!=null){
+            System.out.println("admine?");
             userProfile.setText(admin.getUserName());
             nameProfile.setText(admin.getName());
             lastnameProfile.setText(admin.getLastName());
@@ -34,7 +36,7 @@ public class UserPro {
     }
 
     public void changePass(ActionEvent actionEvent) {
-
+        ;
     }
 
     public void edit(ActionEvent actionEvent) {
