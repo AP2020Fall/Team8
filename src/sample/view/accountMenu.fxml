@@ -6,11 +6,8 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="494.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.AccountMenu">
+<AnchorPane prefHeight="494.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.AccountMenuFx">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="501.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="472.0">
          <fill>
@@ -22,12 +19,14 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Button layoutX="189.0" layoutY="395.0" mnemonicParsing="false" onAction="#logout" prefHeight="44.0" prefWidth="75.0" text="Logout" textFill="#ee0707" />
-      <Label layoutX="84.0" layoutY="119.0" prefHeight="37.0" prefWidth="85.0" text="PlatoStatistics:">
-         <font>
-            <Font name="Arial terminal one" size="12.0" />
-         </font>
-      </Label>
-      <Text fx:id="statisticsText" layoutX="189.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="101.47006225585938" />
+      <Button layoutX="198.0" layoutY="398.0" mnemonicParsing="false" onAction="#logout" prefHeight="44.0" prefWidth="75.0" text="Logout" textFill="#ee0707" />
+      <Button layoutX="57.0" layoutY="335.0" mnemonicParsing="false" onAction="#loadGamesHistory" prefHeight="37.0" prefWidth="128.0" text="View Games History" />
+      <Button layoutX="276.0" layoutY="335.0" mnemonicParsing="false" onAction="#loadProfile" prefHeight="37.0" prefWidth="138.0" text="View UserProfile" />
+      <Label fx:id="usernameLablel" layoutX="208.0" layoutY="24.0" prefHeight="37.0" prefWidth="93.0" />
+      <Label fx:id="reversiStatistics" layoutX="217.0" layoutY="228.0" prefHeight="37.0" prefWidth="75.0" />
+      <Label fx:id="DBStatics" layoutX="217.0" layoutY="281.0" prefHeight="37.0" prefWidth="75.0" />
+      <Label layoutX="42.0" layoutY="256.0" text="Dots and BoxesStatistics" />
+      <Label layoutX="77.0" layoutY="174.0" text="Reversi Statistics" />
+      <Button layoutX="164.0" layoutY="76.0" mnemonicParsing="false" onAction="#loadPlatoStatistics" prefHeight="44.0" prefWidth="138.0" text="View Plato Statistics" />
    </children>
 </AnchorPane>

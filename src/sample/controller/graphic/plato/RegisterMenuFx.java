@@ -29,23 +29,28 @@ public class RegisterMenuFx {
     public Label alertReg;
     public ImageView exitReg;
     public ImageView backReg;
+    private boolean isFirstReg=true;
 
     public void register(ActionEvent actionEvent) throws IOException {
+        //isFirstReg=false;
+        if (!userTFReg.getText().isEmpty()&&!passPFReg.getText().isEmpty()&&!lastnameTFReg.getText().isEmpty()&&!emailTFReg.getText().isEmpty()&&!phoneTFReg.getText().isEmpty()){
         RegisterMenu.registerAccount(userTFReg.getText(),passPFReg.getText(),nameTFReg.getText(),lastnameTFReg.getText(),emailTFReg.getText(),phoneTFReg.getText());
-        RegisterMenu.userPassValidation(userTFReg.getText(),passPFReg.getText());
-        RegisterMenu.emailAndPhoneNumberValidation(emailTFReg.getText(),phoneTFReg.getText());
         alertReg.setText(OutputHandler.showRegisterMenuOutput(RegisterMenu.getNum()));
-        if (Admin.getAdmin().size()==0){
-            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
-            Scene pageTwoScene = new Scene(root);
-            Main.allStage.setScene(pageTwoScene);
-            Main.allStage.show();
-        }
-        else {
-            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
-            Scene pageTwoScene = new Scene(root);
-            Main.allStage.setScene(pageTwoScene);
-            Main.allStage.show();
+      //  System.out.println(Admin.getAdmin());
+        if(RegisterMenu.getNum()==9) {
+            if (isFirstReg) {
+                Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
+                Scene pageTwoScene = new Scene(root);
+                Main.allStage.setScene(pageTwoScene);
+                Main.allStage.show();
+            } else {
+                Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
+                Scene pageTwoScene = new Scene(root);
+                Main.allStage.setScene(pageTwoScene);
+                Main.allStage.show();
+            }
+            isFirstReg=false;
+            }
         }
        // Parent pri= FXMLLoader.load(Objects.requireNonNull(RegisterMenuFx.class.getClassLoader().getResource("registerMenuFx.fxml")));
 

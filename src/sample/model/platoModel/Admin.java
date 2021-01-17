@@ -4,8 +4,15 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.UUID;
 import sample.model.platoModel.*;
+
+import javax.management.StandardEmitterMBean;
+
 public class Admin extends Account {
+    public static boolean isThereAdmin=false;
+    public static String adminId;
     private static ArrayList<Admin> Admin=new ArrayList<>();
+
+
 
     public static ArrayList<Admin> getAdmin() {
         return Admin;
@@ -28,7 +35,7 @@ public class Admin extends Account {
     public void addEvent(LocalDateTime start, LocalDateTime end, String gameName, int score){
         Event event=new Event( UUID.randomUUID().toString(),gameName,start,end,score);
     }
-    public void addSuggestions(){}
+    public void addSuggestions(String user){}
     public void removeSuggestion(){}
 
 }

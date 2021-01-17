@@ -70,8 +70,9 @@ public class OutputHandler {
             return "There is no account with this username";
         else if (outputNo==3)
             return "Wrong password";
+        else
+            return "Logged in successfully!";
 
-        return null;
 
     }
     //naghes

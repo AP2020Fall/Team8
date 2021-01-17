@@ -15,7 +15,6 @@ import sample.model.platoModel.Player;
 
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class FriendsMenuFx {
     public ListView<Player> FriendsMenuList;
@@ -35,9 +34,9 @@ public class FriendsMenuFx {
     }
 
     public void viewUser(ActionEvent actionEvent) throws IOException {
-        UserProfile.setPlayer(Player.getPlayerWithUser(FriendsMenuList.getSelectionModel().getSelectedItem().toString()));
-      //  Parent root = FXMLLoader.load(Objects.requireNonNull(UserProfile.class.getClassLoader().getResource("userProfile.fxml")));
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userProfile.fxml"));
+        PlatoStatics.setPlayer(Player.getPlayerWithUser(FriendsMenuList.getSelectionModel().getSelectedItem().toString()));
+      //  Parent root = FXMLLoader.load(Objects.requireNonNull(UserProfile.class.getClassLoader().getResource("platoStatistics.fxml")));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoStatistics.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();

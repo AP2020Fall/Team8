@@ -17,7 +17,7 @@ public class AdminMenuFx {
     public Button viewUserAdminB;
 
     public void loadAddEvent(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/register.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/addEventFx.fxml"));
 
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(RegisterMenu.class.getClassLoader().getResource("register.fxml")));
         Scene pageTwoScene = new Scene(root);
@@ -28,7 +28,7 @@ public class AdminMenuFx {
     }
 
     public void loadUsers(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/usersMenu.fxml"));
        // Parent root = FXMLLoader.load(Objects.requireNonNull(UsersMenuFx.class.getClassLoader().getResource("usersMenu.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);

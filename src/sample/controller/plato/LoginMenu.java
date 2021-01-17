@@ -11,19 +11,32 @@ public class LoginMenu {
     public static int getNum() {
         return num;
     }
-    private static boolean isAdmin;
+    private static Boolean isAdmin;
     private static int num;
     public static void deleteUserName(String user, String password){
-        correctPassword(user,password);
+        correctPasswordDelete(user,password);
+        if (num==1){
         Account.getAllAccounts().remove(Account.getAccountWithId(user));
+        }
     }
-    public static void correctPassword(String id, String password){
+    public static void correctPasswordLogin(String id, String password){
         if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(id)))
             num= 2;
          else if(!Objects.requireNonNull(Account.getAccountWithId(id)).getPassWord().equals(password))
             num= 3;
         else
             num= 1;
+
+
+    }
+
+    public static void correctPasswordDelete(String id, String password){
+        if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(id)))
+            num= 2;
+        else if(!Objects.requireNonNull(Account.getAccountWithId(id)).getPassWord().equals(password))
+            num= 3;
+        else
+            num= 4;
 
 
     }
@@ -37,8 +50,9 @@ public class LoginMenu {
     }
 
     public static void login(String id, String password){
-        correctPassword(id,password);
-        if (Admin.getAdmin().contains(Admin.getAdmin().get(0))){
+        correctPasswordLogin(id,password);
+        if(num==4){
+        if (id.equals(Admin.adminId)){
             isAdmin=true;
        //     CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
             FirstMenuFx.setLoggedInAdmin(Admin.getAdmin().get(0));
@@ -54,6 +68,7 @@ public class LoginMenu {
             PlayerMenu.setPlayer(Player.getPlayerWithUser(id));
             FriendsMenu.setPlayer(Player.getPlayerWithUser(id));
             AccountsMenu.setAccount(Player.getPlayerWithUser(id));
+          }
         }
     }
 }

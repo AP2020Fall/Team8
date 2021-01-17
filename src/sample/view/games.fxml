@@ -12,7 +12,7 @@
                 <Image url="@../images/paszamine_com_1617_1280×1024.jpg" />
             </image>
         </ImageView>
-        <Label layoutX="259.0" layoutY="46.0" text="controller.GraphicController.GamesFx" textFill="WHITE">
+        <Label layoutX="259.0" layoutY="46.0" text="Games" textFill="WHITE">
             <font>
                 <Font size="30.0" />
             </font>

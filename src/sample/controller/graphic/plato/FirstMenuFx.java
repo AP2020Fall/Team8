@@ -55,23 +55,39 @@ public class FirstMenuFx {
         stage.setResizable(false);
         stage.show();*/
     }
-    public void loadMain() throws IOException {/*
-        Parent root = FXMLLoader.load(getClass().getResource("../view/ScoreBoardMenu.fxml"));
+    public void loadMain() throws IOException {
+        if(loggedInAdmin != null){
+        Parent root = FXMLLoader.load(getClass().getResource("sample/view/adminMenuFx.fxml"));
         Main.allStage.setTitle("Score Board Menu");
         Main.allStage.setScene(new Scene(root));
-        Main.allStage.show();
+        Main.allStage.show();}
+        else if (loggedInPlayer!=null){
+            Parent root = FXMLLoader.load(getClass().getResource("sample/view/playerMenuFx.fxml"));
+            Main.allStage.setTitle("Score Board Menu");
+            Main.allStage.setScene(new Scene(root));
+            Main.allStage.show();}
+        }
         /* Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("register.fxml")));
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();*/
 
+
+
+    public void loadAccount() throws IOException {
+        if (loggedInAdmin != null) {
+            Parent root = FXMLLoader.load(getClass().getResource("sample/view/adminAccount.fxml"));
+            Main.allStage.setTitle("Score Board Menu");
+            Main.allStage.setScene(new Scene(root));
+            Main.allStage.show();
+        } else if (loggedInPlayer != null) {
+            Parent root = FXMLLoader.load(getClass().getResource("sample/view/accountMenu.fxml"));
+            Main.allStage.setTitle("Score Board Menu");
+            Main.allStage.setScene(new Scene(root));
+            Main.allStage.show();
+        }
     }
 
-    public void loadAccount() throws IOException {/*
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Account.class.getClassLoader().getResource("accountMenu.fxml")));
-        Scene pageTwoScene = new Scene(root);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();*/
-    }
+
 
     public void loadReg() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml"));

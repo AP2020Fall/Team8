@@ -1,4 +1,5 @@
 package sample.controller.plato;
+import sample.controller.graphic.plato.FirstMenuFx;
 import sample.model.platoModel.*;
 
 public class AccountsMenu {
@@ -68,7 +69,9 @@ public class AccountsMenu {
         AccountsMenu.account = account;
     }
 
-    public static void Logout(){
+    public static void logout(){
+        FirstMenuFx.setLoggedInAdmin(null);
+        FirstMenuFx.setLoggedInPlayer(null);
         setAccount(null);
         PlayerMenu.setPlayer(null);
         AdminMenu.setAdmin(null);

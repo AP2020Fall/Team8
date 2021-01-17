@@ -1,6 +1,7 @@
 package sample.controller.graphic.plato;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
 import sample.model.platoModel.Player;
@@ -8,16 +9,23 @@ import sample.model.platoModel.Player;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class UserProfile {
+public class PlatoStatics {
 
     private static Player player;
     public Text usernameT;
     public Text winsCountT;
     public Text datePassedT;
     public Text scoreT;
+    public Label userProfile;
+    public Label passProfile;
+    public Label nameProfile;
+    public Label lastnameProfile;
+    public Label emailProfile;
+    public Label phoneProfile;
+    public Label alertProfile;
 
     public static void setPlayer(Player player) {
-        UserProfile.player = player;
+        PlatoStatics.player = player;
     }
     @FXML
     public void initialize(){

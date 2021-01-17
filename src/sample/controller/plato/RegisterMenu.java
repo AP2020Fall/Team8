@@ -1,6 +1,7 @@
 package sample.controller.plato;
 
 
+import sample.controller.graphic.plato.FirstMenuFx;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
 
@@ -15,7 +16,7 @@ public class RegisterMenu {
         return num;
     }
 
-    public static void userPassValidation(String username, String password) {
+    public static void userPassValidation(String username, String password,String email,String phone) {
         if (Player.getAllPlayers().contains(Player.getPlayerWithUser(username))){
            // CommandProcessor.setOutput(2);
             num= 2;
@@ -25,27 +26,24 @@ public class RegisterMenu {
             num= 3;
         } else if (password.length() > 26){
           //  CommandProcessor.setOutput(4);
-            num= 4;
-    }
+            num= 4;}
+            else if(!email.matches("^.+@.+$"))
+                num= 7;
+            else if (!phone.matches("\\d{11}"))
+                num= 8;
+
         //user and password are right
-        num= 1;
+        num= 9;
     }
     //account id ro random bezar
-    public static void emailAndPhoneNumberValidation(String email, String phone){
-        if (num==1){
-            if(!email.matches("^.+@.+$"))
-            num= 7;
-        else if (!phone.matches("\\d{11}"))
-            num= 8;
-        else
-            num=9;
-        }
-
-    }
     public static void registerAccount(String username, String password, String name, String lastname, String email, String phone)throws NullPointerException {
+        userPassValidation(username,password,email,phone);
+        if (num==9){
         String uniqueID = UUID.randomUUID().toString();
-        if (Admin.getAdmin().isEmpty()){
+        if (!Admin.isThereAdmin){
+            FirstMenuFx.setLoggedInAdmin(Admin.getAccountWithId(username));
             addAdminDetails(registerAdmin(username,password),name,lastname,uniqueID,email,phone);
+            Admin.adminId=username;
           //  CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
         }
         else {
@@ -53,7 +51,8 @@ public class RegisterMenu {
             addPlayerDetails(player,name,lastname,uniqueID,email,phone);
             player.setPlatoAge();
             //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
-        }
+        }}
+        Admin.isThereAdmin=true;
     }
     public static Player registerPlayer(String username, String password){
         Player player =new Player(username,password);
