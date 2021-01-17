@@ -6,11 +6,11 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.EventsLogFx">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.EventsLogFx">
     <children>
         <ImageView fitHeight="514.0" fitWidth="625.0" layoutX="-7.0" layoutY="-8.0">
             <image>
-                <Image url="@background/paszamine_com_1677_Full_HD.png" />
+                <Image url="@../images/paszamine_com_1677_Full_HD.png" />
             </image>
         </ImageView>
         <Label layoutX="225.0" layoutY="25.0" text="Events Log" textFill="WHITE">
