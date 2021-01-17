@@ -2,6 +2,7 @@ package sample.controller.plato;
 
 
 import sample.controller.graphic.plato.FirstMenuFx;
+import sample.controller.graphic.plato.RegisterMenuFx;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
 
@@ -12,6 +13,7 @@ public class RegisterMenu {
     //public void register(){}
     private static int num;
 
+    private static boolean registered;
     public static int getNum() {
         return num;
     }
@@ -44,24 +46,27 @@ public class RegisterMenu {
             addAdminDetails(registerAdmin(username,password),name,lastname,uniqueID,email,phone);
             Admin.adminId=username;
             FirstMenuFx.setLoggedInAdmin(Admin.getAdminWithUser(username));
+            Admin.isThereAdmin=true;
+            registered=true;
+
+         //   RegisterMenuFx.setFirstReg(false);
           //  CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
         }
-        else {
+        if (!registered){
             Player player=registerPlayer(username,password);
             addPlayerDetails(player,name,lastname,uniqueID,email,phone);
             player.setPlatoAge();
             FirstMenuFx.setLoggedInPlayer(Player.getPlayerWithUser(username));
+            registered=false;
             //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
         }}
         Admin.isThereAdmin=true;
     }
     public static Player registerPlayer(String username, String password){
-        Player player =new Player(username,password);
-        return player;
+        return new Player(username,password);
     }
     public static Admin registerAdmin(String username, String password){
-          Admin admin=new Admin(username,password);
-                return admin;
+        return new Admin(username,password);
 
           }
     public static void addAdminDetails(Admin admin, String name, String lastName, String accountID, String email, String phone){

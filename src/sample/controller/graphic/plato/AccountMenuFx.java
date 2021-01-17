@@ -23,8 +23,9 @@ public class AccountMenuFx {
 
     public void loadGamesHistory(ActionEvent actionEvent) {
     }
-    @FXML
+   @FXML
     public void initialize(){
+       System.out.println("tof me");
         reversiStatistics.setText("wins:"+String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiAndWinsCounts())+" played:"+FirstMenuFx.getLoggedInPlayer().getReversiPlayedCounts());
         DBStatics.setText("wins:"+String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiAndWinsCounts())+" played:"+FirstMenuFx.getLoggedInPlayer().getReversiPlayedCounts());
     }

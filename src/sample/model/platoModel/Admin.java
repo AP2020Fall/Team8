@@ -11,9 +11,75 @@ public class Admin extends Account {
     public static boolean isThereAdmin=false;
     public static String adminId;
     private static ArrayList<Admin> Admin=new ArrayList<>();
+    private String name;
+    private String lastName;
+    private String userName;
+    private String accountID;
+    private String passWord;
+    private String email;
+    private String phone;
+    private LocalDateTime platoAge;
 
 
+    public void setDetails(String name, String lastName, String accountID, String email, String phone){
+        this.name=name;
+        this.lastName=lastName;
+        this.accountID=accountID;
+        this.email=email;
+        this.phone=phone;
+    }
+    public String getName() {
+        return name;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAccountID() {
+        return accountID;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public LocalDateTime getPlatoAge() {
+        return platoAge;
+    }
+
+
+    public void setPlatoAge() {
+        this.platoAge = LocalDateTime.now();
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAccountID(String accountID) {
+        this.accountID = accountID;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
     public static ArrayList<Admin> getAdmin() {
         return Admin;
     }
@@ -30,18 +96,6 @@ public class Admin extends Account {
         Admin.add(this);
     }
 
-    @Override
-    public void setEmail(String email) {
-        super.setEmail(email);
-    }
-
-    @Override
-    public void setPhone(String phone) {
-        super.setPhone(phone);
-    }
-    public void addEvent(LocalDateTime start, LocalDateTime end, String gameName, int score){
-        Event event=new Event( UUID.randomUUID().toString(),gameName,start,end,score);
-    }
     public void addSuggestions(String user){}
     public void removeSuggestion(){}
 

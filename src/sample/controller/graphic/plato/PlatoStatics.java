@@ -33,6 +33,7 @@ public class PlatoStatics {
         winsCountT.setText(String.valueOf(player.getReversiAndWinsCounts()+player.getDotsAndBoxesAndWinsCount()));
         datePassedT.setText(String.valueOf(Duration.between(player.getPlatoAge(), LocalDateTime.now()).toDays()));
         scoreT.setText(String.valueOf(player.getDBScore()+player.getReversiScore()));
+        friendsCountT.setText(String.valueOf(player.getFriends().size()));
     }
 }
 

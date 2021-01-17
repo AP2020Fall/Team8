@@ -15,15 +15,17 @@ public class LoginMenu {
     private static int num;
     public static void deleteUserName(String user, String password){
         correctPasswordDelete(user,password);
-        if (num==1){
+        if (num==4){
         Account.getAllAccounts().remove(Account.getAccountWithId(user));
         }
     }
     public static void correctPasswordLogin(String id, String password){
-        if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(id)))
+        if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(id))&&!Admin.getAdmin().contains(Admin.getAdminWithUser(id)))
             num= 2;
-         else if(!Objects.requireNonNull(Account.getAccountWithId(id)).getPassWord().equals(password))
+         else if(!Player.getPlayerWithUser(id).getPassWord().equals(password)&&!Admin.getAdminWithUser(id).getPassWord().equalsIgnoreCase(password))
             num= 3;
+         else if(!Admin.getAdminWithUser(id).getPassWord().equalsIgnoreCase(password))
+             num=3;
         else
             num= 1;
 
@@ -31,9 +33,12 @@ public class LoginMenu {
     }
 
     public static void correctPasswordDelete(String id, String password){
-        if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(id)))
+        System.out.println(Player.getAccountWithId(id));
+        System.out.println(Player.getAccountWithId(id).getPassWord());
+        System.out.println(Admin.getAdminWithUser(id));
+        if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(id))&&!Admin.getAdmin().contains(Admin.getAdminWithUser(id)))
             num= 2;
-        else if(!Objects.requireNonNull(Account.getAccountWithId(id)).getPassWord().equals(password))
+        else if(!Player.getPlayerWithUser(id).getPassWord().equals(password)&&!Admin.getAdminWithUser(id).getPassWord().equalsIgnoreCase(password))
             num= 3;
         else
             num= 4;

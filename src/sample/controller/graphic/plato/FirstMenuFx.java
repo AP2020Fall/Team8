@@ -55,14 +55,18 @@ public class FirstMenuFx {
         stage.setResizable(false);
         stage.show();*/
     }
+
     public void loadMain() throws IOException {
+        System.out.println("11");
         if(loggedInAdmin != null){
-        Parent root = FXMLLoader.load(getClass().getResource("sample/view/adminMenuFx.fxml"));
+            System.out.println("22");
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
        // Main.allStage.setTitle("Score Board Menu");
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();}
         else if (loggedInPlayer!=null){
-            Parent root = FXMLLoader.load(getClass().getResource("sample/view/playerMenuFx.fxml"));
+            System.out.println("33");
+            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
            // Main.allStage.setTitle("Score Board Menu");
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();}
@@ -74,12 +78,15 @@ public class FirstMenuFx {
 
 
     public void loadAccount() throws IOException {
+        System.out.println("1");
         if (loggedInAdmin != null) {
-            Parent root = FXMLLoader.load(getClass().getResource("sample/view/adminAccount.fxml"));
+            System.out.println(2);
+            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminAccount.fxml"));
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();
         } else if (loggedInPlayer != null) {
-            Parent root = FXMLLoader.load(getClass().getResource("sample/view/accountMenu.fxml"));
+            System.out.println("3");
+            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml"));
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();
         }
@@ -89,7 +96,6 @@ public class FirstMenuFx {
 
     public void loadReg() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml"));
-
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();}
 

@@ -29,10 +29,20 @@ public class RegisterMenuFx {
     public Label alertReg;
     public ImageView exitReg;
     public ImageView backReg;
-    private boolean isFirstReg=true;
+    private static boolean isFirstReg=true;
+    private static boolean pageTurn=false;
+
+    public static void setFirstReg(boolean firstReg) {
+        RegisterMenuFx.isFirstReg=firstReg;
+    }
+
+    public static void setPageTurn(boolean pageTurn) {
+        RegisterMenuFx.pageTurn = pageTurn;
+    }
 
     public void register(ActionEvent actionEvent) throws IOException {
         //isFirstReg=false;
+        pageTurn=false;
         if (!userTFReg.getText().isEmpty()&&!passPFReg.getText().isEmpty()&&!lastnameTFReg.getText().isEmpty()&&!emailTFReg.getText().isEmpty()&&!phoneTFReg.getText().isEmpty()){
         RegisterMenu.registerAccount(userTFReg.getText(),passPFReg.getText(),nameTFReg.getText(),lastnameTFReg.getText(),emailTFReg.getText(),phoneTFReg.getText());
         alertReg.setText(OutputHandler.showRegisterMenuOutput(RegisterMenu.getNum()));
@@ -43,13 +53,17 @@ public class RegisterMenuFx {
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
                 Main.allStage.show();
-            } else {
+                isFirstReg=false;
+                pageTurn=true;
+            }
+            else if (!pageTurn){
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
                 Main.allStage.show();
+                pageTurn=true;
+
             }
-            isFirstReg=false;
             }
         }
        // Parent pri= FXMLLoader.load(Objects.requireNonNull(RegisterMenuFx.class.getClassLoader().getResource("registerMenuFx.fxml")));

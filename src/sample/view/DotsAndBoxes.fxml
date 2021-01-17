@@ -181,8 +181,8 @@
         <Rectangle fx:id="r76" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
         <Rectangle fx:id="r77" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
         <Circle fx:id="sc11" fill="#1f93ff00" layoutX="29.0" layoutY="22.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="true" />
-        <Circle fx:id="sc12" fill="#1f93ff00" layoutX="80.0" layoutY="22.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
-        <Circle fx:id="sc13" fill="#1f93ff00" layoutX="130.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
+        <Circle fx:id="sc12" fill="#1f93ff00" layoutX="80.0" layoutY="22.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="true"/>
+        <Circle fx:id="sc13" fill="#1f93ff00" layoutX="130.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="true" />
         <Circle fx:id="sc14" fill="#1f93ff00" layoutX="179.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="true" />
         <Circle fx:id="sc15" fill="#1f93ff00" layoutX="230.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="false" />
         <Circle fx:id="sc16" fill="#1f93ff00" layoutX="280.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="#bac267" strokeType="INSIDE" strokeWidth="5.0" visible="false" />

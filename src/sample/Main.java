@@ -12,7 +12,7 @@ public class Main extends Application {
    public static Stage allStage=new Stage();
     @Override
     public void start(Stage primaryStage) throws Exception{
-     /*   Parent root = FXMLLoader.load(getClass().getResource("/sample/view/DotsAndBoxes.fxml"));
+       /* Parent root = FXMLLoader.load(getClass().getResource("/sample/view/DotsAndBoxes.fxml"));
        primaryStage.setTitle("ReversiStartMenu");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();*/

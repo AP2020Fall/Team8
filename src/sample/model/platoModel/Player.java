@@ -13,17 +13,37 @@ public class Player extends  Account {
     private ArrayList<Player> friends;
     private ArrayList<Player> friendRequest;
     private Set<String> favoriteGames;
-    private int reversiAndWinsCounts=0;
+    private int reversiAndWinsCounts = 0;
     private int reversiScore;
     private boolean isReversiFav;
     private boolean isDBFav;
     private int DBScore;
-    private int dotsAndBoxesAndWinsCount=0;
-    private int reversiPlayedCounts=0;
-    private int dotsAndBoxesPlayedCounts=0;
-    private static ArrayList<Player> allPlayers=new ArrayList<>();
+    private int dotsAndBoxesAndWinsCount = 0;
+    private int reversiPlayedCounts = 0;
+    private int dotsAndBoxesPlayedCounts = 0;
+    private static ArrayList<Player> allPlayers = new ArrayList<>();
     private ArrayList<GameReq> gameReqs;
-    public void addFriend(){}
+
+    public void addFriend() {
+    }
+
+    private String name;
+    private String lastName;
+    private String userName;
+    private String accountID;
+    private String passWord;
+    private String email;
+    private String phone;
+    private LocalDateTime platoAge;
+
+
+    public void setDetails(String name, String lastName, String accountID, String email, String phone) {
+        this.name = name;
+        this.lastName = lastName;
+        this.accountID = accountID;
+        this.email = email;
+        this.phone = phone;
+    }
 
     public void setReversiFav(boolean reversiFav) {
         isReversiFav = reversiFav;
@@ -58,13 +78,66 @@ public class Player extends  Account {
         return DBScore;
     }
 
-    public Player getPlayerWithId(String Id){
+    public Player getPlayerWithId(String Id) {
         for (Player player : allPlayers) {
             if (player.getAccountID().equals(Id))
                 return player;
         }
         return null;
     }
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAccountID() {
+        return accountID;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public LocalDateTime getPlatoAge() {
+        return platoAge;
+    }
+
+
+    public void setPlatoAge() {
+        this.platoAge = LocalDateTime.now();
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAccountID(String accountID) {
+        this.accountID = accountID;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public ArrayList<GameReq> getGameReqs() {
         return gameReqs;
     }
@@ -115,37 +188,28 @@ public class Player extends  Account {
     }
 
     public Player(String username, String password) {
-        super(username,password);
-        suggestions=new LinkedHashSet<>();
-        favoriteGames=new LinkedHashSet<String>();
-        friendRequest=new ArrayList<>();
-        friends=new ArrayList<>();
+        super(username, password);
+        suggestions = new LinkedHashSet<>();
+        favoriteGames = new LinkedHashSet<String>();
+        friendRequest = new ArrayList<>();
+        friends = new ArrayList<>();
         allPlayers.add(this);
 
     }
-    public String statistic(){
-        int winsTotal=reversiAndWinsCounts+dotsAndBoxesAndWinsCount;
+
+    public String statistic() {
+        int winsTotal = reversiAndWinsCounts + dotsAndBoxesAndWinsCount;
         long noOfDaysBetween = ChronoUnit.DAYS.between(getPlatoAge(), LocalDateTime.now());
-        return "numbers of friends:"+friends.size()+" wins count:"+winsTotal+" plato age: "+noOfDaysBetween;
+        return "numbers of friends:" + friends.size() + " wins count:" + winsTotal + " plato age: " + noOfDaysBetween;
 
-            }
+    }
 
 
-
-    public static Player getPlayerWithUser(String username){
+    public static Player getPlayerWithUser(String username) {
         for (Player player : allPlayers) {
             if (player.getUserName().equals(username))
                 return player;
         }
         return null;
-    }
-    @Override
-    public void setEmail(String email) {
-        super.setEmail(email);
-    }
-
-    @Override
-    public void setPhone(String phone) {
-        super.setPhone(phone);
     }
 }

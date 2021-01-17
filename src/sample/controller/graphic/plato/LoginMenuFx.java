@@ -28,7 +28,7 @@ public class LoginMenuFx {
     public  void login(ActionEvent actionEvent) throws IOException {
         LoginMenu.login(userLoginTF.getText(),passwordLoginTF.getText());
         alertLog.setText(OutputHandler.showLoginMenuOutput(LoginMenu.getNum()));
-        if (LoginMenu.getNum()==4) {
+        if (LoginMenu.getNum()==1) {
             if (LoginMenu.isIsAdmin()) {
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);

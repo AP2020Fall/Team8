@@ -1,5 +1,6 @@
 package sample.controller.graphic.plato;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import sample.model.platoModel.Admin;
@@ -32,4 +33,11 @@ public class UserPro {
         }
     }
 
+    public void changePass(ActionEvent actionEvent) {
+
+    }
+
+    public void edit(ActionEvent actionEvent) {
+
+    }
 }
