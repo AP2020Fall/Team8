@@ -1,7 +1,5 @@
 package model;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -13,7 +11,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 import javafx.scene.media.Media;
-//import java.awt.*;
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
@@ -307,10 +304,9 @@ public class DotsAndBoxes extends Game {
         private ArrayList<Line> ra77 = new ArrayList<Line>();
         private ArrayList<Rectangle> allRectangles = new ArrayList<Rectangle>();
 
-        // ...
 
-        private ArrayList<Circle> selectedC=new ArrayList<>();
-        private boolean isSecondCircle=false;
+        private ArrayList<Circle> selectedC = new ArrayList<>();
+        private boolean isSecondCircle = false;
         private DBPlayer firstPlayer;
         private DbGameMenu secondPlayer;
         private int firstPlayerScore = 0;
@@ -318,7 +314,6 @@ public class DotsAndBoxes extends Game {
         private boolean isFirstPlayerTurn;
         private boolean isRectangleDone;
         private ArrayList<Line> selectedL;
-        //   private boolean isFirst;
         private Stage stage;
 
         public void playMusic() {
@@ -332,42 +327,18 @@ public class DotsAndBoxes extends Game {
         public void setHasCountDown(boolean hasCountDown) {
             this.hasCountDown = hasCountDown;
         }
-      //  @FXML
-   /* public void initialize(){
-        dbBackground.setOnMouseClicked(e->{
-            double x=e.getX();
-            double y=e.getY();
-            Circle circle=new Circle(x,y,10);
-            Group root = new Group(circle);
-         //   primaryStage.setTitle("Hello World");
-            stage.setScene(new Scene(root, 300, 275));
-            stage.show();
-        });
-    }*/
 
-   /* public void drawCircle(int centerX,int centerY){
-//Drawing a Circle
-        Circle circle = new Circle(centerX, centerY, 10);
-
-        //Creating a Group object
-        Group root = new Group(circle);
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
-    }*/
-        public void setTimer(){
-            // Timer timer=new Timer(120000,this);
+        public void setTimer() {
         }
 
         public void drawCircle(MouseEvent mouseEvent) {
             double x = mouseEvent.getX();
             double y = mouseEvent.getY();
-            Circle circle = new Circle(x,y,10);
+            Circle circle = new Circle(x, y, 10);
             circle.setVisible(true);
         }
 
-       public void showC(MouseEvent mouseEvent) {
+        public void showC(MouseEvent mouseEvent) {
             double x = MouseInfo.getPointerInfo().getLocation().getX() - 340;
             double y = MouseInfo.getPointerInfo().getLocation().getY() - 110;
             //command for first player
@@ -381,325 +352,253 @@ public class DotsAndBoxes extends Game {
                         sc12.setVisible(true);
                         sc12.setFill(Color.web("#bac267"));
                         selectedC.add(sc12);
-                    }
-
-                    else if (x > 112 && x < 148 && y > 5 && y < 41) {
+                    } else if (x > 112 && x < 148 && y > 5 && y < 41) {
                         sc13.setVisible(true);
                         sc13.setFill(Color.web("#bac267"));
                         selectedC.add(sc13);
-                    }
-                    else if (x > 161 && x < 197 && y > 5 && y < 41) {
+                    } else if (x > 161 && x < 197 && y > 5 && y < 41) {
                         sc14.setVisible(true);
                         sc14.setFill(Color.web("#bac267"));
                         selectedC.add(sc14);
-                    }
-
-                    else if (x > 212 && x < 248 && y > 5 && y < 41) {
+                    } else if (x > 212 && x < 248 && y > 5 && y < 41) {
                         sc15.setVisible(true);
                         sc15.setFill(Color.web("#bac267"));
                         selectedC.add(sc15);
-                    }
-
-                    else if (x > 262 && x < 298 && y > 5 && y < 41) {
+                    } else if (x > 262 && x < 298 && y > 5 && y < 41) {
                         sc16.setVisible(true);
                         sc16.setFill(Color.web("#bac267"));
                         selectedC.add(sc16);
-                    }
-                    else if (x > 312 && x < 348 && y > 5 && y < 41) {
+                    } else if (x > 312 && x < 348 && y > 5 && y < 41) {
                         sc17.setVisible(true);
                         sc17.setFill(Color.web("#bac267"));
                         selectedC.add(sc17);
-                    }
-                    else if (x > 360 && x < 396 && y > 5 && y < 41) {
+                    } else if (x > 360 && x < 396 && y > 5 && y < 41) {
                         sc18.setVisible(true);
                         sc18.setFill(Color.web("#bac267"));
                         selectedC.add(sc18);
-                    }
-                    else if (x > 11 && x < 47 && y > 55 && y < 91) {
+                    } else if (x > 11 && x < 47 && y > 55 && y < 91) {
                         sc21.setVisible(true);
                         sc21.setFill(Color.web("#bac267"));
                         selectedC.add(sc21);
-                    }
-                    else if (x > 62 && x < 98 && y > 55 && y < 91) {
+                    } else if (x > 62 && x < 98 && y > 55 && y < 91) {
                         sc22.setVisible(true);
                         sc22.setFill(Color.web("#bac267"));
                         selectedC.add(sc22);
-                    }
-                    else if (x > 112 && x < 148 && y > 55 && y < 91) {
+                    } else if (x > 112 && x < 148 && y > 55 && y < 91) {
                         sc23.setVisible(true);
                         sc23.setFill(Color.web("#bac267"));
                         selectedC.add(sc23);
-                    }
-                    else if (x > 161 && x < 197 && y > 55 && y < 91) {
+                    } else if (x > 161 && x < 197 && y > 55 && y < 91) {
                         sc24.setVisible(true);
                         sc24.setFill(Color.web("#bac267"));
                         selectedC.add(sc24);
-                    }
-                    else if (x > 212 && x < 248 && y > 55 && y < 91) {
+                    } else if (x > 212 && x < 248 && y > 55 && y < 91) {
                         sc25.setVisible(true);
                         sc25.setFill(Color.web("#bac267"));
                         selectedC.add(sc25);
-                    }
-                    else if (x > 262 && x < 298 && y > 55 && y < 91) {
+                    } else if (x > 262 && x < 298 && y > 55 && y < 91) {
                         sc26.setVisible(true);
                         sc26.setFill(Color.web("#bac267"));
                         selectedC.add(sc26);
-                    }
-                    else if (x > 312 && x < 348 && y > 55 && y < 91) {
+                    } else if (x > 312 && x < 348 && y > 55 && y < 91) {
                         sc27.setVisible(true);
                         sc27.setFill(Color.web("#bac267"));
                         selectedC.add(sc27);
-                    }
-                    else if (x > 360 && x < 396 && y > 55 && y < 91) {
+                    } else if (x > 360 && x < 396 && y > 55 && y < 91) {
                         sc28.setVisible(true);
                         sc28.setFill(Color.web("#bac267"));
                         selectedC.add(sc28);
-                    }
-                    else if (x > 11 && x < 47 && y > 105 && y < 141) {
+                    } else if (x > 11 && x < 47 && y > 105 && y < 141) {
                         sc31.setVisible(true);
                         sc31.setFill(Color.web("#bac267"));
                         selectedC.add(sc31);
-                    }
-                    else if (x > 62 && x < 98 && y > 105 && y < 141) {
+                    } else if (x > 62 && x < 98 && y > 105 && y < 141) {
                         sc32.setVisible(true);
                         sc32.setFill(Color.web("#bac267"));
                         selectedC.add(sc32);
-                    }
-                    else if (x > 112 && x < 148 && y > 106 && y < 142) {
+                    } else if (x > 112 && x < 148 && y > 106 && y < 142) {
                         sc33.setVisible(true);
                         sc33.setFill(Color.web("#bac267"));
                         selectedC.add(sc33);
-                    }
-                    else if (x > 161 && x < 197 && y > 106 && y < 142) {
+                    } else if (x > 161 && x < 197 && y > 106 && y < 142) {
                         sc34.setVisible(true);
                         sc34.setFill(Color.web("#bac267"));
                         selectedC.add(sc34);
 
-                    }
-                    else if (x > 212 && x < 248 && y > 106 && y < 142) {
+                    } else if (x > 212 && x < 248 && y > 106 && y < 142) {
                         sc35.setVisible(true);
                         sc35.setFill(Color.web("#bac267"));
                         selectedC.add(sc35);
 
-                    }
-                    else if (x > 262 && x < 298 && y > 106 && y < 142) {
+                    } else if (x > 262 && x < 298 && y > 106 && y < 142) {
                         sc36.setVisible(true);
                         sc36.setFill(Color.web("#bac267"));
                         selectedC.add(sc36);
-                    }
-                    else if (x > 312 && x < 348 && y > 106 && y < 142) {
+                    } else if (x > 312 && x < 348 && y > 106 && y < 142) {
                         sc37.setVisible(true);
                         sc37.setFill(Color.web("#bac267"));
                         selectedC.add(sc37);
-                    }
-                    else if (x > 360 && x < 396 && y > 106 && y < 142) {
+                    } else if (x > 360 && x < 396 && y > 106 && y < 142) {
                         sc38.setVisible(true);
                         sc38.setFill(Color.web("#bac267"));
                         selectedC.add(sc38);
-                    }
-
-                    else if (x > 11 && x < 47 && y > 155 && y < 191) {
+                    } else if (x > 11 && x < 47 && y > 155 && y < 191) {
                         sc41.setVisible(true);
                         sc41.setFill(Color.web("#bac267"));
                         selectedC.add(sc41);
-                    }
-                    else if (x > 62 && x < 98 && y > 155 && y < 191) {
+                    } else if (x > 62 && x < 98 && y > 155 && y < 191) {
                         sc42.setVisible(true);
                         sc42.setFill(Color.web("#bac267"));
                         selectedC.add(sc42);
-                    }
-
-                    else if (x > 112 && x < 148 && y > 156 && y < 192) {
+                    } else if (x > 112 && x < 148 && y > 156 && y < 192) {
                         sc43.setVisible(true);
                         sc43.setFill(Color.web("#bac267"));
                         selectedC.add(sc43);
-                    }
-                    else if (x > 161 && x < 197 && y > 156 && y < 192) {
+                    } else if (x > 161 && x < 197 && y > 156 && y < 192) {
                         sc44.setVisible(true);
                         sc44.setFill(Color.web("#bac267"));
                         selectedC.add(sc44);
-                    }
-                    else if (x > 212 && x < 248 && y > 156 && y < 192) {
+                    } else if (x > 212 && x < 248 && y > 156 && y < 192) {
                         sc45.setVisible(true);
                         sc45.setFill(Color.web("#bac267"));
                         selectedC.add(sc45);
-                    }
-                    else if (x > 262 && x < 298 && y > 156 && y < 192) {
+                    } else if (x > 262 && x < 298 && y > 156 && y < 192) {
                         sc46.setVisible(true);
                         sc46.setFill(Color.web("#bac267"));
                         selectedC.add(sc46);
-                    }
-                    else if (x > 312 && x < 348 && y > 156 && y < 192) {
+                    } else if (x > 312 && x < 348 && y > 156 && y < 192) {
                         sc47.setVisible(true);
                         sc47.setFill(Color.web("#bac267"));
                         selectedC.add(sc47);
-                    }
-                    else if (x > 360 && x < 396 && y > 156 && y < 192) {
+                    } else if (x > 360 && x < 396 && y > 156 && y < 192) {
                         sc48.setVisible(true);
                         sc48.setFill(Color.web("#bac267"));
                         selectedC.add(sc48);
-                    }
-                    else if (x > 11 && x < 47 && y > 206 && y < 242) {
+                    } else if (x > 11 && x < 47 && y > 206 && y < 242) {
                         sc51.setVisible(true);
                         sc51.setFill(Color.web("#bac267"));
                         selectedC.add(sc51);
-                    }
-                    else if (x > 62 && x < 98 && y > 205 && y < 241) {
+                    } else if (x > 62 && x < 98 && y > 205 && y < 241) {
                         sc52.setVisible(true);
                         sc52.setFill(Color.web("#bac267"));
                         selectedC.add(sc52);
-                    }
-                    else if (x > 112 && x < 148 && y > 206 && y < 242) {
+                    } else if (x > 112 && x < 148 && y > 206 && y < 242) {
                         sc53.setVisible(true);
                         sc53.setFill(Color.web("#bac267"));
                         selectedC.add(sc53);
-                    }
-
-                    else if (x > 161 && x < 197 && y > 205 && y < 241) {
+                    } else if (x > 161 && x < 197 && y > 205 && y < 241) {
                         sc54.setVisible(true);
                         sc54.setFill(Color.web("#bac267"));
                         selectedC.add(sc54);
-                    }
-                    else if (x > 212 && x < 248 && y > 205 && y < 241) {
+                    } else if (x > 212 && x < 248 && y > 205 && y < 241) {
                         sc55.setVisible(true);
                         sc55.setFill(Color.web("#bac267"));
                         selectedC.add(sc55);
-                    }
-                    else if (x > 262 && x < 298 && y > 205 && y < 241) {
+                    } else if (x > 262 && x < 298 && y > 205 && y < 241) {
                         sc56.setVisible(true);
                         sc56.setFill(Color.web("#bac267"));
                         selectedC.add(sc56);
-                    }
-                    else if (x > 312 && x < 348 && y > 205 && y < 241) {
+                    } else if (x > 312 && x < 348 && y > 205 && y < 241) {
                         sc57.setVisible(true);
                         sc57.setFill(Color.web("#bac267"));
                         selectedC.add(sc57);
-                    }
-                    else if (x > 360 && x < 396 && y > 205 && y < 241) {
+                    } else if (x > 360 && x < 396 && y > 205 && y < 241) {
                         sc58.setVisible(true);
                         sc58.setFill(Color.web("#bac267"));
                         selectedC.add(sc58);
-                    }
-
-                    else if (x > 11 && x < 47 && y > 255 && y < 291) {
+                    } else if (x > 11 && x < 47 && y > 255 && y < 291) {
                         sc61.setVisible(true);
                         sc61.setFill(Color.web("#bac267"));
                         selectedC.add(sc61);
-                    }
-                    else if (x > 62 && x < 98 && y > 255 && y < 291) {
+                    } else if (x > 62 && x < 98 && y > 255 && y < 291) {
                         sc62.setVisible(true);
                         sc62.setFill(Color.web("#bac267"));
                         selectedC.add(sc62);
-                    }
-                    else if (x > 112 && x < 148 && y > 256 && y < 292) {
+                    } else if (x > 112 && x < 148 && y > 256 && y < 292) {
                         sc63.setVisible(true);
                         sc63.setFill(Color.web("#bac267"));
                         selectedC.add(sc63);
-                    }
-                    else if (x > 161 && x < 197 && y > 256 && y < 292) {
+                    } else if (x > 161 && x < 197 && y > 256 && y < 292) {
                         sc64.setVisible(true);
                         sc64.setFill(Color.web("#bac267"));
                         selectedC.add(sc64);
-                    }
-                    else if (x > 212 && x < 248 && y > 256 && y < 292) {
+                    } else if (x > 212 && x < 248 && y > 256 && y < 292) {
                         sc65.setVisible(true);
                         sc65.setFill(Color.web("#bac267"));
                         selectedC.add(sc65);
-                    }
-                    else if (x > 262 && x < 298 && y > 256 && y < 292) {
+                    } else if (x > 262 && x < 298 && y > 256 && y < 292) {
                         sc66.setVisible(true);
                         sc66.setFill(Color.web("#bac267"));
                         selectedC.add(sc66);
-                    }
-                    else if (x > 312 && x < 348 && y > 256 && y < 292) {
+                    } else if (x > 312 && x < 348 && y > 256 && y < 292) {
                         sc67.setVisible(true);
                         sc67.setFill(Color.web("#bac267"));
                         selectedC.add(sc67);
-                    }
-                    else if (x > 360 && x < 396 && y > 256 && y < 292) {
+                    } else if (x > 360 && x < 396 && y > 256 && y < 292) {
                         sc68.setVisible(true);
                         sc68.setFill(Color.web("#bac267"));
                         selectedC.add(sc68);
-                    }
-                    else if (x > 10 && x < 46 && y > 306 && y < 342) {
+                    } else if (x > 10 && x < 46 && y > 306 && y < 342) {
                         sc71.setVisible(true);
                         sc71.setFill(Color.web("#bac267"));
                         selectedC.add(sc71);
-                    }
-                    else if (x > 61 && x < 97 && y > 305 && y < 341) {
+                    } else if (x > 61 && x < 97 && y > 305 && y < 341) {
                         sc72.setVisible(true);
                         sc72.setFill(Color.web("#bac267"));
                         selectedC.add(sc72);
-                    }
-                    else if (x > 111 && x < 147 && y > 306 && y < 342) {
+                    } else if (x > 111 && x < 147 && y > 306 && y < 342) {
                         sc73.setVisible(true);
                         sc73.setFill(Color.web("#bac267"));
                         selectedC.add(sc73);
-                    }
-                    else if (x > 160 && x < 196 && y > 306 && y < 342) {
+                    } else if (x > 160 && x < 196 && y > 306 && y < 342) {
                         sc74.setVisible(true);
                         sc74.setFill(Color.web("#bac267"));
                         selectedC.add(sc74);
-                    }
-
-                    else if (x > 211 && x < 247 && y > 306 && y < 342) {
+                    } else if (x > 211 && x < 247 && y > 306 && y < 342) {
                         sc75.setVisible(true);
                         sc75.setFill(Color.web("#bac267"));
                         selectedC.add(sc75);
-                    }
-                    else if (x > 261 && x < 297 && y > 306 && y < 342) {
+                    } else if (x > 261 && x < 297 && y > 306 && y < 342) {
                         sc76.setVisible(true);
                         sc76.setFill(Color.web("#bac267"));
                         selectedC.add(sc76);
-                    }
-                    else if (x > 311 && x < 347 && y > 306 && y < 342) {
+                    } else if (x > 311 && x < 347 && y > 306 && y < 342) {
                         sc77.setVisible(true);
                         sc77.setFill(Color.web("#bac267"));
                         selectedC.add(sc77);
-                    }
-                    else if (x > 359 && x < 395 && y > 306 && y < 342) {
+                    } else if (x > 359 && x < 395 && y > 306 && y < 342) {
                         sc78.setVisible(true);
                         sc78.setFill(Color.web("#bac267"));
                         selectedC.add(sc78);
-                    }
-                    else if (x > 11 && x < 47 && y > 355 && y < 391) {
+                    } else if (x > 11 && x < 47 && y > 355 && y < 391) {
                         sc81.setVisible(true);
                         sc81.setFill(Color.web("#bac267"));
                         selectedC.add(sc81);
-                    }
-
-                    else if (x > 61 && x < 97 && y > 356 && y < 392) {
+                    } else if (x > 61 && x < 97 && y > 356 && y < 392) {
                         sc82.setVisible(true);
                         sc82.setFill(Color.web("#bac267"));
                         selectedC.add(sc82);
-                    }
-
-                    else if (x > 111 && x < 147 && y > 356 && y < 392) {
+                    } else if (x > 111 && x < 147 && y > 356 && y < 392) {
                         sc83.setVisible(true);
                         sc83.setFill(Color.web("#bac267"));
                         selectedC.add(sc83);
-                    }
-                    else if (x > 159 && x < 195 && y > 356 && y < 392) {
+                    } else if (x > 159 && x < 195 && y > 356 && y < 392) {
                         sc84.setVisible(true);
                         sc84.setFill(Color.web("#bac267"));
                         selectedC.add(sc84);
-                    }
-                    else if (x > 211 && x < 247 && y > 356 && y < 392) {
+                    } else if (x > 211 && x < 247 && y > 356 && y < 392) {
                         sc85.setVisible(true);
                         sc85.setFill(Color.web("#bac267"));
                         selectedC.add(sc85);
-                    }
-                    else if (x > 261 && x < 297 && y > 356 && y < 392) {
+                    } else if (x > 261 && x < 297 && y > 356 && y < 392) {
                         sc86.setVisible(true);
                         sc86.setFill(Color.web("#bac267"));
                         selectedC.add(sc86);
-                    }
-                    else if (x > 312 && x < 348 && y > 356 && y < 392) {
+                    } else if (x > 312 && x < 348 && y > 356 && y < 392) {
                         sc87.setVisible(true);
                         sc87.setFill(Color.web("#bac267"));
                         selectedC.add(sc87);
-                    }
-                    else if (x > 360 && x < 396 && y > 356 && y < 392) {
+                    } else if (x > 360 && x < 396 && y > 356 && y < 392) {
                         sc88.setVisible(true);
                         sc88.setFill(Color.web("#bac267"));
                         selectedC.add(sc88);
@@ -715,13 +614,13 @@ public class DotsAndBoxes extends Game {
                         if (x1 == sc12.getCenterX() && y1 == sc12.getCenterY()) {
                             if (hl11.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
-                           else {
+                            else {
                                 sc12.setVisible(true);
                                 hl11.setVisible(true);
                                 sc12.setFill(Color.web("#bac267"));
                                 hl11.setFill(Color.web("#98c4c0"));
                                 ra11.add(hl11);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
@@ -729,8 +628,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc21.getCenterX() && y1 == sc21.getCenterY()) {
+                        } else if (x1 == sc21.getCenterX() && y1 == sc21.getCenterY()) {
                             if (vl11.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -739,7 +637,7 @@ public class DotsAndBoxes extends Game {
                                 sc21.setFill(Color.web("#bac267"));
                                 vl11.setFill(Color.web("#98c4c0"));
                                 ra11.add(vl11);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
@@ -748,8 +646,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                        else if (x > 62 && x < 98 && y > 4 && y < 40) {
+                    } else if (x > 62 && x < 98 && y > 4 && y < 40) {
                         if (x1 == sc11.getCenterX() && y1 == sc11.getCenterY()) {
                             if (hl11.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -759,7 +656,7 @@ public class DotsAndBoxes extends Game {
                                 sc11.setFill(Color.web("#bac267"));
                                 hl11.setFill(Color.web("#98c4c0"));
                                 ra11.add(hl11);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
@@ -767,8 +664,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc13.getCenterX() && y1 == sc13.getCenterY()) {
+                        } else if (x1 == sc13.getCenterX() && y1 == sc13.getCenterY()) {
                             if (hl12.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -777,7 +673,7 @@ public class DotsAndBoxes extends Game {
                                 sc13.setFill(Color.web("#bac267"));
                                 hl12.setFill(Color.web("#98c4c0"));
                                 ra12.add(hl12);
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
@@ -785,8 +681,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc22.getCenterX() && y1 == sc22.getCenterY()) {
+                        } else if (x1 == sc22.getCenterX() && y1 == sc22.getCenterY()) {
                             if (vl12.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -796,14 +691,14 @@ public class DotsAndBoxes extends Game {
                                 vl12.setFill(Color.web("#98c4c0"));
                                 ra11.add(vl12);
                                 ra12.add(vl12);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
                                     firstPlayerScore++;
                                     playMusic();
                                 }
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
@@ -812,8 +707,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 112 && x < 148 && y > 5 && y < 41) {
+                    } else if (x > 112 && x < 148 && y > 5 && y < 41) {
                         if (x1 == sc12.getCenterX() && y1 == sc12.getCenterY()) {
                             if (hl12.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -823,7 +717,7 @@ public class DotsAndBoxes extends Game {
                                 sc12.setFill(Color.web("#bac267"));
                                 hl12.setFill(Color.web("#98c4c0"));
                                 ra12.add(hl12);
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
@@ -831,8 +725,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()) {
+                        } else if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()) {
                             if (hl13.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -841,7 +734,7 @@ public class DotsAndBoxes extends Game {
                                 sc14.setFill(Color.web("#bac267"));
                                 hl13.setFill(Color.web("#98c4c0"));
                                 ra13.add(hl13);
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
@@ -849,8 +742,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()){
+                        } else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()) {
                             if (vl13.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -860,14 +752,14 @@ public class DotsAndBoxes extends Game {
                                 vl13.setFill(Color.web("#98c4c0"));
                                 ra13.add(vl13);
                                 ra12.add(vl13);
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
                                     firstPlayerScore++;
                                     playMusic();
                                 }
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
@@ -876,18 +768,17 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 161 && x < 197 && y > 5 && y < 41) {
+                    } else if (x > 161 && x < 197 && y > 5 && y < 41) {
                         if (x1 == sc13.getCenterX() && y1 == sc13.getCenterY()) {
                             if (hl13.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
-                            sc13.setVisible(true);
+                                sc13.setVisible(true);
                                 hl13.setVisible(true);
                                 sc13.setFill(Color.web("#bac267"));
                                 hl13.setFill(Color.web("#98c4c0"));
                                 ra13.add(hl13);
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
@@ -895,8 +786,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()) {
+                        } else if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()) {
                             if (hl14.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -905,7 +795,7 @@ public class DotsAndBoxes extends Game {
                                 sc15.setFill(Color.web("#bac267"));
                                 hl14.setFill(Color.web("#98c4c0"));
                                 ra14.add(hl14);
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
@@ -913,8 +803,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                       else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
+                        } else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
                             if (vl14.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -924,14 +813,14 @@ public class DotsAndBoxes extends Game {
                                 vl14.setFill(Color.web("#98c4c0"));
                                 ra13.add(vl14);
                                 ra14.add(vl14);
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
                                     firstPlayerScore++;
                                     playMusic();
                                 }
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
@@ -940,18 +829,17 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 212 && x < 248 && y > 5 && y < 41) {
-                        if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()){
+                    } else if (x > 212 && x < 248 && y > 5 && y < 41) {
+                        if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()) {
                             if (hl14.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
-                                else {
-                                    sc14.setVisible(true);
-                                    hl14.setVisible(true);
-                                    sc14.setFill(Color.web("#bac267"));
-                                    hl14.setFill(Color.web("#98c4c0"));
+                            else {
+                                sc14.setVisible(true);
+                                hl14.setVisible(true);
+                                sc14.setFill(Color.web("#bac267"));
+                                hl14.setFill(Color.web("#98c4c0"));
                                 ra14.add(hl14);
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
@@ -959,8 +847,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc16.getCenterX() && y1 == sc16.getCenterY()){
+                        } else if (x1 == sc16.getCenterX() && y1 == sc16.getCenterY()) {
                             if (hl15.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -969,7 +856,7 @@ public class DotsAndBoxes extends Game {
                                 sc16.setFill(Color.web("#bac267"));
                                 hl15.setFill(Color.web("#98c4c0"));
                                 ra15.add(hl15);
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -977,8 +864,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
+                        } else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
                             if (vl15.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -988,14 +874,14 @@ public class DotsAndBoxes extends Game {
                                 vl15.setFill(Color.web("#98c4c0"));
                                 ra14.add(vl15);
                                 ra15.add(vl15);
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
                                     firstPlayerScore++;
                                     playMusic();
                                 }
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -1004,9 +890,8 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 262 && x < 298 && y > 5 && y < 41) {
-                        if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()){
+                    } else if (x > 262 && x < 298 && y > 5 && y < 41) {
+                        if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()) {
                             if (hl15.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1015,7 +900,7 @@ public class DotsAndBoxes extends Game {
                                 sc15.setFill(Color.web("#bac267"));
                                 hl15.setFill(Color.web("#98c4c0"));
                                 ra15.add(hl15);
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -1023,8 +908,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc17.getCenterX() && y1 == sc17.getCenterY()) {
+                        } else if (x1 == sc17.getCenterX() && y1 == sc17.getCenterY()) {
                             if (hl16.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1033,7 +917,7 @@ public class DotsAndBoxes extends Game {
                                 sc17.setFill(Color.web("#bac267"));
                                 hl16.setFill(Color.web("#98c4c0"));
                                 ra16.add(hl16);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1041,8 +925,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc26.getCenterX()  && y1 == sc26.getCenterY()) {
+                        } else if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
                             if (vl16.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1051,7 +934,7 @@ public class DotsAndBoxes extends Game {
                                 sc26.setFill(Color.web("#bac267"));
                                 vl16.setFill(Color.web("#98c4c0"));
                                 ra15.add(vl16);
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -1059,7 +942,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra16.add(vl16);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1068,8 +951,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 312 && x < 348 && y > 5 && y < 41) {
+                    } else if (x > 312 && x < 348 && y > 5 && y < 41) {
                         if (x1 == sc16.getCenterX() && y1 == sc16.getCenterY()) {
                             if (hl16.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1079,7 +961,7 @@ public class DotsAndBoxes extends Game {
                                 sc16.setFill(Color.web("#bac267"));
                                 hl16.setFill(Color.web("#98c4c0"));
                                 ra16.add(hl16);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1087,8 +969,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc18.getCenterX() && y1 == sc18.getCenterY()) {
+                        } else if (x1 == sc18.getCenterX() && y1 == sc18.getCenterY()) {
                             if (hl17.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1097,7 +978,7 @@ public class DotsAndBoxes extends Game {
                                 sc18.setFill(Color.web("#bac267"));
                                 hl17.setFill(Color.web("#98c4c0"));
                                 ra17.add(hl17);
-                                if (ra17.size()==4){
+                                if (ra17.size() == 4) {
                                     r17.setVisible(true);
                                     r17.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r17);
@@ -1105,8 +986,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
+                        } else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
                             if (vl17.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1115,7 +995,7 @@ public class DotsAndBoxes extends Game {
                                 sc27.setFill(Color.web("#bac267"));
                                 vl17.setFill(Color.web("#98c4c0"));
                                 ra16.add(vl17);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1123,7 +1003,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra17.add(vl17);
-                                if (ra17.size()==4){
+                                if (ra17.size() == 4) {
                                     r17.setVisible(true);
                                     r17.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r17);
@@ -1132,8 +1012,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 360 && x < 396 && y > 5 && y < 41) {
+                    } else if (x > 360 && x < 396 && y > 5 && y < 41) {
                         if (x1 == sc17.getCenterX() && y1 == sc17.getCenterY()) {
                             if (hl17.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1143,7 +1022,7 @@ public class DotsAndBoxes extends Game {
                                 sc17.setFill(Color.web("#bac267"));
                                 hl17.setFill(Color.web("#98c4c0"));
                                 ra17.add(hl17);
-                                if (ra17.size()==4){
+                                if (ra17.size() == 4) {
                                     r17.setVisible(true);
                                     r17.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r17);
@@ -1151,8 +1030,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
+                        } else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
                             if (vl18.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1161,7 +1039,7 @@ public class DotsAndBoxes extends Game {
                                 sc28.setFill(Color.web("#bac267"));
                                 vl18.setFill(Color.web("#98c4c0"));
                                 ra17.add(vl18);
-                                if (ra17.size()==4){
+                                if (ra17.size() == 4) {
                                     r17.setVisible(true);
                                     r17.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r17);
@@ -1182,7 +1060,7 @@ public class DotsAndBoxes extends Game {
                                 sc22.setFill(Color.web("#bac267"));
                                 hl21.setFill(Color.web("#98c4c0"));
                                 ra11.add(hl21);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
@@ -1190,7 +1068,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra21.add(hl21);
-                                if (ra21.size()==4){
+                                if (ra21.size() == 4) {
                                     r21.setVisible(true);
                                     r21.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r21);
@@ -1198,8 +1076,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc11.getCenterX() && y1 == sc11.getCenterY()) {
+                        } else if (x1 == sc11.getCenterX() && y1 == sc11.getCenterY()) {
                             if (vl11.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1208,7 +1085,7 @@ public class DotsAndBoxes extends Game {
                                 sc11.setFill(Color.web("#bac267"));
                                 vl11.setFill(Color.web("#98c4c0"));
                                 ra11.add(vl11);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
@@ -1216,8 +1093,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
+                        } else if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
                             if (vl21.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1226,7 +1102,7 @@ public class DotsAndBoxes extends Game {
                                 sc31.setFill(Color.web("#bac267"));
                                 vl21.setFill(Color.web("#98c4c0"));
                                 ra21.add(vl21);
-                                if (ra21.size()==4){
+                                if (ra21.size() == 4) {
                                     r21.setVisible(true);
                                     r21.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r21);
@@ -1235,8 +1111,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 62 && x < 98 && y > 55 && y < 91) {
+                    } else if (x > 62 && x < 98 && y > 55 && y < 91) {
                         if (x1 == sc12.getCenterX() && y1 == sc12.getCenterY()) {
                             if (vl12.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1246,7 +1121,7 @@ public class DotsAndBoxes extends Game {
                                 sc12.setFill(Color.web("#bac267"));
                                 vl12.setFill(Color.web("#98c4c0"));
                                 ra11.add(vl12);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
@@ -1254,7 +1129,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra12.add(vl12);
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
@@ -1271,7 +1146,7 @@ public class DotsAndBoxes extends Game {
                                 sc21.setFill(Color.web("#bac267"));
                                 hl21.setFill(Color.web("#98c4c0"));
                                 ra11.add(hl21);
-                                if (ra11.size()==4){
+                                if (ra11.size() == 4) {
                                     r11.setVisible(true);
                                     r11.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r11);
@@ -1279,7 +1154,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra21.add(hl21);
-                                if (ra21.size()==4){
+                                if (ra21.size() == 4) {
                                     r21.setVisible(true);
                                     r21.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r21);
@@ -1296,7 +1171,7 @@ public class DotsAndBoxes extends Game {
                                 sc23.setFill(Color.web("#bac267"));
                                 hl22.setFill(Color.web("#98c4c0"));
                                 ra12.add(hl22);
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
@@ -1304,7 +1179,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra22.add(hl22);
-                                if (ra22.size()==4){
+                                if (ra22.size() == 4) {
                                     r22.setVisible(true);
                                     r22.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r22);
@@ -1312,8 +1187,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
+                        } else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
                             if (vl22.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1322,7 +1196,7 @@ public class DotsAndBoxes extends Game {
                                 sc32.setFill(Color.web("#bac267"));
                                 vl22.setFill(Color.web("#98c4c0"));
                                 ra22.add(vl22);
-                                if (ra22.size()==4){
+                                if (ra22.size() == 4) {
                                     r22.setVisible(true);
                                     r22.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r22);
@@ -1330,7 +1204,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra23.add(vl22);
-                                if (ra23.size()==4){
+                                if (ra23.size() == 4) {
                                     r23.setVisible(true);
                                     r23.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r23);
@@ -1339,9 +1213,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-
-                    else if (x > 112 && x < 148 && y > 55 && y < 91) {
+                    } else if (x > 112 && x < 148 && y > 55 && y < 91) {
                         if (x1 == sc13.getCenterX() && y1 == sc13.getCenterY()) {
                             if (vl13.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1351,7 +1223,7 @@ public class DotsAndBoxes extends Game {
                                 sc13.setFill(Color.web("#bac267"));
                                 vl13.setFill(Color.web("#98c4c0"));
                                 ra12.add(vl13);
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
@@ -1359,7 +1231,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra13.add(vl13);
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
@@ -1376,7 +1248,7 @@ public class DotsAndBoxes extends Game {
                                 sc22.setFill(Color.web("#bac267"));
                                 hl22.setFill(Color.web("#98c4c0"));
                                 ra12.add(hl22);
-                                if (ra12.size()==4){
+                                if (ra12.size() == 4) {
                                     r12.setVisible(true);
                                     r12.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r12);
@@ -1384,7 +1256,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra22.add(hl22);
-                                if (ra22.size()==4){
+                                if (ra22.size() == 4) {
                                     r22.setVisible(true);
                                     r22.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r22);
@@ -1401,7 +1273,7 @@ public class DotsAndBoxes extends Game {
                                 sc24.setFill(Color.web("#bac267"));
                                 hl23.setFill(Color.web("#98c4c0"));
                                 ra13.add(hl23);
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
@@ -1409,7 +1281,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra23.add(hl23);
-                                if (ra23.size()==4){
+                                if (ra23.size() == 4) {
                                     r23.setVisible(true);
                                     r23.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r23);
@@ -1417,8 +1289,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
+                        } else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
                             if (vl23.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1427,7 +1298,7 @@ public class DotsAndBoxes extends Game {
                                 sc33.setFill(Color.web("#bac267"));
                                 vl23.setFill(Color.web("#98c4c0"));
                                 ra22.add(vl23);
-                                if (ra22.size()==4){
+                                if (ra22.size() == 4) {
                                     r22.setVisible(true);
                                     r22.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r22);
@@ -1435,7 +1306,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra23.add(vl23);
-                                if (ra23.size()==4){
+                                if (ra23.size() == 4) {
                                     r23.setVisible(true);
                                     r23.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r23);
@@ -1444,8 +1315,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 161 && x < 197 && y > 55 && y < 91) {
+                    } else if (x > 161 && x < 197 && y > 55 && y < 91) {
                         if (x1 == sc14.getCenterX() && y1 == sc14.getCenterY()) {
                             if (vl14.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1455,7 +1325,7 @@ public class DotsAndBoxes extends Game {
                                 sc14.setFill(Color.web("#bac267"));
                                 vl14.setFill(Color.web("#98c4c0"));
                                 ra13.add(vl14);
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
@@ -1463,7 +1333,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra14.add(vl14);
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
@@ -1471,8 +1341,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()) {
+                        } else if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()) {
                             if (hl23.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1481,7 +1350,7 @@ public class DotsAndBoxes extends Game {
                                 sc23.setFill(Color.web("#bac267"));
                                 hl23.setFill(Color.web("#98c4c0"));
                                 ra13.add(hl23);
-                                if (ra13.size()==4){
+                                if (ra13.size() == 4) {
                                     r13.setVisible(true);
                                     r13.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r13);
@@ -1489,7 +1358,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra23.add(hl23);
-                                if (ra23.size()==4){
+                                if (ra23.size() == 4) {
                                     r23.setVisible(true);
                                     r23.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r23);
@@ -1497,8 +1366,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
+                        } else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
                             if (hl24.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1507,7 +1375,7 @@ public class DotsAndBoxes extends Game {
                                 sc25.setFill(Color.web("#bac267"));
                                 hl24.setFill(Color.web("#98c4c0"));
                                 ra14.add(hl24);
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
@@ -1515,7 +1383,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra24.add(hl24);
-                                if (ra24.size()==4){
+                                if (ra24.size() == 4) {
                                     r24.setVisible(true);
                                     r24.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r24);
@@ -1523,8 +1391,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
+                        } else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
                             if (vl24.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1533,7 +1400,7 @@ public class DotsAndBoxes extends Game {
                                 sc34.setFill(Color.web("#bac267"));
                                 vl24.setFill(Color.web("#98c4c0"));
                                 ra23.add(vl24);
-                                if (ra23.size()==4){
+                                if (ra23.size() == 4) {
                                     r23.setVisible(true);
                                     r23.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r23);
@@ -1541,7 +1408,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra24.add(vl24);
-                                if (ra24.size()==4){
+                                if (ra24.size() == 4) {
                                     r24.setVisible(true);
                                     r24.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r24);
@@ -1550,8 +1417,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 212 && x < 248 && y > 55 && y < 91) {
+                    } else if (x > 212 && x < 248 && y > 55 && y < 91) {
                         if (x1 == sc15.getCenterX() && y1 == sc15.getCenterY()) {
                             if (vl15.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1561,7 +1427,7 @@ public class DotsAndBoxes extends Game {
                                 sc15.setFill(Color.web("#bac267"));
                                 vl15.setFill(Color.web("#98c4c0"));
                                 ra14.add(vl15);
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
@@ -1569,7 +1435,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra15.add(vl15);
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -1577,8 +1443,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
+                        } else if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
                             if (hl24.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1587,7 +1452,7 @@ public class DotsAndBoxes extends Game {
                                 sc24.setFill(Color.web("#bac267"));
                                 hl24.setFill(Color.web("#98c4c0"));
                                 ra14.add(hl24);
-                                if (ra14.size()==4){
+                                if (ra14.size() == 4) {
                                     r14.setVisible(true);
                                     r14.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r14);
@@ -1595,7 +1460,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra24.add(hl24);
-                                if (ra24.size()==4){
+                                if (ra24.size() == 4) {
                                     r24.setVisible(true);
                                     r24.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r24);
@@ -1604,8 +1469,7 @@ public class DotsAndBoxes extends Game {
                                 }
 
                             }
-                        }
-                        else if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
+                        } else if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
                             if (hl25.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1614,7 +1478,7 @@ public class DotsAndBoxes extends Game {
                                 sc26.setFill(Color.web("#bac267"));
                                 hl25.setFill(Color.web("#98c4c0"));
                                 ra15.add(hl25);
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -1622,7 +1486,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra25.add(hl25);
-                                if (ra25.size()==4){
+                                if (ra25.size() == 4) {
                                     r25.setVisible(true);
                                     r25.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r25);
@@ -1630,8 +1494,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
+                        } else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
                             if (vl25.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1640,7 +1503,7 @@ public class DotsAndBoxes extends Game {
                                 sc35.setFill(Color.web("#bac267"));
                                 vl25.setFill(Color.web("#98c4c0"));
                                 ra24.add(vl25);
-                                if (ra24.size()==4){
+                                if (ra24.size() == 4) {
                                     r24.setVisible(true);
                                     r24.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r24);
@@ -1648,7 +1511,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra25.add(vl25);
-                                if (ra25.size()==4){
+                                if (ra25.size() == 4) {
                                     r25.setVisible(true);
                                     r25.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r25);
@@ -1657,8 +1520,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 262 && x < 298 && y > 55 && y < 91) {
+                    } else if (x > 262 && x < 298 && y > 55 && y < 91) {
                         if (x1 == sc16.getCenterX() && y1 == sc16.getCenterY()) {
                             if (vl16.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1668,7 +1530,7 @@ public class DotsAndBoxes extends Game {
                                 sc16.setFill(Color.web("#bac267"));
                                 vl16.setFill(Color.web("#98c4c0"));
                                 ra15.add(vl16);
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -1676,7 +1538,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra16.add(vl16);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1684,8 +1546,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
+                        } else if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
                             if (hl25.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1694,7 +1555,7 @@ public class DotsAndBoxes extends Game {
                                 sc25.setFill(Color.web("#bac267"));
                                 hl25.setFill(Color.web("#98c4c0"));
                                 ra15.add(hl25);
-                                if (ra15.size()==4){
+                                if (ra15.size() == 4) {
                                     r15.setVisible(true);
                                     r15.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r15);
@@ -1702,7 +1563,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra25.add(hl25);
-                                if (ra25.size()==4){
+                                if (ra25.size() == 4) {
                                     r25.setVisible(true);
                                     r25.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r25);
@@ -1710,8 +1571,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
+                        } else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
                             if (hl26.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1720,7 +1580,7 @@ public class DotsAndBoxes extends Game {
                                 sc27.setFill(Color.web("#bac267"));
                                 hl26.setFill(Color.web("#98c4c0"));
                                 ra16.add(hl26);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1728,7 +1588,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra26.add(hl26);
-                                if (ra26.size()==4){
+                                if (ra26.size() == 4) {
                                     r26.setVisible(true);
                                     r26.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r26);
@@ -1736,8 +1596,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
+                        } else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
                             if (vl26.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1746,7 +1605,7 @@ public class DotsAndBoxes extends Game {
                                 sc36.setFill(Color.web("#bac267"));
                                 vl26.setFill(Color.web("#98c4c0"));
                                 ra25.add(vl26);
-                                if (ra25.size()==4){
+                                if (ra25.size() == 4) {
                                     r25.setVisible(true);
                                     r25.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r25);
@@ -1754,7 +1613,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra26.add(vl26);
-                                if (ra26.size()==4){
+                                if (ra26.size() == 4) {
                                     r26.setVisible(true);
                                     r26.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r26);
@@ -1763,8 +1622,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 312 && x < 348 && y > 55 && y < 91) {
+                    } else if (x > 312 && x < 348 && y > 55 && y < 91) {
                         if (x1 == sc17.getCenterX() && y1 == sc17.getCenterY()) {
                             if (vl17.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1774,7 +1632,7 @@ public class DotsAndBoxes extends Game {
                                 sc17.setFill(Color.web("#bac267"));
                                 vl17.setFill(Color.web("#98c4c0"));
                                 ra16.add(vl17);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1782,7 +1640,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra17.add(vl17);
-                                if (ra17.size()==4){
+                                if (ra17.size() == 4) {
                                     r17.setVisible(true);
                                     r17.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r17);
@@ -1790,8 +1648,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
+                        } else if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
                             if (hl26.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1800,7 +1657,7 @@ public class DotsAndBoxes extends Game {
                                 sc26.setFill(Color.web("#bac267"));
                                 hl26.setFill(Color.web("#98c4c0"));
                                 ra16.add(hl26);
-                                if (ra16.size()==4){
+                                if (ra16.size() == 4) {
                                     r16.setVisible(true);
                                     r16.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r16);
@@ -1808,7 +1665,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra26.add(hl26);
-                                if (ra26.size()==4){
+                                if (ra26.size() == 4) {
                                     r26.setVisible(true);
                                     r26.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r26);
@@ -1816,8 +1673,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
+                        } else if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
                             if (hl27.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1826,7 +1682,7 @@ public class DotsAndBoxes extends Game {
                                 sc28.setFill(Color.web("#bac267"));
                                 hl27.setFill(Color.web("#98c4c0"));
                                 ra17.add(hl27);
-                                if (ra17.size()==4){
+                                if (ra17.size() == 4) {
                                     r17.setVisible(true);
                                     r17.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r17);
@@ -1834,7 +1690,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra27.add(hl27);
-                                if (ra27.size()==4){
+                                if (ra27.size() == 4) {
                                     r27.setVisible(true);
                                     r27.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r27);
@@ -1842,8 +1698,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
+                        } else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
                             if (vl27.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1852,7 +1707,7 @@ public class DotsAndBoxes extends Game {
                                 sc37.setFill(Color.web("#bac267"));
                                 vl27.setFill(Color.web("#98c4c0"));
                                 ra26.add(vl27);
-                                if (ra26.size()==4){
+                                if (ra26.size() == 4) {
                                     r26.setVisible(true);
                                     r26.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r26);
@@ -1860,7 +1715,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra27.add(vl27);
-                                if (ra27.size()==4){
+                                if (ra27.size() == 4) {
                                     r27.setVisible(true);
                                     r27.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r27);
@@ -1869,72 +1724,68 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 360 && x < 396 && y > 55 && y < 91) {
-                       if (x1 == sc18.getCenterX() && y1 == sc18.getCenterY()) {
-                           if (vl18.isVisible())
-                               alertMessage.setText("Oops! This line has already been chosen!");
-                           else {
-                               sc38.setVisible(true);
-                               vl18.setVisible(true);
-                               sc38.setFill(Color.web("#bac267"));
-                               vl18.setFill(Color.web("#98c4c0"));
-                               ra17.add(vl18);
-                               if (ra17.size()==4){
-                                   r17.setVisible(true);
-                                   r17.setFill(Color.web("#dcff3e"));
-                                   allRectangles.add(r17);
-                                   firstPlayerScore++;
-                                   playMusic();
-                               }
-                           }
-                       }
-                       else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
-                           if (hl27.isVisible())
-                               alertMessage.setText("Oops! This line has already been chosen!");
-                           else {
-                               sc27.setVisible(true);
-                               hl27.setVisible(true);
-                               sc27.setFill(Color.web("#bac267"));
-                               hl27.setFill(Color.web("#98c4c0"));
-                               ra17.add(hl27);
-                               if (ra17.size()==4){
-                                   r17.setVisible(true);
-                                   r17.setFill(Color.web("#dcff3e"));
-                                   allRectangles.add(r17);
-                                   firstPlayerScore++;
-                                   playMusic();
-                               }
-                               ra27.add(hl27);
-                               if (ra27.size()==4){
-                                   r27.setVisible(true);
-                                   r27.setFill(Color.web("#dcff3e"));
-                                   allRectangles.add(r27);
-                                   firstPlayerScore++;
-                                   playMusic();
-                               }
-                           }
-                       }
-                       else if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
-                           if (vl27.isVisible())
-                               alertMessage.setText("Oops! This line has already been chosen!");
-                           else {
-                               sc38.setVisible(true);
-                               vl27.setVisible(true);
-                               sc38.setFill(Color.web("#bac267"));
-                               vl27.setFill(Color.web("#98c4c0"));
-                               ra27.add(vl27);
-                               if (ra27.size()==4){
-                                   r27.setVisible(true);
-                                   r27.setFill(Color.web("#dcff3e"));
-                                   allRectangles.add(r27);
-                                   firstPlayerScore++;
-                                   playMusic();
-                               }
-                           }
-                       }
-                    }
-                    else if (x > 11 && x < 47 && y > 105 && y < 141) {
+                    } else if (x > 360 && x < 396 && y > 55 && y < 91) {
+                        if (x1 == sc18.getCenterX() && y1 == sc18.getCenterY()) {
+                            if (vl18.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc38.setVisible(true);
+                                vl18.setVisible(true);
+                                sc38.setFill(Color.web("#bac267"));
+                                vl18.setFill(Color.web("#98c4c0"));
+                                ra17.add(vl18);
+                                if (ra17.size() == 4) {
+                                    r17.setVisible(true);
+                                    r17.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r17);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
+                            if (hl27.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc27.setVisible(true);
+                                hl27.setVisible(true);
+                                sc27.setFill(Color.web("#bac267"));
+                                hl27.setFill(Color.web("#98c4c0"));
+                                ra17.add(hl27);
+                                if (ra17.size() == 4) {
+                                    r17.setVisible(true);
+                                    r17.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r17);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra27.add(hl27);
+                                if (ra27.size() == 4) {
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
+                            if (vl27.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc38.setVisible(true);
+                                vl27.setVisible(true);
+                                sc38.setFill(Color.web("#bac267"));
+                                vl27.setFill(Color.web("#98c4c0"));
+                                ra27.add(vl27);
+                                if (ra27.size() == 4) {
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    } else if (x > 11 && x < 47 && y > 105 && y < 141) {
                         if (x1 == sc21.getCenterX() && y1 == sc21.getCenterY()) {
                             if (vl21.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -1944,7 +1795,7 @@ public class DotsAndBoxes extends Game {
                                 sc21.setFill(Color.web("#bac267"));
                                 vl21.setFill(Color.web("#98c4c0"));
                                 ra21.add(vl21);
-                                if (ra21.size()==4){
+                                if (ra21.size() == 4) {
                                     r21.setVisible(true);
                                     r21.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r21);
@@ -1952,8 +1803,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
+                        } else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
                             if (hl31.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1962,7 +1812,7 @@ public class DotsAndBoxes extends Game {
                                 sc32.setFill(Color.web("#bac267"));
                                 hl31.setFill(Color.web("#98c4c0"));
                                 ra21.add(hl31);
-                                if (ra21.size()==4){
+                                if (ra21.size() == 4) {
                                     r21.setVisible(true);
                                     r21.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r21);
@@ -1970,7 +1820,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra31.add(hl31);
-                                if (ra31.size()==4){
+                                if (ra31.size() == 4) {
                                     r31.setVisible(true);
                                     r31.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r31);
@@ -1978,8 +1828,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
+                        } else if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
                             if (vl31.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -1988,7 +1837,7 @@ public class DotsAndBoxes extends Game {
                                 sc41.setFill(Color.web("#bac267"));
                                 vl31.setFill(Color.web("#98c4c0"));
                                 ra31.add(vl31);
-                                if (ra31.size()==4){
+                                if (ra31.size() == 4) {
                                     r31.setVisible(true);
                                     r31.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r31);
@@ -1997,8 +1846,7 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                    }
-                    else if (x > 62 && x < 98 && y > 105 && y < 141) {
+                    } else if (x > 62 && x < 98 && y > 105 && y < 141) {
                         if (x1 == sc22.getCenterX() && y1 == sc22.getCenterY()) {
                             if (vl22.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2008,7 +1856,7 @@ public class DotsAndBoxes extends Game {
                                 sc22.setFill(Color.web("#bac267"));
                                 vl22.setFill(Color.web("#98c4c0"));
                                 ra21.add(vl22);
-                                if (ra21.size()==4){
+                                if (ra21.size() == 4) {
                                     r21.setVisible(true);
                                     r21.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r21);
@@ -2016,7 +1864,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra22.add(vl22);
-                                if (ra22.size()==4){
+                                if (ra22.size() == 4) {
                                     r22.setVisible(true);
                                     r22.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r22);
@@ -2024,8 +1872,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
+                        } else if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
                             if (hl31.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2034,7 +1881,7 @@ public class DotsAndBoxes extends Game {
                                 sc31.setFill(Color.web("#bac267"));
                                 hl31.setFill(Color.web("#98c4c0"));
                                 ra21.add(hl31);
-                                if (ra21.size()==4){
+                                if (ra21.size() == 4) {
                                     r21.setVisible(true);
                                     r21.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r21);
@@ -2042,7 +1889,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra31.add(hl31);
-                                if (ra31.size()==4){
+                                if (ra31.size() == 4) {
                                     r31.setVisible(true);
                                     r31.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r31);
@@ -2050,8 +1897,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                        else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
+                        } else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
                             if (hl32.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2060,7 +1906,7 @@ public class DotsAndBoxes extends Game {
                                 sc33.setFill(Color.web("#bac267"));
                                 hl32.setFill(Color.web("#98c4c0"));
                                 ra22.add(hl32);
-                                if (ra22.size()==4){
+                                if (ra22.size() == 4) {
                                     r22.setVisible(true);
                                     r22.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r22);
@@ -2068,7 +1914,32 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                                 ra32.add(hl32);
-                                if (ra32.size()==4){
+                                if (ra32.size() == 4) {
+                                    r32.setVisible(true);
+                                    r32.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r32);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
+                            if (vl32.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc42.setVisible(true);
+                                vl32.setVisible(true);
+                                sc42.setFill(Color.web("#bac267"));
+                                vl32.setFill(Color.web("#98c4c0"));
+                                ra31.add(vl32);
+                                if (ra31.size() == 4) {
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra32.add(vl32);
+                                if (ra32.size() == 4) {
                                     r32.setVisible(true);
                                     r32.setFill(Color.web("#dcff3e"));
                                     allRectangles.add(r32);
@@ -2077,13 +1948,648 @@ public class DotsAndBoxes extends Game {
                                 }
                             }
                         }
-                        else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
-                            if (vl32.isVisible())
+                    } else if (x > 112 && x < 148 && y > 106 && y < 142) {
+                        if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()) {
+                            if (vl23.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc23.setVisible(true);
+                                vl23.setVisible(true);
+                                sc23.setFill(Color.web("#bac267"));
+                                vl23.setFill(Color.web("#98c4c0"));
+                                ra22.add(vl23);
+                                if (ra22.size() == 4) {
+                                    r22.setVisible(true);
+                                    r22.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r22);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra23.add(vl23);
+                                if (ra23.size() == 4) {
+                                    r23.setVisible(true);
+                                    r23.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r23);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
+                            if (hl32.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc32.setVisible(true);
+                                hl32.setVisible(true);
+                                sc32.setFill(Color.web("#bac267"));
+                                hl32.setFill(Color.web("#98c4c0"));
+                                ra22.add(hl32);
+                                if (ra22.size() == 4) {
+                                    r22.setVisible(true);
+                                    r22.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r22);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra32.add(hl32);
+                                if (ra32.size() == 4) {
+                                    r32.setVisible(true);
+                                    r32.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r32);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
+                            if (hl33.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc34.setVisible(true);
+                                hl33.setVisible(true);
+                                sc34.setFill(Color.web("#bac267"));
+                                hl33.setFill(Color.web("#98c4c0"));
+                                ra23.add(hl33);
+                                if (ra23.size() == 4) {
+                                    r23.setVisible(true);
+                                    r23.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r23);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra33.add(hl33);
+                                if (ra33.size() == 4) {
+                                    r33.setVisible(true);
+                                    r33.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r33);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
+                            if (vl33.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc43.setVisible(true);
+                                vl33.setVisible(true);
+                                sc43.setFill(Color.web("#bac267"));
+                                vl33.setFill(Color.web("#98c4c0"));
+                                ra32.add(vl33);
+                                if (ra32.size() == 4) {
+                                    r32.setVisible(true);
+                                    r32.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r32);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra33.add(vl33);
+                                if (ra33.size() == 4) {
+                                    r33.setVisible(true);
+                                    r33.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r33);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    } else if (x > 161 && x < 197 && y > 106 && y < 142) {
+                        if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
+                            if (vl24.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc24.setVisible(true);
+                                vl24.setVisible(true);
+                                sc24.setFill(Color.web("#bac267"));
+                                vl24.setFill(Color.web("#98c4c0"));
+                                ra23.add(vl24);
+                                if (ra23.size() == 4) {
+                                    r23.setVisible(true);
+                                    r23.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r23);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra24.add(vl24);
+                                if (ra24.size() == 4) {
+                                    r24.setVisible(true);
+                                    r24.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r24);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
+                            if (hl33.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc33.setVisible(true);
+                                hl33.setVisible(true);
+                                sc33.setFill(Color.web("#bac267"));
+                                hl33.setFill(Color.web("#98c4c0"));
+                                ra23.add(hl33);
+                                if (ra23.size() == 4) {
+                                    r23.setVisible(true);
+                                    r23.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r23);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra33.add(hl33);
+                                if (ra33.size() == 4) {
+                                    r33.setVisible(true);
+                                    r33.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r33);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
+                            if (hl34.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc35.setVisible(true);
+                                hl34.setVisible(true);
+                                sc35.setFill(Color.web("#bac267"));
+                                hl34.setFill(Color.web("#98c4c0"));
+                                ra24.add(hl34);
+                                if (ra24.size() == 4) {
+                                    r24.setVisible(true);
+                                    r24.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r24);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra34.add(hl34);
+                                if (ra34.size() == 4) {
+                                    r34.setVisible(true);
+                                    r34.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r34);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
+                            if (vl34.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc44.setVisible(true);
+                                vl34.setVisible(true);
+                                sc44.setFill(Color.web("#bac267"));
+                                vl34.setFill(Color.web("#98c4c0"));
+                                ra33.add(vl34);
+                                if (ra33.size() == 4) {
+                                    r33.setVisible(true);
+                                    r33.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r33);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra34.add(vl34);
+                                if (ra34.size() == 4) {
+                                    r34.setVisible(true);
+                                    r34.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r34);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    } else if (x > 212 && x < 248 && y > 106 && y < 142) {
+                        if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
+                            if (vl25.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc25.setVisible(true);
+                                vl25.setVisible(true);
+                                sc25.setFill(Color.web("#bac267"));
+                                vl25.setFill(Color.web("#98c4c0"));
+                                ra24.add(vl25);
+                                if (ra24.size() == 4) {
+                                    r24.setVisible(true);
+                                    r24.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r24);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra25.add(vl25);
+                                if (ra25.size() == 4) {
+                                    r25.setVisible(true);
+                                    r25.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r25);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
+                            if (hl34.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc34.setVisible(true);
+                                hl34.setVisible(true);
+                                sc34.setFill(Color.web("#bac267"));
+                                hl34.setFill(Color.web("#98c4c0"));
+                                ra24.add(hl34);
+                                if (ra24.size() == 4) {
+                                    r24.setVisible(true);
+                                    r24.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r24);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra34.add(hl34);
+                                if (ra34.size() == 4) {
+                                    r34.setVisible(true);
+                                    r34.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r34);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
+                            if (hl35.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc36.setVisible(true);
+                                hl35.setVisible(true);
+                                sc36.setFill(Color.web("#bac267"));
+                                hl35.setFill(Color.web("#98c4c0"));
+                                ra25.add(hl35);
+                                if (ra25.size() == 4) {
+                                    r25.setVisible(true);
+                                    r25.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r25);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra35.add(hl35);
+                                if (ra35.size() == 4) {
+                                    r35.setVisible(true);
+                                    r35.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r35);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
+                            if (vl35.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc45.setVisible(true);
+                                vl35.setVisible(true);
+                                sc45.setFill(Color.web("#bac267"));
+                                vl35.setFill(Color.web("#98c4c0"));
+                                ra34.add(vl35);
+                                if (ra34.size() == 4) {
+                                    r34.setVisible(true);
+                                    r34.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r34);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra35.add(vl35);
+                                if (ra35.size() == 4) {
+                                    r35.setVisible(true);
+                                    r35.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r35);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    } else if (x > 262 && x < 298 && y > 106 && y < 142) {
+                        if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
+                            if (vl26.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc26.setVisible(true);
+                                vl26.setVisible(true);
+                                sc26.setFill(Color.web("#bac267"));
+                                vl26.setFill(Color.web("#98c4c0"));
+                                ra25.add(vl26);
+                                if (ra25.size() == 4) {
+                                    r25.setVisible(true);
+                                    r25.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r25);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra26.add(vl26);
+                                if (ra26.size() == 4) {
+                                    r26.setVisible(true);
+                                    r26.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r26);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+
+                            }
+                        } else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
+                            if (hl35.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc35.setVisible(true);
+                                hl35.setVisible(true);
+                                sc35.setFill(Color.web("#bac267"));
+                                hl35.setFill(Color.web("#98c4c0"));
+                                ra35.add(hl35);
+                                if (ra35.size() == 4) {
+                                    r35.setVisible(true);
+                                    r35.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r35);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra25.add(hl35);
+                                if (ra25.size() == 4) {
+                                    r25.setVisible(true);
+                                    r25.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r25);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
+                            if (hl36.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc37.setVisible(true);
+                                hl36.setVisible(true);
+                                sc37.setFill(Color.web("#bac267"));
+                                hl36.setFill(Color.web("#98c4c0"));
+                                ra26.add(hl36);
+                                if (ra26.size() == 4) {
+                                    r26.setVisible(true);
+                                    r26.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r26);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                    ra36.add(hl36);
+                                    if (ra36.size() == 4) {
+                                        r36.setVisible(true);
+                                        r36.setFill(Color.web("#dcff3e"));
+                                        allRectangles.add(r36);
+                                        firstPlayerScore++;
+                                        playMusic();
+                                    }
+                                }
+                            }
+                        } else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
+                            if (vl36.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc46.setVisible(true);
+                                vl36.setVisible(true);
+                                sc46.setFill(Color.web("#bac267"));
+                                vl36.setFill(Color.web("#98c4c0"));
+                                ra35.add(vl36);
+                                if (ra35.size() == 4) {
+                                    r35.setVisible(true);
+                                    r35.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r35);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra36.add(vl36);
+                                if (ra36.size() == 4) {
+                                    r36.setVisible(true);
+                                    r36.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r36);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    } else if (x > 312 && x < 348 && y > 106 && y < 142) {
+                        if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
+                            if (vl27.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc27.setVisible(true);
+                                vl27.setVisible(true);
+                                sc27.setFill(Color.web("#bac267"));
+                                vl27.setFill(Color.web("#98c4c0"));
+                                ra26.add(vl27);
+                                if (ra26.size() == 4) {
+                                    r26.setVisible(true);
+                                    r26.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r26);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra27.add(vl27);
+                                if (ra27.size() == 4) {
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
+                            if (hl36.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc36.setVisible(true);
+                                hl36.setVisible(true);
+                                sc36.setFill(Color.web("#bac267"));
+                                hl36.setFill(Color.web("#98c4c0"));
+                                ra26.add(hl36);
+                                if (ra26.size() == 4) {
+                                    r26.setVisible(true);
+                                    r26.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r26);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra36.add(hl36);
+                                if (ra36.size() == 4) {
+                                    r36.setVisible(true);
+                                    r36.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r36);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
+                            if (hl37.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc38.setVisible(true);
+                                hl37.setVisible(true);
+                                sc38.setFill(Color.web("#bac267"));
+                                hl37.setFill(Color.web("#98c4c0"));
+                                ra27.add(hl37);
+                                if (ra27.size() == 4) {
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra37.add(hl37);
+                                if (ra37.size() == 4) {
+                                    r37.setVisible(true);
+                                    r37.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r37);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
+                            if (vl37.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc47.setVisible(true);
+                                vl37.setVisible(true);
+                                sc47.setFill(Color.web("#bac267"));
+                                vl37.setFill(Color.web("#98c4c0"));
+                                ra26.add(vl37);
+                                if (ra26.size() == 4) {
+                                    r26.setVisible(true);
+                                    r26.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r26);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra36.add(vl37);
+                                if (ra36.size() == 4) {
+                                    r36.setVisible(true);
+                                    r36.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r36);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    } else if (x > 360 && x < 396 && y > 106 && y < 142) {
+                        if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
+                            if (vl28.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc28.setVisible(true);
+                                vl28.setVisible(true);
+                                sc28.setFill(Color.web("#bac267"));
+                                vl28.setFill(Color.web("#98c4c0"));
+                                ra27.add(vl28);
+                                if (ra27.size() == 4) {
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
+                            if (hl37.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc37.setVisible(true);
+                                hl37.setVisible(true);
+                                sc37.setFill(Color.web("#bac267"));
+                                hl37.setFill(Color.web("#98c4c0"));
+                                ra27.add(hl37);
+                                if (ra27.size() == 4) {
+                                    r27.setVisible(true);
+                                    r27.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r27);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra37.add(hl37);
+                                if (ra37.size() == 4) {
+                                    r37.setVisible(true);
+                                    r37.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r37);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()) {
+                            if (vl38.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc48.setVisible(true);
+                                vl38.setVisible(true);
+                                sc48.setFill(Color.web("#bac267"));
+                                vl38.setFill(Color.web("#98c4c0"));
+                                ra37.add(vl38);
+                                if (ra37.size() == 4) {
+                                    r37.setVisible(true);
+                                    r37.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r37);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    } else if (x > 11 && x < 47 && y > 155 && y < 191) {
+                        if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
+                            if (vl31.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc31.setVisible(true);
+                                vl31.setVisible(true);
+                                sc31.setFill(Color.web("#bac267"));
+                                vl31.setFill(Color.web("#98c4c0"));
+                                ra31.add(vl31);
+                                if (ra31.size() == 4) {
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
+                            if (hl41.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
                                 sc42.setVisible(true);
-                                vl32.setVisible(true);
+                                hl41.setVisible(true);
                                 sc42.setFill(Color.web("#bac267"));
+                                hl41.setFill(Color.web("#98c4c0"));
+                                ra31.add(hl41);
+                                if (ra31.size() == 4) {
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra41.add(hl41);
+                                if (ra41.size() == 4) {
+                                    r41.setVisible(true);
+                                    r41.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r41);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        } else if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()) {
+                            if (vl41.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc51.setVisible(true);
+                                vl41.setVisible(true);
+                                sc51.setFill(Color.web("#bac267"));
+                                vl41.setFill(Color.web("#98c4c0"));
+                                ra41.add(vl41);
+                                if (ra41.size() == 4) {
+                                    r41.setVisible(true);
+                                    r41.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r41);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                            }
+                        }
+                    }
+                    else if (x > 62 && x < 98 && y > 155 && y < 191) {
+                        if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
+                            if (vl32.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc32.setVisible(true);
+                                vl32.setVisible(true);
+                                sc32.setFill(Color.web("#bac267"));
                                 vl32.setFill(Color.web("#98c4c0"));
                                 ra31.add(vl32);
                                 if (ra31.size()==4){
@@ -2102,552 +2608,7 @@ public class DotsAndBoxes extends Game {
                                     playMusic();
                                 }
                             }
-                        }
-                    }
-                    else if (x > 112 && x < 148 && y > 106 && y < 142) {
-                        if (x1 == sc23.getCenterX() && y1 == sc23.getCenterY()) {
-                            if (vl23.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc23.setVisible(true);
-                                vl23.setVisible(true);
-                                sc23.setFill(Color.web("#bac267"));
-                                vl23.setFill(Color.web("#98c4c0"));
-                                ra22.add(vl23);
-                                if (ra22.size()==4){
-                                    r22.setVisible(true);
-                                    r22.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r22);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra23.add(vl23);
-                                if (ra23.size()==4){
-                                    r23.setVisible(true);
-                                    r23.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r23);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
-                            if (hl32.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc32.setVisible(true);
-                                hl32.setVisible(true);
-                                sc32.setFill(Color.web("#bac267"));
-                                hl32.setFill(Color.web("#98c4c0"));
-                                ra22.add(hl32);
-                                if (ra22.size()==4){
-                                    r22.setVisible(true);
-                                    r22.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r22);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra32.add(hl32);
-                                if (ra32.size()==4){
-                                    r32.setVisible(true);
-                                    r32.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r32);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
-                            if (hl33.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc34.setVisible(true);
-                                hl33.setVisible(true);
-                                sc34.setFill(Color.web("#bac267"));
-                                hl33.setFill(Color.web("#98c4c0"));
-                                ra23.add(hl33);
-                                if (ra23.size()==4){
-                                    r23.setVisible(true);
-                                    r23.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r23);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra33.add(hl33);
-                                if (ra33.size()==4){
-                                    r33.setVisible(true);
-                                    r33.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r33);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
-                            if (vl33.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc43.setVisible(true);
-                                vl33.setVisible(true);
-                                sc43.setFill(Color.web("#bac267"));
-                                vl33.setFill(Color.web("#98c4c0"));
-                                ra32.add(vl33);
-                                if (ra32.size()==4){
-                                    r32.setVisible(true);
-                                    r32.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r32);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra33.add(vl33);
-                                if (ra33.size()==4){
-                                    r33.setVisible(true);
-                                    r33.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r33);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                    }
-                    else if (x > 161 && x < 197 && y > 106 && y < 142) {
-                        if (x1 == sc24.getCenterX() && y1 == sc24.getCenterY()) {
-                            if (vl24.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc24.setVisible(true);
-                                vl24.setVisible(true);
-                                sc24.setFill(Color.web("#bac267"));
-                                vl24.setFill(Color.web("#98c4c0"));
-                                ra23.add(vl24);
-                                if (ra23.size()==4){
-                                    r23.setVisible(true);
-                                    r23.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r23);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra24.add(vl24);
-                                if (ra24.size()==4){
-                                    r24.setVisible(true);
-                                    r24.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r24);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
-                            if (hl33.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc33.setVisible(true);
-                                hl33.setVisible(true);
-                                sc33.setFill(Color.web("#bac267"));
-                                hl33.setFill(Color.web("#98c4c0"));
-                                ra23.add(hl33);
-                                if (ra23.size()==4){
-                                    r23.setVisible(true);
-                                    r23.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r23);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra33.add(hl33);
-                                if (ra33.size()==4){
-                                    r33.setVisible(true);
-                                    r33.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r33);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
-                            if (hl34.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc35.setVisible(true);
-                                hl34.setVisible(true);
-                                sc35.setFill(Color.web("#bac267"));
-                                hl34.setFill(Color.web("#98c4c0"));
-                                ra24.add(hl34);
-                                if (ra24.size()==4){
-                                    r24.setVisible(true);
-                                    r24.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r24);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra34.add(hl34);
-                                if (ra34.size()==4){
-                                    r34.setVisible(true);
-                                    r34.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r34);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
-                            if (vl34.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc44.setVisible(true);
-                                vl34.setVisible(true);
-                                sc44.setFill(Color.web("#bac267"));
-                                vl34.setFill(Color.web("#98c4c0"));
-                                ra33.add(vl34);
-                                if (ra33.size()==4){
-                                    r33.setVisible(true);
-                                    r33.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r33);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra34.add(vl34);
-                                if (ra34.size()==4){
-                                    r34.setVisible(true);
-                                    r34.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r34);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                    }
-                    else if (x > 212 && x < 248 && y > 106 && y < 142) {
-                        if (x1 == sc25.getCenterX() && y1 == sc25.getCenterY()) {
-                            if (vl25.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc25.setVisible(true);
-                                vl25.setVisible(true);
-                                sc25.setFill(Color.web("#bac267"));
-                                vl25.setFill(Color.web("#98c4c0"));
-                                ra24.add(vl25);
-                                if (ra24.size()==4){
-                                    r24.setVisible(true);
-                                    r24.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r24);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra25.add(vl25);
-                                if (ra25.size()==4){
-                                    r25.setVisible(true);
-                                    r25.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r25);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
-                            if (hl34.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc34.setVisible(true);
-                                hl34.setVisible(true);
-                                sc34.setFill(Color.web("#bac267"));
-                                hl34.setFill(Color.web("#98c4c0"));
-                                ra24.add(hl34);
-                                if (ra24.size()==4){
-                                    r24.setVisible(true);
-                                    r24.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r24);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra34.add(hl34);
-                                if (ra34.size()==4){
-                                    r34.setVisible(true);
-                                    r34.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r34);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
-                            if (hl35.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc36.setVisible(true);
-                                hl35.setVisible(true);
-                                sc36.setFill(Color.web("#bac267"));
-                                hl35.setFill(Color.web("#98c4c0"));
-                                ra25.add(hl35);
-                                if (ra25.size()==4){
-                                    r25.setVisible(true);
-                                    r25.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r25);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra35.add(hl35);
-                                if (ra35.size()==4){
-                                    r35.setVisible(true);
-                                    r35.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r35);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
-                            if (vl35.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc45.setVisible(true);
-                                vl35.setVisible(true);
-                                sc45.setFill(Color.web("#bac267"));
-                                vl35.setFill(Color.web("#98c4c0"));
-                                ra34.add(vl35);
-                                if (ra34.size()==4){
-                                    r34.setVisible(true);
-                                    r34.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r34);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra35.add(vl35);
-                                if (ra35.size()==4){
-                                    r35.setVisible(true);
-                                    r35.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r35);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                    }
-                    else if (x > 262 && x < 298 && y > 106 && y < 142) {
-                        if (x1 == sc26.getCenterX() && y1 == sc26.getCenterY()) {
-                            if (vl26.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc26.setVisible(true);
-                                vl26.setVisible(true);
-                                sc26.setFill(Color.web("#bac267"));
-                                vl26.setFill(Color.web("#98c4c0"));
-                                ra25.add(vl26);
-                                if (ra25.size()==4){
-                                    r25.setVisible(true);
-                                    r25.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r25);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra26.add(vl26);
-                                if (ra26.size()==4){
-                                    r26.setVisible(true);
-                                    r26.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r26);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-
-                            }
-                        }
-                        else if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
-                            if (hl35.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc35.setVisible(true);
-                                hl35.setVisible(true);
-                                sc35.setFill(Color.web("#bac267"));
-                                hl35.setFill(Color.web("#98c4c0"));
-                                ra35.add(hl35);
-                                if (ra35.size()==4){
-                                    r35.setVisible(true);
-                                    r35.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r35);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra25.add(hl35);
-                                if (ra25.size()==4){
-                                    r25.setVisible(true);
-                                    r25.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r25);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                        else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
-                            if (hl36.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc37.setVisible(true);
-                                hl36.setVisible(true);
-                                sc37.setFill(Color.web("#bac267"));
-                                hl36.setFill(Color.web("#98c4c0"));
-                                ra26.add(hl36);
-                                if (ra26.size()==4){
-                                    r26.setVisible(true);
-                                    r26.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r26);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                    ra36.add(hl36);
-                                    if (ra36.size()==4){
-                                        r36.setVisible(true);
-                                        r36.setFill(Color.web("#dcff3e"));
-                                        allRectangles.add(r36);
-                                        firstPlayerScore++;
-                                        playMusic();
-                                    }
-                                }
-                            }
-                        }
-                        else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
-                            if (vl36.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc46.setVisible(true);
-                                vl36.setVisible(true);
-                                sc46.setFill(Color.web("#bac267"));
-                                vl36.setFill(Color.web("#98c4c0"));
-                                ra35.add(vl36);
-                                if (ra35.size()==4){
-                                    r35.setVisible(true);
-                                    r35.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r35);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                                ra36.add(vl36);
-                                if (ra36.size()==4){
-                                    r36.setVisible(true);
-                                    r36.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r36);
-                                    firstPlayerScore++;
-                                    playMusic();
-                                }
-                            }
-                        }
-                    }
-                    else if (x > 312 && x < 348 && y > 106 && y < 142) {
-                        if (x1 == sc27.getCenterX() && y1 == sc27.getCenterY()) {
-                            if (vl27.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc27.setVisible(true);
-                                vl27.setVisible(true);
-                                sc27.setFill(Color.web("#bac267"));
-                                vl27.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
-                            if (hl36.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc36.setVisible(true);
-                                hl36.setVisible(true);
-                                sc36.setFill(Color.web("#bac267"));
-                                hl36.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
-                            if (hl37.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc38.setVisible(true);
-                                hl37.setVisible(true);
-                                sc38.setFill(Color.web("#bac267"));
-                                hl37.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
-                            if (vl37.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc47.setVisible(true);
-                                vl37.setVisible(true);
-                                sc47.setFill(Color.web("#bac267"));
-                                vl37.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                    }
-                    else if (x > 360 && x < 396 && y > 106 && y < 142) {
-                        if (x1 == sc28.getCenterX() && y1 == sc28.getCenterY()) {
-                            if (vl28.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc28.setVisible(true);
-                                vl28.setVisible(true);
-                                sc28.setFill(Color.web("#bac267"));
-                                vl28.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
-                            if (hl37.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc37.setVisible(true);
-                                hl37.setVisible(true);
-                                sc37.setFill(Color.web("#bac267"));
-                                hl37.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()){
-                            if (vl38.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc48.setVisible(true);
-                                vl38.setVisible(true);
-                                sc48.setFill(Color.web("#bac267"));
-                                vl38.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                    }
-
-                    else if (x > 11 && x < 47 && y > 155 && y < 191) {
-                        if (x1 == sc31.getCenterX() && y1 == sc31.getCenterY()) {
-                            if (vl31.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc31.setVisible(true);
-                                vl31.setVisible(true);
-                                sc31.setFill(Color.web("#bac267"));
-                                vl31.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
-                            if (hl41.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc42.setVisible(true);
-                                hl41.setVisible(true);
-                                sc42.setFill(Color.web("#bac267"));
-                                hl41.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()){
-                            if (vl41.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc51.setVisible(true);
-                                vl41.setVisible(true);
-                                sc51.setFill(Color.web("#bac267"));
-                                vl41.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                    }
-                    else if (x > 62 && x < 98 && y > 155 && y < 191) {
-                        if (x1 == sc32.getCenterX() && y1 == sc32.getCenterY()) {
-                            if (vl32.isVisible())
-                                alertMessage.setText("Oops! This line has already been chosen!");
-                            else {
-                                sc32.setVisible(true);
-                                vl32.setVisible(true);
-                                sc32.setFill(Color.web("#bac267"));
-                                vl32.setFill(Color.web("#98c4c0"));
-                            }
-                        }
-                        else if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
+                        } else if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
                             if (hl41.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2655,9 +2616,24 @@ public class DotsAndBoxes extends Game {
                                 hl41.setVisible(true);
                                 sc41.setFill(Color.web("#bac267"));
                                 hl41.setFill(Color.web("#98c4c0"));
+                                ra31.add(hl41);
+                                if (ra31.size()==4){
+                                    r31.setVisible(true);
+                                    r31.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r31);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra41.add(hl41);
+                                if (ra41.size()==4){
+                                    r41.setVisible(true);
+                                    r41.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r41);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
                             }
-                        }
-                        else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
+                        } else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
                             if (hl42.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2665,9 +2641,24 @@ public class DotsAndBoxes extends Game {
                                 hl42.setVisible(true);
                                 sc43.setFill(Color.web("#bac267"));
                                 hl42.setFill(Color.web("#98c4c0"));
+                                ra37.add(vl38);
+                                if (ra37.size()==4){
+                                    r37.setVisible(true);
+                                    r37.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r37);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra37.add(vl38);
+                                if (ra37.size()==4){
+                                    r37.setVisible(true);
+                                    r37.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r37);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
                             }
-                        }
-                        else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
+                        } else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
                             if (vl42.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2677,9 +2668,7 @@ public class DotsAndBoxes extends Game {
                                 vl42.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-
-                    else if (x > 112 && x < 148 && y > 156 && y < 192) {
+                    } else if (x > 112 && x < 148 && y > 156 && y < 192) {
                         if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
                             if (vl33.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2689,8 +2678,7 @@ public class DotsAndBoxes extends Game {
                                 sc33.setFill(Color.web("#bac267"));
                                 vl33.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
+                        } else if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
                             if (hl42.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2699,8 +2687,7 @@ public class DotsAndBoxes extends Game {
                                 sc42.setFill(Color.web("#bac267"));
                                 hl42.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
+                        } else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
                             if (hl43.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2709,8 +2696,7 @@ public class DotsAndBoxes extends Game {
                                 sc44.setFill(Color.web("#bac267"));
                                 hl43.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
+                        } else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
                             if (vl43.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2720,8 +2706,7 @@ public class DotsAndBoxes extends Game {
                                 vl43.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 161 && x < 197 && y > 156 && y < 192) {
+                    } else if (x > 161 && x < 197 && y > 156 && y < 192) {
                         if (x1 == sc34.getCenterX() && y1 == sc34.getCenterY()) {
                             if (vl34.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2731,8 +2716,7 @@ public class DotsAndBoxes extends Game {
                                 sc34.setFill(Color.web("#bac267"));
                                 vl34.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
+                        } else if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
                             if (hl43.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2741,8 +2725,7 @@ public class DotsAndBoxes extends Game {
                                 sc43.setFill(Color.web("#bac267"));
                                 hl43.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
+                        } else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
                             if (hl44.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2751,8 +2734,7 @@ public class DotsAndBoxes extends Game {
                                 sc45.setFill(Color.web("#bac267"));
                                 hl44.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
+                        } else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
                             if (vl44.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2762,8 +2744,7 @@ public class DotsAndBoxes extends Game {
                                 vl44.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 212 && x < 248 && y > 156 && y < 192) {
+                    } else if (x > 212 && x < 248 && y > 156 && y < 192) {
                         if (x1 == sc35.getCenterX() && y1 == sc35.getCenterY()) {
                             if (vl35.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2773,8 +2754,7 @@ public class DotsAndBoxes extends Game {
                                 sc35.setFill(Color.web("#bac267"));
                                 vl35.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
+                        } else if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
                             if (hl44.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2783,8 +2763,7 @@ public class DotsAndBoxes extends Game {
                                 sc44.setFill(Color.web("#bac267"));
                                 hl44.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
+                        } else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
                             if (hl45.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2793,8 +2772,7 @@ public class DotsAndBoxes extends Game {
                                 sc46.setFill(Color.web("#bac267"));
                                 hl45.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
+                        } else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
                             if (vl45.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2804,8 +2782,7 @@ public class DotsAndBoxes extends Game {
                                 vl45.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 262 && x < 298 && y > 156 && y < 192) {
+                    } else if (x > 262 && x < 298 && y > 156 && y < 192) {
                         if (x1 == sc36.getCenterX() && y1 == sc36.getCenterY()) {
                             if (vl36.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2815,8 +2792,7 @@ public class DotsAndBoxes extends Game {
                                 sc36.setFill(Color.web("#bac267"));
                                 vl36.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
+                        } else if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
                             if (hl45.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2825,8 +2801,7 @@ public class DotsAndBoxes extends Game {
                                 sc45.setFill(Color.web("#bac267"));
                                 hl45.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
+                        } else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
                             if (hl46.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2835,8 +2810,7 @@ public class DotsAndBoxes extends Game {
                                 sc47.setFill(Color.web("#bac267"));
                                 hl46.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
+                        } else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
                             if (vl46.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2846,8 +2820,7 @@ public class DotsAndBoxes extends Game {
                                 vl46.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 312 && x < 348 && y > 156 && y < 192) {
+                    } else if (x > 312 && x < 348 && y > 156 && y < 192) {
                         if (x1 == sc37.getCenterX() && y1 == sc37.getCenterY()) {
                             if (vl37.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2857,8 +2830,7 @@ public class DotsAndBoxes extends Game {
                                 sc37.setFill(Color.web("#bac267"));
                                 vl37.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
+                        } else if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
                             if (hl46.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2867,8 +2839,7 @@ public class DotsAndBoxes extends Game {
                                 sc46.setFill(Color.web("#bac267"));
                                 hl46.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()) {
+                        } else if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()) {
                             if (hl47.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2877,8 +2848,7 @@ public class DotsAndBoxes extends Game {
                                 sc48.setFill(Color.web("#bac267"));
                                 hl47.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
+                        } else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
                             if (vl47.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2888,8 +2858,7 @@ public class DotsAndBoxes extends Game {
                                 vl47.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 360 && x < 396 && y > 156 && y < 192) {
+                    } else if (x > 360 && x < 396 && y > 156 && y < 192) {
                         if (x1 == sc38.getCenterX() && y1 == sc38.getCenterY()) {
                             if (vl38.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2899,8 +2868,7 @@ public class DotsAndBoxes extends Game {
                                 sc38.setFill(Color.web("#bac267"));
                                 vl38.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
+                        } else if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
                             if (hl47.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2909,8 +2877,7 @@ public class DotsAndBoxes extends Game {
                                 sc47.setFill(Color.web("#bac267"));
                                 hl47.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
+                        } else if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
                             if (vl48.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2920,8 +2887,7 @@ public class DotsAndBoxes extends Game {
                                 vl48.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 11 && x < 47 && y > 206 && y < 242) {
+                    } else if (x > 11 && x < 47 && y > 206 && y < 242) {
                         if (x1 == sc41.getCenterX() && y1 == sc41.getCenterY()) {
                             if (vl41.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2931,8 +2897,7 @@ public class DotsAndBoxes extends Game {
                                 sc41.setFill(Color.web("#bac267"));
                                 vl41.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc61.getCenterX() && y1 == sc61.getCenterY()) {
+                        } else if (x1 == sc61.getCenterX() && y1 == sc61.getCenterY()) {
                             if (vl51.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2941,8 +2906,7 @@ public class DotsAndBoxes extends Game {
                                 sc61.setFill(Color.web("#bac267"));
                                 vl51.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
+                        } else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
                             if (hl51.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2952,8 +2916,7 @@ public class DotsAndBoxes extends Game {
                                 hl51.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 62 && x < 98 && y > 205 && y < 241) {
+                    } else if (x > 62 && x < 98 && y > 205 && y < 241) {
                         if (x1 == sc42.getCenterX() && y1 == sc42.getCenterY()) {
                             if (vl42.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -2963,8 +2926,7 @@ public class DotsAndBoxes extends Game {
                                 sc42.setFill(Color.web("#bac267"));
                                 vl42.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()) {
+                        } else if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()) {
                             if (hl51.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2973,8 +2935,7 @@ public class DotsAndBoxes extends Game {
                                 sc51.setFill(Color.web("#bac267"));
                                 hl51.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
+                        } else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
                             if (hl52.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2983,8 +2944,7 @@ public class DotsAndBoxes extends Game {
                                 sc53.setFill(Color.web("#bac267"));
                                 hl52.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
+                        } else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
                             if (vl52.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -2994,8 +2954,7 @@ public class DotsAndBoxes extends Game {
                                 vl52.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 112 && x < 148 && y > 206 && y < 242) {
+                    } else if (x > 112 && x < 148 && y > 206 && y < 242) {
                         if (x1 == sc43.getCenterX() && y1 == sc43.getCenterY()) {
                             if (vl43.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3005,8 +2964,7 @@ public class DotsAndBoxes extends Game {
                                 sc43.setFill(Color.web("#bac267"));
                                 vl43.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
+                        } else if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
                             if (hl52.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3015,8 +2973,7 @@ public class DotsAndBoxes extends Game {
                                 sc52.setFill(Color.web("#bac267"));
                                 hl52.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
+                        } else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
                             if (hl52.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3025,8 +2982,7 @@ public class DotsAndBoxes extends Game {
                                 sc54.setFill(Color.web("#bac267"));
                                 hl53.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
+                        } else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
                             if (vl53.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3036,9 +2992,7 @@ public class DotsAndBoxes extends Game {
                                 vl53.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-
-                    else if (x > 161 && x < 197 && y > 205 && y < 241) {
+                    } else if (x > 161 && x < 197 && y > 205 && y < 241) {
                         if (x1 == sc44.getCenterX() && y1 == sc44.getCenterY()) {
                             if (vl44.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3048,8 +3002,7 @@ public class DotsAndBoxes extends Game {
                                 sc44.setFill(Color.web("#bac267"));
                                 vl44.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
+                        } else if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
                             if (hl53.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3058,8 +3011,7 @@ public class DotsAndBoxes extends Game {
                                 sc53.setFill(Color.web("#bac267"));
                                 hl53.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
+                        } else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
                             if (hl54.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3068,8 +3020,7 @@ public class DotsAndBoxes extends Game {
                                 sc55.setFill(Color.web("#bac267"));
                                 hl54.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
+                        } else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
                             if (vl54.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3079,8 +3030,7 @@ public class DotsAndBoxes extends Game {
                                 vl54.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 212 && x < 248 && y > 205 && y < 241) {
+                    } else if (x > 212 && x < 248 && y > 205 && y < 241) {
                         if (x1 == sc45.getCenterX() && y1 == sc45.getCenterY()) {
                             if (vl45.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3090,8 +3040,7 @@ public class DotsAndBoxes extends Game {
                                 sc45.setFill(Color.web("#bac267"));
                                 vl45.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
+                        } else if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
                             if (hl54.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3100,8 +3049,7 @@ public class DotsAndBoxes extends Game {
                                 sc54.setFill(Color.web("#bac267"));
                                 hl54.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
+                        } else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
                             if (hl55.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3110,8 +3058,7 @@ public class DotsAndBoxes extends Game {
                                 sc56.setFill(Color.web("#bac267"));
                                 hl55.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
+                        } else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
                             if (vl55.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3121,8 +3068,7 @@ public class DotsAndBoxes extends Game {
                                 vl55.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 262 && x < 298 && y > 205 && y < 241) {
+                    } else if (x > 262 && x < 298 && y > 205 && y < 241) {
                         if (x1 == sc46.getCenterX() && y1 == sc46.getCenterY()) {
                             if (vl46.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3132,8 +3078,7 @@ public class DotsAndBoxes extends Game {
                                 sc46.setFill(Color.web("#bac267"));
                                 vl46.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
+                        } else if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
                             if (hl55.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3142,8 +3087,7 @@ public class DotsAndBoxes extends Game {
                                 sc55.setFill(Color.web("#bac267"));
                                 hl55.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
+                        } else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
                             if (hl56.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3152,8 +3096,7 @@ public class DotsAndBoxes extends Game {
                                 sc57.setFill(Color.web("#bac267"));
                                 hl56.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
+                        } else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
                             if (vl56.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3163,8 +3106,7 @@ public class DotsAndBoxes extends Game {
                                 vl56.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 312 && x < 348 && y > 205 && y < 241) {
+                    } else if (x > 312 && x < 348 && y > 205 && y < 241) {
                         if (x1 == sc47.getCenterX() && y1 == sc47.getCenterY()) {
                             if (vl47.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3174,8 +3116,7 @@ public class DotsAndBoxes extends Game {
                                 sc47.setFill(Color.web("#bac267"));
                                 vl47.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
+                        } else if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
                             if (hl56.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3184,8 +3125,7 @@ public class DotsAndBoxes extends Game {
                                 sc56.setFill(Color.web("#bac267"));
                                 hl56.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
+                        } else if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
                             if (hl57.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3194,8 +3134,7 @@ public class DotsAndBoxes extends Game {
                                 sc58.setFill(Color.web("#bac267"));
                                 hl57.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
+                        } else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
                             if (vl57.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3205,8 +3144,7 @@ public class DotsAndBoxes extends Game {
                                 vl57.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 360 && x < 396 && y > 205 && y < 241) {
+                    } else if (x > 360 && x < 396 && y > 205 && y < 241) {
                         if (x1 == sc48.getCenterX() && y1 == sc48.getCenterY()) {
                             if (vl48.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3216,8 +3154,7 @@ public class DotsAndBoxes extends Game {
                                 sc48.setFill(Color.web("#bac267"));
                                 vl48.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
+                        } else if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
                             if (hl57.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3226,8 +3163,7 @@ public class DotsAndBoxes extends Game {
                                 sc57.setFill(Color.web("#bac267"));
                                 hl57.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
+                        } else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
                             if (vl58.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3237,9 +3173,7 @@ public class DotsAndBoxes extends Game {
                                 vl58.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-
-                    else if (x > 11 && x < 47 && y > 255 && y < 291) {
+                    } else if (x > 11 && x < 47 && y > 255 && y < 291) {
                         if (x1 == sc51.getCenterX() && y1 == sc51.getCenterY()) {
                             if (vl51.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3249,8 +3183,7 @@ public class DotsAndBoxes extends Game {
                                 sc51.setFill(Color.web("#bac267"));
                                 vl51.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
+                        } else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
                             if (hl61.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3259,8 +3192,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setFill(Color.web("#bac267"));
                                 hl61.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc71.getCenterX() && y1 == sc71.getCenterY()) {
+                        } else if (x1 == sc71.getCenterX() && y1 == sc71.getCenterY()) {
                             if (vl71.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3270,40 +3202,35 @@ public class DotsAndBoxes extends Game {
                                 vl71.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 62 && x < 98 && y > 255 && y < 291) {
+                    } else if (x > 62 && x < 98 && y > 255 && y < 291) {
                         if (x1 == sc52.getCenterX() && y1 == sc52.getCenterY()) {
-                        if (vl52.isVisible())
-                            alertMessage.setText("Oops! This line has already been chosen!");
-                        else {
-                            sc52.setVisible(true);
-                            vl52.setVisible(true);
-                            sc52.setFill(Color.web("#bac267"));
-                            vl52.setFill(Color.web("#98c4c0"));
-                        }
-                    }
-
-                    else if (x1 == sc61.getCenterX() && y1 == sc61.getCenterY()) {
-                        if (hl61.isVisible())
-                            alertMessage.setText("Oops! This line has already been chosen!");
-                        else {
-                            sc61.setVisible(true);
-                            hl61.setVisible(true);
-                            sc61.setFill(Color.web("#bac267"));
-                            hl61.setFill(Color.web("#98c4c0"));
-                        }
-                    }
-                    else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
-                        if (hl62.isVisible())
-                            alertMessage.setText("Oops! This line has already been chosen!");
-                        else {
-                            sc63.setVisible(true);
-                            hl62.setVisible(true);
-                            sc63.setFill(Color.web("#bac267"));
-                            hl62.setFill(Color.web("#98c4c0"));
-                        }
-                    }
-                        else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
+                            if (vl52.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc52.setVisible(true);
+                                vl52.setVisible(true);
+                                sc52.setFill(Color.web("#bac267"));
+                                vl52.setFill(Color.web("#98c4c0"));
+                            }
+                        } else if (x1 == sc61.getCenterX() && y1 == sc61.getCenterY()) {
+                            if (hl61.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc61.setVisible(true);
+                                hl61.setVisible(true);
+                                sc61.setFill(Color.web("#bac267"));
+                                hl61.setFill(Color.web("#98c4c0"));
+                            }
+                        } else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
+                            if (hl62.isVisible())
+                                alertMessage.setText("Oops! This line has already been chosen!");
+                            else {
+                                sc63.setVisible(true);
+                                hl62.setVisible(true);
+                                sc63.setFill(Color.web("#bac267"));
+                                hl62.setFill(Color.web("#98c4c0"));
+                            }
+                        } else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
                             if (vl72.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3313,8 +3240,7 @@ public class DotsAndBoxes extends Game {
                                 vl72.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 112 && x < 148 && y > 256 && y < 292) {
+                    } else if (x > 112 && x < 148 && y > 256 && y < 292) {
                         if (x1 == sc53.getCenterX() && y1 == sc53.getCenterY()) {
                             if (vl53.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3324,9 +3250,7 @@ public class DotsAndBoxes extends Game {
                                 sc53.setFill(Color.web("#bac267"));
                                 vl53.setFill(Color.web("#98c4c0"));
                             }
-                        }
-
-                        else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
+                        } else if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
                             if (hl62.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3335,8 +3259,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setFill(Color.web("#bac267"));
                                 hl62.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
+                        } else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
                             if (hl63.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3345,8 +3268,7 @@ public class DotsAndBoxes extends Game {
                                 sc64.setFill(Color.web("#bac267"));
                                 hl63.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
+                        } else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
                             if (vl73.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3356,8 +3278,7 @@ public class DotsAndBoxes extends Game {
                                 vl73.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 161 && x < 197 && y > 256 && y < 292) {
+                    } else if (x > 161 && x < 197 && y > 256 && y < 292) {
                         if (x1 == sc54.getCenterX() && y1 == sc54.getCenterY()) {
                             if (vl54.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3367,9 +3288,7 @@ public class DotsAndBoxes extends Game {
                                 sc54.setFill(Color.web("#bac267"));
                                 vl54.setFill(Color.web("#98c4c0"));
                             }
-                        }
-
-                        else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
+                        } else if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
                             if (hl62.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3378,8 +3297,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setFill(Color.web("#bac267"));
                                 hl62.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
+                        } else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
                             if (hl64.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3388,8 +3306,7 @@ public class DotsAndBoxes extends Game {
                                 sc65.setFill(Color.web("#bac267"));
                                 hl64.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
+                        } else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
                             if (vl74.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3399,8 +3316,7 @@ public class DotsAndBoxes extends Game {
                                 vl74.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 212 && x < 248 && y > 256 && y < 292) {
+                    } else if (x > 212 && x < 248 && y > 256 && y < 292) {
                         if (x1 == sc55.getCenterX() && y1 == sc55.getCenterY()) {
                             if (vl55.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3410,9 +3326,7 @@ public class DotsAndBoxes extends Game {
                                 sc55.setFill(Color.web("#bac267"));
                                 vl55.setFill(Color.web("#98c4c0"));
                             }
-                        }
-
-                        else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
+                        } else if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
                             if (hl63.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3421,8 +3335,7 @@ public class DotsAndBoxes extends Game {
                                 sc64.setFill(Color.web("#bac267"));
                                 hl63.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
+                        } else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
                             if (hl65.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3431,8 +3344,7 @@ public class DotsAndBoxes extends Game {
                                 sc66.setFill(Color.web("#bac267"));
                                 hl65.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
+                        } else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
                             if (vl75.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3442,8 +3354,7 @@ public class DotsAndBoxes extends Game {
                                 vl75.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 262 && x < 298 && y > 256 && y < 292) {
+                    } else if (x > 262 && x < 298 && y > 256 && y < 292) {
                         if (x1 == sc56.getCenterX() && y1 == sc56.getCenterY()) {
                             if (vl56.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3453,9 +3364,7 @@ public class DotsAndBoxes extends Game {
                                 sc56.setFill(Color.web("#bac267"));
                                 vl56.setFill(Color.web("#98c4c0"));
                             }
-                        }
-
-                        else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
+                        } else if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
                             if (hl64.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3464,8 +3373,7 @@ public class DotsAndBoxes extends Game {
                                 sc65.setFill(Color.web("#bac267"));
                                 hl64.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
+                        } else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
                             if (hl66.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3474,8 +3382,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setFill(Color.web("#bac267"));
                                 hl66.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
+                        } else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
                             if (vl76.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3485,8 +3392,7 @@ public class DotsAndBoxes extends Game {
                                 vl76.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 312 && x < 348 && y > 256 && y < 292) {
+                    } else if (x > 312 && x < 348 && y > 256 && y < 292) {
                         if (x1 == sc57.getCenterX() && y1 == sc57.getCenterY()) {
                             if (vl57.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3496,9 +3402,7 @@ public class DotsAndBoxes extends Game {
                                 sc57.setFill(Color.web("#bac267"));
                                 vl57.setFill(Color.web("#98c4c0"));
                             }
-                        }
-
-                        else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
+                        } else if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
                             if (hl65.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3507,8 +3411,7 @@ public class DotsAndBoxes extends Game {
                                 sc66.setFill(Color.web("#bac267"));
                                 hl65.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc68.getCenterX() && y1 == sc68.getCenterY()) {
+                        } else if (x1 == sc68.getCenterX() && y1 == sc68.getCenterY()) {
                             if (hl67.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3517,8 +3420,7 @@ public class DotsAndBoxes extends Game {
                                 sc68.setFill(Color.web("#bac267"));
                                 hl67.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
+                        } else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
                             if (vl77.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3528,8 +3430,7 @@ public class DotsAndBoxes extends Game {
                                 vl77.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 360 && x < 396 && y > 256 && y < 292) {
+                    } else if (x > 360 && x < 396 && y > 256 && y < 292) {
                         if (x1 == sc58.getCenterX() && y1 == sc58.getCenterY()) {
                             if (vl58.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3539,8 +3440,7 @@ public class DotsAndBoxes extends Game {
                                 sc58.setFill(Color.web("#bac267"));
                                 vl58.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
+                        } else if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
                             if (hl67.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3549,8 +3449,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setFill(Color.web("#bac267"));
                                 hl67.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc78.getCenterX() && y1 == sc78.getCenterY()) {
+                        } else if (x1 == sc78.getCenterX() && y1 == sc78.getCenterY()) {
                             if (vl78.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3560,8 +3459,7 @@ public class DotsAndBoxes extends Game {
                                 vl78.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 10 && x < 46 && y > 306 && y < 342) {
+                    } else if (x > 10 && x < 46 && y > 306 && y < 342) {
                         if (x1 == sc61.getCenterX() && y1 == sc61.getCenterY()) {
                             if (vl71.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3571,8 +3469,7 @@ public class DotsAndBoxes extends Game {
                                 sc61.setFill(Color.web("#bac267"));
                                 vl71.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc81.getCenterX() && y1 == sc81.getCenterY()) {
+                        } else if (x1 == sc81.getCenterX() && y1 == sc81.getCenterY()) {
                             if (vl81.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3581,8 +3478,7 @@ public class DotsAndBoxes extends Game {
                                 sc81.setFill(Color.web("#bac267"));
                                 vl81.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
+                        } else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
                             if (vl71.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3592,8 +3488,7 @@ public class DotsAndBoxes extends Game {
                                 vl71.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 61 && x < 97 && y > 305 && y < 341) {
+                    } else if (x > 61 && x < 97 && y > 305 && y < 341) {
                         if (x1 == sc62.getCenterX() && y1 == sc62.getCenterY()) {
                             if (vl72.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3603,8 +3498,7 @@ public class DotsAndBoxes extends Game {
                                 sc62.setFill(Color.web("#bac267"));
                                 vl72.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc71.getCenterX() && y1 == sc71.getCenterY()) {
+                        } else if (x1 == sc71.getCenterX() && y1 == sc71.getCenterY()) {
                             if (hl71.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3613,8 +3507,7 @@ public class DotsAndBoxes extends Game {
                                 sc71.setFill(Color.web("#bac267"));
                                 hl71.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
+                        } else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
                             if (hl72.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3623,8 +3516,7 @@ public class DotsAndBoxes extends Game {
                                 sc73.setFill(Color.web("#bac267"));
                                 hl72.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc82.getCenterX() && y1 == sc82.getCenterY()) {
+                        } else if (x1 == sc82.getCenterX() && y1 == sc82.getCenterY()) {
                             if (vl82.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3634,8 +3526,7 @@ public class DotsAndBoxes extends Game {
                                 vl82.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 111 && x < 147 && y > 306 && y < 342) {
+                    } else if (x > 111 && x < 147 && y > 306 && y < 342) {
                         if (x1 == sc63.getCenterX() && y1 == sc63.getCenterY()) {
                             if (vl73.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3645,8 +3536,7 @@ public class DotsAndBoxes extends Game {
                                 sc63.setFill(Color.web("#bac267"));
                                 vl73.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
+                        } else if (x1 == sc72.getCenterX() && y1 == sc72.getCenterY()) {
                             if (hl72.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3655,8 +3545,7 @@ public class DotsAndBoxes extends Game {
                                 sc72.setFill(Color.web("#bac267"));
                                 hl72.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
+                        } else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
                             if (hl73.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3665,8 +3554,7 @@ public class DotsAndBoxes extends Game {
                                 sc74.setFill(Color.web("#bac267"));
                                 hl73.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc83.getCenterX() && y1 == sc83.getCenterY()) {
+                        } else if (x1 == sc83.getCenterX() && y1 == sc83.getCenterY()) {
                             if (vl83.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3676,8 +3564,7 @@ public class DotsAndBoxes extends Game {
                                 vl83.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 160 && x < 196 && y > 306 && y < 342) {
+                    } else if (x > 160 && x < 196 && y > 306 && y < 342) {
                         if (x1 == sc64.getCenterX() && y1 == sc64.getCenterY()) {
                             if (vl74.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3687,8 +3574,7 @@ public class DotsAndBoxes extends Game {
                                 sc64.setFill(Color.web("#bac267"));
                                 vl74.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
+                        } else if (x1 == sc73.getCenterX() && y1 == sc73.getCenterY()) {
                             if (hl73.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3697,8 +3583,7 @@ public class DotsAndBoxes extends Game {
                                 sc73.setFill(Color.web("#bac267"));
                                 hl73.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
+                        } else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
                             if (hl74.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3707,8 +3592,7 @@ public class DotsAndBoxes extends Game {
                                 sc75.setFill(Color.web("#bac267"));
                                 hl74.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc84.getCenterX() && y1 == sc84.getCenterY()) {
+                        } else if (x1 == sc84.getCenterX() && y1 == sc84.getCenterY()) {
                             if (vl84.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3718,9 +3602,7 @@ public class DotsAndBoxes extends Game {
                                 vl84.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-
-                    else if (x > 211 && x < 247 && y > 306 && y < 342) {
+                    } else if (x > 211 && x < 247 && y > 306 && y < 342) {
                         if (x1 == sc65.getCenterX() && y1 == sc65.getCenterY()) {
                             if (vl75.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3730,8 +3612,7 @@ public class DotsAndBoxes extends Game {
                                 sc65.setFill(Color.web("#bac267"));
                                 vl75.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
+                        } else if (x1 == sc74.getCenterX() && y1 == sc74.getCenterY()) {
                             if (hl74.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3740,8 +3621,7 @@ public class DotsAndBoxes extends Game {
                                 sc74.setFill(Color.web("#bac267"));
                                 hl74.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
+                        } else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
                             if (hl75.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3750,8 +3630,7 @@ public class DotsAndBoxes extends Game {
                                 sc76.setFill(Color.web("#bac267"));
                                 hl75.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc85.getCenterX() && y1 == sc85.getCenterY()) {
+                        } else if (x1 == sc85.getCenterX() && y1 == sc85.getCenterY()) {
                             if (vl85.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3761,8 +3640,7 @@ public class DotsAndBoxes extends Game {
                                 vl85.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 261 && x < 297 && y > 306 && y < 342) {
+                    } else if (x > 261 && x < 297 && y > 306 && y < 342) {
                         if (x1 == sc66.getCenterX() && y1 == sc66.getCenterY()) {
                             if (vl76.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3772,8 +3650,7 @@ public class DotsAndBoxes extends Game {
                                 sc66.setFill(Color.web("#bac267"));
                                 vl76.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
+                        } else if (x1 == sc75.getCenterX() && y1 == sc75.getCenterY()) {
                             if (hl75.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3782,8 +3659,7 @@ public class DotsAndBoxes extends Game {
                                 sc75.setFill(Color.web("#bac267"));
                                 hl75.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
+                        } else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
                             if (hl76.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3792,8 +3668,7 @@ public class DotsAndBoxes extends Game {
                                 sc77.setFill(Color.web("#bac267"));
                                 hl76.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc86.getCenterX() && y1 == sc86.getCenterY()) {
+                        } else if (x1 == sc86.getCenterX() && y1 == sc86.getCenterY()) {
                             if (vl86.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3803,8 +3678,7 @@ public class DotsAndBoxes extends Game {
                                 vl86.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 311 && x < 347 && y > 306 && y < 342) {
+                    } else if (x > 311 && x < 347 && y > 306 && y < 342) {
                         if (x1 == sc67.getCenterX() && y1 == sc67.getCenterY()) {
                             if (vl77.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3814,8 +3688,7 @@ public class DotsAndBoxes extends Game {
                                 sc67.setFill(Color.web("#bac267"));
                                 vl77.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
+                        } else if (x1 == sc76.getCenterX() && y1 == sc76.getCenterY()) {
                             if (hl76.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3824,8 +3697,7 @@ public class DotsAndBoxes extends Game {
                                 sc76.setFill(Color.web("#bac267"));
                                 hl76.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc78.getCenterX() && y1 == sc78.getCenterY()) {
+                        } else if (x1 == sc78.getCenterX() && y1 == sc78.getCenterY()) {
                             if (hl77.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3834,8 +3706,7 @@ public class DotsAndBoxes extends Game {
                                 sc78.setFill(Color.web("#bac267"));
                                 hl77.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc87.getCenterX() && y1 == sc87.getCenterY()) {
+                        } else if (x1 == sc87.getCenterX() && y1 == sc87.getCenterY()) {
                             if (vl87.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3845,8 +3716,7 @@ public class DotsAndBoxes extends Game {
                                 vl87.setFill(Color.web("#98c4c0"));
                             }
                         }
-                    }
-                    else if (x > 359 && x < 395 && y > 306 && y < 342) {
+                    } else if (x > 359 && x < 395 && y > 306 && y < 342) {
                         if (x1 == sc68.getCenterX() && y1 == sc68.getCenterY()) {
                             if (vl78.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
@@ -3856,8 +3726,7 @@ public class DotsAndBoxes extends Game {
                                 sc68.setFill(Color.web("#bac267"));
                                 vl78.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
+                        } else if (x1 == sc77.getCenterX() && y1 == sc77.getCenterY()) {
                             if (hl77.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3866,8 +3735,7 @@ public class DotsAndBoxes extends Game {
                                 sc77.setFill(Color.web("#bac267"));
                                 hl77.setFill(Color.web("#98c4c0"));
                             }
-                        }
-                        else if (x1 == sc88.getCenterX() && y1 == sc88.getCenterY()) {
+                        } else if (x1 == sc88.getCenterX() && y1 == sc88.getCenterY()) {
                             if (vl88.isVisible())
                                 alertMessage.setText("Oops! This line has already been chosen!");
                             else {
@@ -3880,80 +3748,15 @@ public class DotsAndBoxes extends Game {
                     }
                     isSecondCircle = false;
                 }
-            //commands for second player
-        }
-            else {}
-    }
-
-
-    /*public void showL(MouseEvent mouseEvent) {
-        double x= MouseInfo.getPointerInfo().getLocation().getX();
-        double y=MouseInfo.getPointerInfo().getLocation().getY();
-        Circle circle1= selectedC.get(0);
-        Circle circle2=selectedC.get(1);
-        if (circle1.getCenterX()==29&& circle2.getCenterY()==22){
-
+                //commands for second player
+            } else {
+            }
         }
 
-
-    }*/
-
-  /*  public void drawLine(MouseEvent mouseEvent){
-        if (isFirstPoint){
-            drawCircle();
+        public void showResult() {
         }
-        else{
-            drawCircle();
 
+        public void showScore() {
         }
-    }*/
-
     }
-
-    public   boolean isValid(int x1,int x2,int y1,int y2){return true;}
-
-      public   void showValidPosition(){}
-
-       public void showGrid(){}
-
-     public    void drawLine(){}
-
-       public void setLineColor(){}
-
-      public   void showLines(){}
-
-       public void showPossibleDots(){}
-
-      public   void showResult(){}
-
-       public void showScore(){}
-
-
-
-
-
-
-
-public class Board{
-    private int[][] Board = new int[8][8];
-    private int lastX , lastY;
-    public int[][] getBoard() {
-        return Board;
-    }
-
-    public void setLastX(int lastX) {
-        this.lastX = lastX;
-    }
-
-    public void setLastY(int lastY) {
-        this.lastY = lastY;
-    }
-
-    public int getLastX() {
-        return lastX;
-    }
-
-    public int getLastY() {
-        return lastY;
-    }
-}}
+}
