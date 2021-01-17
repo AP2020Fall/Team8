@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicController.UserProfile">
+<AnchorPane prefHeight="554.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.UserProfile">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="557.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="610.0">
          <fill>
