@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.reversi.StartMenuController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.11999999731779099" green="0.22276200354099274" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.155799999833107" green="0.8199999928474426" blue="0.20619449019432068" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Circle fx:id="StartGameCircle" layoutX="300.0" layoutY="247.0" onMouseClicked="#OnStartCircleClicked" radius="56.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.11999999731779099" green="0.22276200354099274" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.12012670934200287" green="0.8947368264198303" blue="0.28795889019966125" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="254.0" layoutY="235.0" prefHeight="19.0" prefWidth="93.0" text="Start Game !!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Circle fx:id="ScoreBoardCircle" layoutX="-27.0" layoutY="-26.0" onMouseClicked="#OnScoreBoardCircleClicked" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.11999999731779099" green="0.22276200354099274" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.155799999833107" green="0.8199999928474426" blue="0.20619449019432068" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Circle fx:id="ExitCircle" layoutX="626.0" layoutY="-26.0" onMouseClicked="#OnExitCircleClicked" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.14541515707969666" green="1.0" blue="0.11999999731779099" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9210526347160339" green="0.23026315867900848" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label layoutX="-3.0" layoutY="20.0" prefHeight="19.0" prefWidth="65.0" rotate="-45.0" text="Score Board" textFill="WHITE" />
+      <Label layoutX="564.0" layoutY="21.0" rotate="49.1" text="exit" textFill="#fffefe" />
+      <Label layoutX="198.0" layoutY="79.0" text="Reversi !!" textFill="#76e16a">
+         <font>
+            <Font name="Algerian" size="39.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="Player1Combo" layoutX="40.0" layoutY="230.0" opacity="0.8" prefWidth="150.0" promptText="Player1 Color">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ComboBox>
+      <ComboBox fx:id="Player2Combo" layoutX="410.0" layoutY="230.0" opacity="0.8" prefWidth="150.0" promptText="Player2 Color" />
+   </children>
+</Pane>

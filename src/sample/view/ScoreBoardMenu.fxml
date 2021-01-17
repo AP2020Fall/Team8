@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.reversi.ScoreBoardMenu">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.10916179418563843" green="0.8421052694320679" blue="0.6955165863037109" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.052686404436826706" green="0.03399122878909111" blue="0.40789473056793213" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Rectangle>
+   <TextArea fx:id="ScoreBoardTextArea" layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+   <Circle fx:id="ScoreBoardMenuBackCircle" layoutX="300.0" onMouseClicked="#OnScoreBoardMenuBackCircleClicked" radius="49.0" stroke="TRANSPARENT" strokeType="INSIDE">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="0.11999999731779099" blue="0.11999999731779099" />
+                  </color>
+               </Stop>
+               <Stop offset="0.9961685823754789">
+                  <color>
+                     <Color red="0.0486111119389534" green="0.6681712865829468" blue="0.75" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.0486111119389534" green="0.6681712865829468" blue="0.75" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Circle>
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="281.0" layoutY="8.0" prefHeight="28.0" prefWidth="39.0" text="back" textAlignment="CENTER" textFill="#f8f8f8">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>
