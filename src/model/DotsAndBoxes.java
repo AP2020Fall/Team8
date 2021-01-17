@@ -2641,19 +2641,19 @@ public class DotsAndBoxes extends Game {
                                 hl42.setVisible(true);
                                 sc43.setFill(Color.web("#bac267"));
                                 hl42.setFill(Color.web("#98c4c0"));
-                                ra37.add(vl38);
-                                if (ra37.size()==4){
-                                    r37.setVisible(true);
-                                    r37.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r37);
+                                ra32.add(hl42);
+                                if (ra32.size()==4){
+                                    r32.setVisible(true);
+                                    r32.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r32);
                                     firstPlayerScore++;
                                     playMusic();
                                 }
-                                ra37.add(vl38);
-                                if (ra37.size()==4){
-                                    r37.setVisible(true);
-                                    r37.setFill(Color.web("#dcff3e"));
-                                    allRectangles.add(r37);
+                                ra42.add(hl42);
+                                if (ra42.size()==4){
+                                    r42.setVisible(true);
+                                    r42.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r42);
                                     firstPlayerScore++;
                                     playMusic();
                                 }
@@ -2666,8 +2666,25 @@ public class DotsAndBoxes extends Game {
                                 vl42.setVisible(true);
                                 sc52.setFill(Color.web("#bac267"));
                                 vl42.setFill(Color.web("#98c4c0"));
+                                ra41.add(vl42);
+                                if (ra41.size()==4){
+                                    r41.setVisible(true);
+                                    r41.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r41);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
+                                ra42.add(vl42);
+                                if (ra42.size()==4){
+                                    r42.setVisible(true);
+                                    r42.setFill(Color.web("#dcff3e"));
+                                    allRectangles.add(r42);
+                                    firstPlayerScore++;
+                                    playMusic();
+                                }
                             }
                         }
+                        ////////////////////////////////////HERE///////////////////////////////////////////////////////
                     } else if (x > 112 && x < 148 && y > 156 && y < 192) {
                         if (x1 == sc33.getCenterX() && y1 == sc33.getCenterY()) {
                             if (vl33.isVisible())
