@@ -43,8 +43,7 @@ public class RegisterMenu {
         if (num==9){
         String uniqueID = UUID.randomUUID().toString();
         if (!Admin.isThereAdmin){
-            addAdminDetails(registerAdmin(username,password),name,lastname,uniqueID,email,phone);
-            Admin.adminId=username;
+          registerAdmin(username,password,name,lastname,email,phone);
             FirstMenuFx.setLoggedInAdmin(Admin.getAdminWithUser(username));
             Admin.isThereAdmin=true;
             registered=true;
@@ -53,20 +52,21 @@ public class RegisterMenu {
           //  CommandProcessor.setMainMenuStatus(MainMenuStatus.AdminMenu);
         }
         if (!registered){
-            Player player=registerPlayer(username,password);
-            addPlayerDetails(player,name,lastname,uniqueID,email,phone);
-            player.setPlatoAge();
+           registerPlayer(username,password,name,lastname,email,phone);
             FirstMenuFx.setLoggedInPlayer(Player.getPlayerWithUser(username));
             registered=false;
             //CommandProcessor.setMainMenuStatus(MainMenuStatus.PlayerMenu);
         }}
         Admin.isThereAdmin=true;
     }
-    public static Player registerPlayer(String username, String password){
-        return new Player(username,password);
+    public static void registerPlayer(String username, String password, String name, String lastName, String email, String phone){
+        Player player= new Player(username,password);
+        player.setDetails(name,lastName,UUID.randomUUID().toString(),email,phone);
+        player.setPlatoAge();
     }
-    public static Admin registerAdmin(String username, String password){
-        return new Admin(username,password);
+    public static void registerAdmin(String username, String password, String name, String lastName, String email, String phone){
+         Admin admin=new Admin(username,password);
+         admin.setDetails(name,lastName,UUID.randomUUID().toString(),email,phone);
 
           }
     public static void addAdminDetails(Admin admin, String name, String lastName, String accountID, String email, String phone){
