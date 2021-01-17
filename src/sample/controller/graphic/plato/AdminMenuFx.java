@@ -4,12 +4,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import sample.Main;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class AdminMenuFx {
+    public Button addEventB;
+    public Button viewEventB;
+    public Button addSugB;
+    public Button viewUserAdminB;
+
     public void loadAddEvent(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/register.fxml"));
 
@@ -21,6 +27,14 @@ public class AdminMenuFx {
 
     }
 
+    public void loadUsers(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userMenu.fxml"));
+       // Parent root = FXMLLoader.load(Objects.requireNonNull(UsersMenuFx.class.getClassLoader().getResource("usersMenu.fxml")));
+        Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+
+    }
     public void loadViewEvent(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/eventsLog.fxml"));
 
