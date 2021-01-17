@@ -11,7 +11,7 @@ import java.util.UUID;
 
 public class AdminMenu {
     private static Admin admin;
-    public static String validation(LocalDateTime start, LocalDateTime end, String score, String gameName){
+    public static String validationEvent(LocalDateTime start, LocalDateTime end, String score, String gameName){
         if (!start.isBefore(end))
             return "start of the date must be before end";
         else if(start.isBefore(LocalDateTime.now()))
@@ -30,7 +30,9 @@ public class AdminMenu {
     }
 
     public static void processAddEvent(LocalDateTime start, LocalDateTime end, int score, String gameName){
-        Event event=new Event(UUID.randomUUID().toString(),gameName,start,end,score);
+        validationEvent(start,end,String.valueOf(score),gameName);
+        if (validationEvent(start,end,String.valueOf(score),gameName).equalsIgnoreCase("event added successfully!")){
+        Event event=new Event(UUID.randomUUID().toString(),gameName,start,end,score);}
 
     }
     public void viewEvents(){

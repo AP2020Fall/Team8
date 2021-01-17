@@ -114,7 +114,7 @@ public class FirstMenuFx {
     }
 //helia akhtarkavian pare shod.
     public void loadFriendMenu() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendsMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
