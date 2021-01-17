@@ -58,12 +58,12 @@ public class FirstMenuFx {
     public void loadMain() throws IOException {
         if(loggedInAdmin != null){
         Parent root = FXMLLoader.load(getClass().getResource("sample/view/adminMenuFx.fxml"));
-        Main.allStage.setTitle("Score Board Menu");
+       // Main.allStage.setTitle("Score Board Menu");
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();}
         else if (loggedInPlayer!=null){
             Parent root = FXMLLoader.load(getClass().getResource("sample/view/playerMenuFx.fxml"));
-            Main.allStage.setTitle("Score Board Menu");
+           // Main.allStage.setTitle("Score Board Menu");
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();}
         }
@@ -76,12 +76,10 @@ public class FirstMenuFx {
     public void loadAccount() throws IOException {
         if (loggedInAdmin != null) {
             Parent root = FXMLLoader.load(getClass().getResource("sample/view/adminAccount.fxml"));
-            Main.allStage.setTitle("Score Board Menu");
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();
         } else if (loggedInPlayer != null) {
             Parent root = FXMLLoader.load(getClass().getResource("sample/view/accountMenu.fxml"));
-            Main.allStage.setTitle("Score Board Menu");
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();
         }

@@ -17,12 +17,12 @@ public class PlatoStatics {
     public Text datePassedT;
     public Text scoreT;
     public Label userProfile;
-    public Label passProfile;
     public Label nameProfile;
     public Label lastnameProfile;
     public Label emailProfile;
     public Label phoneProfile;
     public Label alertProfile;
+    public Text friendsCountT;
 
     public static void setPlayer(Player player) {
         PlatoStatics.player = player;
