@@ -7,7 +7,7 @@ import sample.model.platoModel.*;
 
 import javax.management.StandardEmitterMBean;
 
-public class Admin extends Account {
+public class Admin{
     public static boolean isThereAdmin=false;
     public static String adminId;
     private static ArrayList<Admin> Admin=new ArrayList<>();
@@ -27,6 +27,7 @@ public class Admin extends Account {
         this.accountID=accountID;
         this.email=email;
         this.phone=phone;
+        System.out.println(this.getAccountID()+" "+name+" "+lastName+" "+accountID+" "+email);
     }
     public String getName() {
         return name;
@@ -91,8 +92,13 @@ public class Admin extends Account {
         return null;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
     public Admin(String userName, String passWord) {
-        super(userName, passWord);
+       this.userName=userName;
+       this.passWord=passWord;
         Admin.add(this);
     }
 

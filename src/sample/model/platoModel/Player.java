@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class Player extends  Account {
+public class Player{
     private int point;
     private ArrayList<String> platoMessages;
-    private Set<Suggestion> suggestions;
+    private ArrayList<Suggestion> suggestions;
     private ArrayList<Player> friends;
     private ArrayList<Player> friendRequest;
     private Set<String> favoriteGames;
@@ -25,6 +25,7 @@ public class Player extends  Account {
     private ArrayList<GameReq> gameReqs;
 
     public void addFriend() {
+
     }
 
     private String name;
@@ -155,7 +156,7 @@ public class Player extends  Account {
         return friendRequest;
     }
 
-    public Set<Suggestion> getSuggestions() {
+    public ArrayList<Suggestion> getSuggestions() {
         return suggestions;
     }
 
@@ -188,13 +189,18 @@ public class Player extends  Account {
     }
 
     public Player(String username, String password) {
-        super(username, password);
-        suggestions = new LinkedHashSet<>();
+        this.userName=username;
+        this.passWord=password;
+        suggestions = new ArrayList<>();
         favoriteGames = new LinkedHashSet<String>();
         friendRequest = new ArrayList<>();
         friends = new ArrayList<>();
         allPlayers.add(this);
 
+    }
+
+    public String getUserName() {
+        return userName;
     }
 
     public String statistic() {

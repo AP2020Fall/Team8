@@ -23,5 +23,6 @@ public class AdminAccountFx {
 
     public void logout(ActionEvent actionEvent) {
         AccountsMenu.logout();
+        Main.allStage.close();
     }
 }

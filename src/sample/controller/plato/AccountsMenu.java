@@ -3,6 +3,8 @@ import sample.controller.graphic.plato.FirstMenuFx;
 import sample.model.platoModel.*;
 
 public class AccountsMenu {
+    private static Player player;
+    private static Admin admin;
     private static Account account;
     private boolean isLogin;
     public static String viewAccountInfo(){
@@ -55,7 +57,7 @@ public class AccountsMenu {
         return 2;
 
     }
-    public static String viewPlatoStatistics(){
+   /* public static String viewPlatoStatistics(){
         if (account instanceof Player){
 
         }
@@ -63,7 +65,7 @@ public class AccountsMenu {
         return "your not a player";
 
         return null;
-    }
+    }*/
 
     public static void setAccount(Account account) {
         AccountsMenu.account = account;

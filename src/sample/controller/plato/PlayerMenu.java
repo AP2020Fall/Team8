@@ -34,7 +34,7 @@ public class PlayerMenu {
         player.getFriendRequest().add(Player.getPlayerWithUser(username));
     }
     public static int friendUserValidation(String ID){
-        if (!Player.getAllAccounts().contains(Player.getPlayerWithUser(ID))){
+        if (!Player.getAllPlayers().contains(Player.getPlayerWithUser(ID))){
             return 1;
         }
         else {

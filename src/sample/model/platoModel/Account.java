@@ -38,14 +38,14 @@ public class Account {
     public String getUserName() {
         return userName;
     }
-    public void setDetails(String name, String lastName, String accountID, String email, String phone){
+   /* public void setDetails(String name, String lastName, String accountID, String email, String phone){
         this.name=name;
         this.lastName=lastName;
         this.accountID=accountID;
         this.email=email;
         this.phone=phone;
     }
-
+*/
     public String getName() {
         return name;
     }

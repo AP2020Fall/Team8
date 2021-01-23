@@ -7,13 +7,16 @@ public class Suggestion {
     private String suggestedGame;
     private LocalDateTime dateOfSuggestion;
     private String suggestionId;
+    private Player player;
     private static ArrayList<Suggestion> allSugs;
 
-    public Suggestion(String suggestedGame, LocalDateTime dateOfSuggestion, String suggestionId) {
+    public Suggestion(String suggestedGame, String suggestionId,Player player) {
         this.suggestedGame = suggestedGame;
-        this.dateOfSuggestion = dateOfSuggestion;
+        dateOfSuggestion=LocalDateTime.now();
         this.suggestionId = suggestionId;
         allSugs.add(this);
+        this.player=player;
+        player.getSuggestions().add(this);
     }
 
     public String getSuggestionId() {

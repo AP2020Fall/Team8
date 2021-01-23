@@ -28,7 +28,13 @@ public class AdminMenu {
     public static void setAdmin(Admin admin) {
         AdminMenu.admin = admin;
     }
+    public static void sendPBMessage(String user,String message) {
+        if (Player.getAllPlayers().contains(Player.getPlayerWithUser(user))){
+            Player.getPlayerWithUser(user).getPlatoMessages().add(message);
+        }
 
+    }
+    public static void setPBMessage
     public static void processAddEvent(LocalDateTime start, LocalDateTime end, int score, String gameName){
         validationEvent(start,end,String.valueOf(score),gameName);
         if (validationEvent(start,end,String.valueOf(score),gameName).equalsIgnoreCase("event added successfully!")){
@@ -63,7 +69,7 @@ public class AdminMenu {
         if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(userName))){
             return "invalid userName";
         }
-        else if (!gameName.equalsIgnoreCase("reversi")&&!gameName.equalsIgnoreCase("dots and boxs"))
+        else if (!gameName.equalsIgnoreCase("reversi")&&!gameName.equalsIgnoreCase("dots and boxes"))
             return "invalid gameName";
         else if (!Player.getPlayerWithUser(userName).getSuggestions().isEmpty()){
         for (Suggestion suggestion : Player.getPlayerWithUser(userName).getSuggestions()) {
@@ -72,19 +78,22 @@ public class AdminMenu {
             }
         }}
         else{
-            Suggestion suggestion=new Suggestion(gameName, LocalDateTime.now(), UUID.randomUUID().toString());
-            Player.getPlayerWithUser(userName).getSuggestions().add(suggestion);
+            Suggestion suggestion=new Suggestion( gameName,UUID.randomUUID().toString(),Player.getPlayerWithUser(userName));
             return "suggestion added successfully";
         }
         return null;
 
     }
   //  public void idSugValidation(String suggestionId){}
-    public String removeSuggestion(String suggestionId){
-        if (Suggestion.getAllSugs().contains(Suggestion.getSugwithId(suggestionId)))
-            return "suggestion removed";
-        else
+    public static String removeSuggestion(String suggestionId){
+       if (!Suggestion.getAllSugs().contains(Suggestion.getSugwithId(suggestionId))){
             return "invalid suggestion id";
+        }
+       else{
+           Suggestion.getAllSugs().remove(Suggestion.getSugwithId(suggestionId));
+            return "suggestion removed";
+
+       }
     }
     public String viewUserProfile(String userName){
         if (Player.getAllPlayers().contains(Player.getPlayerWithUser(userName)))

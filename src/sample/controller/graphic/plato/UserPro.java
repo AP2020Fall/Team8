@@ -13,11 +13,12 @@ public class UserPro {
     public Label emailProfile;
     public Label phoneProfile;
     public Label alertProfile;
-    private static Player player;
+   // private static Player player;
     private static Admin admin;
     @FXML
     public void initialize(){
-        if(player!=null){
+        if(FirstMenuFx.getLoggedInPlayer()!=null){
+            Player player=FirstMenuFx.getLoggedInPlayer();
             System.out.println("playere?");
         userProfile.setText(player.getUserName());
         nameProfile.setText(player.getName());
@@ -25,7 +26,8 @@ public class UserPro {
         emailProfile.setText(player.getEmail());
         phoneProfile.setText(player.getPhone());
     }
-        else if(admin!=null){
+        else if(FirstMenuFx.getLoggedInAdmin()!=null){
+            Admin admin=FirstMenuFx.getLoggedInAdmin();
             System.out.println("admine?");
             userProfile.setText(admin.getUserName());
             nameProfile.setText(admin.getName());

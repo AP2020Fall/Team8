@@ -45,6 +45,7 @@ public class RegisterMenuFx {
         pageTurn=false;
         if (!userTFReg.getText().isEmpty()&&!passPFReg.getText().isEmpty()&&!lastnameTFReg.getText().isEmpty()&&!emailTFReg.getText().isEmpty()&&!phoneTFReg.getText().isEmpty()){
         RegisterMenu.registerAccount(userTFReg.getText(),passPFReg.getText(),nameTFReg.getText(),lastnameTFReg.getText(),emailTFReg.getText(),phoneTFReg.getText());
+            System.out.println(userTFReg.getText()+passPFReg.getText()+nameTFReg.getText()+lastnameTFReg.getText()+emailTFReg.getText()+phoneTFReg.getText());
         alertReg.setText(OutputHandler.showRegisterMenuOutput(RegisterMenu.getNum()));
       //  System.out.println(Admin.getAdmin());
         if(RegisterMenu.getNum()==9) {

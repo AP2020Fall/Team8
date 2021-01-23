@@ -17,7 +17,7 @@ public class PlayerMenuFx {
     public Button platobotB;
 
     public void loadFavGames(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoBotsMessage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/showFavoriteGames.fxml"));
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(PlatoBotMessageFx.class.getClassLoader().getResource("platoBotsMessage.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
@@ -25,7 +25,7 @@ public class PlayerMenuFx {
     }
 
     public void loadEventPlayer(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/events.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/eventsLog.fxml"));
         //Parent root = FXMLLoader.load(Objects.requireNonNull(EventsLogFx.class.getClassLoader().getResource("events.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);

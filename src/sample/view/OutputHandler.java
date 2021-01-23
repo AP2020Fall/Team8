@@ -59,6 +59,8 @@ public class OutputHandler {
             return "invalid phone number!";
         else if (outputNo==9)
             return  "registered successfully";
+        else if (outputNo==10)
+            return "you have to logout first";
 
     return null;
 
@@ -70,6 +72,8 @@ public class OutputHandler {
             return "There is no account with this username";
         else if (outputNo==3)
             return "Wrong password";
+        else if (outputNo==5)
+            return "you have to logout first";
         else
             return "Logged in successfully!";
 

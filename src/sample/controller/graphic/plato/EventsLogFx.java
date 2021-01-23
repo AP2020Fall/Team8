@@ -61,6 +61,5 @@ public class EventsLogFx {
 
     public   static void list(){
         eventsShow.addAll(Event.getAllEvents());
-
     }
 }
