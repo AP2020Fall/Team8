@@ -1,5 +1,6 @@
 package sample.model.platoModel;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -7,8 +8,8 @@ public class Event {
     private static ArrayList<Event> allEvents=new ArrayList<>();
     private String eventId;
     private String gameName;
-    private LocalDateTime startOfGame;
-    private LocalDateTime endOfGame;
+    private LocalDate startOfGame;
+    private LocalDate endOfGame;
     private int eventScore;
 
     public static void setAllEvents(ArrayList<Event> allEvents) {
@@ -20,11 +21,11 @@ public class Event {
         return gameName;
     }
 
-    public LocalDateTime getStartOfGame() {
+    public LocalDate getStartOfGame() {
         return startOfGame;
     }
 
-    public LocalDateTime getEndOfGame() {
+    public LocalDate getEndOfGame() {
         return endOfGame;
     }
 
@@ -32,7 +33,7 @@ public class Event {
         return eventScore;
     }
 
-    public Event(String eventId, String gameName, LocalDateTime startOfGame, LocalDateTime endOfGame, int eventScore) {
+    public Event(String eventId, String gameName, LocalDate startOfGame, LocalDate endOfGame, int eventScore) {
         this.eventId = eventId;
         this.gameName = gameName;
         this.startOfGame = startOfGame;
@@ -62,11 +63,11 @@ public class Event {
         this.gameName = gameName;
     }
 
-    public void setStartOfGame(LocalDateTime startOfGame) {
+    public void setStartOfGame(LocalDate startOfGame) {
         this.startOfGame = startOfGame;
     }
 
-    public void setEndOfGame(LocalDateTime endOfGame) {
+    public void setEndOfGame(LocalDate endOfGame) {
         this.endOfGame = endOfGame;
     }
 

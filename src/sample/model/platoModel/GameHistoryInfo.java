@@ -2,7 +2,7 @@ package sample.model.platoModel;
 
 import java.time.LocalDateTime;
 
-public class GameInfo {
+public class GameHistoryInfo {
     private Player player;
     private Player competitor;
     private String logId;
@@ -11,12 +11,13 @@ public class GameInfo {
     private LocalDateTime dateTime;
     private String gameName;
 
-    public GameInfo(Player player, Player competitor, String logId, LocalDateTime dateTime, String gameName) {
-        this.player = player;
+    public GameHistoryInfo( String gameName,Player competitor, LocalDateTime dateTime,GameResult gameResult) {
         this.competitor = competitor;
-        this.logId = logId;
         this.dateTime = dateTime;
         this.gameName = gameName;
+        this.gameResult=gameResult;
+
     }
+
     //  private String instruction;
 }

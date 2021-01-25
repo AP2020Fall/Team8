@@ -6,19 +6,21 @@ import sample.model.platoModel.Event;
 import sample.model.platoModel.Player;
 import sample.model.platoModel.Suggestion;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class AdminMenu {
     private static Admin admin;
-    public static String validationEvent(LocalDateTime start, LocalDateTime end, String score, String gameName){
+    public static String validationEvent(LocalDate start, LocalDate end, String score, String gameName){
         if (!start.isBefore(end))
             return "start of the date must be before end";
-        else if(start.isBefore(LocalDateTime.now()))
+        else if(start.isBefore(LocalDate.now()))
             return "start of the date must be after now";
-        else if(end.isBefore(LocalDateTime.now()))
+        else if(end.isBefore(LocalDate.now()))
             return "end of the date must be after now";
-        else if (!score.matches("\\d+"))
+        else if (!score.matches(
+                "\\d+"))
             return "you must enter a number!!";
         else{
             processAddEvent(start,end, Integer.parseInt(score),gameName);
@@ -28,14 +30,17 @@ public class AdminMenu {
     public static void setAdmin(Admin admin) {
         AdminMenu.admin = admin;
     }
-    public static void sendPBMessage(String user,String message) {
-        if (Player.getAllPlayers().contains(Player.getPlayerWithUser(user))){
-            Player.getPlayerWithUser(user).getPlatoMessages().add(message);
+    public static String sendPBMessage(String user,String message) {
+        if (!Player.getAllPlayers().contains(Player.getPlayerWithUser(user))){
+            return "invalid userID entered";
+        }
+        else {Player.getPlayerWithUser(user).getPlatoMessages().add(message);
+        return "Message sent successfully";
         }
 
     }
-    public static void setPBMessage
-    public static void processAddEvent(LocalDateTime start, LocalDateTime end, int score, String gameName){
+
+    public static void processAddEvent(LocalDate start, LocalDate end, int score, String gameName){
         validationEvent(start,end,String.valueOf(score),gameName);
         if (validationEvent(start,end,String.valueOf(score),gameName).equalsIgnoreCase("event added successfully!")){
         Event event=new Event(UUID.randomUUID().toString(),gameName,start,end,score);}
@@ -94,15 +99,6 @@ public class AdminMenu {
             return "suggestion removed";
 
        }
-    }
-    public String viewUserProfile(String userName){
-        if (Player.getAllPlayers().contains(Player.getPlayerWithUser(userName)))
-            return Player.getPlayerWithUser(userName).toString();
-        else
-            return "invalid user entered";
-    }
-    public String viewUsers(){
-       return Player.getAllPlayers().toString();
     }
 
 }

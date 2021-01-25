@@ -4,9 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import sample.controller.plato.FriendsMenu;
 import sample.model.platoModel.Player;
 
@@ -16,6 +14,7 @@ public class FriendsRequestsFx {
     public Button acceptB;
     public Button addB;
     public TextField userTF;
+    public Label alertReq;
 
     @FXML
     public void initialize(){
@@ -27,15 +26,18 @@ public class FriendsRequestsFx {
     public void declineReq(ActionEvent actionEvent) {
        String selectedP=FriendRequestsList.getSelectionModel().getSelectedItem().toString();
         FriendsMenu.processDeclineUser(selectedP);
-
+        FriendRequestsList.getItems().remove(FriendRequestsList.getSelectionModel().getSelectedItem());
     }
 
     public void acceptReq(ActionEvent actionEvent) {
+
         String selectedP=FriendRequestsList.getSelectionModel().getSelectedItem().toString();
         FriendsMenu.processAcceptUser(selectedP);
+        FriendRequestsList.getItems().remove(FriendRequestsList.getSelectionModel().getSelectedItem());
     }
 
     public void sendFreindReq(ActionEvent actionEvent) {
         FriendsMenu.addUsername(userTF.getText());
+        alertReq.setText(FriendsMenu.output);
     }
 }

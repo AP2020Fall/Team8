@@ -12,6 +12,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0"
       prefWidth="578.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="sample.controller.graphic.plato.SuggestionsMenuFx">
@@ -59,14 +61,14 @@
           <Font name="Arial Terminal" size="12.0"/>
         </font>
     </Button>
-    <TreeTableView fx:id="sugTable" layoutX="136.0" layoutY="59.0" prefHeight="237.0" prefWidth="323.0">
+    <TableView fx:id="sugTable" layoutX="136.0" layoutY="59.0" prefHeight="237.0" prefWidth="323.0">
       <columns>
-          <TreeTableColumn fx:id="sugIdC" prefWidth="75.0" text="ID"/>
-          <TreeTableColumn fx:id="gameNameC" prefWidth="75.0" text="Game"/>
-          <TreeTableColumn fx:id="userSugC" prefWidth="84.0" text="User"/>
-          <TreeTableColumn fx:id="dateSugC" prefWidth="87.33331298828125" text="Date"/>
+          <TableColumn fx:id="sugIdC" prefWidth="75.0" text="ID"/>
+          <TableColumn fx:id="gameNameC" prefWidth="75.0" text="Game"/>
+          <TableColumn fx:id="userSugC" prefWidth="84.0" text="User"/>
+          <TableColumn fx:id="dateSugC" prefWidth="87.33331298828125" text="Date"/>
       </columns>
-    </TreeTableView>
+    </TableView>
     <Button layoutX="472.0" layoutY="294.0" mnemonicParsing="false" onAction="#removeSug" text="Remove"
             textFill="#f70303">
         <font>

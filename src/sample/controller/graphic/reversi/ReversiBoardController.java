@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import org.junit.Test;
 import sample.Main;
+import sample.model.platoModel.GameResult;
 import sample.model.reversiModel.Board;
 import sample.model.reversiModel.ReversiGame;
 import sample.model.reversiModel.ReversiPlayer;
@@ -464,6 +465,8 @@ public class ReversiBoardController implements Initializable {
             MessagePreviewLabel.setTextFill(Color.GREEN);
             reversiGame.getPlayer1().won();
             reversiGame.getPlayer2().lost();
+            reversiGame.saveGame(GameResult.WIN,reversiGame.getPlayer1(),Player1Score);
+            reversiGame.saveGame(GameResult.LOSE,reversiGame.getPlayer2(),Player2Score);
             return;
         }else if(Player1Score < Player2Score){
             reversiGame.setWinner(reversiGame.getPlayer2());
@@ -471,6 +474,8 @@ public class ReversiBoardController implements Initializable {
             MessagePreviewLabel.setTextFill(Color.GREEN);
             reversiGame.getPlayer2().won();
             reversiGame.getPlayer1().lost();
+            reversiGame.saveGame(GameResult.LOSE,reversiGame.getPlayer1(),Player1Score);
+            reversiGame.saveGame(GameResult.WIN,reversiGame.getPlayer2(),Player2Score);
             return;
         }else{ // in case the points are equal
             reversiGame.GameIsEven();
@@ -478,6 +483,8 @@ public class ReversiBoardController implements Initializable {
             MessagePreviewLabel.setTextFill(Color.GRAY);
             reversiGame.getPlayer1().draw();
             reversiGame.getPlayer2().draw();
+            reversiGame.saveGame(GameResult.MATCH,reversiGame.getPlayer1(),Player1Score);
+            reversiGame.saveGame(GameResult.MATCH,reversiGame.getPlayer2(),Player2Score);
             return;
         }
     }
@@ -1064,7 +1071,8 @@ public class ReversiBoardController implements Initializable {
         }else {
             NotValidCoordinateError();
         }
-    }public void OnCircle87Click(){
+    }
+    public void OnCircle87Click(){
         int x = Integer.parseInt(String.valueOf(Circle87.getId().charAt(6))) ;
         int y = Integer.parseInt(String.valueOf(Circle87.getId().charAt(7))) ;
         if (isValidCordinate(x,y)) {

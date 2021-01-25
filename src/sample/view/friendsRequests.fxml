@@ -35,5 +35,6 @@
             <Font name="Arial terminal one" size="12.0" />
          </font>
       </Label>
+      <Label fx:id="alertReq" layoutX="249.0" layoutY="386.0" textFill="#ea0b0b" />
     </children>
 </Pane>

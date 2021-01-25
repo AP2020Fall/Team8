@@ -54,15 +54,15 @@ public class GameMenuFx {
 
     public void addToFavorite(ActionEvent actionEvent) {
         if (gameName.equals("Reversi")){
-            player.setReversiFav(true);
+            FirstMenuFx.getLoggedInPlayer().setReversiFav(true);
         }
         else
-            player.setDBFav(true);
+            FirstMenuFx.getLoggedInPlayer().setDBFav(true);
     }
 
     public void runGame(ActionEvent actionEvent) throws IOException {
         if(gameName.equals("Reversi")){
-            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/reversiFirstMenu.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/sample/view/ReversiStartMenu.fxml"));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
             Main.allStage.show();

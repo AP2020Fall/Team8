@@ -34,6 +34,7 @@ public class LoginMenu {
                 num = 3;
             } else
                 num = 4;
+            return;
         }
         if (!Admin.getAdmin().contains(Admin.getAdminWithUser(id))) {
             System.out.println("no admin? ");

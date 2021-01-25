@@ -1,21 +1,23 @@
 package sample.model.platoModel;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Suggestion {
     private String suggestedGame;
-    private LocalDateTime dateOfSuggestion;
+    private LocalDate dateOfSuggestion;
     private String suggestionId;
     private Player player;
-    private static ArrayList<Suggestion> allSugs;
+    private static ArrayList<Suggestion> allSugs=new ArrayList<>();
 
     public Suggestion(String suggestedGame, String suggestionId,Player player) {
         this.suggestedGame = suggestedGame;
-        dateOfSuggestion=LocalDateTime.now();
+        dateOfSuggestion= LocalDate.now();
         this.suggestionId = suggestionId;
         allSugs.add(this);
         this.player=player;
+        dateOfSuggestion=LocalDate.now();
         player.getSuggestions().add(this);
     }
 
@@ -42,7 +44,7 @@ public class Suggestion {
         this.suggestedGame = suggestedGame;
     }
 
-    public void setDateOfSuggestion(LocalDateTime dateOfSuggestion) {
+    public void setDateOfSuggestion(LocalDate dateOfSuggestion) {
         this.dateOfSuggestion = dateOfSuggestion;
     }
 
@@ -50,7 +52,7 @@ public class Suggestion {
         this.suggestionId = suggestionId;
     }
 
-    public void setAllSugs(ArrayList<Suggestion> allSugs) {
-        this.allSugs = allSugs;
+    public static void setAllSugs(ArrayList<Suggestion> allSugs) {
+        Suggestion.allSugs = allSugs;
     }
 }

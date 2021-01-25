@@ -5,7 +5,6 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ReversiPlayer {
-    private Player player;
     private Color color;
     private static ArrayList<ReversiPlayer> allplayers = new ArrayList<>();
     private String username;
@@ -15,6 +14,11 @@ public class ReversiPlayer {
     private int currentScore;
     private  int finalScore;
     private boolean isWinner;
+    private Player player;
+
+    public Player getPlayer() {
+        return player;
+    }
 
     public ReversiPlayer(String username){
         this.username = username;
@@ -23,6 +27,7 @@ public class ReversiPlayer {
     public boolean hasmadeMove(){
         return hasMadeMove;
     }
+
 
     public Color getColor() {
         return color;

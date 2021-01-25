@@ -15,7 +15,8 @@ public class MenuController {
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.show();
-    } public void openScoreBoardMenu() throws IOException {
+    }
+    public void openScoreBoardMenu() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../view/ScoreBoardMenu.fxml"));
         stage.setTitle("Score Board Menu");
         stage.setScene(new Scene(root));

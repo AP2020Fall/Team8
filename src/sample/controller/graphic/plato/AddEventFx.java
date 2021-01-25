@@ -4,6 +4,7 @@ import sample.controller.plato.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -20,8 +21,8 @@ public class AddEventFx {
 
     public void addEvent(ActionEvent actionEvent) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDateTime start = LocalDateTime.parse(startDateAddEventTF.getText(),formatter);
-        LocalDateTime end = LocalDateTime.parse(endDateAddEventTF.getText(),formatter);
+        LocalDate start = LocalDate.parse(startDateAddEventTF.getText(),formatter);
+        LocalDate end = LocalDate.parse(endDateAddEventTF.getText(),formatter);
         if (gameName == null){
             alertCreateEvent.setText("you must choose your game first!");
         }

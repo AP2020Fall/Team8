@@ -26,7 +26,6 @@ public class FriendsMenu {
         Player.getPlayerWithUser(friendId).getFriends().remove(player);
         player.getFriends().remove(Player.getPlayerWithUser(friendId));
     }
-    public static void viewFriendProfile(){}
     public static void processAcceptUser(String userId){
         player.getFriends().add(Player.getPlayerWithUser(userId));
         Player.getPlayerWithUser(userId).getFriends().add(player);
@@ -39,9 +38,12 @@ public class FriendsMenu {
     public static  void userValidation(String username){
        if(! Player.getAllPlayers().contains(Player.getPlayerWithUser(username)))
            output="this user doesn't  exists";
+       else output="we requested the friend request";
     }
     public static void addUsername(String userName){
-        Objects.requireNonNull(Player.getPlayerWithUser(userName)).getFriendRequest().add(player);
-        output="we requested the friend request ";
+        userValidation(userName);
+        if (output.equals("we requested the friend request"))
+            Objects.requireNonNull(Player.getPlayerWithUser(userName)).getFriendRequest().add(player);
+
     }
 }

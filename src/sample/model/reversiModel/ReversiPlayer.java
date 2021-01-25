@@ -1,5 +1,7 @@
 package sample.model.reversiModel;
 
+import sample.model.platoModel.Player;
+
 import java.util.ArrayList;
 
 public class ReversiPlayer {
@@ -9,12 +11,18 @@ public class ReversiPlayer {
     private int username;
     private int playerNum;
     public boolean hasMadeMove ;
+    private  Player player;
     public ReversiPlayer(int username){
         allplayers.add(this);
         this.username=username;
         this.setColor(javafx.scene.paint.Color.RED);
         hasMadeMove = false;
     }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
     public void setColor(javafx.scene.paint.Color color) {
         this.color = color;
     }
@@ -64,5 +72,9 @@ public class ReversiPlayer {
     }
     public int getUsername() {
         return username;
+    }
+
+    public Player getPlayer() {
+        return player;
     }
 }

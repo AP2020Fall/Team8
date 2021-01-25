@@ -23,11 +23,7 @@ public class Player{
     private int dotsAndBoxesPlayedCounts = 0;
     private static ArrayList<Player> allPlayers = new ArrayList<>();
     private ArrayList<GameReq> gameReqs;
-
-    public void addFriend() {
-
-    }
-
+    private String status;
     private String name;
     private String lastName;
     private String userName;
@@ -36,7 +32,7 @@ public class Player{
     private String email;
     private String phone;
     private LocalDateTime platoAge;
-
+    private ArrayList<GameHistoryInfo> gameHistories;
 
     public void setDetails(String name, String lastName, String accountID, String email, String phone) {
         this.name = name;
@@ -44,6 +40,10 @@ public class Player{
         this.accountID = accountID;
         this.email = email;
         this.phone = phone;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public void setReversiFav(boolean reversiFav) {
@@ -61,6 +61,22 @@ public class Player{
     public void setDBFav(boolean DBFav) {
         isDBFav = DBFav;
     }
+    public void addReversiScore(int score,boolean win){
+        reversiScore+=score;
+        reversiPlayedCounts++;
+        if (win)
+            reversiAndWinsCounts++;
+
+    }
+    public void addDBScore(int score,boolean win){
+        DBScore+=score;
+        dotsAndBoxesPlayedCounts++;
+        if (win)
+            dotsAndBoxesAndWinsCount++;
+
+    }
+
+
 
     //for scoreboards
     public void setReversiScore(int reversiScore) {
@@ -196,7 +212,16 @@ public class Player{
         friendRequest = new ArrayList<>();
         friends = new ArrayList<>();
         allPlayers.add(this);
+        gameHistories=new ArrayList<>();
 
+    }
+
+    public ArrayList<GameHistoryInfo> getGameHistories() {
+        return gameHistories;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public String getUserName() {

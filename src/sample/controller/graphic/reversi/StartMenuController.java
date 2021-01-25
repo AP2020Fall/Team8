@@ -2,7 +2,11 @@ package sample.controller.graphic.reversi;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import sample.Main;
+import sample.controller.graphic.plato.FirstMenuFx;
+import sample.model.platoModel.Player;
 import sample.model.reversiModel.ReversiGame;
 import sample.model.reversiModel.ReversiPlayer;
 
@@ -12,9 +16,12 @@ public class StartMenuController {
     public static ReversiGame reversiGame;
     public ComboBox Player1Combo;
     public ComboBox Player2Combo;
+    public TextField player2ID;
+    public Label alertReversi;
     ReversiPlayer reversiPlayer1 = new ReversiPlayer(1);
     ReversiPlayer reversiPlayer2 = new ReversiPlayer(2);
     public StartMenuController(){
+
     }
     @FXML
     public void initialize() {
@@ -27,10 +34,18 @@ public class StartMenuController {
 
     }
     public void OnStartCircleClicked() throws IOException {
-        FindPlayer1Color();
-        FindPlayer2Color();
-        reversiGame = new ReversiGame(reversiPlayer1,reversiPlayer2);
-        Main.menuController.openReversiBoard();
+        if(!Player.getAllPlayers().contains(Player.getPlayerWithUser(player2ID.getText()))){
+            alertReversi.setText("invalid username for player 2");
+        }
+        else {
+            FindPlayer1Color();
+            FindPlayer2Color();
+            reversiGame = new ReversiGame(reversiPlayer1,reversiPlayer2);
+            reversiPlayer1.setPlayer(FirstMenuFx.getLoggedInPlayer());
+            reversiPlayer2.setPlayer(Player.getPlayerWithUser(player2ID.getText()));
+            Main.menuController.openReversiBoard();
+        }
+
     }
     public void FindPlayer1Color(){
         if (Player1Combo.getValue().toString().equals("Black")){

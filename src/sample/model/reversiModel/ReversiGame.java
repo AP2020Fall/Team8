@@ -1,5 +1,8 @@
 package sample.model.reversiModel;
 
+import sample.model.platoModel.GameHistoryInfo;
+import sample.model.platoModel.GameResult;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -69,7 +72,12 @@ public class ReversiGame {
         return allGames;
     }
 
-    public void saveGame(int gameID) {
+    public void saveGame( GameResult gameResult,ReversiPlayer reversiPlayer,int score) {
+        GameHistoryInfo gameHistoryInfo=new GameHistoryInfo("Reversi",reversiPlayer.getPlayer(),date,gameResult);
+        reversiPlayer.getPlayer().getGameHistories().add(gameHistoryInfo);
+        boolean win;
+        win= gameResult.equals(GameResult.WIN);
+        reversiPlayer.getPlayer().addReversiScore(score,win);
     }
 
     public void setWinner(ReversiPlayer winner) {
