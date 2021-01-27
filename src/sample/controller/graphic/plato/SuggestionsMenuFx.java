@@ -23,8 +23,8 @@ public class SuggestionsMenuFx {
     public TableView<Suggestion> sugTable;
     public TableColumn<Suggestion, String> sugIdC;
     public TableColumn<Suggestion, String> gameNameC;
-    public TableColumn<Suggestion, Player> userSugC;
-    public TableColumn<Suggestion, LocalDateTime> dateSugC;
+    public TableColumn<Suggestion, String> userSugC;
+    public TableColumn<Suggestion, String> dateSugC;
     ObservableList<Suggestion> sugObserve = FXCollections.observableArrayList();
     public static ArrayList<Suggestion> sugShow =new ArrayList<>();
     public void addSuggestion(ActionEvent actionEvent) {
@@ -49,10 +49,10 @@ public class SuggestionsMenuFx {
         makeTree();
     }
     public void makeTree() {
-        sugIdC.setCellValueFactory(new PropertyValueFactory<Suggestion, String>("suggestedGame"));
-        gameNameC.setCellValueFactory(new PropertyValueFactory<Suggestion, String>("suggestionId"));
-        userSugC.setCellValueFactory(new PropertyValueFactory<Suggestion, Player>(" player"));
-        dateSugC.setCellValueFactory(new PropertyValueFactory<Suggestion, LocalDateTime>("dateOfSuggestion"));
+        sugIdC.setCellValueFactory(new PropertyValueFactory<Suggestion, String>("suggestionId"));
+        gameNameC.setCellValueFactory(new PropertyValueFactory<Suggestion, String>("suggestedGame"));
+        userSugC.setCellValueFactory(new PropertyValueFactory<Suggestion, String>("player"));
+        dateSugC.setCellValueFactory(new PropertyValueFactory<Suggestion, String>("dateOfSuggestion"));
         sugObserve.clear();
         sugShow.clear();
         list();

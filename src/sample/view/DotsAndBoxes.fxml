@@ -11,261 +11,487 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.DotsAndBoxes">
-    <children>
-        <ImageView fitHeight="412.0" fitWidth="412.0" layoutY="-8.0">
-            <image>
-                <Image url="@/sample/images/screen-0.png" />
-            </image>
-        </ImageView>
-        <Text layoutX="427.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player1 score:">
-            <font>
-                <Font name="Calibri" size="15.0" />
-            </font>
-        </Text>
-        <Line id="hl11" fx:id="hl11" endX="-69.33333587646484" layoutX="135.0" layoutY="23.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl12" endX="-69.33333587646484" layoutX="185.0" layoutY="23.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl13" endX="-69.33333587646484" layoutX="236.0" layoutY="24.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl14" endX="-69.33333587646484" layoutX="286.0" layoutY="24.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl15" endX="-69.33333587646484" layoutX="335.0" layoutY="24.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl16" endX="-69.33333587646484" layoutX="386.0" layoutY="24.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl17" endX="-69.33333587646484" layoutX="434.0" layoutY="24.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl21" endX="-69.33333587646484" layoutX="135.0" layoutY="72.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl22" endX="-69.33333587646484" layoutX="185.0" layoutY="72.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl23" endX="-69.33333587646484" layoutX="236.0" layoutY="73.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl24" endX="-69.33333587646484" layoutX="286.0" layoutY="73.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl25" endX="-69.33333587646484" layoutX="335.0" layoutY="73.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl26" endX="-69.33333587646484" layoutX="386.0" layoutY="73.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl27" endX="-69.33333587646484" layoutX="434.0" layoutY="73.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl31" endX="-69.33333587646484" layoutX="135.0" layoutY="123.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl32" endX="-69.33333587646484" layoutX="185.0" layoutY="123.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl33" endX="-69.33333587646484" layoutX="236.0" layoutY="124.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl34" endX="-69.33333587646484" layoutX="286.0" layoutY="124.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl35" endX="-69.33333587646484" layoutX="335.0" layoutY="124.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl36" endX="-69.33333587646484" layoutX="386.0" layoutY="124.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl37" endX="-69.33333587646484" layoutX="434.0" layoutY="124.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl41" endX="-69.33333587646484" layoutX="135.0" layoutY="174.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl42" endX="-69.33333587646484" layoutX="185.0" layoutY="174.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl43" endX="-69.33333587646484" layoutX="236.0" layoutY="175.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl44" endX="-69.33333587646484" layoutX="286.0" layoutY="175.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl45" endX="-69.33333587646484" layoutX="335.0" layoutY="175.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl46" endX="-69.33333587646484" layoutX="386.0" layoutY="175.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl47" endX="-69.33333587646484" layoutX="434.0" layoutY="175.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl51" endX="-69.33333587646484" layoutX="135.0" layoutY="224.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl52" endX="-69.33333587646484" layoutX="185.0" layoutY="224.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl53" endX="-69.33333587646484" layoutX="236.0" layoutY="225.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl54" endX="-69.33333587646484" layoutX="286.0" layoutY="225.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl55" endX="-69.33333587646484" layoutX="335.0" layoutY="225.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl56" endX="-69.33333587646484" layoutX="386.0" layoutY="225.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl57" endX="-69.33333587646484" layoutX="434.0" layoutY="225.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl61" endX="-69.33333587646484" layoutX="135.0" layoutY="274.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl62" endX="-69.33333587646484" layoutX="185.0" layoutY="274.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl63" endX="-69.33333587646484" layoutX="236.0" layoutY="275.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl64" endX="-69.33333587646484" layoutX="286.0" layoutY="275.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl65" endX="-69.33333587646484" layoutX="335.0" layoutY="275.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl66" endX="-69.33333587646484" layoutX="386.0" layoutY="275.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl67" endX="-69.33333587646484" layoutX="434.0" layoutY="275.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl71" endX="-69.33333587646484" layoutX="135.0" layoutY="324.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl72" endX="-69.33333587646484" layoutX="185.0" layoutY="324.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl73" endX="-69.33333587646484" layoutX="236.0" layoutY="325.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl74" endX="-69.33333587646484" layoutX="286.0" layoutY="325.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl75" endX="-69.33333587646484" layoutX="335.0" layoutY="325.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl76" endX="-69.33333587646484" layoutX="386.0" layoutY="325.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl77" endX="-69.33333587646484" layoutX="434.0" layoutY="325.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl81" endX="-69.33333587646484" layoutX="135.0" layoutY="373.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl82" endX="-69.33333587646484" layoutX="185.0" layoutY="373.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl83" endX="-69.33333587646484" layoutX="236.0" layoutY="374.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl84" endX="-69.33333587646484" layoutX="286.0" layoutY="374.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl85" endX="-69.33333587646484" layoutX="335.0" layoutY="374.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl86" endX="-69.33333587646484" layoutX="386.0" layoutY="374.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="hl87" endX="-69.33333587646484" layoutX="434.0" layoutY="374.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl11" endX="-91.99998474121094" endY="21.666671752929688" layoutX="121.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl21" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl31" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl41" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl51" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl71" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl81" endX="-91.99998474121094" endY="21.666671752929688" layoutX="119.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl12" endX="-91.99998474121094" endY="21.666671752929688" layoutX="172.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl22" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl32" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl42" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl52" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl72" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl82" endX="-91.99998474121094" endY="21.666671752929688" layoutX="170.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl13" endX="-91.99998474121094" endY="21.666671752929688" layoutX="222.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl23" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl33" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl43" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl53" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl73" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl83" endX="-91.99998474121094" endY="21.666671752929688" layoutX="220.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl14" endX="-91.99998474121094" endY="21.666671752929688" layoutX="272.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl24" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl34" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl44" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl54" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl74" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl84" endX="-91.99998474121094" endY="21.666671752929688" layoutX="270.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl15" endX="-91.99998474121094" endY="21.666671752929688" layoutX="322.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl25" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl35" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl45" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl55" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl75" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl85" endX="-91.99998474121094" endY="21.666671752929688" layoutX="320.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl16" endX="-91.99998474121094" endY="21.666671752929688" layoutX="372.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl26" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl36" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl46" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl56" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl76" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl86" endX="-91.99998474121094" endY="21.666671752929688" layoutX="370.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl17" endX="-91.99998474121094" endY="21.666671752929688" layoutX="423.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl27" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl37" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl47" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl57" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl77" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl87" endX="-91.99998474121094" endY="21.666671752929688" layoutX="421.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl18" endX="-91.99998474121094" endY="21.666671752929688" layoutX="472.0" layoutY="37.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl28" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="88.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl38" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="138.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl48" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="188.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl58" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="237.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl78" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="288.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Line fx:id="vl88" endX="-91.99998474121094" endY="21.666671752929688" layoutX="470.0" layoutY="338.0" startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false" />
-        <Rectangle fx:id="r21" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r22" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="90.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r23" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r24" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r25" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r26" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r27" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="85.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r11" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="34.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r12" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="34.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r13" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="34.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r14" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="34.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r15" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="34.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r16" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="34.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r17" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="34.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r31" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="135.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r32" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="135.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r33" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="135.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r34" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="135.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r35" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="135.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r36" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="135.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r37" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="135.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r41" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="185.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r42" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="185.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r43" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="185.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r44" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="185.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r45" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="185.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r46" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="185.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r47" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="185.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r51" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="39.0" layoutY="234.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r52" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="234.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r53" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="141.0" layoutY="234.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r54" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="189.0" layoutY="234.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r55" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="240.0" layoutY="234.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r56" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="289.0" layoutY="234.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r57" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="235.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r61" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r62" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="90.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r63" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r64" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r65" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r66" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r67" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="285.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r71" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r72" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="90.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r73" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r74" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r75" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r76" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Rectangle fx:id="r77" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="335.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0" />
-        <Circle fx:id="sc11" fill="#1f93ff00" layoutX="29.0" layoutY="22.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc12" fill="#1f93ff00" layoutX="80.0" layoutY="22.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc13" fill="#1f93ff00" layoutX="130.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc14" fill="#1f93ff00" layoutX="179.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc15" fill="#1f93ff00" layoutX="230.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc16" fill="#1f93ff00" layoutX="280.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc17" fill="#1f93ff00" layoutX="330.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc18" fill="#1f93ff00" layoutX="378.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc21" fill="#1f93ff00" layoutX="29.0" layoutY="73.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc22" fill="#1f93ff00" layoutX="80.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc23" fill="#1f93ff00" layoutX="130.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc24" fill="#1f93ff00" layoutX="179.0" layoutY="73.0"  onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc25" fill="#1f93ff00" layoutX="230.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc26" fill="#1f93ff00" layoutX="280.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc27" fill="#1f93ff00" layoutX="330.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc28" fill="#1f93ff00" layoutX="378.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc31" fill="#1f93ff00" layoutX="29.0" layoutY="123.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc32" fill="#1f93ff00" layoutX="80.0" layoutY="123.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc33" fill="#1f93ff00" layoutX="130.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc34" fill="#1f93ff00" layoutX="179.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc35" fill="#1f93ff00" layoutX="230.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc36" fill="#1f93ff00" layoutX="280.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc37" fill="#1f93ff00" layoutX="330.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc38" fill="#1f93ff00" layoutX="378.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc41" fill="#1f93ff00" layoutX="29.0" layoutY="173.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc42" fill="#1f93ff00" layoutX="80.0" layoutY="173.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc43" fill="#1f93ff00" layoutX="130.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc44" fill="#1f93ff00" layoutX="179.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc45" fill="#1f93ff00" layoutX="230.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc46" fill="#1f93ff00" layoutX="280.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc47" fill="#1f93ff00" layoutX="330.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc48" fill="#1f93ff00" layoutX="378.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc51" fill="#1f93ff00" layoutX="29.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc52" fill="#1f93ff00" layoutX="80.0" layoutY="223.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc53" fill="#1f93ff00" layoutX="130.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc54" fill="#1f93ff00" layoutX="179.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc55" fill="#1f93ff00" layoutX="230.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc56" fill="#1f93ff00" layoutX="280.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0" stroke="#BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc57" fill="#1f93ff00" layoutX="330.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc58" fill="#1f93ff00" layoutX="378.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc61" fill="#1f93ff00" layoutX="29.0" layoutY="273.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc62" fill="#1f93ff00" layoutX="80.0" layoutY="273.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc63" fill="#1f93ff00" layoutX="130.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc64" fill="#1f93ff00" layoutX="179.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc65" fill="#1f93ff00" layoutX="230.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc66" fill="#1f93ff00" layoutX="280.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc67" fill="#1f93ff00" layoutX="330.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc68" fill="#1f93ff00" layoutX="378.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc71" fill="#1f93ff00" layoutX="28.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc72" fill="#1f93ff00" layoutX="79.0" layoutY="323.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc73" fill="#1f93ff00" layoutX="129.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc74" fill="#1f93ff00" layoutX="178.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc75" fill="#1f93ff00" layoutX="229.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc76" fill="#1f93ff00" layoutX="279.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc77" fill="#1f93ff00" layoutX="329.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc78" fill="#1f93ff00" layoutX="378.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc81" fill="#1f93ff00" layoutX="29.0" layoutY="373.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc82" fill="#1f93ff00" layoutX="79.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc83" fill="#1f93ff00" layoutX="129.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc84" fill="#1f93ff00" layoutX="179.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc85" fill="#1f93ff00" layoutX="229.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc86" fill="#1f93ff00" layoutX="279.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc87" fill="#1f93ff00" layoutX="330.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Circle fx:id="sc88" fill="#1f93ff00" layoutX="378.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-        <Text layoutX="427.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player2 score:" wrappingWidth="172.76824951171875">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Text>
-        <ImageView id="DBImage1" fitHeight="66.0" fitWidth="66.0" layoutX="422.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@/sample/images/blank-avatar.jpg" />
-            </image>
-        </ImageView>
-        <TextField layoutX="427.0" layoutY="235.0" prefHeight="25.0" prefWidth="86.0" />
-        <TextField layoutX="427.0" layoutY="294.0" prefHeight="25.0" prefWidth="86.0" />
-        <Label layoutX="434.0" layoutY="89.0" text="Player1 " />
-        <Label layoutX="536.0" layoutY="89.0" text="Player2" />
-        <ImageView id="DBImage1" fitHeight="66.0" fitWidth="66.0" layoutX="522.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@/sample/images/blank-avatar.jpg" />
-            </image>
-        </ImageView>
-    </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.view.DotsAndBoxes">
+    <ImageView fitHeight="412.0" fitWidth="412.0" layoutY="-8.0">
+        <Image url="@/sample/images/screen-0.png"/>
+    </ImageView>
+    <Text layoutX="427.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player1 score:">
+        <font>
+            <Font name="Calibri" size="15.0"/>
+        </font>
+    </Text>
+    <Line id="hl11" fx:id="hl11" endX="-69.33333587646484" layoutX="135.0" layoutY="23.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl12" endX="-69.33333587646484" layoutX="185.0" layoutY="23.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl13" endX="-69.33333587646484" layoutX="236.0" layoutY="24.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl14" endX="-69.33333587646484" layoutX="286.0" layoutY="24.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl15" endX="-69.33333587646484" layoutX="335.0" layoutY="24.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl16" endX="-69.33333587646484" layoutX="386.0" layoutY="24.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl17" endX="-69.33333587646484" layoutX="434.0" layoutY="24.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl21" endX="-69.33333587646484" layoutX="135.0" layoutY="72.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl22" endX="-69.33333587646484" layoutX="185.0" layoutY="72.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl23" endX="-69.33333587646484" layoutX="236.0" layoutY="73.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl24" endX="-69.33333587646484" layoutX="286.0" layoutY="73.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl25" endX="-69.33333587646484" layoutX="335.0" layoutY="73.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl26" endX="-69.33333587646484" layoutX="386.0" layoutY="73.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl27" endX="-69.33333587646484" layoutX="434.0" layoutY="73.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl31" endX="-69.33333587646484" layoutX="135.0" layoutY="123.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl32" endX="-69.33333587646484" layoutX="185.0" layoutY="123.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl33" endX="-69.33333587646484" layoutX="236.0" layoutY="124.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl34" endX="-69.33333587646484" layoutX="286.0" layoutY="124.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl35" endX="-69.33333587646484" layoutX="335.0" layoutY="124.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl36" endX="-69.33333587646484" layoutX="386.0" layoutY="124.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl37" endX="-69.33333587646484" layoutX="434.0" layoutY="124.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl41" endX="-69.33333587646484" layoutX="135.0" layoutY="174.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl42" endX="-69.33333587646484" layoutX="185.0" layoutY="174.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl43" endX="-69.33333587646484" layoutX="236.0" layoutY="175.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl44" endX="-69.33333587646484" layoutX="286.0" layoutY="175.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl45" endX="-69.33333587646484" layoutX="335.0" layoutY="175.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl46" endX="-69.33333587646484" layoutX="386.0" layoutY="175.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl47" endX="-69.33333587646484" layoutX="434.0" layoutY="175.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl51" endX="-69.33333587646484" layoutX="135.0" layoutY="224.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl52" endX="-69.33333587646484" layoutX="185.0" layoutY="224.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl53" endX="-69.33333587646484" layoutX="236.0" layoutY="225.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl54" endX="-69.33333587646484" layoutX="286.0" layoutY="225.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl55" endX="-69.33333587646484" layoutX="335.0" layoutY="225.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl56" endX="-69.33333587646484" layoutX="386.0" layoutY="225.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl57" endX="-69.33333587646484" layoutX="434.0" layoutY="225.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl61" endX="-69.33333587646484" layoutX="135.0" layoutY="274.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl62" endX="-69.33333587646484" layoutX="185.0" layoutY="274.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl63" endX="-69.33333587646484" layoutX="236.0" layoutY="275.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl64" endX="-69.33333587646484" layoutX="286.0" layoutY="275.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl65" endX="-69.33333587646484" layoutX="335.0" layoutY="275.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl66" endX="-69.33333587646484" layoutX="386.0" layoutY="275.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl67" endX="-69.33333587646484" layoutX="434.0" layoutY="275.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl71" endX="-69.33333587646484" layoutX="135.0" layoutY="324.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl72" endX="-69.33333587646484" layoutX="185.0" layoutY="324.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl73" endX="-69.33333587646484" layoutX="236.0" layoutY="325.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl74" endX="-69.33333587646484" layoutX="286.0" layoutY="325.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl75" endX="-69.33333587646484" layoutX="335.0" layoutY="325.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl76" endX="-69.33333587646484" layoutX="386.0" layoutY="325.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl77" endX="-69.33333587646484" layoutX="434.0" layoutY="325.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl81" endX="-69.33333587646484" layoutX="135.0" layoutY="373.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl82" endX="-69.33333587646484" layoutX="185.0" layoutY="373.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl83" endX="-69.33333587646484" layoutX="236.0" layoutY="374.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl84" endX="-69.33333587646484" layoutX="286.0" layoutY="374.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl85" endX="-69.33333587646484" layoutX="335.0" layoutY="374.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl86" endX="-69.33333587646484" layoutX="386.0" layoutY="374.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="hl87" endX="-69.33333587646484" layoutX="434.0" layoutY="374.0" startX="-91.99998474121094"
+          stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl11" endX="-91.99998474121094" endY="21.666671752929688" layoutX="121.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl21" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl31" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl41" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl51" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl71" endX="-91.99998474121094" endY="21.666671752929688" layoutX="120.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl81" endX="-91.99998474121094" endY="21.666671752929688" layoutX="119.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl12" endX="-91.99998474121094" endY="21.666671752929688" layoutX="172.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl22" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl32" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl42" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl52" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl72" endX="-91.99998474121094" endY="21.666671752929688" layoutX="171.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl82" endX="-91.99998474121094" endY="21.666671752929688" layoutX="170.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl13" endX="-91.99998474121094" endY="21.666671752929688" layoutX="222.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl23" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl33" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl43" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl53" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl73" endX="-91.99998474121094" endY="21.666671752929688" layoutX="221.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl83" endX="-91.99998474121094" endY="21.666671752929688" layoutX="220.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl14" endX="-91.99998474121094" endY="21.666671752929688" layoutX="272.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl24" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl34" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl44" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl54" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl74" endX="-91.99998474121094" endY="21.666671752929688" layoutX="271.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl84" endX="-91.99998474121094" endY="21.666671752929688" layoutX="270.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl15" endX="-91.99998474121094" endY="21.666671752929688" layoutX="322.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl25" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl35" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl45" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl55" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl75" endX="-91.99998474121094" endY="21.666671752929688" layoutX="321.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl85" endX="-91.99998474121094" endY="21.666671752929688" layoutX="320.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl16" endX="-91.99998474121094" endY="21.666671752929688" layoutX="372.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl26" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl36" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl46" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl56" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl76" endX="-91.99998474121094" endY="21.666671752929688" layoutX="371.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl86" endX="-91.99998474121094" endY="21.666671752929688" layoutX="370.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl17" endX="-91.99998474121094" endY="21.666671752929688" layoutX="423.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl27" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl37" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl47" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl57" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl77" endX="-91.99998474121094" endY="21.666671752929688" layoutX="422.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl87" endX="-91.99998474121094" endY="21.666671752929688" layoutX="421.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl18" endX="-91.99998474121094" endY="21.666671752929688" layoutX="472.0" layoutY="37.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl28" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="88.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl38" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="138.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl48" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="188.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl58" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="237.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl78" endX="-91.99998474121094" endY="21.666671752929688" layoutX="471.0" layoutY="288.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Line fx:id="vl88" endX="-91.99998474121094" endY="21.666671752929688" layoutX="470.0" layoutY="338.0"
+          startX="-91.99998474121094" stroke="#98c4c0" strokeWidth="5.0" visible="false"/>
+    <Rectangle fx:id="r21" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="85.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r22" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="90.0" layoutY="85.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r23" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="85.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r24" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="85.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r25" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="85.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r26" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="85.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r27" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="85.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r11" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="34.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r12" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="34.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r13" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="34.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r14" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="34.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r15" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="34.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r16" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="34.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r17" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="34.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r31" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="135.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r32" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="135.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r33" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="135.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r34" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="135.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r35" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="135.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r36" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="135.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r37" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="135.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r41" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="185.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r42" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="185.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r43" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="185.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r44" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="185.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r45" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="185.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r46" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="185.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r47" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="185.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r51" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="39.0" layoutY="234.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r52" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="91.0" layoutY="234.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r53" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="141.0" layoutY="234.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r54" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="189.0" layoutY="234.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r55" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="240.0" layoutY="234.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r56" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="289.0" layoutY="234.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r57" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="235.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r61" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="285.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r62" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="90.0" layoutY="285.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r63" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="285.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r64" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="285.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r65" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="285.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r66" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="285.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r67" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="285.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r71" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="40.0" layoutY="335.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r72" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="90.0" layoutY="335.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r73" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="142.0" layoutY="335.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r74" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="190.0" layoutY="335.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r75" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="241.0" layoutY="335.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r76" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="290.0" layoutY="335.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Rectangle fx:id="r77" arcHeight="5.0" arcWidth="5.0" fill="#c4c4c4" height="27.0" layoutX="341.0" layoutY="335.0"
+               stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="28.0"/>
+    <Circle fx:id="sc11" fill="#1f93ff00" layoutX="29.0" layoutY="22.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc12" fill="#1f93ff00" layoutX="80.0" layoutY="22.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc13" fill="#1f93ff00" layoutX="130.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc14" fill="#1f93ff00" layoutX="179.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc15" fill="#1f93ff00" layoutX="230.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc16" fill="#1f93ff00" layoutX="280.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc17" fill="#1f93ff00" layoutX="330.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc18" fill="#1f93ff00" layoutX="378.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc21" fill="#1f93ff00" layoutX="29.0" layoutY="73.0" radius="18.0" stroke="BLACK" strokeType="INSIDE"
+            strokeWidth="5.0"/>
+    <Circle fx:id="sc22" fill="#1f93ff00" layoutX="80.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc23" fill="#1f93ff00" layoutX="130.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc24" fill="#1f93ff00" layoutX="179.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc25" fill="#1f93ff00" layoutX="230.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc26" fill="#1f93ff00" layoutX="280.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc27" fill="#1f93ff00" layoutX="330.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc28" fill="#1f93ff00" layoutX="378.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc31" fill="#1f93ff00" layoutX="29.0" layoutY="123.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc32" fill="#1f93ff00" layoutX="80.0" layoutY="123.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc33" fill="#1f93ff00" layoutX="130.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc34" fill="#1f93ff00" layoutX="179.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc35" fill="#1f93ff00" layoutX="230.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc36" fill="#1f93ff00" layoutX="280.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc37" fill="#1f93ff00" layoutX="330.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc38" fill="#1f93ff00" layoutX="378.0" layoutY="124.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc41" fill="#1f93ff00" layoutX="29.0" layoutY="173.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc42" fill="#1f93ff00" layoutX="80.0" layoutY="173.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc43" fill="#1f93ff00" layoutX="130.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc44" fill="#1f93ff00" layoutX="179.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc45" fill="#1f93ff00" layoutX="230.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc46" fill="#1f93ff00" layoutX="280.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc47" fill="#1f93ff00" layoutX="330.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc48" fill="#1f93ff00" layoutX="378.0" layoutY="174.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc51" fill="#1f93ff00" layoutX="29.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc52" fill="#1f93ff00" layoutX="80.0" layoutY="223.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc53" fill="#1f93ff00" layoutX="130.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc54" fill="#1f93ff00" layoutX="179.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc55" fill="#1f93ff00" layoutX="230.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc56" fill="#1f93ff00" layoutX="280.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc57" fill="#1f93ff00" layoutX="330.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc58" fill="#1f93ff00" layoutX="378.0" layoutY="224.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc61" fill="#1f93ff00" layoutX="29.0" layoutY="273.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc62" fill="#1f93ff00" layoutX="80.0" layoutY="273.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc63" fill="#1f93ff00" layoutX="130.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc64" fill="#1f93ff00" layoutX="179.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc65" fill="#1f93ff00" layoutX="230.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc66" fill="#1f93ff00" layoutX="280.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc67" fill="#1f93ff00" layoutX="330.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc68" fill="#1f93ff00" layoutX="378.0" layoutY="274.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc71" fill="#1f93ff00" layoutX="28.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc72" fill="#1f93ff00" layoutX="79.0" layoutY="323.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc73" fill="#1f93ff00" layoutX="129.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc74" fill="#1f93ff00" layoutX="178.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc75" fill="#1f93ff00" layoutX="229.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc76" fill="#1f93ff00" layoutX="279.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc77" fill="#1f93ff00" layoutX="329.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc78" fill="#1f93ff00" layoutX="378.0" layoutY="324.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc81" fill="#1f93ff00" layoutX="29.0" layoutY="373.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc82" fill="#1f93ff00" layoutX="79.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc83" fill="#1f93ff00" layoutX="129.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc84" fill="#1f93ff00" layoutX="179.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc85" fill="#1f93ff00" layoutX="229.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc86" fill="#1f93ff00" layoutX="279.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc87" fill="#1f93ff00" layoutX="330.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Circle fx:id="sc88" fill="#1f93ff00" layoutX="378.0" layoutY="374.0" onMouseClicked="#showC" radius="18.0"
+            stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0"/>
+    <Text layoutX="427.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player2 score:"
+          wrappingWidth="172.76824951171875">
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Text>
+    <ImageView id="DBImage1" fitHeight="66.0" fitWidth="66.0" layoutX="422.0" layoutY="16.0" pickOnBounds="true"
+               preserveRatio="true">
+        <image>
+            <Image url="@/sample/images/blank-avatar.jpg"/>
+        </image>
+    </ImageView>
+    <TextField layoutX="427.0" layoutY="235.0" prefHeight="25.0" prefWidth="86.0"/>
+    <TextField layoutX="427.0" layoutY="294.0" prefHeight="25.0" prefWidth="86.0"/>
+    <Label layoutX="434.0" layoutY="89.0" text="Player1 "/>
+    <Label layoutX="536.0" layoutY="89.0" text="Player2"/>
+    <ImageView id="DBImage1" fitHeight="66.0" fitWidth="66.0" layoutX="522.0" layoutY="16.0" pickOnBounds="true"
+               preserveRatio="true">
+        <image>
+            <Image url="@/sample/images/blank-avatar.jpg"/>
+        </image>
+    </ImageView>
 </Pane>

@@ -18,4 +18,9 @@ public class UserShow {
         this.winsCount = winsCount;
         allUserShows.add(this);
     }
+
+
+    public static ArrayList<UserShow> getAllUserShows() {
+        return allUserShows;
+    }
 }

@@ -1,5 +1,6 @@
 package sample.model.platoModel;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class Player{
     private ArrayList<Player> friendRequest;
     private Set<String> favoriteGames;
     private int reversiAndWinsCounts = 0;
+    private int totalWins;
     private int reversiScore;
     private boolean isReversiFav;
     private boolean isDBFav;
@@ -33,10 +35,13 @@ public class Player{
     private String email;
     private String phone;
     private LocalDateTime platoAge;
+    private long datesPassed;
+
     private ArrayList<GameHistoryInfo> gameHistories;
     public Player(String username, String password) {
         this.userName=username;
         this.passWord=password;
+      //  this.point=point;
         suggestions = new ArrayList<>();
         favoriteGames = new LinkedHashSet<>();
         friendRequest = new ArrayList<>();
@@ -44,7 +49,7 @@ public class Player{
         allPlayers.add(this);
         gameHistories=new ArrayList<>();
         platoMessages=new ArrayList<>();
-
+        datesPassed= Duration.between(LocalDateTime.now(),platoAge).toDays();
     }
 
 
@@ -56,9 +61,7 @@ public class Player{
         this.phone = phone;
     }
 
-    public void setPoint(int point) {
-        this.point = point;
-    }
+
 
     public void setPlatoMessages(ArrayList<PBMessage> platoMessages) {
         this.platoMessages = platoMessages;
@@ -141,17 +144,22 @@ public class Player{
     }
     public void addReversiScore(int score,boolean win){
         reversiScore+=score;
+        point+=score;
         reversiPlayedCounts++;
-        if (win)
+        if (win){
             reversiAndWinsCounts++;
+            totalWins++;
+        }
 
     }
     public void addDBScore(int score,boolean win){
         DBScore+=score;
+        point+=score;
         dotsAndBoxesPlayedCounts++;
-        if (win)
+        if (win) {
             dotsAndBoxesAndWinsCount++;
-
+            totalWins++;
+        }
     }
 
 
@@ -312,4 +320,11 @@ public class Player{
     }
 
 
+    public long getDatesPassed() {
+        return datesPassed;
+    }
+
+    public void setDatesPassed(long datesPassed) {
+        this.datesPassed = datesPassed;
+    }
 }

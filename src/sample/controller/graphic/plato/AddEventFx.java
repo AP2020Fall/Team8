@@ -27,7 +27,9 @@ public class AddEventFx {
             alertCreateEvent.setText("you must choose your game first!");
         }
         else {
-        alertCreateEvent.setText(AdminMenu.validationEvent(start,end,eventScoreTF.getText(),gameName));}
+        alertCreateEvent.setText(AdminMenu.validationEvent(start,end,eventScoreTF.getText(),gameName));
+            AdminMenu.processAddEvent(start,end,Integer.parseInt(eventScoreTF.getText()),gameName);
+        }
       //  AdminMenu.processAddEvent(start,end,Integer.parseInt(eventScoreTF.getText()),gameMenuB.getI);
 
     }

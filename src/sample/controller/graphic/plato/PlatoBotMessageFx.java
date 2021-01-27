@@ -17,18 +17,18 @@ import java.util.ArrayList;
 public class PlatoBotMessageFx {
   //  public ListView PlatoBotMessageList;
     public TableView<PBMessage> PBMessageTV;
-    public TableColumn<PBMessage, String> messageC;
-    public TableColumn<PBMessage, String> timeC;
+    public TableColumn<PBMessage,String> messageC;
+    public TableColumn<PBMessage,String> timeC;
    // ObservableList<PBMessage> PBObserve = FXCollections.observableArrayList();
      ArrayList<PBMessage> PBShow =new ArrayList<>();
     @FXML
     public void initialize(){
 
-        messageC.setCellValueFactory(new PropertyValueFactory<PBMessage, String>("message"));
-        timeC.setCellValueFactory(new PropertyValueFactory<PBMessage, String>("date"));
+        messageC.setCellValueFactory(new PropertyValueFactory<PBMessage,String>("message"));
+        timeC.setCellValueFactory(new PropertyValueFactory<PBMessage,String>("time"));
 
         list();
-        ObservableList<PBMessage > PBObserve = FXCollections.observableArrayList(PBShow);
+        ObservableList<PBMessage> PBObserve = FXCollections.observableArrayList(PBShow);
         PBMessageTV.setItems(PBObserve);
         PBMessageTV.setEditable(true);
         PBMessageTV.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);

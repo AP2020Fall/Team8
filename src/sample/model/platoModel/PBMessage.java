@@ -5,21 +5,35 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class PBMessage {
+  //  private String dateOfSuggestion;
     private  String message;
-    private String  time;
-    private  Player user;
+ //   private String  time;
+ //   private  Player user;
+    private LocalDate date;
 
 
     public PBMessage(String message) {
         this.message = message;
+        date=LocalDate.now();
       //  this.time = time;
-       LocalDate timeSent = LocalDate.now();
 
-        time = timeSent.format(DateTimeFormatter.ofPattern("hh:mm"));
 
     }
 
-    public void setUser(Player user) {
-        this.user = user;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 }

@@ -53,7 +53,6 @@ public class Event {
         }
         return null;
     }
-    public void joinEvent(Player player){}
 
     public static ArrayList<Event> getAllEvents() {
         return allEvents;

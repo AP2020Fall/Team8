@@ -20,10 +20,9 @@ public class AdminMenu {
                 "\\d+"))
             return "you must enter a number!!";
         else{
-            processAddEvent(start,end, Integer.parseInt(score),gameName);
+           // processAddEvent(start,end, Integer.parseInt(score),gameName);
             return "event added successfully!";}
     }
-
     public static void setAdmin(Admin admin) {
         AdminMenu.admin = admin;
     }
@@ -33,12 +32,12 @@ public class AdminMenu {
         }
         else {
             PBMessage pbMessage=new PBMessage(message);
+           // pbMessage.setTime();
             Player.getPlayerWithUser(user).getPlatoMessages().add(pbMessage);
             return "Message sent successfully";
         }
 
     }
-
     public static void processAddEvent(LocalDate start, LocalDate end, int score, String gameName){
         validationEvent(start,end,String.valueOf(score),gameName);
         if (validationEvent(start,end,String.valueOf(score),gameName).equalsIgnoreCase("event added successfully!")){

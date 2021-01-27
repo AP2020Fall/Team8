@@ -30,6 +30,13 @@ public class MenuController {
         stage.setResizable(false);
         stage.show();
     }
+    public void openDotsBoard() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/DotsAndBoxes.fxml"));
+        stage.setTitle("Game Board");
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.show();
+    }
     public void closeStage() throws  IOException{
         stage.close();
     }

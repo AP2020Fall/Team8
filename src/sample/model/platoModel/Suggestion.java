@@ -23,6 +23,18 @@ public class Suggestion {
         dateOfSuggestion=date.toString();
     }
 
+    public String getDateOfSuggestion() {
+        return dateOfSuggestion;
+    }
+
+    public String getPlayer() {
+        return player;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
     public String getSuggestionId() {
         return suggestionId;
     }

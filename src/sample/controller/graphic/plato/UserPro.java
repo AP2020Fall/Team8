@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import sample.controller.plato.AccountsMenu;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
+import sample.view.OutputHandler;
 
 public class UserPro {
     public Label userProfile;
@@ -45,11 +46,13 @@ public class UserPro {
     }
 
     public void changePass(ActionEvent actionEvent) {
-        AccountsMenu.changePassword(oldPassTf.getText(),newPassTf.getText());
+       int messge= AccountsMenu.changePassword(oldPassTf.getText(),newPassTf.getText());
+        alertProfile.setText(OutputHandler.showAccountOutput(messge));
     }
 
     public void edit(ActionEvent actionEvent) {
-        AccountsMenu.editField(fieldTF.getText(),newValueTf.getText());
+        int message =AccountsMenu.editField(fieldTF.getText(),newValueTf.getText());
+        alertProfile.setText(OutputHandler.showAccountOutput(message));
         initialize();
 
     }

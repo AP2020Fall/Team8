@@ -7,6 +7,7 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import sample.controller.plato.PlayerMenu;
 import sample.model.platoModel.Player;
 import sample.model.platoModel.UserShow;
 
@@ -16,24 +17,24 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class UsersMenuFx {
-    public TableColumn<UserShow, String> userColumn;
-    public TableColumn<UserShow, String> scoreColumn;
-    public TableColumn<UserShow, String> daysPassedColumn;
-    public TableColumn<UserShow, String> winCountColumn;
-    public TableView<UserShow> userTable;
+    public TableColumn<Player,String> userColumn;
+    public TableColumn<Player,Integer> scoreColumn;
+    public TableColumn<Player,Long> daysPassedColumn;
+    public TableColumn<Player,Integer> winCountColumn;
+    public TableView<Player> userTable;
     private String gameName;
-    ObservableList<UserShow> names = FXCollections.observableArrayList();
-    public static ArrayList<UserShow> users =new ArrayList<>();
+    ObservableList<Player> names = FXCollections.observableArrayList();
+    public static ArrayList<Player> users =new ArrayList<>();
   //  ListView<Player> listView = new ListView<Player>(names);
     @FXML
     public void initialize() throws IOException {
         makeTree();
     }
     public void makeTree() {
-        userColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String>("userName"));
-        scoreColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String>("score"));
-        daysPassedColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String >("datesPassed"));
-        winCountColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String>( "winsCount"));
+        userColumn.setCellValueFactory(new PropertyValueFactory<Player, String >("userName"));
+        scoreColumn.setCellValueFactory(new PropertyValueFactory<Player,Integer>("point"));
+        daysPassedColumn.setCellValueFactory(new PropertyValueFactory<Player,Long>("datesPassed"));
+        winCountColumn.setCellValueFactory(new PropertyValueFactory<Player,Integer>("totalWins"));
         names.clear();
         users.clear();
         list();
@@ -45,11 +46,7 @@ public class UsersMenuFx {
     }
 
     private  static void list(){
-        for (Player player : Player.getAllPlayers()) {
-            UserShow userShow=new UserShow(player.getUserName(),String.valueOf(player.getDBScore()+player.getReversiScore()), String.valueOf(Duration.between(LocalDateTime.now(),player.getPlatoAge()).toDays()),String.valueOf(player.getReversiAndWinsCounts()+player.getDotsAndBoxesAndWinsCount()));
-          // userShow.setPlayer(player);
-            users.add(userShow);
-        }
+        users.addAll(Player.getAllPlayers());
     }
 
 
