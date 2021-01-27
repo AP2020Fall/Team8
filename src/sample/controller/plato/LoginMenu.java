@@ -18,35 +18,36 @@ public class LoginMenu {
         if (num==4){
         if (Player.getAllPlayers().contains(Player.getPlayerWithUser(user)))
             Player.getAllPlayers().remove(Player.getPlayerWithUser(user));
-        else if (Admin.getAdmin().contains(Admin.getAdminWithUser(user)))
-            Admin.getAdmin().remove(Admin.getAdminWithUser(user));
+        else Admin.getAdmin().remove(Admin.getAdminWithUser(user));
         }
 
     }
     public static void correctPasswordLogin(String id, String password) {
         //  boolean invalid = true;
         //   if (invalid) {
-        if (!Player.getAllPlayers().contains(Player.getPlayerWithUser(id))) {
+        if (!Player.getAllPlayers().contains(Player.getPlayerWithUser(id))&&!Admin.getAdmin().contains(Admin.getAdminWithUser(id))) {
             System.out.println("not player");
             num = 2;
-        } else {
+
+        } else if (Player.getAllPlayers().contains(Player.getPlayerWithUser(id))){
             if (!Player.getPlayerWithUser(id).getPassWord().equals(password)) {
                 num = 3;
-            } else
+
+            } else {
                 num = 4;
-            return;
+                return;
+            }
+
         }
-        if (!Admin.getAdmin().contains(Admin.getAdminWithUser(id))) {
-            System.out.println("no admin? ");
-            num = 2;
-        } else {
+        else if (Admin.getAdmin().contains(Admin.getAdminWithUser(id))){
             if (!Admin.getAdminWithUser(id).getPassWord().equals(password)) {
                 System.out.println("wrong pass?!");
                 num = 3;
-            } else
+            } else{
                 num = 4;
+          }
         }
-        if (FirstMenuFx.getLoggedInAdmin()!=null||FirstMenuFx.getLoggedInPlayer()!=null)
+         else if (FirstMenuFx.getLoggedInAdmin()!=null||FirstMenuFx.getLoggedInPlayer()!=null)
             num=5;
 
     }

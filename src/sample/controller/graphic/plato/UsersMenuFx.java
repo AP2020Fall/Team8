@@ -17,9 +17,9 @@ import java.util.ArrayList;
 
 public class UsersMenuFx {
     public TableColumn<UserShow, String> userColumn;
-    public TableColumn<UserShow, Integer> scoreColumn;
-    public TableColumn<UserShow, Integer> daysPassedColumn;
-    public TableColumn<UserShow, Integer> winCountColumn;
+    public TableColumn<UserShow, String> scoreColumn;
+    public TableColumn<UserShow, String> daysPassedColumn;
+    public TableColumn<UserShow, String> winCountColumn;
     public TableView<UserShow> userTable;
     private String gameName;
     ObservableList<UserShow> names = FXCollections.observableArrayList();
@@ -31,9 +31,9 @@ public class UsersMenuFx {
     }
     public void makeTree() {
         userColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String>("userName"));
-        scoreColumn.setCellValueFactory(new PropertyValueFactory<UserShow, Integer>("score"));
-        daysPassedColumn.setCellValueFactory(new PropertyValueFactory<UserShow, Integer>("datesPassed"));
-        winCountColumn.setCellValueFactory(new PropertyValueFactory<UserShow, Integer>("winsCount"));
+        scoreColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String>("score"));
+        daysPassedColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String >("datesPassed"));
+        winCountColumn.setCellValueFactory(new PropertyValueFactory<UserShow, String>( "winsCount"));
         names.clear();
         users.clear();
         list();
@@ -46,8 +46,8 @@ public class UsersMenuFx {
 
     private  static void list(){
         for (Player player : Player.getAllPlayers()) {
-            UserShow userShow=new UserShow(player.getUserName(),player.getDBScore()+player.getReversiScore(), (int) Duration.between(LocalDateTime.now(),player.getPlatoAge()).toDays(),player.getReversiAndWinsCounts()+player.getDotsAndBoxesAndWinsCount());
-           userShow.setPlayer(player);
+            UserShow userShow=new UserShow(player.getUserName(),String.valueOf(player.getDBScore()+player.getReversiScore()), String.valueOf(Duration.between(LocalDateTime.now(),player.getPlatoAge()).toDays()),String.valueOf(player.getReversiAndWinsCounts()+player.getDotsAndBoxesAndWinsCount()));
+          // userShow.setPlayer(player);
             users.add(userShow);
         }
     }

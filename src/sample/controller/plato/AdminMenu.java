@@ -1,10 +1,7 @@
 package sample.controller.plato;
 
 
-import sample.model.platoModel.Admin;
-import sample.model.platoModel.Event;
-import sample.model.platoModel.Player;
-import sample.model.platoModel.Suggestion;
+import sample.model.platoModel.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -34,8 +31,10 @@ public class AdminMenu {
         if (!Player.getAllPlayers().contains(Player.getPlayerWithUser(user))){
             return "invalid userID entered";
         }
-        else {Player.getPlayerWithUser(user).getPlatoMessages().add(message);
-        return "Message sent successfully";
+        else {
+            PBMessage pbMessage=new PBMessage(message);
+            Player.getPlayerWithUser(user).getPlatoMessages().add(pbMessage);
+            return "Message sent successfully";
         }
 
     }
@@ -45,9 +44,6 @@ public class AdminMenu {
         if (validationEvent(start,end,String.valueOf(score),gameName).equalsIgnoreCase("event added successfully!")){
         Event event=new Event(UUID.randomUUID().toString(),gameName,start,end,score);}
 
-    }
-    public void viewEvents(){
-        Event.getAllEvents().toString();
     }
     public String editEvent(String field, String eventID, String newValue){
         if (field.equalsIgnoreCase("score")){
@@ -83,7 +79,7 @@ public class AdminMenu {
             }
         }}
         else{
-            Suggestion suggestion=new Suggestion( gameName,UUID.randomUUID().toString(),Player.getPlayerWithUser(userName));
+            Suggestion suggestion=new Suggestion( gameName,UUID.randomUUID().toString(),userName);
             return "suggestion added successfully";
         }
         return null;

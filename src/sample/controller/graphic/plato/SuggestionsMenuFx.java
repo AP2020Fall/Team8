@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class SuggestionsMenuFx {
-    public ListView<Suggestion> SuggestionsMenuList;
+   // public ListView<Suggestion> SuggestionsMenuList;
     public Button addsugB;
     public Label alertSug;
     public TextField usersugTf;
@@ -30,6 +30,7 @@ public class SuggestionsMenuFx {
     public void addSuggestion(ActionEvent actionEvent) {
         String message=AdminMenu.addSuggestion(usersugTf.getText(), gamesSugTf.getText());
         alertSug.setText(message);
+        makeTree();
     }
     public void removeSug(ActionEvent actionEvent) {
       Suggestion suggestion =sugTable.getSelectionModel().getSelectedItem();

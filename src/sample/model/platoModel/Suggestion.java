@@ -6,19 +6,21 @@ import java.util.ArrayList;
 
 public class Suggestion {
     private String suggestedGame;
-    private LocalDate dateOfSuggestion;
+    private String dateOfSuggestion;
     private String suggestionId;
-    private Player player;
+    private String player;
     private static ArrayList<Suggestion> allSugs=new ArrayList<>();
+    private LocalDate date;
 
-    public Suggestion(String suggestedGame, String suggestionId,Player player) {
+    public Suggestion(String suggestedGame, String suggestionId,String player) {
         this.suggestedGame = suggestedGame;
-        dateOfSuggestion= LocalDate.now();
+      //  dateOfSuggestion= LocalDate.now();
         this.suggestionId = suggestionId;
         allSugs.add(this);
         this.player=player;
-        dateOfSuggestion=LocalDate.now();
-        player.getSuggestions().add(this);
+        Player.getPlayerWithUser(player).getSuggestions().add(this);
+        date=LocalDate.now();
+        dateOfSuggestion=date.toString();
     }
 
     public String getSuggestionId() {
@@ -40,19 +42,5 @@ public class Suggestion {
         }
         return null;
     }
-    public void setSuggestedGame(String suggestedGame) {
-        this.suggestedGame = suggestedGame;
-    }
 
-    public void setDateOfSuggestion(LocalDate dateOfSuggestion) {
-        this.dateOfSuggestion = dateOfSuggestion;
-    }
-
-    public void setSuggestionId(String suggestionId) {
-        this.suggestionId = suggestionId;
-    }
-
-    public static void setAllSugs(ArrayList<Suggestion> allSugs) {
-        Suggestion.allSugs = allSugs;
-    }
 }

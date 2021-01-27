@@ -1,11 +1,12 @@
 package sample.controller.plato;
 
+import sample.controller.graphic.plato.FirstMenuFx;
 import sample.model.platoModel.Player;
 
 import java.util.Objects;
 
 public class FriendsMenu {
-     private static Player player;
+     private static Player player=FirstMenuFx.getLoggedInPlayer();
    /* public void showFriends(){
         player.getFriends().toString();
     }*/
@@ -43,7 +44,7 @@ public class FriendsMenu {
     public static void addUsername(String userName){
         userValidation(userName);
         if (output.equals("we requested the friend request"))
-            Objects.requireNonNull(Player.getPlayerWithUser(userName)).getFriendRequest().add(player);
+            Objects.requireNonNull(Player.getPlayerWithUser(userName)).getFriendRequest().add(FirstMenuFx.getLoggedInPlayer());
 
     }
 }

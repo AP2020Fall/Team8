@@ -5,25 +5,23 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.UsersMenuFx">
-    <children>
-        <ImageView fitHeight="515.0" fitWidth="622.0" layoutX="-8.0" layoutY="-7.0">
-            <image>
-                <Image url="@../images/paszamine_com_1687_Full_HD.jpg" />
-            </image>
-        </ImageView>
-        <Label layoutX="221.0" layoutY="54.0" text="User's Menu">
-            <font>
-                <Font size="30.0" />
-            </font>
-        </Label>
-      <TableView fx:id="userTable" layoutX="120.0" layoutY="133.0" prefHeight="330.0" prefWidth="365.0">
-        <columns>
-          <TableColumn fx:id="userColumn" prefWidth="86.66667938232422" text="UserName" />
-          <TableColumn fx:id="scoreColumn" prefWidth="79.33338928222656" text="Score" />
-            <TableColumn fx:id="daysPassedColumn" prefWidth="97.33331298828125" text="Days Passed" />
-            <TableColumn fx:id="winCountColumn" prefWidth="101.33331298828125" text="Wins Count" />
-        </columns>
-      </TableView>
-    </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0"
+      prefWidth="608.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.controller.graphic.plato.UsersMenuFx">
+    <ImageView fitHeight="515.0" fitWidth="622.0" layoutX="-8.0" layoutY="-7.0">
+        <Image url="@../images/paszamine_com_1687_Full_HD.jpg"/>
+    </ImageView>
+    <Label layoutX="221.0" layoutY="54.0" text="User's Menu">
+        <font>
+            <Font size="30.0"/>
+        </font>
+    </Label>
+    <TableView fx:id="userTable" layoutX="120.0" layoutY="133.0" prefHeight="330.0" prefWidth="365.0">
+      <columns>
+          <TableColumn fx:id="userColumn" prefWidth="86.66667938232422" text="UserName"/>
+          <TableColumn fx:id="scoreColumn" prefWidth="79.33338928222656" text="Score"/>
+          <TableColumn fx:id="daysPassedColumn" prefWidth="97.33331298828125" text="Days Passed"/>
+          <TableColumn fx:id="winCountColumn" prefWidth="101.33331298828125" text="Wins Count"/>
+      </columns>
+    </TableView>
 </Pane>

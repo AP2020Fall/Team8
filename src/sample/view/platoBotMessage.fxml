@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.PlatoBotMessageFx">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.PlatoBotMessageFx">
     <children>
         <ImageView fitHeight="514.0" fitWidth="625.0" layoutX="-7.0" layoutY="-8.0">
             <image>
                 <Image url="@../images/paszamine_com_1677_Full_HD.png" />
             </image>
         </ImageView>
-        <Label layoutX="207.0" layoutY="63.0" text="PlatoBot Message" textFill="WHITE">
+        <Label layoutX="253.0" layoutY="45.0" prefHeight="35.0" prefWidth="190.0" text="PlatoBot Messages" textFill="WHITE">
             <font>
-                <Font name="Calibri" size="30.0" />
+                <Font name="Calibri" size="24.0" />
             </font>
         </Label>
       <TableView fx:id="PBMessageTV" layoutX="187.0" layoutY="120.0" prefHeight="358.0" prefWidth="253.0">
@@ -26,5 +23,11 @@
           <TableColumn fx:id="timeC" prefWidth="83.33331298828125" text="Time" />
         </columns>
       </TableView>
+      <Label fx:id="firsMessageDate" layoutX="107.0" layoutY="149.0" prefHeight="17.0" prefWidth="80.0" />
+      <ImageView fitHeight="59.0" fitWidth="64.0" layoutX="185.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/platoIcon.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>

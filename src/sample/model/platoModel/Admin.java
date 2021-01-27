@@ -105,4 +105,19 @@ public class Admin{
     public void addSuggestions(String user){}
     public void removeSuggestion(){}
 
+    public static void setAdmin(ArrayList<sample.model.platoModel.Admin> admin) {
+        Admin = admin;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setPlatoAge(LocalDateTime platoAge) {
+        this.platoAge = platoAge;
+    }
 }

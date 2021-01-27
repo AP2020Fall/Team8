@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import sample.Main;
+import sample.controller.plato.FriendsMenu;
 import sample.model.platoModel.Player;
 
 
@@ -35,6 +36,7 @@ public class GameMenuFx {
 
     @FXML
     public void initialize(){
+        if (FirstMenuFx.getLoggedInPlayer()!=null){
         if(gameName.equals("Reversi")){
             showPlayedCountText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiPlayedCounts()));
             showWinsText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiAndWinsCounts()));
@@ -48,7 +50,8 @@ public class GameMenuFx {
             showWinsText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getDotsAndBoxesAndWinsCount()));
             gameDet.setText("Usually two players take turns adding a single horizontal or vertical line between two unjoined adjacent dots. A player who completes the fourth side of a 1×1 box earns one point and takes another turn. (A point is typically recorded by placing a mark that identifies the player in the box, such as an initial.)");
             gameDet.setEditable(false);
-        }
+        }}
+
 
     }
 

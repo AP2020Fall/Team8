@@ -26,18 +26,19 @@ public class RegisterMenu {
         if (Player.getAllPlayers().contains(Player.getPlayerWithUser(username))){
             num= 2;
         }
-        else if (password.length() < 9) {
+        else if (password.length() < 9)
             num= 3;
-        } else if (password.length() > 26){
-            num= 4;}
-            else if(!email.matches("^.+@.+$"))
+        else if (password.length() > 26)
+            num= 4;
+        else if(!email.matches("^.+@.+$"))
                 num= 7;
-            else if (!phone.matches("\\d{11}"))
+        else if (!phone.matches("\\d{11}"))
                 num= 8;
-            else if (FirstMenuFx.getLoggedInPlayer()!=null || FirstMenuFx.getLoggedInAdmin()!=null)
+        else if (FirstMenuFx.getLoggedInPlayer()!=null || FirstMenuFx.getLoggedInAdmin()!=null)
                 num=10;
         //user and password are right
-        num= 9;
+        else
+            num= 9;
     }
     //account id ro random bezar
     public static void registerAccount(String username, String password, String name, String lastname, String email, String phone)throws NullPointerException {
@@ -61,7 +62,7 @@ public class RegisterMenu {
             System.out.println(Player.getPlayerWithUser(username));
 
         }}
-        Admin.isThereAdmin=true;
+       // Admin.isThereAdmin=true;
     }
     public static void registerPlayer(String username, String password, String name, String lastName, String email, String phone){
         Player player= new Player(username,password);
@@ -73,11 +74,5 @@ public class RegisterMenu {
          admin.setDetails(name,lastName,UUID.randomUUID().toString(),email,phone);
 
           }
-    public static void addAdminDetails(Admin admin, String name, String lastName, String accountID, String email, String phone){
-        admin.setDetails(name,lastName,accountID,email,phone);
-    }
-    public static void addPlayerDetails(Player player, String name, String lastName, String accountID, String email, String phone){
-        player.setDetails(name,lastName,accountID,email,phone);
-    }
 
 }

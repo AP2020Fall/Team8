@@ -67,6 +67,8 @@ public class RegisterMenuFx {
             }
             }
         }
+        else {alertReg.setText("you must fill all of the text fields");
+        }
        // Parent pri= FXMLLoader.load(Objects.requireNonNull(RegisterMenuFx.class.getClassLoader().getResource("registerMenuFx.fxml")));
 
     }

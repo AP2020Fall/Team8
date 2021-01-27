@@ -3,6 +3,8 @@ package sample.controller.graphic.plato;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import sample.controller.plato.AccountsMenu;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
 
@@ -15,6 +17,11 @@ public class UserPro {
     public Label alertProfile;
    // private static Player player;
     private static Admin admin;
+    public TextField oldPassTf;
+    public TextField newPassTf;
+    public TextField fieldTF;
+    public TextField newValueTf;
+
     @FXML
     public void initialize(){
         if(FirstMenuFx.getLoggedInPlayer()!=null){
@@ -38,10 +45,12 @@ public class UserPro {
     }
 
     public void changePass(ActionEvent actionEvent) {
-        ;
+        AccountsMenu.changePassword(oldPassTf.getText(),newPassTf.getText());
     }
 
     public void edit(ActionEvent actionEvent) {
+        AccountsMenu.editField(fieldTF.getText(),newValueTf.getText());
+        initialize();
 
     }
 }

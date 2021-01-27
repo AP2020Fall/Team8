@@ -3,12 +3,13 @@ package sample.model.platoModel;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class Player{
     private int point;
-    private ArrayList<String> platoMessages;
+    private ArrayList<PBMessage> platoMessages;
     private ArrayList<Suggestion> suggestions;
     private ArrayList<Player> friends;
     private ArrayList<Player> friendRequest;
@@ -33,6 +34,19 @@ public class Player{
     private String phone;
     private LocalDateTime platoAge;
     private ArrayList<GameHistoryInfo> gameHistories;
+    public Player(String username, String password) {
+        this.userName=username;
+        this.passWord=password;
+        suggestions = new ArrayList<>();
+        favoriteGames = new LinkedHashSet<>();
+        friendRequest = new ArrayList<>();
+        friends = new ArrayList<>();
+        allPlayers.add(this);
+        gameHistories=new ArrayList<>();
+        platoMessages=new ArrayList<>();
+
+    }
+
 
     public void setDetails(String name, String lastName, String accountID, String email, String phone) {
         this.name = name;
@@ -40,6 +54,70 @@ public class Player{
         this.accountID = accountID;
         this.email = email;
         this.phone = phone;
+    }
+
+    public void setPoint(int point) {
+        this.point = point;
+    }
+
+    public void setPlatoMessages(ArrayList<PBMessage> platoMessages) {
+        this.platoMessages = platoMessages;
+    }
+
+    public void setSuggestions(ArrayList<Suggestion> suggestions) {
+        this.suggestions = suggestions;
+    }
+
+    public void setFriends(ArrayList<Player> friends) {
+        this.friends = friends;
+    }
+
+    public void setFriendRequest(ArrayList<Player> friendRequest) {
+        this.friendRequest = friendRequest;
+    }
+
+    public void setFavoriteGames(Set<String> favoriteGames) {
+        this.favoriteGames = favoriteGames;
+    }
+
+    public void setReversiAndWinsCounts(int reversiAndWinsCounts) {
+        this.reversiAndWinsCounts = reversiAndWinsCounts;
+    }
+
+    public void setDotsAndBoxesAndWinsCount(int dotsAndBoxesAndWinsCount) {
+        this.dotsAndBoxesAndWinsCount = dotsAndBoxesAndWinsCount;
+    }
+
+    public void setReversiPlayedCounts(int reversiPlayedCounts) {
+        this.reversiPlayedCounts = reversiPlayedCounts;
+    }
+
+    public void setDotsAndBoxesPlayedCounts(int dotsAndBoxesPlayedCounts) {
+        this.dotsAndBoxesPlayedCounts = dotsAndBoxesPlayedCounts;
+    }
+
+    public static void setAllPlayers(ArrayList<Player> allPlayers) {
+        Player.allPlayers = allPlayers;
+    }
+
+    public void setGameReqs(ArrayList<GameReq> gameReqs) {
+        this.gameReqs = gameReqs;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setPlatoAge(LocalDateTime platoAge) {
+        this.platoAge = platoAge;
+    }
+
+    public void setGameHistories(ArrayList<GameHistoryInfo> gameHistories) {
+        this.gameHistories = gameHistories;
     }
 
     public void setStatus(String status) {
@@ -163,7 +241,7 @@ public class Player{
         return point;
     }
 
-    public ArrayList<String> getPlatoMessages() {
+    public ArrayList<PBMessage> getPlatoMessages() {
         return platoMessages;
     }
 
@@ -204,17 +282,6 @@ public class Player{
         return friends;
     }
 
-    public Player(String username, String password) {
-        this.userName=username;
-        this.passWord=password;
-        suggestions = new ArrayList<>();
-        favoriteGames = new LinkedHashSet<String>();
-        friendRequest = new ArrayList<>();
-        friends = new ArrayList<>();
-        allPlayers.add(this);
-        gameHistories=new ArrayList<>();
-
-    }
 
     public ArrayList<GameHistoryInfo> getGameHistories() {
         return gameHistories;
@@ -243,4 +310,6 @@ public class Player{
         }
         return null;
     }
+
+
 }

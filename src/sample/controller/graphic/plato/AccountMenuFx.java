@@ -15,13 +15,21 @@ public class AccountMenuFx {
     public Label usernameLablel;
     public Label reversiStatistics;
     public Label DBStatics;
+    public Label alertAccount;
 
 
     public void logout(ActionEvent actionEvent) {
         AccountsMenu.logout();
+        alertAccount.setText("logout successfully");
+        Main.allStage.close();
+
     }
 
-    public void loadGamesHistory(ActionEvent actionEvent) {
+    public void loadGamesHistory(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameHistory.fxml"));
+        Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
    @FXML
     public void initialize(){

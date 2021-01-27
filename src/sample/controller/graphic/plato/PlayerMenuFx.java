@@ -40,6 +40,11 @@ public class PlayerMenuFx {
         Main.allStage.show();
     }
 
-    public void loadPBB(ActionEvent actionEvent) {
+    public void loadPBB(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoBotMessage.fxml"));
+        Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+
     }
 }

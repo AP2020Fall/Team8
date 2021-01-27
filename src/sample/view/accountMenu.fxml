@@ -25,4 +25,5 @@
    <Label layoutX="42.0" layoutY="256.0" text="Dots and BoxesStatistics" />
    <Label layoutX="77.0" layoutY="174.0" text="Reversi Statistics" />
    <Button layoutX="164.0" layoutY="76.0" mnemonicParsing="false" onAction="#loadPlatoStatistics" prefHeight="44.0" prefWidth="138.0" text="View Plato Statistics" />
+   <Label fx:id="alertAccount" layoutX="132.0" layoutY="302.0" prefHeight="17.0" prefWidth="227.0" />
 </AnchorPane>

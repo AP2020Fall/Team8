@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 public class PlatoStatics {
 
-    private static Player player;
+    private static Player player=FirstMenuFx.getLoggedInPlayer();
     public Text usernameT;
     public Text winsCountT;
     public Text datePassedT;
@@ -24,9 +24,6 @@ public class PlatoStatics {
     public Label alertProfile;
     public Text friendsCountT;
 
-    public static void setPlayer(Player player) {
-        PlatoStatics.player = player;
-    }
     @FXML
     public void initialize(){
         usernameT.setText(player.getUserName());
