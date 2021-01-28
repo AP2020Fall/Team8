@@ -1,8 +1,15 @@
 package sample.controller.graphic.plato;
 
 
+import javafx.scene.Parent;
+
 public class DBFx {
-   /* private  ArrayList<Line> ra11=new ArrayList<>();
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        DBFx.pre = pre;
+    }
+    /* private  ArrayList<Line> ra11=new ArrayList<>();
 
     private ArrayList<Line> ra77=new ArrayList<>();
     public Line vl77;

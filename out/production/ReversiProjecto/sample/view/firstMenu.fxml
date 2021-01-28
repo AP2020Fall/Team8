@@ -6,6 +6,8 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.FirstMenuFx">
 <children>
     <Rectangle arcHeight="5.0" arcWidth="5.0" height="523.0" layoutX="-4.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="580.0">
@@ -49,5 +51,11 @@
             <Font name="Arial terminal one" size="14.0" />
         </font>
     </Button>
+
+    <ImageView fx:id="exit" fitHeight="70.0" fitWidth="116.0" layoutX="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/exitIcon.png" />
+        </image>
+    </ImageView>
 </children>
 </Pane>

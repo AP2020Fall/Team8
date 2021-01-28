@@ -1,6 +1,7 @@
 package sample.controller.graphic.plato;
 
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.text.Text;
 import sample.model.platoModel.*;
 
@@ -13,6 +14,11 @@ public class FriendProfile {
     public Text frDatePassedT;
     public Text frScoreT;
     private static Player player;
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        FriendProfile.pre = pre;
+    }
 
     @FXML
     public void initialize(){

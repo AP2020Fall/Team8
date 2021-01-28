@@ -6,6 +6,8 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <AnchorPane prefHeight="489.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.PreFriendsMenu">
    <Rectangle arcHeight="5.0" arcWidth="5.0" height="522.0" stroke="BLACK" strokeType="INSIDE" width="446.0">
@@ -23,4 +25,16 @@
    <Button layoutX="235.0" layoutY="314.0" mnemonicParsing="false" onAction="#loadFriendsReqa" prefHeight="81.0"
            prefWidth="179.0" text="Friend Requests"/>
    <Text layoutX="200.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends Menu"/>
+   <ImageView fx:id="back" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/backk.jpg" />
+      </image>
+   </ImageView>
+   <ImageView fx:id="exit" fitHeight="70.0" fitWidth="116.0" layoutX="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/exitIcon.png" />
+      </image>
+   </ImageView>
+
 </AnchorPane>
+

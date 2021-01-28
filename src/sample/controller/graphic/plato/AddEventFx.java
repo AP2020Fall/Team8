@@ -1,5 +1,9 @@
 package sample.controller.graphic.plato;
 
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import sample.Main;
 import sample.controller.plato.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -18,6 +22,12 @@ public class AddEventFx {
     public Button createEventB;
     public Label alertCreateEvent;
     private String gameName;
+
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        AddEventFx.pre = pre;
+    }
 
     public void addEvent(ActionEvent actionEvent) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -41,5 +51,15 @@ public class AddEventFx {
 
     public void addDB(ActionEvent actionEvent) {
         gameName="Dots and Boxes";
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

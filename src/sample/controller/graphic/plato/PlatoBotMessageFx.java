@@ -3,11 +3,15 @@ package sample.controller.graphic.plato;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import sample.Main;
 import sample.model.platoModel.Event;
 import sample.model.platoModel.PBMessage;
 
@@ -18,15 +22,20 @@ public class PlatoBotMessageFx {
   //  public ListView PlatoBotMessageList;
     public TableView<PBMessage> PBMessageTV;
     public TableColumn<PBMessage,String> messageC;
-    public TableColumn<PBMessage,String> timeC;
+    public TableColumn<PBMessage,LocalDate> timeC;
    // ObservableList<PBMessage> PBObserve = FXCollections.observableArrayList();
      ArrayList<PBMessage> PBShow =new ArrayList<>();
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        PlatoBotMessageFx.pre = pre;
+    }
+
     @FXML
     public void initialize(){
 
         messageC.setCellValueFactory(new PropertyValueFactory<PBMessage,String>("message"));
-        timeC.setCellValueFactory(new PropertyValueFactory<PBMessage,String>("time"));
-
+        timeC.setCellValueFactory(new PropertyValueFactory<PBMessage,LocalDate>("date"));
         list();
         ObservableList<PBMessage> PBObserve = FXCollections.observableArrayList(PBShow);
         PBMessageTV.setItems(PBObserve);
@@ -40,4 +49,15 @@ public class PlatoBotMessageFx {
     public    void list(){
         PBShow=FirstMenuFx.getLoggedInPlayer().getPlatoMessages();
         }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
 }

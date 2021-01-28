@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.controller.plato.AccountsMenu;
 
@@ -16,8 +17,10 @@ public class AccountMenuFx {
     public Label reversiStatistics;
     public Label DBStatics;
     public Label alertAccount;
-
-
+    private static Parent pre;
+    public static void setPre(Parent pre) {
+        AccountMenuFx.pre = pre;
+    }
     public void logout(ActionEvent actionEvent) {
         AccountsMenu.logout();
         alertAccount.setText("logout successfully");
@@ -25,7 +28,10 @@ public class AccountMenuFx {
 
     }
 
+
+
     public void loadGamesHistory(ActionEvent actionEvent) throws IOException {
+        GameHistoryFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameHistory.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
@@ -39,6 +45,7 @@ public class AccountMenuFx {
     }
 
     public void loadProfile(ActionEvent actionEvent) throws IOException {
+      UserPro.setPre(FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml")));
         if (FirstMenuFx.getLoggedInPlayer()!=null){
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userProfile.fxml"));
         Scene pageTwoScene = new Scene(root);
@@ -54,8 +61,19 @@ public class AccountMenuFx {
     }
 
     public void loadPlatoStatistics(ActionEvent actionEvent) throws IOException {
+        PlatoStatics.setPre(FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoStatistics.fxml"));
         Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
     }

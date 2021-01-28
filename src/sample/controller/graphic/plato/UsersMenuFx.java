@@ -3,10 +3,16 @@ package sample.controller.graphic.plato;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import sample.Main;
+import sample.controller.MenuController;
 import sample.controller.plato.PlayerMenu;
 import sample.model.platoModel.Player;
 import sample.model.platoModel.UserShow;
@@ -26,6 +32,12 @@ public class UsersMenuFx {
     ObservableList<Player> names = FXCollections.observableArrayList();
     public static ArrayList<Player> users =new ArrayList<>();
   //  ListView<Player> listView = new ListView<Player>(names);
+  private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        UsersMenuFx.pre = pre;
+    }
+
     @FXML
     public void initialize() throws IOException {
         makeTree();
@@ -46,8 +58,23 @@ public class UsersMenuFx {
     }
 
     private  static void list(){
+        for (Player player : Player.getAllPlayers()) {
+            player.setDatesPassed();
+        }
         users.addAll(Player.getAllPlayers());
     }
 
 
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+
+
+    }
+
+    public void processBack(MouseEvent mouseEvent) throws IOException {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
 }

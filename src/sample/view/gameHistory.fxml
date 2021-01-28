@@ -27,4 +27,14 @@
             <TableColumn fx:id="resultC" prefWidth="90.6666259765625" text="Result"/>
         </columns>
     </TableView>
+    <ImageView fx:id="back" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/backk.jpg" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="exit" fitHeight="70.0" fitWidth="116.0" layoutX="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/exitIcon.png" />
+        </image>
+    </ImageView>
 </Pane>

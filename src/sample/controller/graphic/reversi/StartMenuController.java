@@ -1,9 +1,12 @@
 package sample.controller.graphic.reversi;
 
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.controller.graphic.plato.FirstMenuFx;
 import sample.model.platoModel.Player;
@@ -20,9 +23,17 @@ public class StartMenuController {
     public Label alertReversi;
     ReversiPlayer reversiPlayer1 = new ReversiPlayer(1);
     ReversiPlayer reversiPlayer2 = new ReversiPlayer(2);
+    static Parent pre;
+
+    public static void setPre(Parent pre) {
+        StartMenuController.pre = pre;
+    }
+
     public StartMenuController(){
 
     }
+
+
     @FXML
     public void initialize() {
         Player1Combo.getItems().removeAll(Player1Combo.getItems());
@@ -74,5 +85,16 @@ public class StartMenuController {
 
     public static ReversiGame getReversiGame() {
         return reversiGame;
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

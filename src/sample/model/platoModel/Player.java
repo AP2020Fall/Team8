@@ -1,6 +1,7 @@
 package sample.model.platoModel;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -41,7 +42,6 @@ public class Player{
     public Player(String username, String password) {
         this.userName=username;
         this.passWord=password;
-      //  this.point=point;
         suggestions = new ArrayList<>();
         favoriteGames = new LinkedHashSet<>();
         friendRequest = new ArrayList<>();
@@ -49,8 +49,9 @@ public class Player{
         allPlayers.add(this);
         gameHistories=new ArrayList<>();
         platoMessages=new ArrayList<>();
-        datesPassed= Duration.between(LocalDateTime.now(),platoAge).toDays();
+        platoAge=LocalDateTime.now();
     }
+
 
 
     public void setDetails(String name, String lastName, String accountID, String email, String phone) {
@@ -60,21 +61,15 @@ public class Player{
         this.email = email;
         this.phone = phone;
     }
-
-
-
     public void setPlatoMessages(ArrayList<PBMessage> platoMessages) {
         this.platoMessages = platoMessages;
     }
-
     public void setSuggestions(ArrayList<Suggestion> suggestions) {
         this.suggestions = suggestions;
     }
-
-    public void setFriends(ArrayList<Player> friends) {
+   public void setFriends(ArrayList<Player> friends) {
         this.friends = friends;
     }
-
     public void setFriendRequest(ArrayList<Player> friendRequest) {
         this.friendRequest = friendRequest;
     }
@@ -324,7 +319,16 @@ public class Player{
         return datesPassed;
     }
 
-    public void setDatesPassed(long datesPassed) {
-        this.datesPassed = datesPassed;
+    public void setDatesPassed() {
+        datesPassed= ChronoUnit.DAYS.between(LocalDate.now(), platoAge);
+
+    }
+
+    public int getTotalWins() {
+        return totalWins;
+    }
+
+    public void setTotalWins(int totalWins) {
+        this.totalWins = totalWins;
     }
 }

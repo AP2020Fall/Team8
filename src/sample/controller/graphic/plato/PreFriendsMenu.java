@@ -4,13 +4,21 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import sample.Main;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class PreFriendsMenu {
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        PreFriendsMenu.pre = pre;
+    }
+
     public void loadFriendLists(ActionEvent actionEvent) throws IOException {
+        FriendsMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
@@ -18,8 +26,20 @@ public class PreFriendsMenu {
     }
 
     public void loadFriendsReqa(ActionEvent actionEvent) throws IOException {
+        FriendsRequestsFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendsRequests.fxml"));
         Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
     }

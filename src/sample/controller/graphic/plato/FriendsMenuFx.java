@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.controller.plato.FriendsMenu;
 import sample.model.platoModel.Player;
@@ -22,6 +23,12 @@ public class FriendsMenuFx {
     public Button removeB;
     public Button viewUser;
     ArrayList<String> friends=new ArrayList<>();
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        FriendsMenuFx.pre = pre;
+    }
+
     @FXML
     public void initialize(){
         list();
@@ -51,5 +58,15 @@ public class FriendsMenuFx {
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
 
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

@@ -19,7 +19,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <TextField fx:id="searchTF" layoutX="129.0" layoutY="37.0" onInputMethodTextChanged="#searchProcess" prefHeight="25.0" prefWidth="269.0" />
+      <TextField fx:id="searchTF" layoutX="129.0" layoutY="37.0" onKeyTyped="#searchProcess" prefHeight="25.0" prefWidth="269.0" />
       <ListView fx:id="searchList" layoutX="126.0" layoutY="78.0" prefHeight="434.0" prefWidth="276.0" />
       <Label layoutX="68.0" layoutY="78.0" text="Results:">
          <font>
@@ -32,5 +32,16 @@
          </image>
       </ImageView>
       <Button layoutX="442.0" layoutY="295.0" mnemonicParsing="false" onAction="#openUser" text="View User" />
+      <ImageView fx:id="back" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backk.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exit" fitHeight="70.0" fitWidth="116.0" layoutX="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/exitIcon.png" />
+         </image>
+      </ImageView>
    </children>
+
 </AnchorPane>

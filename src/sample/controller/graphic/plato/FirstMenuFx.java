@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import sample.Main;
@@ -28,6 +29,12 @@ public class FirstMenuFx {
     public Button firstLoginB;
     public Button firstFriendB;
    private static Player loggedInPlayer;
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        FirstMenuFx.pre = pre;
+    }
+
     public static Player getLoggedInPlayer() {
         return loggedInPlayer;
     }
@@ -63,11 +70,13 @@ public class FirstMenuFx {
         System.out.println("11");
         if(loggedInAdmin != null){
             System.out.println("22");
+            AdminMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
        // Main.allStage.setTitle("Score Board Menu");
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();}
         else if (loggedInPlayer!=null){
+            PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             System.out.println("33");
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
            // Main.allStage.setTitle("Score Board Menu");
@@ -83,12 +92,14 @@ public class FirstMenuFx {
     public void loadAccount() throws IOException {
         System.out.println("1");
         if (loggedInAdmin != null) {
+            AdminAccountFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             System.out.println(2);
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminAccount.fxml"));
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();
         } else if (loggedInPlayer != null) {
             System.out.println("3");
+            AccountMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml"));
             Main.allStage.setScene(new Scene(root));
             Main.allStage.show();
@@ -98,11 +109,13 @@ public class FirstMenuFx {
 
 
     public void loadReg() throws IOException {
+        RegisterMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml"));
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();}
 
     public void loadGames() throws IOException {
+        GameMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/games.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
@@ -110,6 +123,7 @@ public class FirstMenuFx {
     }
 
     public void loadLogin() throws IOException {
+        LoginMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/loginMenuFx.fxml"));
 
             Main.allStage.setScene(new Scene(root));
@@ -117,16 +131,17 @@ public class FirstMenuFx {
     }
 //helia akhtarkavian pare shod.
     public void loadFriendMenu() throws IOException {
+      FriendsMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
 
     }
-    public void playMusic() {
-        File file = new File("src\\Sounds\\Click.mp3");
-        Media media = new Media(file.toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(media);
-        mediaPlayer.play();
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+
+
     }
 }

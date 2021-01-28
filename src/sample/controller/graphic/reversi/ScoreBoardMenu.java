@@ -1,7 +1,9 @@
 package sample.controller.graphic.reversi;
 
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 import sample.Main;
 import sample.model.reversiModel.ReversiPlayer;
@@ -31,5 +33,17 @@ public class ScoreBoardMenu  implements Initializable {
         ScoreBoardTextArea.setText(stringBuilder.toString());
         if (stringBuilder.length() > 1)
         stringBuilder.delete(0,stringBuilder.length()-1);
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+
     }
 }

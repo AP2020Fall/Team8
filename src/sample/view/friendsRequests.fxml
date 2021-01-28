@@ -36,5 +36,15 @@
          </font>
       </Label>
       <Label fx:id="alertReq" layoutX="249.0" layoutY="386.0" textFill="#ea0b0b" />
+        <ImageView fx:id="back" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/backk.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="exit" fitHeight="70.0" fitWidth="116.0" layoutX="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/exitIcon.png" />
+            </image>
+        </ImageView>
     </children>
 </Pane>

@@ -1,9 +1,13 @@
 package sample.controller.graphic.plato;
 
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
+import sample.Main;
 import sample.model.platoModel.Player;
 
 import java.time.Duration;
@@ -23,6 +27,11 @@ public class PlatoStatics {
     public Label phoneProfile;
     public Label alertProfile;
     public Text friendsCountT;
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        PlatoStatics.pre = pre;
+    }
 
     @FXML
     public void initialize(){
@@ -31,6 +40,17 @@ public class PlatoStatics {
         datePassedT.setText(String.valueOf(Duration.between(player.getPlatoAge(), LocalDateTime.now()).toDays()));
         scoreT.setText(String.valueOf(player.getDBScore()+player.getReversiScore()));
         friendsCountT.setText(String.valueOf(player.getFriends().size()));
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }
 

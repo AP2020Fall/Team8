@@ -4,8 +4,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import sample.Main;
 import sample.controller.plato.AdminMenu;
 import sample.model.platoModel.*;
 
@@ -27,6 +31,12 @@ public class SuggestionsMenuFx {
     public TableColumn<Suggestion, String> dateSugC;
     ObservableList<Suggestion> sugObserve = FXCollections.observableArrayList();
     public static ArrayList<Suggestion> sugShow =new ArrayList<>();
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        SuggestionsMenuFx.pre = pre;
+    }
+
     public void addSuggestion(ActionEvent actionEvent) {
         String message=AdminMenu.addSuggestion(usersugTf.getText(), gamesSugTf.getText());
         alertSug.setText(message);
@@ -67,5 +77,16 @@ public class SuggestionsMenuFx {
 
     public   static void list(){
         sugShow.addAll(Suggestion.getAllSugs());
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

@@ -11,6 +11,7 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.model.platoModel.*;
 
@@ -29,9 +30,16 @@ public class EventsLogFx {
     public TableView<sample.model.platoModel.Event> EventsTable;
     ObservableList<sample.model.platoModel.Event> eventsObserve = FXCollections.observableArrayList();
     public static ArrayList<sample.model.platoModel.Event> eventsShow =new ArrayList<>();
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        EventsLogFx.pre = pre;
+    }
+
     public void loadEvent(ActionEvent actionEvent) throws IOException {
         sample.model.platoModel.Event event=EventsTable.getSelectionModel().getSelectedItem();
         EventFx.setEvent(event);
+        EventFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/eventsLog.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/eventFx.fxml"));
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(EventFx.class.getClassLoader().getResource("eventFx.fxml")));
         Scene pageTwoScene = new Scene(root);
@@ -61,5 +69,15 @@ public class EventsLogFx {
 
     public   static void list(){
         eventsShow.addAll(Event.getAllEvents());
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

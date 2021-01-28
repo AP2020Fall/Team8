@@ -4,7 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+import sample.Main;
 import sample.controller.plato.FriendsMenu;
 import sample.model.platoModel.Player;
 
@@ -18,6 +22,11 @@ public class FriendsRequestsFx {
     public TextField userTF;
     public Label alertReq;
     ArrayList<String> names=new ArrayList<>();
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        FriendsRequestsFx.pre = pre;
+    }
 
     @FXML
     public void initialize(){
@@ -47,5 +56,16 @@ public class FriendsRequestsFx {
     public void sendFreindReq(ActionEvent actionEvent) {
         FriendsMenu.addUsername(userTF.getText());
         alertReq.setText(FriendsMenu.output);
+    }
+
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

@@ -1,5 +1,6 @@
 package sample.controller.graphic.plato;
 
+import javafx.scene.input.MouseEvent;
 import sample.controller.plato.RegisterMenu;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -32,6 +33,12 @@ public class RegisterMenuFx {
     private static boolean isFirstReg=true;
     private static boolean pageTurn=false;
 
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        RegisterMenuFx.pre = pre;
+    }
+
     public static void setFirstReg(boolean firstReg) {
         RegisterMenuFx.isFirstReg=firstReg;
     }
@@ -50,6 +57,7 @@ public class RegisterMenuFx {
       //  System.out.println(Admin.getAdmin());
         if(RegisterMenu.getNum()==9) {
             if (isFirstReg) {
+                PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
@@ -58,6 +66,7 @@ public class RegisterMenuFx {
                 pageTurn=true;
             }
             else if (!pageTurn){
+                PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
@@ -73,9 +82,16 @@ public class RegisterMenuFx {
 
     }
 
-    public void processExit(ContextMenuEvent contextMenuEvent) {
+    public void processBack(ContextMenuEvent contextMenuEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
-    public void processBack(ContextMenuEvent contextMenuEvent) {
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
     }
+
+
 }

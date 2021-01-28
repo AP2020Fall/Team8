@@ -7,36 +7,36 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
-import javafx.scene.input.InputMethodEvent;
 
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.model.platoModel.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class SearchMenu {
     public TextField searchTF;
     public ListView<String> searchList;
     ObservableList<String> friendsName = FXCollections.observableArrayList();
     ArrayList<String> searchResult=new ArrayList<>();
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        SearchMenu.pre = pre;
+    }
+
     @FXML
     public void initialize(){
-        //primaryStage.setTitle("ListView Experiment 1");
-
-        friendsName.clear();
+      //   friendsName.clear();
         friendsName.addAll(searchResult);
         searchList.setItems(friendsName);
-        searchList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-
-
-
-
+        //searchList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
-    public void searchProcess(InputMethodEvent inputMethodEvent) {
+    public void searchProcess(KeyEvent inputMethodEvent) {
         //ArrayList<String> searchResult=new ArrayList<>();
+        System.out.println("searching");
         for (Player friend : FirstMenuFx.getLoggedInPlayer().getFriends()) {
             if (friend.getUserName().contains(searchTF.getText())){
                 searchResult.add(friend.getUserName());
@@ -51,9 +51,20 @@ public class SearchMenu {
            Player p1= Player.getPlayerWithUser(index.toString());
             FriendProfile.setPlayer(p1);
         }
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendProfile.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoStatistics.fxml"));
     //    Parent root = FXMLLoader.load(Objects.requireNonNull(FriendProfile.class.getClassLoader().getResource("friendProfile.fxml")));
         Scene pageTwoScene = new Scene(root);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
     }

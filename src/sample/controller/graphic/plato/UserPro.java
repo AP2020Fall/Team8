@@ -2,8 +2,12 @@ package sample.controller.graphic.plato;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import sample.Main;
 import sample.controller.plato.AccountsMenu;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
@@ -22,6 +26,11 @@ public class UserPro {
     public TextField newPassTf;
     public TextField fieldTF;
     public TextField newValueTf;
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        UserPro.pre = pre;
+    }
 
     @FXML
     public void initialize(){
@@ -55,5 +64,16 @@ public class UserPro {
         alertProfile.setText(OutputHandler.showAccountOutput(message));
         initialize();
 
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+        Main.allStage.close();
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

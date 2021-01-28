@@ -3,6 +3,7 @@ package sample.controller.graphic.plato;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -20,6 +21,11 @@ public class ScoreBoardMenuFx {
     public TableColumn<ReversiSBPlayer, String> playerSBColumn2;
     public TableColumn<ReversiSBPlayer, Number> scoreSBColumn2;
     public TableView<ReversiSBPlayer> SBTableView2;
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        ScoreBoardMenuFx.pre = pre;
+    }
 
     public static void setGameName(String gameName) {
         ScoreBoardMenuFx.gameName = gameName;

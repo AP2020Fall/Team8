@@ -8,7 +8,7 @@ import sample.controller.graphic.plato.FirstMenuFx;
 import java.io.IOException;
 
 public class MenuController {
-    Stage stage = new Stage();
+    static Stage stage = new Stage();
     public void openStartMenu() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../view/firstMenu.fxml"));
         stage.setTitle("Start Menu");

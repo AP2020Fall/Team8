@@ -1,7 +1,11 @@
 package sample.controller.graphic.plato;
 
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import sample.Main;
 import sample.model.platoModel.*;
 
 import java.io.IOException;
@@ -13,6 +17,11 @@ public class EventFx {
     public Text evScoreT;
     public Text evEndT;
      private static Event event;
+    private static Parent pre;
+
+    public static void setPre(Parent pre) {
+        EventFx.pre = pre;
+    }
 
     public static void setEvent(Event event) {
         EventFx.event = event;
@@ -30,4 +39,14 @@ public class EventFx {
         evScoreT.setText(String.valueOf(event.getEventScore()));
 
             }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
+    }
 }

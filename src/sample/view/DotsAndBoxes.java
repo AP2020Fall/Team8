@@ -1,5 +1,6 @@
 package sample.view;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -11,6 +12,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 import javafx.scene.media.Media;
+import sample.Main;
+
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
@@ -3771,6 +3774,16 @@ public class DotsAndBoxes{
     }
 
     public void showScore() {
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+    public void processBack(MouseEvent mouseEvent) {
+        Scene pageTwoScene = new Scene(pre);
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }
 

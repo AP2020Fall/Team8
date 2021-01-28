@@ -6,6 +6,8 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane prefHeight="481.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.UserPro">
     <Rectangle arcHeight="5.0" arcWidth="5.0" height="502.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" width="456.0">
         <fill>
@@ -51,4 +53,16 @@
     <TextField fx:id="newValueTf" layoutX="167.0" layoutY="411.0" />
     <Label layoutX="60.0" layoutY="389.0" text="Field" />
     <Label layoutX="215.0" layoutY="389.0" text=" new Value" />
+
+    <ImageView fx:id="back" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/backk.jpg" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="exit" fitHeight="70.0" fitWidth="116.0" layoutX="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/exitIcon.png" />
+        </image>
+    </ImageView>
+
 </AnchorPane>
