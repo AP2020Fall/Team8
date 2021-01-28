@@ -59,13 +59,13 @@ public class LoginMenuFx {
 
     }
     public void playMusiAdmin(){
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Популярная_классика_–_Mozart_Piano_Co.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
     public void playMusicPlayer(){
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Yatao - Listen to the Mountains.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);

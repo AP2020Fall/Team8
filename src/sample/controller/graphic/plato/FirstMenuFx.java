@@ -89,51 +89,51 @@ public class FirstMenuFx {
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();*/
         public void playMusicMainAdmin() {
-            File file = new File("src/sample/sounds/viva.mp3");
+            File file = new File("src/sample/sounds/Популярная_классика_–_Mozart_Piano_Co.mp3");
             Media media = new Media(file.toURI().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(media);
             mediaPlayer.setAutoPlay(true);
         }
     public void playMusicMainPlayer() {
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Tik Taak Ta Hamishe.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
     public void playMusicMainAccountAdmin(){
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Tom_Rosenthal_–_Home_Edward_Sharpe_&.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
     public void playMusicAccountPlayer (){
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Yatao - Listen to the Mountains.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
 
     public void playMusicReg(){
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Yasaman Mashhouri - Extinguished Memories (128).mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
     public void playMusicLogin() {
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Wiener Philharmoniker, Leonard Bernstein - Symphony No.25 In.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
     public void playMusicMainGames(){
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Vivaldi The Four Seasons CD 1 TRACK 10 (128).mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
 
     public void playMusicMainFriends(){
-        File file = new File("src/sample/sounds/viva.mp3");
+        File file = new File("src/sample/sounds/Vivaldi Il Cimento dell Armonia e dell Inventione op. VIII -.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
