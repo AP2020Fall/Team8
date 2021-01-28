@@ -1,6 +1,7 @@
 package sample.controller.graphic.reversi;
 
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
@@ -15,6 +16,7 @@ import java.util.ResourceBundle;
 public class ScoreBoardMenu  implements Initializable {
     public Circle ScoreBoardMenuBackCircle;
     public TextArea ScoreBoardTextArea;
+    private  static Parent pre;
 
     public void OnScoreBoardMenuBackCircleClicked() throws IOException {
         Main.menuController.openStartMenu();

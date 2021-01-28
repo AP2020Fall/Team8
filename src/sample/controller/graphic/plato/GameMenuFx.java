@@ -9,6 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import sample.Main;
 import sample.controller.graphic.dots.StartDotsController;
@@ -17,6 +19,7 @@ import sample.controller.plato.FriendsMenu;
 import sample.model.platoModel.Player;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -81,6 +84,7 @@ public class GameMenuFx {
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/ReversiStartMenu.fxml"));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
+            playMusicStartRev();
             Main.allStage.show();
         }
         else{
@@ -88,6 +92,7 @@ public class GameMenuFx {
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/DBFirstMenu.fxml"));
             Scene pageTwoScene = new Scene(root);
             Main.allStage.setScene(pageTwoScene);
+            playMusicStartDB();
             Main.allStage.show();
         }
     }
@@ -96,9 +101,12 @@ public class GameMenuFx {
         if (gameName.equals("Reversi")){
             ScoreBoardMenuFx.setGameName("Reversi");
             ScoreBoardMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml")));
+            playSCRev();
         }
-        else
+        else{
             ScoreBoardMenuFx.setGameName("Dots and Boxes");
+            playSCDB();
+        }
         ScoreBoardMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/scoreBoardMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
@@ -113,7 +121,31 @@ public class GameMenuFx {
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
     }
+    public void playMusicStartRev(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
 
+    public void playMusicStartDB(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playSCRev(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playSCDB(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
     }

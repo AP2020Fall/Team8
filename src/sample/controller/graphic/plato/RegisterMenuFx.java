@@ -1,6 +1,8 @@
 package sample.controller.graphic.plato;
 
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import sample.controller.plato.RegisterMenu;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +18,7 @@ import sample.Main;
 import sample.model.platoModel.Admin;
 import sample.view.OutputHandler;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -61,6 +64,7 @@ public class RegisterMenuFx {
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
+                playMusicAd();
                 Main.allStage.show();
                 isFirstReg=false;
                 pageTurn=true;
@@ -70,6 +74,7 @@ public class RegisterMenuFx {
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
+                playMusicPla();
                 Main.allStage.show();
                 pageTurn=true;
 
@@ -80,6 +85,18 @@ public class RegisterMenuFx {
         }
        // Parent pri= FXMLLoader.load(Objects.requireNonNull(RegisterMenuFx.class.getClassLoader().getResource("registerMenuFx.fxml")));
 
+    }
+    public void playMusicAd(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicPla(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
     }
 
     public void processBack(ContextMenuEvent contextMenuEvent) {

@@ -6,9 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import sample.Main;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -27,6 +30,7 @@ public class GamesFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicRev();
         Main.allStage.show();
     }
 
@@ -36,7 +40,19 @@ public class GamesFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicDB();
         Main.allStage.show();
+    }    public void playMusicRev(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicDB(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
     }
 
     public void exit(MouseEvent mouseEvent) {

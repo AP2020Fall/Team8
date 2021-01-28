@@ -11,11 +11,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import sample.Main;
 import sample.controller.plato.LoginMenu;
 import sample.model.platoModel.Player;
 import sample.view.OutputHandler;
 
+import java.io.File;
 import java.io.IOException;
 
 //import view.Main;
@@ -41,6 +44,7 @@ public class LoginMenuFx {
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
+                playMusiAdmin();
                 Main.allStage.show();
 
             } else {
@@ -48,10 +52,23 @@ public class LoginMenuFx {
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
                 Main.allStage.setScene(pageTwoScene);
+                playMusicPlayer();
                 Main.allStage.show();
             }
         }
 
+    }
+    public void playMusiAdmin(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicPlayer(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
     }
 
     public void deleteUserName(ActionEvent actionEvent) {

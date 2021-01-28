@@ -6,8 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import sample.Main;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -28,6 +31,7 @@ public class PlayerMenuFx {
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(PlatoBotMessageFx.class.getClassLoader().getResource("platoBotsMessage.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicFav();
         Main.allStage.show();
     }
 
@@ -37,6 +41,7 @@ public class PlayerMenuFx {
         //Parent root = FXMLLoader.load(Objects.requireNonNull(EventsLogFx.class.getClassLoader().getResource("events.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicMainEventPla();
         Main.allStage.show();
     }
 
@@ -46,6 +51,7 @@ public class PlayerMenuFx {
       //  Parent root = FXMLLoader.load(Objects.requireNonNull(SearchMenu.class.getClassLoader().getResource("searchMenu.fxml")));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicSearch();
         Main.allStage.show();
     }
 
@@ -54,9 +60,35 @@ public class PlayerMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoBotMessage.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicPBB();
         Main.allStage.show();
 
     }
+    public void playMusicSearch(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicFav(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }    public void playMusicPBB(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicMainEventPla(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+
+
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);

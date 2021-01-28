@@ -74,6 +74,7 @@ public class FirstMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
        // Main.allStage.setTitle("Score Board Menu");
         Main.allStage.setScene(new Scene(root));
+        playMusicMainAdmin();
         Main.allStage.show();}
         else if (loggedInPlayer!=null){
             PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
@@ -81,14 +82,62 @@ public class FirstMenuFx {
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
            // Main.allStage.setTitle("Score Board Menu");
             Main.allStage.setScene(new Scene(root));
+            playMusicMainPlayer();
             Main.allStage.show();}
         }
         /* Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("register.fxml")));
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();*/
+        public void playMusicMainAdmin() {
+            File file = new File("src/sample/sounds/viva.mp3");
+            Media media = new Media(file.toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.setAutoPlay(true);
+        }
+    public void playMusicMainPlayer() {
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicMainAccountAdmin(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicAccountPlayer (){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
 
+    public void playMusicReg(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicLogin() {
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicMainGames(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
 
-
+    public void playMusicMainFriends(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
     public void loadAccount() throws IOException {
         System.out.println("1");
         if (loggedInAdmin != null) {
@@ -96,12 +145,14 @@ public class FirstMenuFx {
             System.out.println(2);
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminAccount.fxml"));
             Main.allStage.setScene(new Scene(root));
+            playMusicMainAccountAdmin();
             Main.allStage.show();
         } else if (loggedInPlayer != null) {
             System.out.println("3");
             AccountMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml"));
             Main.allStage.setScene(new Scene(root));
+            playMusicAccountPlayer();
             Main.allStage.show();
         }
     }
@@ -112,6 +163,7 @@ public class FirstMenuFx {
         RegisterMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml"));
         Main.allStage.setScene(new Scene(root));
+        playMusicReg();
         Main.allStage.show();}
 
     public void loadGames() throws IOException {
@@ -119,6 +171,7 @@ public class FirstMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/games.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicMainGames();
         Main.allStage.show();
     }
 
@@ -127,6 +180,7 @@ public class FirstMenuFx {
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/loginMenuFx.fxml"));
 
             Main.allStage.setScene(new Scene(root));
+            playMusicLogin();
             Main.allStage.show();
     }
 //helia akhtarkavian pare shod.
@@ -135,6 +189,7 @@ public class FirstMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicMainFriends();
         Main.allStage.show();
 
     }

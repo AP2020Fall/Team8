@@ -7,9 +7,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import sample.Main;
 import sample.controller.plato.AccountsMenu;
 
+import java.io.File;
 import java.io.IOException;
 
 public class AccountMenuFx {
@@ -35,6 +38,7 @@ public class AccountMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameHistory.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
+        playMusicGH();
         Main.allStage.show();
     }
    @FXML
@@ -57,6 +61,7 @@ public class AccountMenuFx {
             Main.allStage.setScene(pageTwoScene);
             Main.allStage.show();
         }
+        playMusicPro();
 
     }
 
@@ -66,6 +71,25 @@ public class AccountMenuFx {
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
+        playMusicSta();
+    }
+    public void playMusicGH(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicPro(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+    }
+    public void playMusicSta(){
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
     }
 
     public void exit(MouseEvent mouseEvent) {
