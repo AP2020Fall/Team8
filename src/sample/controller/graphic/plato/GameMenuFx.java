@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -34,6 +35,17 @@ public class GameMenuFx {
     public TextArea gameDet;
     public Label game;
     private static Parent pre;
+    public Button showSCB;
+    public Button showLogB;
+    public ImageView back;
+    public ImageView exit;
+    public Button updatetB;
+    public Button gameLogB;
+    public Label WCL;
+    public Label PCL;
+    private static boolean isReversiUpdating;
+    private static boolean isDotsUpdating;
+    public Label alert;
 
     public static void setPre(Parent pre) {
         GameMenuFx.pre = pre;
@@ -65,7 +77,26 @@ public class GameMenuFx {
             showWinsText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getDotsAndBoxesAndWinsCount()));
             gameDet.setText("Usually two players take turns adding a single horizontal or vertical line between two unjoined adjacent dots. A player who completes the fourth side of a 1×1 box earns one point and takes another turn. (A point is typically recorded by placing a mark that identifies the player in the box, such as an initial.)");
             gameDet.setEditable(false);
-        }}
+        }
+        WCL.setVisible(true);
+        PCL.setVisible(true);
+        runGameB.setVisible(true);
+        addToFavoritesB.setVisible(true);
+        showLogB.setVisible(true);
+        showSCB.setVisible(true);
+        updatetB.setVisible(false);
+        gameLogB.setVisible(false);
+        }
+        else {
+            updatetB.setVisible(true);
+            WCL.setVisible(false);
+            PCL.setVisible(false);
+            runGameB.setVisible(false);
+            addToFavoritesB.setVisible(false);
+            showLogB.setVisible(false);
+            showSCB.setVisible(false);
+            gameLogB.setVisible(true);
+        }
 
 
     }
@@ -154,5 +185,27 @@ public class GameMenuFx {
         Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
+    }
+
+    public void update(ActionEvent actionEvent) {
+        if(gameName.equalsIgnoreCase("reversi")){
+            isReversiUpdating=true;
+            if (FirstMenuFx.getLoggedInPlayer()!=null) {
+                runGameB.setDisable(true);
+                alert.setText("Unable to access the game because updates.");
+            }
+        }
+        else if (gameName.equalsIgnoreCase("dots and boxes")){
+            isDotsUpdating=true;
+           // if ()
+            if (FirstMenuFx.getLoggedInPlayer()!=null) {
+                runGameB.setDisable(true);
+                alert.setText("Unable to access the game because updates.");
+            }
+        }
+    }
+
+    public void changeLog(ActionEvent actionEvent) {
+
     }
 }

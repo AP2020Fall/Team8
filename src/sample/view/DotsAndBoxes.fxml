@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.DotsAndBoxes">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.DotsAndBoxes">
     <ImageView fitHeight="412.0" fitWidth="412.0" layoutY="-8.0">
         <Image url="@/sample/images/screen-0.png" />
     </ImageView>
@@ -184,7 +189,7 @@
     <Circle fx:id="sc16" fill="#1f93ff00" layoutX="280.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
     <Circle fx:id="sc17" fill="#1f93ff00" layoutX="330.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
     <Circle fx:id="sc18" fill="#1f93ff00" layoutX="378.0" layoutY="23.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
-    <Circle fx:id="sc21" fill="#1f93ff00" layoutX="29.0" layoutY="73.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+    <Circle fx:id="sc21" fill="#1f93ff00" layoutX="29.0" layoutY="73.0"  onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
     <Circle fx:id="sc22" fill="#1f93ff00" layoutX="80.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
     <Circle fx:id="sc23" fill="#1f93ff00" layoutX="130.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
     <Circle fx:id="sc24" fill="#1f93ff00" layoutX="179.0" layoutY="73.0" onMouseClicked="#showC" radius="18.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
@@ -269,4 +274,5 @@
             <Image url="@../images/exitIcon.png" />
         </image>
     </ImageView>
+   <Label fx:id="alertMessage" layoutX="428.0" layoutY="131.0" prefHeight="48.0" prefWidth="151.0" textFill="#e30b0b" />
 </Pane>

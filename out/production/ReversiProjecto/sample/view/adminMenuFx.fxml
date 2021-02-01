@@ -2,12 +2,12 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.AdminMenuFx">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="525.0" layoutX="-3.0" layoutY="-8.0" stroke="BLACK" strokeType="INSIDE" width="611.0">
@@ -30,16 +30,8 @@
         <Button fx:id="addSugB" layoutX="56.0" layoutY="152.0" mnemonicParsing="false" onAction="#loadAddSug" prefHeight="62.0" prefWidth="152.0" text="Suggestions" />
         <Button fx:id="viewUserAdminB" layoutX="362.0" layoutY="152.0" mnemonicParsing="false" onAction="#loadUsers" prefHeight="62.0" prefWidth="162.0" text="View Users" />
     </children>
-    <ImageView fx:id="back" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@../images/backk.jpg" />
-        </image>
-    </ImageView>
-    <ImageView fx:id="exit" fitHeight="70.0" fitWidth="116.0" layoutX="70.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@../images/exitIcon.png" />
-        </image>
-    </ImageView>
+   <Button layoutY="1.0" mnemonicParsing="false" onAction="#processBack" text="Back" />
+   <Button layoutX="41.0" layoutY="1.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
 
 
 </AnchorPane>

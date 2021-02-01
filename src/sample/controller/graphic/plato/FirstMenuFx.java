@@ -167,7 +167,7 @@ public class FirstMenuFx {
         Main.allStage.show();}
 
     public void loadGames() throws IOException {
-        GameMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
+        GamesFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/games.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
@@ -178,14 +178,13 @@ public class FirstMenuFx {
     public void loadLogin() throws IOException {
         LoginMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/loginMenuFx.fxml"));
-
             Main.allStage.setScene(new Scene(root));
             playMusicLogin();
             Main.allStage.show();
     }
 //helia akhtarkavian pare shod.
     public void loadFriendMenu() throws IOException {
-      FriendsMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
+      PreFriendsMenu.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);
