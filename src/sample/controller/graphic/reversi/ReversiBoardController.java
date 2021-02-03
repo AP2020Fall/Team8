@@ -3,6 +3,8 @@ package sample.controller.graphic.reversi;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import org.junit.Test;
@@ -12,6 +14,7 @@ import sample.model.reversiModel.Board;
 import sample.model.reversiModel.ReversiGame;
 import sample.model.reversiModel.ReversiPlayer;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -20,6 +23,8 @@ import java.util.ResourceBundle;
 public class ReversiBoardController implements Initializable {
     public Label MessagePreviewLabel;
     public ReversiGame reversiGame;
+    public boolean isEvent;
+    public static int  eventScore;
     public Board board ;
     public Circle Circle11;public Circle Circle12 ;public Circle Circle13;public Circle Circle14;public Circle Circle15;public Circle Circle16;public Circle Circle17;public Circle Circle18;
     public Circle Circle21;public Circle Circle22 ;public Circle Circle23;public Circle Circle24;public Circle Circle25;public Circle Circle26;public Circle Circle27;public Circle Circle28;
@@ -56,6 +61,14 @@ public class ReversiBoardController implements Initializable {
         Circle54.setFill(reversiGame.getPlayer2().getColor());
         Circle1.setFill(reversiGame.getPlayer1().getColor());
         Circle2.setFill(reversiGame.getPlayer2().getColor());
+        playMusicFirst();
+
+    }
+    public void playMusicFirst() {
+        File file = new File("src/sample/sounds/viva.mp3");
+        Media media = new Media(file.toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
     }
     public void OnBackButtonClicked() throws IOException {
         if (reversiGame.getGameIsOnGoing()){
@@ -465,7 +478,7 @@ public class ReversiBoardController implements Initializable {
             MessagePreviewLabel.setTextFill(Color.GREEN);
             reversiGame.getPlayer1().won();
             reversiGame.getPlayer2().lost();
-            reversiGame.saveGame(GameResult.WIN,reversiGame.getPlayer1(),Player1Score);
+            reversiGame.saveGame(GameResult.WIN,reversiGame.getPlayer1(),Player1Score+eventScore);
             reversiGame.saveGame(GameResult.LOSE,reversiGame.getPlayer2(),Player2Score);
             return;
         }else if(Player1Score < Player2Score){
@@ -475,7 +488,7 @@ public class ReversiBoardController implements Initializable {
             reversiGame.getPlayer2().won();
             reversiGame.getPlayer1().lost();
             reversiGame.saveGame(GameResult.LOSE,reversiGame.getPlayer1(),Player1Score);
-            reversiGame.saveGame(GameResult.WIN,reversiGame.getPlayer2(),Player2Score);
+            reversiGame.saveGame(GameResult.WIN,reversiGame.getPlayer2(),Player2Score+eventScore);
             return;
         }else{ // in case the points are equal
             reversiGame.GameIsEven();

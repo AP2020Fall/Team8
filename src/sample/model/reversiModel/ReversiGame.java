@@ -75,9 +75,10 @@ public class ReversiGame {
     public void saveGame( GameResult gameResult,ReversiPlayer reversiPlayer,int score) {
         GameHistoryInfo gameHistoryInfo=new GameHistoryInfo("Reversi",reversiPlayer.getPlayer(),date,gameResult);
         reversiPlayer.getPlayer().getGameHistories().add(gameHistoryInfo);
+        int scoreplus=reversiPlayer.getPlayer().LoginCount;
         boolean win;
         win= gameResult.equals(GameResult.WIN);
-        reversiPlayer.getPlayer().addReversiScore(score,win);
+        reversiPlayer.getPlayer().addReversiScore(score+scoreplus*5+reversiPlayer.getPlayer().getReversiPlayedCounts()*5,win);
     }
 
     public void setWinner(ReversiPlayer winner) {

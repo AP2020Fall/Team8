@@ -64,8 +64,8 @@ public class GameMenuFx {
         if (FirstMenuFx.getLoggedInPlayer()!=null){
         if(gameName.equals("Reversi")){
             game.setText("Reversi");
-            showPlayedCountText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiPlayedCounts()));
-            showWinsText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiAndWinsCounts()));
+           // showPlayedCountText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiPlayedCounts()));
+           // showWinsText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getReversiAndWinsCounts()));
             gameDet.setText("Image result for reversi game rules\n" +
                     "You must place the piece so that an opponent's piece, or a row of opponent's pieces, is flanked by your pieces. All of the opponent's pieces between your pieces are then turned over to become your color. The object of the game is to own more pieces than your opponent when the game is over.") ;
             gameDet.setEditable(false);
@@ -73,8 +73,8 @@ public class GameMenuFx {
 
         else if(gameName.equals("Dots and Boxes")){
             game.setText("Dots and Boxes");
-            showPlayedCountText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getDotsAndBoxesPlayedCounts()));
-            showWinsText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getDotsAndBoxesAndWinsCount()));
+         //   showPlayedCountText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getDotsAndBoxesPlayedCounts()));
+          //  showWinsText.setText(String.valueOf(FirstMenuFx.getLoggedInPlayer().getDotsAndBoxesAndWinsCount()));
             gameDet.setText("Usually two players take turns adding a single horizontal or vertical line between two unjoined adjacent dots. A player who completes the fourth side of a 1×1 box earns one point and takes another turn. (A point is typically recorded by placing a mark that identifies the player in the box, such as an initial.)");
             gameDet.setEditable(false);
         }

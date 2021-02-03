@@ -4,8 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.controller.plato.AccountsMenu;
@@ -27,6 +29,8 @@ public class UserPro {
     public TextField fieldTF;
     public TextField newValueTf;
     private static Parent pre;
+
+
 
     public static void setPre(Parent pre) {
         UserPro.pre = pre;
@@ -75,5 +79,8 @@ public class UserPro {
         Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
+    }
+
+    public void changePhoto(MouseEvent mouseEvent) {
     }
 }

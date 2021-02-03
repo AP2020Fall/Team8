@@ -69,4 +69,9 @@ public class FriendsMenuFx {
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
     }
+
+    public void reportUser(ActionEvent actionEvent) {
+        String selectedP=FriendsMenuList.getSelectionModel().getSelectedItem();
+        UsersMenuFx.reportedUsers.add(selectedP);
+    }
 }

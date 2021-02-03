@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="494.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.AccountMenuFx">
+<AnchorPane prefHeight="494.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.AccountMenuFx">
    <Rectangle arcHeight="5.0" arcWidth="5.0" height="501.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="472.0">
       <fill>
          <LinearGradient endX="1.0" endY="1.0">
@@ -25,7 +29,7 @@
    <Label fx:id="DBStatics" layoutX="217.0" layoutY="246.0" prefHeight="37.0" prefWidth="242.0" />
    <Label layoutX="42.0" layoutY="256.0" text="Dots and BoxesStatistics" />
    <Label layoutX="77.0" layoutY="174.0" text="Reversi Statistics" />
-   <Button layoutX="164.0" layoutY="76.0" mnemonicParsing="false" onAction="#loadPlatoStatistics" prefHeight="44.0" prefWidth="138.0" text="View Plato Statistics" />
+   <Button layoutX="166.0" layoutY="61.0" mnemonicParsing="false" onAction="#loadPlatoStatistics" prefHeight="44.0" prefWidth="138.0" text="View Plato Statistics" />
    <Label fx:id="alertAccount" layoutX="132.0" layoutY="302.0" prefHeight="17.0" prefWidth="227.0" />
    <ImageView fx:id="back" fitHeight="70.0" fitWidth="75.0" onMouseClicked="#processBack" pickOnBounds="true" preserveRatio="true">
       <image>
@@ -37,4 +41,5 @@
          <Image url="@../images/exitIcon.png" />
       </image>
    </ImageView>
+   <TextField fx:id="statusT" layoutX="161.0" layoutY="139.0" onKeyTyped="#setStatus" promptText="status" />
 </AnchorPane>

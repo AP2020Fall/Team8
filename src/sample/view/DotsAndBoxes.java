@@ -318,7 +318,7 @@ public class DotsAndBoxes {
     double xStart,yStart,xEnd,yEnd;
 
     public void playMusic() {
-        File file = new File("src\\Sounds\\Click.mp3");
+        File file = new File("src\\sounds\\Click.mp3");
         Media media = new Media(file.toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.play();
@@ -1251,8 +1251,9 @@ public class DotsAndBoxes {
                                 playMusic();
                                 hasAward = true;
                             }
+                            else {
                             ra211.add(hl21);
-                            hasAward = false;
+                            hasAward = false;}
                             if (ra211.size() == 4) {
                                 r21.setVisible(true);
                                 r21.setFill(Color.web("#dcff3e"));
@@ -6225,13 +6226,16 @@ public class DotsAndBoxes {
                     }
                 }
                 isSecondCircle = false;
+                selectedC.clear();
                 if(hasAward){
                     isFirstPlayerTurn=true;
                 }
                 else {
+
                 }
 
             }
+         //   selectedC.clear();
             //commands for second player
         } /*else {
             if (!isSecondCircle) {

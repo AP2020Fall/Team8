@@ -2,13 +2,21 @@ package sample.controller.graphic.plato;
 
 //import controller.RegisterMenu;
 
+import javafx.animation.RotateTransition;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.scene.transform.Rotate;
+import javafx.util.Duration;
 import sample.Main;
 import sample.model.platoModel.Account;
 import sample.model.platoModel.Admin;
@@ -21,7 +29,7 @@ import java.io.IOException;
 //import model.Player;
 //import view.Main;
 
-public class FirstMenuFx {
+public  class FirstMenuFx {
     public Button firstMainMenuB;
     public Button firstAccountB;
     public Button firstRegB;
@@ -29,6 +37,12 @@ public class FirstMenuFx {
     public Button firstLoginB;
     public Button firstFriendB;
    private static Player loggedInPlayer;
+   public static Text rect;
+    public static Pane firstPane=new Pane();
+   public static Scene scene;
+
+    @FXML
+    private ImageView imageview;
     private static Parent pre;
 
     public static void setPre(Parent pre) {
@@ -82,12 +96,34 @@ public class FirstMenuFx {
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
            // Main.allStage.setTitle("Score Board Menu");
             Main.allStage.setScene(new Scene(root));
+
             playMusicMainPlayer();
             Main.allStage.show();}
         }
         /* Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("register.fxml")));
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();*/
+        @FXML
+        public void initialize(){
+
+            rect = new Text("Welcome");
+            rect.setFill(Color.RED);
+            RotateTransition rotate = new RotateTransition(
+            );
+            rotate.setDuration(Duration.millis(1000));
+            rotate.setAxis(Rotate.Y_AXIS);  // set title for the stage
+        //    Main.allStage.setTitle("Creating popup");
+
+            rotate.setCycleCount(500);
+            rotate.setNode(rect);
+            rotate.play();
+
+            firstPane.getChildren().addAll(rect);
+            scene=new Scene(firstPane);
+            Main.allStage.setScene(scene);
+
+        }
+
         public void playMusicMainAdmin() {
             File file = new File("src/sample/sounds/Популярная_классика_–_Mozart_Piano_Co.mp3");
             Media media = new Media(file.toURI().toString());
@@ -155,7 +191,7 @@ public class FirstMenuFx {
             playMusicAccountPlayer();
             Main.allStage.show();
         }
-    }
+        }
 
 
 

@@ -119,6 +119,7 @@ public class LoginMenu {
             FirstMenuFx.setLoggedInPlayer(Player.getPlayerWithUser(id));
             PlayerMenu.setPlayer(Player.getPlayerWithUser(id));
             FriendsMenu.setPlayer(Player.getPlayerWithUser(id));
+            Player.getPlayerWithUser(id).LoginCount++;
           }
         }
     }

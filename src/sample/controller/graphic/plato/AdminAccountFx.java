@@ -13,17 +13,20 @@ import sample.controller.plato.AccountsMenu;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class AdminAccountFx {
     public Button viewProB;
     public Button logoutB;
     private static Parent pre;
 
+
     public static void setPre(Parent pre) {
         AdminAccountFx.pre = pre;
     }
 
     public void viewAdminPro(ActionEvent actionEvent) throws IOException {
+
         UserPro.setPre(FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userProfile.fxml"));
         Scene pageTwoScene = new Scene(root);

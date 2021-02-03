@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<Pane prefHeight="492.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.LoginMenuFx">
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="492.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.graphic.plato.LoginMenuFx">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="495.0" layoutX="-3.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="523.0">
             <fill>
@@ -58,6 +64,7 @@
                 <Image url="@../images/exitIcon.png" />
             </image>
         </ImageView>
+      <CheckBox layoutX="213.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#saveLogin" prefHeight="17.0" prefWidth="123.0" text="Save Login Info" />
     </children>
 
 </Pane>

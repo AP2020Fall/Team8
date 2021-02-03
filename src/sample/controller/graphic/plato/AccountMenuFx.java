@@ -6,14 +6,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import sample.Main;
 import sample.controller.plato.AccountsMenu;
 
+import javax.print.DocFlavor;
 import java.io.File;
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class AccountMenuFx {
     public Label usernameLablel;
@@ -21,6 +27,12 @@ public class AccountMenuFx {
     public Label DBStatics;
     public Label alertAccount;
     private static Parent pre;
+    public TextField statusT;
+    @FXML
+    private ImageView imageview;
+
+
+
     public static void setPre(Parent pre) {
         AccountMenuFx.pre = pre;
     }
@@ -100,5 +112,9 @@ public class AccountMenuFx {
         Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
+    }
+
+    public void setStatus(KeyEvent keyEvent) {
+        statusT.getText();
     }
 }

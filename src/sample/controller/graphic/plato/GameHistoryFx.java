@@ -15,6 +15,7 @@ import sample.model.platoModel.GameHistoryInfo;
 import sample.model.platoModel.GameResult;
 import sample.model.platoModel.Player;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -48,8 +49,13 @@ public class GameHistoryFx {
         GameHistoryTable.getSelectionModel().setCellSelectionEnabled(true);
         GameHistoryTable.setItems(gameHistoryInfoOL);
     }
-    public void list(){
-        gameHistoryShow.addAll(FirstMenuFx.getLoggedInPlayer().getGameHistories());
+    public void list()
+    {
+        LocalDateTime now=LocalDateTime.now();
+        ArrayList<GameHistoryInfo> histories=new ArrayList<>();
+        histories.add(new GameHistoryInfo("dots and boxes",new Player("bardia","bardiajoon"),now,GameResult.WIN));
+        gameHistoryShow.addAll(histories);
+       // gameHistoryShow.addAll(FirstMenuFx.getLoggedInPlayer().getGameHistories());
     }
 
     public void exit(MouseEvent mouseEvent) {

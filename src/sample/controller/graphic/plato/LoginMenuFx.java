@@ -31,6 +31,7 @@ public class LoginMenuFx {
     public Button deleteLoginButton;
     private static Parent pre;
 
+
     public static void setPre(Parent pre) {
         LoginMenuFx.pre = pre;
     }
@@ -83,5 +84,9 @@ public class LoginMenuFx {
     public void processBack(MouseEvent mouseEvent) {Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
+    }
+
+    public void saveLogin(MouseEvent mouseEvent) {
+
     }
 }

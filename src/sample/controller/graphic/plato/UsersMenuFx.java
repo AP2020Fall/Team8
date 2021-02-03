@@ -3,23 +3,18 @@ package sample.controller.graphic.plato;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import sample.Main;
-import sample.controller.MenuController;
-import sample.controller.plato.PlayerMenu;
 import sample.model.platoModel.Player;
-import sample.model.platoModel.UserShow;
 
 import java.io.IOException;
-import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class UsersMenuFx {
@@ -28,7 +23,9 @@ public class UsersMenuFx {
     public TableColumn<Player,Long> daysPassedColumn;
     public TableColumn<Player,Integer> winCountColumn;
     public TableView<Player> userTable;
+    public ListView<String> reportList;
     private String gameName;
+    public static ArrayList<String> reportedUsers=new ArrayList<>();
     ObservableList<Player> names = FXCollections.observableArrayList();
     public static ArrayList<Player> users =new ArrayList<>();
   //  ListView<Player> listView = new ListView<Player>(names);
@@ -38,9 +35,13 @@ public class UsersMenuFx {
         UsersMenuFx.pre = pre;
     }
 
+
+
     @FXML
     public void initialize() throws IOException {
         makeTree();
+        ObservableList<String > friendsObs = FXCollections.observableArrayList(reportedUsers);
+        reportList.setItems(friendsObs);
     }
     public void makeTree() {
         userColumn.setCellValueFactory(new PropertyValueFactory<Player, String >("userName"));
@@ -76,5 +77,10 @@ public class UsersMenuFx {
         Scene pageTwoScene = new Scene(pre);
         Main.allStage.setScene(pageTwoScene);
         Main.allStage.show();
+    }
+
+    public void banUser(MouseEvent mouseEvent) {
+        PlayerMenuFx.setIsBanned(true);
+
     }
 }

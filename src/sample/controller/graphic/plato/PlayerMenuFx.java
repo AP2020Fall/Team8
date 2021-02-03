@@ -1,10 +1,12 @@
 package sample.controller.graphic.plato;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -20,6 +22,22 @@ public class PlayerMenuFx {
     public Button searchFriendsB;
     public Button platobotB;
     private static Parent pre;
+    private static boolean isBanned;
+    public Label reportAlert;
+
+    public static void setIsBanned(boolean isBanned) {
+        PlayerMenuFx.isBanned = isBanned;
+    }
+    @FXML
+    public void initialize(){
+        if (isBanned){
+            viewEventsB.setDisable(true);
+            viewGamesB.setDisable(true);
+            searchFriendsB.setDisable(true);
+            platobotB.setDisable(true);
+            reportAlert.setText("you are reported!!");
+        }
+    }
 
     public static void setPre(Parent pre) {
         PlayerMenuFx.pre = pre;

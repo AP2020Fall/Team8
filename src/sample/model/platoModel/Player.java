@@ -37,6 +37,7 @@ public class Player{
     private String phone;
     private LocalDateTime platoAge;
     private long datesPassed;
+    public static int LoginCount=0;
 
     private ArrayList<GameHistoryInfo> gameHistories;
     public Player(String username, String password) {
