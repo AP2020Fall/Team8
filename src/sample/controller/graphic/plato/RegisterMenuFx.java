@@ -38,7 +38,7 @@ public class RegisterMenuFx {
     private static boolean pageTurn=false;
 
     private static Parent pre;
-
+//branch avaz shod?
     public static void setPre(Parent pre) {
         RegisterMenuFx.pre = pre;
     }
