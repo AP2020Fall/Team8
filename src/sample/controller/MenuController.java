@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import sample.controller.graphic.plato.FirstMenuFx;
 
 import java.io.IOException;
+//idk
 
 public class MenuController {
     static Stage stage = new Stage();
