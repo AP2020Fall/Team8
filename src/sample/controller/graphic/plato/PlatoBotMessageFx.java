@@ -5,14 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import sample.Main;
-import sample.model.platoModel.Event;
+import sample.Client;
 import sample.model.platoModel.PBMessage;
 
 import java.time.LocalDate;
@@ -52,12 +50,12 @@ public class PlatoBotMessageFx {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Main.allStage.close();
+        Client.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 }

@@ -3,13 +3,12 @@ package sample.controller.graphic.plato;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-import sample.Main;
+import sample.Client;
 import sample.controller.plato.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class AddEventFx {
@@ -59,7 +58,7 @@ public class AddEventFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 }

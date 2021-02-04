@@ -6,10 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
-import sample.Main;
-import sample.controller.graphic.plato.FirstMenuFx;
+import sample.Client;
 import sample.model.platoModel.Player;
-import sample.model.reversiModel.ReversiGame;
 
 public class StartDotsController {
     public Circle StartGameCircle;
@@ -24,7 +22,7 @@ public class StartDotsController {
     }
 
     public void OnExitCircleClicked(MouseEvent mouseEvent) {
-        Main.allStage.close();
+        Client.allStage.close();
         System.exit(0);
     }
 
@@ -46,7 +44,7 @@ public class StartDotsController {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 }

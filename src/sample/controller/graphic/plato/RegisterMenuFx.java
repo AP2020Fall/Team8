@@ -1,6 +1,5 @@
 package sample.controller.graphic.plato;
 
-import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -15,13 +14,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ContextMenuEvent;
-import sample.Main;
-import sample.model.platoModel.Admin;
+import sample.Client;
 import sample.view.OutputHandler;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
 
 public class RegisterMenuFx {
     public TextField userTFReg;
@@ -64,9 +61,9 @@ public class RegisterMenuFx {
                 PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
-                Main.allStage.setScene(pageTwoScene);
+                Client.allStage.setScene(pageTwoScene);
                 playMusicAd();
-                Main.allStage.show();
+                Client.allStage.show();
                 isFirstReg=false;
                 pageTurn=true;
             }
@@ -74,9 +71,9 @@ public class RegisterMenuFx {
                 PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
-                Main.allStage.setScene(pageTwoScene);
+                Client.allStage.setScene(pageTwoScene);
                 playMusicPla();
-                Main.allStage.show();
+                Client.allStage.show();
                 pageTurn=true;
 
             }
@@ -102,13 +99,13 @@ public class RegisterMenuFx {
 
     public void processBack(ContextMenuEvent contextMenuEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Main.allStage.close();
+        Client.allStage.close();
     }
 
 

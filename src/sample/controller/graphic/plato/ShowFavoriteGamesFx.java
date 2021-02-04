@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.input.MouseEvent;
-import sample.Main;
+import sample.Client;
 
 import java.util.ArrayList;
 
@@ -44,12 +44,12 @@ public class ShowFavoriteGamesFx {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Main.allStage.close();
+        Client.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 }

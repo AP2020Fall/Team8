@@ -17,7 +17,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.transform.Rotate;
 import javafx.util.Duration;
-import sample.Main;
+import sample.Client;
 import sample.model.platoModel.Account;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
@@ -87,42 +87,23 @@ public  class FirstMenuFx {
             AdminMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
        // Main.allStage.setTitle("Score Board Menu");
-        Main.allStage.setScene(new Scene(root));
+        Client.allStage.setScene(new Scene(root));
         playMusicMainAdmin();
-        Main.allStage.show();}
+        Client.allStage.show();}
         else if (loggedInPlayer!=null){
             PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             System.out.println("33");
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
            // Main.allStage.setTitle("Score Board Menu");
-            Main.allStage.setScene(new Scene(root));
+            Client.allStage.setScene(new Scene(root));
 
             playMusicMainPlayer();
-            Main.allStage.show();}
+            Client.allStage.show();}
         }
         /* Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("register.fxml")));
         Main.allStage.setScene(new Scene(root));
         Main.allStage.show();*/
-        @FXML
-        public void initialize(){
 
-            rect = new Text("Welcome");
-            rect.setFill(Color.RED);
-            RotateTransition rotate = new RotateTransition(
-            );
-            rotate.setDuration(Duration.millis(1000));
-            rotate.setAxis(Rotate.Y_AXIS);  // set title for the stage
-        //    Main.allStage.setTitle("Creating popup");
-
-            rotate.setCycleCount(500);
-            rotate.setNode(rect);
-            rotate.play();
-
-            firstPane.getChildren().addAll(rect);
-            scene=new Scene(firstPane);
-            Main.allStage.setScene(scene);
-
-        }
 
         public void playMusicMainAdmin() {
             File file = new File("src/sample/sounds/Популярная_классика_–_Mozart_Piano_Co.mp3");
@@ -180,16 +161,16 @@ public  class FirstMenuFx {
             AdminAccountFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             System.out.println(2);
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminAccount.fxml"));
-            Main.allStage.setScene(new Scene(root));
+            Client.allStage.setScene(new Scene(root));
             playMusicMainAccountAdmin();
-            Main.allStage.show();
+            Client.allStage.show();
         } else if (loggedInPlayer != null) {
             System.out.println("3");
             AccountMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml"));
-            Main.allStage.setScene(new Scene(root));
+            Client.allStage.setScene(new Scene(root));
             playMusicAccountPlayer();
-            Main.allStage.show();
+            Client.allStage.show();
         }
         }
 
@@ -198,39 +179,39 @@ public  class FirstMenuFx {
     public void loadReg() throws IOException {
         RegisterMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml"));
-        Main.allStage.setScene(new Scene(root));
+        Client.allStage.setScene(new Scene(root));
         playMusicReg();
-        Main.allStage.show();}
+        Client.allStage.show();}
 
     public void loadGames() throws IOException {
         GamesFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/games.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Main.allStage.setScene(pageTwoScene);
+        Client.allStage.setScene(pageTwoScene);
         playMusicMainGames();
-        Main.allStage.show();
+        Client.allStage.show();
     }
 
     public void loadLogin() throws IOException {
         LoginMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/loginMenuFx.fxml"));
-            Main.allStage.setScene(new Scene(root));
+            Client.allStage.setScene(new Scene(root));
             playMusicLogin();
-            Main.allStage.show();
+            Client.allStage.show();
     }
 //helia akhtarkavian pare shod.
     public void loadFriendMenu() throws IOException {
       PreFriendsMenu.setPre(FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Main.allStage.setScene(pageTwoScene);
+        Client.allStage.setScene(pageTwoScene);
         playMusicMainFriends();
-        Main.allStage.show();
+        Client.allStage.show();
 
     }
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Main.allStage.close();
+        Client.allStage.close();
 
 
     }

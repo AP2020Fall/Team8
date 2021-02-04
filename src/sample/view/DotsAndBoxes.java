@@ -13,7 +13,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
 import javafx.scene.media.Media;
-import sample.Main;
+import sample.Client;
 import sample.model.platoModel.DBPlayer;
 
 import java.awt.*;
@@ -12113,8 +12113,8 @@ public class DotsAndBoxes {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene=new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 }
 

@@ -56,10 +56,7 @@
                 <Image url="@../images/exitIcon.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="imgReg" fitHeight="109.0" fitWidth="155.0" layoutX="408.0" layoutY="23.0" onDragDropped="#enterPhoto" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/me.jpg" />
-         </image></ImageView>
+
     </children>
 
 </Pane>

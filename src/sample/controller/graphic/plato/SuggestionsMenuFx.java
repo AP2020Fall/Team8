@@ -9,11 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import sample.Main;
+import sample.Client;
 import sample.controller.plato.AdminMenu;
 import sample.model.platoModel.*;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class SuggestionsMenuFx {
@@ -81,12 +80,12 @@ public class SuggestionsMenuFx {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Main.allStage.close();
+        Client.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 }

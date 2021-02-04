@@ -23,11 +23,15 @@ import javafx.util.Duration;
 import sample.controller.MenuController;
 
 import java.awt.*;
-import java.io.File;
+import java.io.*;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.util.Scanner;
 
-public class Main extends Application {
+public class Client extends Application {
     public static MenuController menuController = new MenuController();
    public static Stage allStage=new Stage();
+   public static String command= "";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -49,7 +53,20 @@ public class Main extends Application {
         mediaPlayer.setAutoPlay(true);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
+        Socket socket=new Socket("localhost",9090);
+        BufferedReader input=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        BufferedReader keyboard=new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter out=new PrintWriter(socket.getOutputStream(),true);
+
+        while (true){
+            System.out.println(">");
+            String command=keyboard.readLine();
+            if (command.equals("quit")) break;
+            out.println(command);
+            String serverResponse=input.readLine();
+            System.out.println("Server says"+ serverResponse);
+        }
     }
 }

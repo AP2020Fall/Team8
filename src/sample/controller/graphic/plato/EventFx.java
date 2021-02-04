@@ -7,11 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
-import sample.Main;
+import sample.Client;
 import sample.model.platoModel.*;
 
 import java.io.IOException;
@@ -86,8 +85,8 @@ public class EventFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 
     public void joinEv(MouseEvent mouseEvent) throws IOException {
@@ -95,8 +94,8 @@ public class EventFx {
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/ReversiStartMenu.fxml"));
             //   Parent root = FXMLLoader.load(Objects.requireNonNull(PlatoBotMessageFx.class.getClassLoader().getResource("platoBotsMessage.fxml")));
             Scene pageTwoScene = new Scene(root);
-            Main.allStage.setScene(pageTwoScene);
-            Main.allStage.show();
+            Client.allStage.setScene(pageTwoScene);
+            Client.allStage.show();
         }
     }
 

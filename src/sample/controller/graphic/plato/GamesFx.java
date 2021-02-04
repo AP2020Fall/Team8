@@ -12,12 +12,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import sample.Main;
+import sample.Client;
 
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
 
 public class GamesFx {
     public Button ReversiB;
@@ -49,9 +48,9 @@ public class GamesFx {
         GameMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/games.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Main.allStage.setScene(pageTwoScene);
+        Client.allStage.setScene(pageTwoScene);
         playMusicRev();
-        Main.allStage.show();
+        Client.allStage.show();
     }
 
     public void loadDB(ActionEvent actionEvent) throws IOException {
@@ -59,9 +58,9 @@ public class GamesFx {
         GameMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/games.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Main.allStage.setScene(pageTwoScene);
+        Client.allStage.setScene(pageTwoScene);
         playMusicDB();
-        Main.allStage.show();
+        Client.allStage.show();
     }    public void playMusicRev(){
         File file = new File("src/sample/sounds/viva.mp3");
         Media media = new Media(file.toURI().toString());
@@ -81,8 +80,8 @@ public class GamesFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Main.allStage.setScene(pageTwoScene);
-        Main.allStage.show();
+        Client.allStage.setScene(pageTwoScene);
+        Client.allStage.show();
     }
 
     public void deleteGame(ActionEvent actionEvent) {
