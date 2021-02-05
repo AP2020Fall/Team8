@@ -10,7 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import sample.Client;
+import sample.Main;
 import sample.model.platoModel.GameHistoryInfo;
 import sample.model.platoModel.GameResult;
 import sample.model.platoModel.Player;
@@ -63,7 +63,7 @@ public class GameHistoryFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

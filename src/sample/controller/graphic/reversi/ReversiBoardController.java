@@ -8,7 +8,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import org.junit.Test;
-import sample.Client;
+import sample.Main;
 import sample.model.platoModel.GameResult;
 import sample.model.reversiModel.Board;
 import sample.model.reversiModel.ReversiGame;
@@ -72,11 +72,11 @@ public class ReversiBoardController implements Initializable {
     }
     public void OnBackButtonClicked() throws IOException {
         if (reversiGame.getGameIsOnGoing()){
-            Client.menuController.openStartMenu();
+            Main.menuController.openStartMenu();
             reversiGame.getPlayer1().draw();
             reversiGame.getPlayer2().draw();
         }else{
-            Client.menuController.openStartMenu();
+            Main.menuController.openStartMenu();
         }
     }
     public void OnChangeTurnButton(){

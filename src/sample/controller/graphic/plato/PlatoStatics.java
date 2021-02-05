@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-import sample.Client;
+import sample.Main;
 import sample.model.platoModel.Player;
 
 import java.time.Duration;
@@ -44,13 +44,13 @@ public class PlatoStatics {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }
 

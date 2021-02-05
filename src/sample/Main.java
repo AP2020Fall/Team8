@@ -12,7 +12,7 @@ import sample.controller.MenuController;
 import java.io.*;
 import java.net.Socket;
 
-public class Client extends Application {
+public class Main extends Application {
     public static MenuController menuController = new MenuController();
    public static Stage allStage=new Stage();
    public static String command= "";
@@ -28,7 +28,7 @@ public class Client extends Application {
 
     public static PrintWriter pow;
 
-    public Client() throws IOException {
+    public Main() throws IOException {
     }
 
     @Override

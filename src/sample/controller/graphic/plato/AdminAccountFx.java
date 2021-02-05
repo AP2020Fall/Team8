@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import sample.Client;
+import sample.Main;
 import sample.controller.plato.AccountsMenu;
 
 import java.io.File;
@@ -29,9 +29,9 @@ public class AdminAccountFx {
         UserPro.setPre(FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userProfile.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicProAdmin();
-        Client.allStage.show();
+        Main.allStage.show();
     }
     public void playMusicProAdmin(){
         File file = new File("src/sample/sounds/viva.mp3");
@@ -42,7 +42,7 @@ public class AdminAccountFx {
 
     public void logout(ActionEvent actionEvent) {
         AccountsMenu.logout();
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void exit(MouseEvent mouseEvent) {
@@ -51,7 +51,7 @@ public class AdminAccountFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

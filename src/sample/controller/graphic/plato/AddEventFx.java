@@ -3,7 +3,7 @@ package sample.controller.graphic.plato;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-import sample.Client;
+import sample.Main;
 import sample.controller.plato.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
@@ -58,7 +58,7 @@ public class AddEventFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

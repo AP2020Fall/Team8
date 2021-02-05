@@ -12,7 +12,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import sample.Client;
+import sample.Main;
 import sample.controller.plato.AccountsMenu;
 
 import java.io.File;
@@ -36,7 +36,7 @@ public class AccountMenuFx {
     public void logout(ActionEvent actionEvent) {
         AccountsMenu.logout();
         alertAccount.setText("logout successfully");
-        Client.allStage.close();
+        Main.allStage.close();
 
     }
 
@@ -46,9 +46,9 @@ public class AccountMenuFx {
         GameHistoryFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameHistory.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicGH();
-        Client.allStage.show();
+        Main.allStage.show();
     }
    @FXML
     public void initialize(){
@@ -62,13 +62,13 @@ public class AccountMenuFx {
         if (FirstMenuFx.getLoggedInPlayer()!=null){
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userProfile.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();}
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();}
         else if (FirstMenuFx.getLoggedInAdmin()!=null){
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/userProfile.fxml"));
             Scene pageTwoScene = new Scene(root);
-            Client.allStage.setScene(pageTwoScene);
-            Client.allStage.show();
+            Main.allStage.setScene(pageTwoScene);
+            Main.allStage.show();
         }
         playMusicPro();
 
@@ -78,8 +78,8 @@ public class AccountMenuFx {
         PlatoStatics.setPre(FXMLLoader.load(getClass().getResource("/sample/view/accountMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoStatistics.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
         playMusicSta();
     }
     public void playMusicGH(){
@@ -107,8 +107,8 @@ public class AccountMenuFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void setStatus(KeyEvent keyEvent) {

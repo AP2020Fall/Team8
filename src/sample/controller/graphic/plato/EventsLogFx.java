@@ -12,7 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import sample.Client;
+import sample.Main;
 import sample.model.platoModel.*;
 
 
@@ -42,8 +42,8 @@ public class EventsLogFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/eventFx.fxml"));
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(EventFx.class.getClassLoader().getResource("eventFx.fxml")));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
     @FXML
     public void initialize() throws IOException {
@@ -76,7 +76,7 @@ public class EventsLogFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

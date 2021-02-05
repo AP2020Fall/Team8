@@ -11,7 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import sample.Client;
+import sample.Main;
 import sample.model.platoModel.Player;
 
 import java.io.IOException;
@@ -68,15 +68,15 @@ public class UsersMenuFx {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
 
 
     }
 
     public void processBack(MouseEvent mouseEvent) throws IOException {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void banUser(MouseEvent mouseEvent) {

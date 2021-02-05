@@ -21,25 +21,8 @@ public class OutputHandler {
         else
             return "piouiupouiu";
     }
-    //naghes
-    public static String showPlayerMenuOutput(int outputNo){
-        if(outputNo==1)
-            return "This user does not exist";
-        else if (outputNo==2)
-            return "request is sent";
-        return null;
-    }
-    public void showAdminOutput(int outputNo){}
-    public void showGamesMenuOutput(int outputNo){}
-    public void showReversiOutput(int outputNo){}
-    public static String showFriendsMenuOutput(int outputNo){
-        if (outputNo==1)
-            return "invalid user entered";
-        else
-            return "lalalalala";
 
 
-    }
     public static String showRegisterMenuOutput(int outputNo){
         //getinfo output
         //error output
@@ -78,12 +61,6 @@ public class OutputHandler {
             return "Logged in successfully!";
 
 
-    }
-    //naghes
-    public static String showGameMenuOutput(int outputNo){
-        if(outputNo==1)
-            return "game request is sent";
-        return null;
     }
 
 }

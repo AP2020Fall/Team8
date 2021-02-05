@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
-import sample.Client;
+import sample.Main;
 import sample.model.platoModel.Player;
 
 public class StartDotsController {
@@ -22,7 +22,7 @@ public class StartDotsController {
     }
 
     public void OnExitCircleClicked(MouseEvent mouseEvent) {
-        Client.allStage.close();
+        Main.allStage.close();
         System.exit(0);
     }
 
@@ -44,7 +44,7 @@ public class StartDotsController {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

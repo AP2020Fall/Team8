@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import sample.Client;
+import sample.Main;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,9 +47,9 @@ public class PlayerMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/showFavoriteGames.fxml"));
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(PlatoBotMessageFx.class.getClassLoader().getResource("platoBotsMessage.fxml")));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicFav();
-        Client.allStage.show();
+        Main.allStage.show();
     }
 
     public void loadEventPlayer(ActionEvent actionEvent) throws IOException {
@@ -57,9 +57,9 @@ public class PlayerMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/eventsLog.fxml"));
         //Parent root = FXMLLoader.load(Objects.requireNonNull(EventsLogFx.class.getClassLoader().getResource("events.fxml")));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicMainEventPla();
-        Client.allStage.show();
+        Main.allStage.show();
     }
 
     public void loadSearch(ActionEvent actionEvent) throws IOException {
@@ -67,18 +67,18 @@ public class PlayerMenuFx {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/searchMenu.fxml"));
       //  Parent root = FXMLLoader.load(Objects.requireNonNull(SearchMenu.class.getClassLoader().getResource("searchMenu.fxml")));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicSearch();
-        Client.allStage.show();
+        Main.allStage.show();
     }
 
     public void loadPBB(ActionEvent actionEvent) throws IOException {
         PlatoBotMessageFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoBotMessage.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicPBB();
-        Client.allStage.show();
+        Main.allStage.show();
 
     }
     public void playMusicSearch(){
@@ -109,12 +109,12 @@ public class PlayerMenuFx {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

@@ -14,14 +14,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ContextMenuEvent;
-import sample.Client;
+import sample.Main;
 import sample.view.OutputHandler;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 
-import static sample.Client.myWriter;
+import static sample.Main.myWriter;
 
 public class RegisterMenuFx {
     public TextField userTFReg;
@@ -72,9 +71,9 @@ public class RegisterMenuFx {
                 PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
-                Client.allStage.setScene(pageTwoScene);
+                Main.allStage.setScene(pageTwoScene);
                 playMusicAd();
-                Client.allStage.show();
+                Main.allStage.show();
                 isFirstReg=false;
                 pageTurn=true;
             }
@@ -82,9 +81,9 @@ public class RegisterMenuFx {
                 PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/registerMenu.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
-                Client.allStage.setScene(pageTwoScene);
+                Main.allStage.setScene(pageTwoScene);
                 playMusicPla();
-                Client.allStage.show();
+                Main.allStage.show();
                 pageTurn=true;
 
             }
@@ -110,13 +109,13 @@ public class RegisterMenuFx {
 
     public void processBack(ContextMenuEvent contextMenuEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
 

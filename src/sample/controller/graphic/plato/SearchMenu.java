@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import sample.Client;
+import sample.Main;
 import sample.model.platoModel.*;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -54,18 +54,18 @@ public class SearchMenu {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoStatistics.fxml"));
     //    Parent root = FXMLLoader.load(Objects.requireNonNull(FriendProfile.class.getClassLoader().getResource("friendProfile.fxml")));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

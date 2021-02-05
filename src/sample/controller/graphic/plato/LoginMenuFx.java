@@ -13,7 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import sample.Client;
+import sample.Main;
 import sample.controller.plato.LoginMenu;
 import sample.view.OutputHandler;
 
@@ -43,17 +43,17 @@ public class LoginMenuFx {
                 AdminMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/loginMenuFx.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
-                Client.allStage.setScene(pageTwoScene);
+                Main.allStage.setScene(pageTwoScene);
                 playMusiAdmin();
-                Client.allStage.show();
+                Main.allStage.show();
 
             } else {
                 PlayerMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/loginMenuFx.fxml")));
                 Parent root = FXMLLoader.load(getClass().getResource("/sample/view/playerMenuFx.fxml"));
                 Scene pageTwoScene = new Scene(root);
-                Client.allStage.setScene(pageTwoScene);
+                Main.allStage.setScene(pageTwoScene);
                 playMusicPlayer();
-                Client.allStage.show();
+                Main.allStage.show();
             }
         }
 
@@ -81,8 +81,8 @@ public class LoginMenuFx {
     }
 
     public void processBack(MouseEvent mouseEvent) {Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void saveLogin(MouseEvent mouseEvent) {

@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import sample.Client;
+import sample.Main;
 import sample.controller.plato.AccountsMenu;
 import sample.model.platoModel.Admin;
 import sample.model.platoModel.Player;
@@ -70,13 +70,13 @@ public class UserPro {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void changePhoto(MouseEvent mouseEvent) {

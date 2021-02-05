@@ -7,7 +7,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import sample.Client;
+import sample.Main;
 import sample.controller.graphic.plato.FirstMenuFx;
 import sample.model.platoModel.Player;
 import sample.model.reversiModel.ReversiGame;
@@ -54,7 +54,7 @@ public class StartMenuController {
             reversiGame = new ReversiGame(reversiPlayer1,reversiPlayer2);
             reversiPlayer1.setPlayer(FirstMenuFx.getLoggedInPlayer());
             reversiPlayer2.setPlayer(Player.getPlayerWithUser(player2ID.getText()));
-            Client.menuController.openReversiBoard();
+            Main.menuController.openReversiBoard();
         }
 
     }
@@ -77,10 +77,10 @@ public class StartMenuController {
         }
     }
     public void OnExitCircleClicked() throws IOException {
-        Client.menuController.closeStage();
+        Main.menuController.closeStage();
     }
     public void OnScoreBoardCircleClicked() throws IOException {
-        Client.menuController.openScoreBoardMenu();
+        Main.menuController.openScoreBoardMenu();
     }
 
     public static ReversiGame getReversiGame() {
@@ -89,12 +89,12 @@ public class StartMenuController {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

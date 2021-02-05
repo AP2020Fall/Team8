@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import sample.Client;
+import sample.Main;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,18 +23,18 @@ public class PreFriendsMenu {
         FriendsMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendsMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicFriendsList();
-        Client.allStage.show();
+        Main.allStage.show();
     }
 
     public void loadFriendsReqa(ActionEvent actionEvent) throws IOException {
         FriendsRequestsFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/preFriendsMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/friendsRequests.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
+        Main.allStage.setScene(pageTwoScene);
         playMusicReqs();
-        Client.allStage.show();
+        Main.allStage.show();
     }
 
     public void playMusicReqs(){
@@ -51,12 +51,12 @@ public class PreFriendsMenu {
     }
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 }

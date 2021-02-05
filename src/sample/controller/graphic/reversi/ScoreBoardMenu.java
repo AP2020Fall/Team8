@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
-import sample.Client;
+import sample.Main;
 import sample.model.reversiModel.ReversiPlayer;
 
 import java.io.IOException;
@@ -19,7 +19,7 @@ public class ScoreBoardMenu  implements Initializable {
     private  static Parent pre;
 
     public void OnScoreBoardMenuBackCircleClicked() throws IOException {
-        Client.menuController.openStartMenu();
+        Main.menuController.openStartMenu();
     }
 
     public void DeleteScoreBoard() {
@@ -39,13 +39,13 @@ public class ScoreBoardMenu  implements Initializable {
 
     public void exit(MouseEvent mouseEvent) {
         System.exit(0);
-        Client.allStage.close();
+        Main.allStage.close();
     }
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
 
     }
 }

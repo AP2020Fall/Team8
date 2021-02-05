@@ -13,7 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
-import sample.Client;
+import sample.Main;
 import sample.controller.graphic.dots.StartDotsController;
 import sample.controller.graphic.reversi.StartMenuController;
 import sample.model.platoModel.Player;
@@ -112,17 +112,17 @@ public class GameMenuFx {
             StartMenuController.setPre(FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/ReversiStartMenu.fxml"));
             Scene pageTwoScene = new Scene(root);
-            Client.allStage.setScene(pageTwoScene);
+            Main.allStage.setScene(pageTwoScene);
             playMusicStartRev();
-            Client.allStage.show();
+            Main.allStage.show();
         }
         else{
             StartDotsController.setPre(FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml")));
             Parent root = FXMLLoader.load(getClass().getResource("/sample/view/DBFirstMenu.fxml"));
             Scene pageTwoScene = new Scene(root);
-            Client.allStage.setScene(pageTwoScene);
+            Main.allStage.setScene(pageTwoScene);
             playMusicStartDB();
-            Client.allStage.show();
+            Main.allStage.show();
         }
     }
 
@@ -139,16 +139,16 @@ public class GameMenuFx {
         ScoreBoardMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/scoreBoardMenu.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void loadGameLog(ActionEvent actionEvent) throws IOException {
         GameHistoryFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/gameMenu.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/gameHistory.fxml"));
         Scene pageTwoScene = new Scene(root);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
     public void playMusicStartRev(){
         File file = new File("src/sample/sounds/viva.mp3");
@@ -181,8 +181,8 @@ public class GameMenuFx {
 
     public void processBack(MouseEvent mouseEvent) {
         Scene pageTwoScene = new Scene(pre);
-        Client.allStage.setScene(pageTwoScene);
-        Client.allStage.show();
+        Main.allStage.setScene(pageTwoScene);
+        Main.allStage.show();
     }
 
     public void update(ActionEvent actionEvent) {
