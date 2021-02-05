@@ -18,7 +18,10 @@ import sample.Client;
 import sample.view.OutputHandler;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+
+import static sample.Client.myWriter;
 
 public class RegisterMenuFx {
     public TextField userTFReg;
@@ -50,6 +53,14 @@ public class RegisterMenuFx {
 
     public void register(ActionEvent actionEvent) throws IOException {
         //isFirstReg=false;
+        try {
+            myWriter.write("register");
+            myWriter.close();
+            System.out.println(" register Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         pageTurn=false;
         if (!userTFReg.getText().isEmpty()&&!passPFReg.getText().isEmpty()&&!lastnameTFReg.getText().isEmpty()&&!emailTFReg.getText().isEmpty()&&!phoneTFReg.getText().isEmpty()){
         RegisterMenu.registerAccount(userTFReg.getText(),passPFReg.getText(),nameTFReg.getText(),lastnameTFReg.getText(),emailTFReg.getText(),phoneTFReg.getText());

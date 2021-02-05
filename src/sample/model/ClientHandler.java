@@ -27,6 +27,11 @@ class ClientHandler implements Runnable
     public void run()
     {
         try {
+            System.out.println(in.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
 
 
             while (true) {

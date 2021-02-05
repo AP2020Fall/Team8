@@ -12,19 +12,19 @@ import java.util.concurrent.Executors;
 
 public class Server  {
     private static ArrayList<ClientHandler> clients=new ArrayList<>();
-   // private static ExecutorService pool= Executors.newFixedThreadPool(4);
+    private static ExecutorService pool= Executors.newFixedThreadPool(4);
     public static void main(String[] args) throws IOException
     {
 
         // server is listening on port 5056
         while (true) {
             System.out.println("waiting for client");
-            ServerSocket listener = new ServerSocket(9090);
+            ServerSocket listener = new ServerSocket(2345);
             Socket client = listener.accept();
             System.out.println("connected");
             ClientHandler clientThread = new ClientHandler(client);
             clients.add(clientThread);
-          //  pool.execute(clientThread);
+            pool.execute(clientThread);
         }
 
     }
