@@ -33,9 +33,9 @@ public class Client extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-     //   MainWindow.getInstance().start(primaryStage);
+           MainWindow.getInstance().start(primaryStage);
         System.out.println("stage");
-        runClient();
+        //runClient();
        // System.out.println("client run");
       /*  Parent root = FXMLLoader.load(getClass().getResource("/sample/view/firstMenu.fxml"));
        primaryStage.setTitle("ReversiStartMenu");
@@ -54,7 +54,7 @@ public class Client extends Application {
         MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
     }
-    public static void runClient() throws IOException {
+  /*  public static void runClient() throws IOException {
         Socket socket=new Socket("localhost",2345);
         BufferedReader input=new BufferedReader(new InputStreamReader(socket.getInputStream()));
         BufferedReader keyboard=new BufferedReader(new InputStreamReader(System.in));
@@ -68,7 +68,7 @@ public class Client extends Application {
             System.out.println("Server says"+ serverResponse);
 
         }
-    }
+    }*/
 
     public static void main(String[] args) throws IOException {
       launch(args);
