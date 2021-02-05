@@ -8,10 +8,12 @@ import java.util.Scanner;
 // Client class
 public class Client
 {
-    public static void main(String[] args) throws IOException
-    {
+    static DataInputStream dis ;
+   static DataOutputStream dos;
+    public static void runMyClient(){
         try
         {
+
             Scanner scn = new Scanner(System.in);
 
             // getting localhost ip
@@ -21,12 +23,12 @@ public class Client
             Socket s = new Socket(ip, 5056);
 
             // obtaining input and out streams
-            DataInputStream dis = new DataInputStream(s.getInputStream());
-            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+           dis = new DataInputStream(s.getInputStream());
+           dos = new DataOutputStream(s.getOutputStream());
 
             // the following loop performs the exchange of
             // information between client and client handler
-            while (true)
+         /*   while (true)
             {
                 System.out.println(dis.readUTF());
                 String tosend = scn.nextLine();
@@ -45,14 +47,18 @@ public class Client
                 // printing date or time as requested by client
                 String received = dis.readUTF();
                 System.out.println(received);
-            }
+            }*/
 
             // closing resources
-            scn.close();
-            dis.close();
-            dos.close();
+          //  scn.close();
+           // dis.close();
+           // dos.close();
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+    public static void main(String[] args) throws IOException
+    {
+
     }
 }

@@ -8,6 +8,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import sample.controller.MenuController;
+import sample.view.Client;
 
 import java.io.*;
 import java.net.Socket;
@@ -33,7 +34,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-           MainWindow.getInstance().start(primaryStage);
+
+        Client.runMyClient();
+        MainWindow.getInstance().start(primaryStage);
         System.out.println("stage");
         //runClient();
        // System.out.println("client run");
