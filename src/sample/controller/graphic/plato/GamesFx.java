@@ -85,6 +85,7 @@ public class GamesFx {
     }
 
     public void deleteGame(ActionEvent actionEvent) {
+        //nemikhad nemizanam
         if (gameText.getText().equalsIgnoreCase("reversi")){
             ReversiB.setVisible(false);
         }

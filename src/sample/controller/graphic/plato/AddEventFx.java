@@ -7,7 +7,9 @@ import sample.Main;
 import sample.controller.plato.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import sample.view.Client;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -32,6 +34,14 @@ public class AddEventFx {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate start = LocalDate.parse(startDateAddEventTF.getText(),formatter);
         LocalDate end = LocalDate.parse(endDateAddEventTF.getText(),formatter);
+        try {
+            Client.dos.writeUTF("addEvent"+startDateAddEventTF.getText()+","+endDateAddEventTF.getText()+","+eventScoreTF);
+            // myWriter.close();
+            System.out.println(" register Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         if (gameName == null){
             alertCreateEvent.setText("you must choose your game first!");
         }

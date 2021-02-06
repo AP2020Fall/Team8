@@ -14,6 +14,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import sample.Main;
 import sample.controller.plato.AccountsMenu;
+import sample.view.Client;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,8 +26,7 @@ public class AccountMenuFx {
     public Label alertAccount;
     private static Parent pre;
     public TextField statusT;
-    @FXML
-    private ImageView imageview;
+
 
 
 
@@ -34,8 +34,18 @@ public class AccountMenuFx {
         AccountMenuFx.pre = pre;
     }
     public void logout(ActionEvent actionEvent) {
-        AccountsMenu.logout();
-        alertAccount.setText("logout successfully");
+        try {
+            Client.dos.writeUTF("logout");
+            // myWriter.close();
+            System.out.println(" logout Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        FirstMenuFx.setLoggedInPlayer(null);
+        FirstMenuFx.setLoggedInAdmin(null);
+       // AccountsMenu.logout();
+        //alertAccount.setText("logout successfully");
         Main.allStage.close();
 
     }

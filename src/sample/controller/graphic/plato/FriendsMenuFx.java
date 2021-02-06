@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.controller.plato.FriendsMenu;
 import sample.model.platoModel.Player;
+import sample.view.Client;
 
 
 import java.io.IOException;
@@ -45,14 +46,16 @@ public class FriendsMenuFx {
 
     public void removeUser(ActionEvent actionEvent) {
         String selectedP=FriendsMenuList.getSelectionModel().getSelectedItem();
-        FriendsMenu.processRemoveFriend(selectedP);
-        FriendsMenuList.getItems().remove(selectedP);
+
+        //FriendsMenu.processRemoveFriend(selectedP);
+      //  FriendsMenuList.getItems().remove(selectedP);
 
     }
 
     public void viewUser(ActionEvent actionEvent) throws IOException {
     //    PlatoStatics.setPlayer(Player.getPlayerWithUser(FriendsMenuList.getSelectionModel().getSelectedItem()));
       //  Parent root = FXMLLoader.load(Objects.requireNonNull(UserProfile.class.getClassLoader().getResource("platoStatistics.fxml")));
+      //nemikhad nemizanam
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/platoStatistics.fxml"));
         Scene pageTwoScene = new Scene(root);
         Main.allStage.setScene(pageTwoScene);

@@ -15,6 +15,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import sample.Main;
 import sample.controller.plato.LoginMenu;
+import sample.view.Client;
 import sample.view.OutputHandler;
 
 import java.io.File;
@@ -36,8 +37,16 @@ public class LoginMenuFx {
     }
 
     public  void login(ActionEvent actionEvent) throws IOException {
-        LoginMenu.login(userLoginTF.getText(),passwordLoginTF.getText());
-        alertLog.setText(OutputHandler.showLoginMenuOutput(LoginMenu.getNum()));
+        try {
+            Client.dos.writeUTF("login,"+userLoginTF.getText()+","+passwordLoginTF.getText());
+            // myWriter.close();
+            System.out.println(" loadAddSug Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+      //  LoginMenu.login(userLoginTF.getText(),passwordLoginTF.getText());
+       // alertLog.setText(OutputHandler.showLoginMenuOutput(LoginMenu.getNum()));
         if (LoginMenu.getNum()==4) {
             if (LoginMenu.isIsAdmin()) {
                 AdminMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/loginMenuFx.fxml")));
@@ -72,8 +81,16 @@ public class LoginMenuFx {
     }
 
     public void deleteUserName(ActionEvent actionEvent) {
-        LoginMenu.deleteUserName(userLoginTF.getText(),passwordLoginTF.getText());
-        alertLog.setText(String.valueOf(LoginMenu.getNum()));
+        try {
+            Client.dos.writeUTF("deleteUser,"+userLoginTF.getText()+","+passwordLoginTF.getText());
+            // myWriter.close();
+            System.out.println(" deleteUser Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        //LoginMenu.deleteUserName(userLoginTF.getText(),passwordLoginTF.getText());
+        //alertLog.setText(String.valueOf(LoginMenu.getNum()));
     }
 
     public void exit(MouseEvent mouseEvent) {

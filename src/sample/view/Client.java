@@ -8,8 +8,8 @@ import java.util.Scanner;
 // Client class
 public class Client
 {
-    static DataInputStream dis ;
-   static DataOutputStream dos;
+    public static DataInputStream dis ;
+  public static DataOutputStream dos;
     public static void runMyClient(){
         try
         {

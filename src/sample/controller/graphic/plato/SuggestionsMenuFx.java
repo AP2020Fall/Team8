@@ -12,7 +12,9 @@ import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.controller.plato.AdminMenu;
 import sample.model.platoModel.*;
+import sample.view.Client;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SuggestionsMenuFx {
@@ -37,19 +39,43 @@ public class SuggestionsMenuFx {
     }
 
     public void addSuggestion(ActionEvent actionEvent) {
-        String message=AdminMenu.addSuggestion(usersugTf.getText(), gamesSugTf.getText());
-        alertSug.setText(message);
+        try {
+            Client.dos.writeUTF("addSug"+","+usersugTf.getText()+","+gamesSugTf.getText());
+            // myWriter.close();
+            System.out.println(" addSug Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+      //  String message=AdminMenu.addSuggestion(usersugTf.getText(), gamesSugTf.getText());
+        //alertSug.setText(message);
         makeTree();
     }
     public void removeSug(ActionEvent actionEvent) {
-      Suggestion suggestion =sugTable.getSelectionModel().getSelectedItem();
-        String message=AdminMenu.removeSuggestion(suggestion.getSuggestionId());
-        alertSug.setText(AdminMenu.removeSuggestion(message));
+        try {
+            Client.dos.writeUTF("removeSug,"+sugTable.getSelectionModel().getSelectedItem().getSuggestionId());
+            // myWriter.close();
+            System.out.println(" removeSug Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    //  Suggestion suggestion =sugTable.getSelectionModel().getSelectedItem();
+      //  String message=AdminMenu.removeSuggestion(suggestion.getSuggestionId());
+        //alertSug.setText(AdminMenu.removeSuggestion(message));
     }
 
     public void sendPlatoBotsMessage(ActionEvent actionEvent) {
-        String message=AdminMenu.sendPBMessage(userPBMessage.getText(),PBTAMessage.getText());
-       alertSug.setText(message);
+        try {
+            Client.dos.writeUTF("sendPB,"+userPBMessage.getText()+","+PBTAMessage.getText());
+            // myWriter.close();
+            System.out.println(" sendPb Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+       // String message=AdminMenu.sendPBMessage(userPBMessage.getText(),PBTAMessage.getText());
+     //  alertSug.setText(message);
 
 
     }

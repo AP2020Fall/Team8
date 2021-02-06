@@ -15,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ContextMenuEvent;
 import sample.Main;
+import sample.view.Client;
 import sample.view.OutputHandler;
 
 import java.io.File;
@@ -53,8 +54,8 @@ public class RegisterMenuFx {
     public void register(ActionEvent actionEvent) throws IOException {
         //isFirstReg=false;
         try {
-            myWriter.write("register");
-            myWriter.close();
+            Client.dos.writeUTF("register"+userTFReg.getText()+","+passPFReg.getText()+","+nameTFReg.getText()+","+lastnameTFReg.getText()+","+emailTFReg.getText()+","+phoneTFReg.getText());
+           // myWriter.close();
             System.out.println(" register Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");

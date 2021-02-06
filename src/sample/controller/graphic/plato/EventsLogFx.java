@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import sample.Main;
 import sample.model.platoModel.*;
+import sample.view.Client;
 
 
 import java.io.IOException;
@@ -36,8 +37,16 @@ public class EventsLogFx {
     }
 
     public void loadEvent(ActionEvent actionEvent) throws IOException {
+        try {
+            Client.dos.writeUTF("loadEvent,"+EventsTable.getSelectionModel().getSelectedItem().getEventId());
+            // myWriter.close();
+            System.out.println(" loadEv Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         sample.model.platoModel.Event event=EventsTable.getSelectionModel().getSelectedItem();
-        EventFx.setEvent(event);
+      //  EventFx.setEvent(event);
         EventFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/eventsLog.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/eventFx.fxml"));
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(EventFx.class.getClassLoader().getResource("eventFx.fxml")));

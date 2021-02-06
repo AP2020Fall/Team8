@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import sample.Main;
+import sample.view.Client;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +26,14 @@ public class AdminMenuFx {
     }
 
     public void loadAddEvent(ActionEvent actionEvent) throws IOException {
+        try {
+            Client.dos.writeUTF("loadAddEvent");
+            // myWriter.close();
+            System.out.println(" register Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         AddEventFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/addEventFx.fxml"));
      //   Parent root = FXMLLoader.load(Objects.requireNonNull(RegisterMenu.class.getClassLoader().getResource("register.fxml")));
@@ -37,6 +46,14 @@ public class AdminMenuFx {
     }
 
     public void loadUsers(ActionEvent actionEvent) throws IOException {
+        try {
+            Client.dos.writeUTF("viewUsers");
+            // myWriter.close();
+            System.out.println(" register Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         UsersMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/usersMenu.fxml"));
        // Parent root = FXMLLoader.load(Objects.requireNonNull(UsersMenuFx.class.getClassLoader().getResource("usersMenu.fxml")));
@@ -47,6 +64,14 @@ public class AdminMenuFx {
 
     }
     public void loadViewEvent(ActionEvent actionEvent) throws IOException {
+        try {
+            Client.dos.writeUTF("viewEvents");
+            // myWriter.close();
+            System.out.println(" register Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         EventsLogFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/eventsLog.fxml"));
 
@@ -59,6 +84,14 @@ public class AdminMenuFx {
     }
 
     public void loadAddSug(ActionEvent actionEvent) throws IOException {
+        try {
+            Client.dos.writeUTF("loadAddSuggestion");
+            // myWriter.close();
+            System.out.println(" loadAddSug Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
         SuggestionsMenuFx.setPre(FXMLLoader.load(getClass().getResource("/sample/view/adminMenuFx.fxml")));
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/suggestionsMenu.fxml"));
 
